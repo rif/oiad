@@ -8,10 +8,24 @@
         </style>
     </head>
     <body>
-        <h1>Links</h1>
+        <h1>Statuses</h1>
+        <table>
+        	<thead>
+        		<th>Address</th>
+        		<th>Status</th>
+        	</thead>
+        	<tbody>
+        		
         <?php
-        foreach($links as $link)
-        echo $link->address;
+        foreach($lines as $address=>$status)
+		{
+			echo "<tr>";
+        	echo"<td>".$address."</td><td>".$status."</td>";
+			echo "</tr>";
+		} 
         ?>
+        
+        </tbody>
+        </table>
     </body>
 </html>
