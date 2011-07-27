@@ -1,0 +1,6 @@
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `address` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT
