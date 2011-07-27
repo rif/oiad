@@ -374,3 +374,88 @@
 #4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #5 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
 #6 {main}
+2011-07-27 19:13:58 --- ERROR: ErrorException [ 8 ]: Use of undefined constant ‘OIAD’ - assumed '‘OIAD’' ~ APPPATH/classes/controller/showlinks.php [ 8 ]
+2011-07-27 19:13:58 --- STRACE: ErrorException [ 8 ]: Use of undefined constant ‘OIAD’ - assumed '‘OIAD’' ~ APPPATH/classes/controller/showlinks.php [ 8 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/controller/showlinks.php(8): Kohana_Core::error_handler(8, 'Use of undefine...', '/home/rif/Docum...', 8, Array)
+#1 [internal function]: Controller_Showlinks->action_index()
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Showlinks))
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#6 {main}
+2011-07-27 19:21:03 --- ERROR: ErrorException [ 8 ]: Undefined variable: address ~ APPPATH/views/check_rss.php [ 15 ]
+2011-07-27 19:21:03 --- STRACE: ErrorException [ 8 ]: Undefined variable: address ~ APPPATH/views/check_rss.php [ 15 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/views/check_rss.php(15): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 15, Array)
+#1 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/view.php(61): include('/home/rif/Docum...')
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/view.php(343): Kohana_View::capture('/home/rif/Docum...', Array)
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/controller/template.php(44): Kohana_View->render()
+#4 [internal function]: Kohana_Controller_Template->after()
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(121): ReflectionMethod->invoke(Object(Controller_Checkrss))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#8 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#9 {main}
+2011-07-27 19:58:40 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL addlink was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+2011-07-27 19:58:40 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL addlink was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-07-27 20:02:33 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected ' ~ APPPATH/views/add_link.php [ 12 ]
+2011-07-27 20:02:33 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected ' ~ APPPATH/views/add_link.php [ 12 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-27 20:21:48 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected $end, expecting T_FUNCTION ~ APPPATH/classes/controller/showlinks.php [ 25 ]
+2011-07-27 20:21:48 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected $end, expecting T_FUNCTION ~ APPPATH/classes/controller/showlinks.php [ 25 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-27 20:22:39 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected $end, expecting T_FUNCTION ~ APPPATH/classes/controller/showlinks.php [ 25 ]
+2011-07-27 20:22:39 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected $end, expecting T_FUNCTION ~ APPPATH/classes/controller/showlinks.php [ 25 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-27 20:23:33 --- ERROR: ErrorException [ 8 ]: Undefined variable: errors ~ APPPATH/views/show.php [ 18 ]
+2011-07-27 20:23:33 --- STRACE: ErrorException [ 8 ]: Undefined variable: errors ~ APPPATH/views/show.php [ 18 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/views/show.php(18): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 18, Array)
+#1 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/view.php(61): include('/home/rif/Docum...')
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/view.php(343): Kohana_View::capture('/home/rif/Docum...', Array)
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/controller/template.php(44): Kohana_View->render()
+#4 [internal function]: Kohana_Controller_Template->after()
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(121): ReflectionMethod->invoke(Object(Controller_Showlinks))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#8 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#9 {main}
+2011-07-27 20:24:45 --- ERROR: ErrorException [ 1 ]: Call to undefined method Model_Link::check_edit() ~ APPPATH/classes/controller/showlinks.php [ 13 ]
+2011-07-27 20:24:45 --- STRACE: ErrorException [ 1 ]: Call to undefined method Model_Link::check_edit() ~ APPPATH/classes/controller/showlinks.php [ 13 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-27 20:26:03 --- ERROR: ORM_Validation_Exception [ 0 ]: Failed to validate array ~ MODPATH/orm/classes/kohana/orm.php [ 1174 ]
+2011-07-27 20:26:03 --- STRACE: ORM_Validation_Exception [ 0 ]: Failed to validate array ~ MODPATH/orm/classes/kohana/orm.php [ 1174 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/controller/showlinks.php(13): Kohana_ORM->check()
+#1 [internal function]: Controller_Showlinks->action_index()
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Showlinks))
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#6 {main}
+2011-07-27 20:26:46 --- ERROR: ORM_Validation_Exception [ 0 ]: Failed to validate array ~ MODPATH/orm/classes/kohana/orm.php [ 1174 ]
+2011-07-27 20:26:46 --- STRACE: ORM_Validation_Exception [ 0 ]: Failed to validate array ~ MODPATH/orm/classes/kohana/orm.php [ 1174 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/modules/orm/classes/kohana/orm.php(1200): Kohana_ORM->check(NULL)
+#1 /home/rif/Documents/webframeworks/kohana/modules/orm/classes/kohana/orm.php(1314): Kohana_ORM->create(NULL)
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/showlinks.php(14): Kohana_ORM->save()
+#3 [internal function]: Controller_Showlinks->action_index()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Showlinks))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
