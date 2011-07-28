@@ -15,10 +15,11 @@ Class Controller_Scrapper extends Controller {
 
         foreach ($links as $link)
         {
-            $parse = parse_url($link->address);
+            $parse = parse_url($link->address);            
             $scrapper = PolyFactory::getScrapper($parse['host']);
             if ($scrapper)
             {
+                echo "<b>".$parse['host']."</b><br />";
                 $scrapper->scrapp();
             }
         }

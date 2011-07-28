@@ -864,3 +864,258 @@
 #5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
 #7 {main}
+2011-07-28 17:26:29 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ',' or ';' ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 25 ]
+2011-07-28 17:26:29 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ',' or ';' ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 25 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:04:25 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 13 ]
+2011-07-28 18:04:25 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 13 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:12:59 --- ERROR: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 19 ]
+2011-07-28 18:12:59 --- STRACE: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 19 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:13:56 --- ERROR: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 20 ]
+2011-07-28 18:13:56 --- STRACE: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 20 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:14:51 --- ERROR: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 19 ]
+2011-07-28 18:14:51 --- STRACE: ErrorException [ 1 ]: Call to undefined function file_get_dom() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 19 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:24:29 --- ERROR: ErrorException [ 1 ]: Call to undefined function find() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 21 ]
+2011-07-28 18:24:29 --- STRACE: ErrorException [ 1 ]: Call to undefined function find() ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 21 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:24:38 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 22 ]
+2011-07-28 18:24:38 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 22 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(22): Kohana_Core::error_handler(8, 'Undefined offse...', '/home/rif/Docum...', 22, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:24:47 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 6063689 bytes) ~ SYSPATH/classes/kohana/debug.php [ 174 ]
+2011-07-28 18:24:47 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 6063689 bytes) ~ SYSPATH/classes/kohana/debug.php [ 174 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:27:14 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:27:14 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:27:24 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+2011-07-28 18:27:24 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:29:11 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:29:11 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:29:21 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 519219 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+2011-07-28 18:29:21 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 519219 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:30:05 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:30:05 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:30:15 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+2011-07-28 18:30:15 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:30:51 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:30:51 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:31:12 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 268435456 bytes exhausted (tried to allocate 1064360 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+2011-07-28 18:31:12 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 268435456 bytes exhausted (tried to allocate 1064360 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:32:02 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:32:02 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:32:33 --- ERROR: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+2011-07-28 18:32:33 --- STRACE: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 35 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(35): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 35, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 18:32:44 --- ERROR: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+2011-07-28 18:32:44 --- STRACE: ErrorException [ 1 ]: Allowed memory size of 134217728 bytes exhausted (tried to allocate 723115 bytes) ~ SYSPATH/classes/kohana/debug.php [ 231 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:43:03 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected ';', expecting T_FUNCTION ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 22 ]
+2011-07-28 18:43:03 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected ';', expecting T_FUNCTION ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 22 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:47:02 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery-onefile.php [ 255 ]
+2011-07-28 18:47:02 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery-onefile.php [ 255 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:50:44 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:50:44 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:53:52 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:53:52 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:53:54 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:53:54 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:54:11 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:54:11 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:54:20 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:54:20 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:55:30 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:55:30 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 18:57:10 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+2011-07-28 18:57:10 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/phpQuery/DOMDocumentWrapper.php [ 127 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 19:03:42 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/QueryPath/QueryPath.php [ 1828 ]
+2011-07-28 19:03:42 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/QueryPath/QueryPath.php [ 1828 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 19:05:14 --- ERROR: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/QueryPath/QueryPath.php [ 1828 ]
+2011-07-28 19:05:14 --- STRACE: ErrorException [ 1 ]: Class 'DOMDocument' not found ~ APPPATH/vendor/QueryPath/QueryPath.php [ 1828 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-07-28 19:06:24 --- ERROR: QueryPathParseException [ 2 ]: DOMDocument::loadHTML(): Opening and ending tag mismatch: b and big in Entity, line: 116 (/home/rif/Documents/webframeworks/kohana/application/vendor/QueryPath/QueryPath.php: 1872) ~ APPPATH/vendor/QueryPath/QueryPath.php [ 2242 ]
+2011-07-28 19:06:24 --- STRACE: QueryPathParseException [ 2 ]: DOMDocument::loadHTML(): Opening and ending tag mismatch: b and big in Entity, line: 116 (/home/rif/Documents/webframeworks/kohana/application/vendor/QueryPath/QueryPath.php: 1872) ~ APPPATH/vendor/QueryPath/QueryPath.php [ 2242 ]
+--
+#0 [internal function]: QueryPathParseException::initializeFromError(2, 'DOMDocument::lo...', '/home/rif/Docum...', 1872, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/vendor/QueryPath/QueryPath.php(1872): DOMDocument->loadHTML('<!DOCTYPE html ...')
+#2 /home/rif/Documents/webframeworks/kohana/application/vendor/QueryPath/QueryPath.php(165): QueryPath->parseXMLString('<!DOCTYPE html ...')
+#3 /home/rif/Documents/webframeworks/kohana/application/vendor/QueryPath/QueryPath.php(23): QueryPath->__construct('<!DOCTYPE html ...', NULL, Array)
+#4 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(19): qp('<!DOCTYPE html ...')
+#5 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#6 [internal function]: Controller_Scrapper->action_index()
+#7 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#8 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#9 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#10 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#11 {main}
+2011-07-28 19:07:08 --- ERROR: ErrorException [ 4096 ]: Object of class DOMElement could not be converted to string ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 21 ]
+2011-07-28 19:07:08 --- STRACE: ErrorException [ 4096 ]: Object of class DOMElement could not be converted to string ~ APPPATH/classes/factory/HeartlandAmericaScrapper.php [ 21 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/HeartlandAmericaScrapper.php(21): Kohana_Core::error_handler(4096, 'Object of class...', '/home/rif/Docum...', 21, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/scrapper.php(23): HeartlandAmericaScrapper->scrapp()
+#2 [internal function]: Controller_Scrapper->action_index()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Scrapper))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-07-28 19:08:25 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/feed-icon16x16.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-07-28 19:08:25 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/feed-icon16x16.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-07-28 19:08:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/question.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-07-28 19:08:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/question.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-07-28 19:08:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/button_in_cart.gif ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-07-28 19:08:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: img/button_in_cart.gif ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-07-28 19:15:20 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: items/1422_SMAbevledoutlinewhite.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-07-28 19:15:20 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: items/1422_SMAbevledoutlinewhite.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-07-28 19:15:20 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL items was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+2011-07-28 19:15:20 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL items was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-07-28 19:17:11 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: items/1422_SMAbevledoutlinewhite.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-07-28 19:17:11 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: items/1422_SMAbevledoutlinewhite.jpg ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-07-28 19:24:53 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ',' or ';' ~ APPPATH/classes/factory/HatDayScrapper.php [ 38 ]
+2011-07-28 19:24:53 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ',' or ';' ~ APPPATH/classes/factory/HatDayScrapper.php [ 38 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
