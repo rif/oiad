@@ -22,6 +22,8 @@
 			}
 		}
         ?>
+        
+                <?php echo HTML::anchor('/checkrss', 'Check RSS activity'); ?>
 		<h1>Current links</h1>
 		<!--a href="<?php URL::site('/checkrss'); ?>">Check links</a-->
         <ol>
