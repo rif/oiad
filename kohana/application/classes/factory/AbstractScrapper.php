@@ -1,7 +1,7 @@
 <?php
 
-class AbstractScrapper 
+abstract class AbstractScrapper 
 {
-    
+    public abstract function scrapp($host, $rss);
 }
 ?>

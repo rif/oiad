@@ -9,8 +9,8 @@ PolyFactory::addScrapper('www.heartlandamerica.com', new HeartlandAmericaScrappe
 class HeartlandAmericaScrapper extends AbstractScrapper {
     const rss_link = "http://www.heartlandamerica.com/feeds/rssFeeds/whatsnew.xml";
 
-    public function scrapp() {
-        $items = Feed::parse(self::rss_link);
+    public function scrapp($host, $rss) {
+        $items = Feed::parse($rss);
 
         foreach ($items[0] as $key => $val) {
             echo "<b>" . $key . "</b> = " . $val . "<br />";

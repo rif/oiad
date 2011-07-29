@@ -3,13 +3,12 @@
 defined('SYSPATH') OR die('No Direct Script Access');
 require_once 'PolyFactory.php';
 
-PolyFactory::addScrapper('hipgreendeals.com', new HipGreenDealsScrapper());
+PolyFactory::addScrapper('www.hipgreendeals.com', new HipGreenDealsScrapper());
 
 class HipGreenDealsScrapper extends AbstractScrapper {
-    const rss_link = "http://www.hipgreendeals.com/feed/";
 
-    public function scrapp() {
-        $items = Feed::parse(self::rss_link);
+    public function scrapp($host, $rss) {
+        $items = Feed::parse($rss);
         // Calculate 24 hours ago
         $yesterday = strtotime('yesterday'); #$yesterday = time() - (24*60*60);
         $found = false;

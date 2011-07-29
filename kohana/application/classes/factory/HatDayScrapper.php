@@ -6,35 +6,28 @@ require_once 'PolyFactory.php';
 PolyFactory::addScrapper('www.hataday.com', new HatDayScrapper());
 
 class HatDayScrapper extends AbstractScrapper {
-    const rss_link = "http://www.hataday.com/rss/index.php";
 
-    public function scrapp() {
-        /*$items = Feed::parse(self::rss_link);
-        // Calculate 24 hours ago
-        $yesterday = strtotime('yesterday'); #$yesterday = time() - (24*60*60);
-        // Loop through all of the items in the feed
-        foreach ($items as $item) {
-            // Compare the timestamp of the feed item with 24 hours ago.
-            if (array_key_exists("pubDate", $item) && time($item["pubDate"]) > $yesterday) {
-                foreach ($item as $key => $val) {
-                    echo $key . " = " . $val . "<br />";
-                }
-                break;
-            }
-        }*/
-        $raw = file_get_contents("http://www.hataday.com/");
+    public function scrapp($host, $rss) {
+        $raw = file_get_contents("http://".$host);
         $doc = phpQuery::newDocument($raw);
-        echo "Short description: ".pq('#mainDescr>h1')->text()."<br />";
-        echo "Price: ".pq('#mainDescr>h2')->text()."<br />";
-        echo "Shipping: ".pq('#mainDescr>h3')->text()."<br />";
-        echo "Long description: ".pq('#mainDescr>p')->text()."<br />";
-        echo "Images: <br/>";
+        
+        
+        $deal = ORM::factory('deal');
+        $deal->site_name="HatADay";
+        $deal->site_link=$host;
+        $deal->item_link=$host;
+        $deal->desc_short = trim(pq('#mainDescr>h1')->text());
+        $deal->price = pq('#mainDescr>h2')->text();
+        $deal->shipping = trim(pq('#mainDescr>h3')->text());
+        $deal->desc_long = trim(pq('#mainDescr>p')->text());
+        $images = "";
         foreach(pq('#mainImage>img') as $img){
             $old_src = pq($img)->attr('src');
-            echo pq($img)->attr('src', "http://www.hataday.com/".$old_src);
-            
+            $images .= pq($img)->attr('src', "http://".$host."/".$old_src);
         }
-        echo "<br/>";
+        $deal->pictures = $images;
+        $deal->pub_date = date('Y-m-d');
+		$deal->save();
     }
 
 }
