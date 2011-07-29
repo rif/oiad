@@ -125,13 +125,15 @@ $rss_links = array(
 		{
 			
 			
-			$this_address = $links->where('address', '=', $l)->find_all();
+			$this_address = $links->where('rss', '=', $l)->find_all();
 			
 			if(count ($this_address) == 0)
 			{
 				echo "$i. saving $l ...<br />";
+				$parse = parse_url($l);   
 				$link = ORM::factory('link');
-				$link->address = $l;
+				$link->host = $parse['host'];
+				$link->rss = $l;
 				$link->save();
 				$saved++;
 			}

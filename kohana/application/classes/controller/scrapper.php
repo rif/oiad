@@ -13,14 +13,11 @@ Class Controller_Scrapper extends Controller {
         $links = ORM::factory('link');
         $links = $links->find_all();
 
-        foreach ($links as $link)
-        {
-            $parse = parse_url($link->address);            
-            $scrapper = PolyFactory::getScrapper($parse['host']);
-            if ($scrapper)
-            {
-                echo "<b>".$parse['host']."</b><br />";
-                $scrapper->scrapp();
+        foreach ($links as $link) {
+            $scrapper = PolyFactory::getScrapper($link->host);
+            if ($scrapper) {
+                echo "<b>" . $link->host . "</b><br />";
+                $scrapper->scrapp($link->host, $link->rss);
             }
         }
     }

@@ -10,7 +10,8 @@
         <h1>Add link</h1>
         <?php
         echo Form::open('/showlinks');
-		echo Form::label('address', 'Address'); echo Form::input('address', 'www.');
+		echo Form::label('host', 'Host name'); echo Form::input('host', 'www.')."<br/>";
+		echo Form::label('rss', 'Rss link'); echo Form::input('rss', 'www.')."<br/>";
 		echo Form::submit('submit', 'Add');
 		echo Form::close();
 		?>
@@ -30,7 +31,7 @@
         <?php
         foreach($links as $link)
 		{
-        	echo "<li>".$link->address."</li>";
+        	echo "<li><b>".$link->host."</b> rss: ".$link->rss."</li>";
 		}
         ?>
         </ol>

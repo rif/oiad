@@ -13,7 +13,7 @@ Class Controller_Checkrss extends Controller_Template {
 
         $lines = array();
         foreach ($links as $link) {
-            $items = Feed::parse($link->address);
+            $items = Feed::parse($link->rss);
             // Calculate 24 hours ago
             $yesterday = strtotime('yesterday'); #$yesterday = time() - (24*60*60);
             $found = false;
@@ -25,7 +25,7 @@ Class Controller_Checkrss extends Controller_Template {
                     break;
                 }
             }
-            $lines[$link->address] = $found ? 'active' : 'inactive';
+            $lines[$link->rss] = $found ? 'active' : 'inactive';
         }
         $this->template->lines = $lines;
     }
