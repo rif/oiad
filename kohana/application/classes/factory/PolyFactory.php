@@ -1,7 +1,6 @@
 <?php
 
 defined('SYSPATH') OR die('No Direct Script Access');
-require_once(Kohana::find_file('vendor', 'phpQuery'));
 
 class PolyFactory {
 

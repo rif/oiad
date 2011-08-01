@@ -3,7 +3,7 @@
 
 class Model_Link extends ORM
 {
-     public function rules()
+     /*public function rules()
     {
         return array(
             'rss' => array(
@@ -13,5 +13,5 @@ class Model_Link extends ORM
                 //array('url'),
             ),
         );
-    }
+    }*/
 }

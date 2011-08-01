@@ -11,13 +11,14 @@ Class Controller_Scrapper extends Controller {
     public function action_index() {
         #$this->template->title = "OIAD";
         $links = ORM::factory('link');
-        $links = $links->find_all();
-
+        $links = $links->where('active', '=', 'T')->find_all();
+        
+        $index = 1;
         foreach ($links as $link) {
             $scrapper = PolyFactory::getScrapper($link->host);
             if ($scrapper) {
-                echo "<b>" . $link->host . "</b><br />";
-                $scrapper->scrapp($link->host, $link->rss);
+                echo $index++.". <b>" . $link->host . "</b><br />";
+                $scrapper->scrapp($link->host);
             }
         }
     }
