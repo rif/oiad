@@ -145,7 +145,7 @@ CREATE TABLE `deals` (
   `desc_long` longtext,
   `price` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,9 +158,9 @@ DROP TABLE IF EXISTS `links`;
 CREATE TABLE `links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `host` varchar(255) DEFAULT NULL,
-  `active` char(1) DEFAULT NULL,
+  `rss` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=433 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -172,4 +172,4 @@ CREATE TABLE `links` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-08-02  0:56:35
+-- Dump completed on 2011-07-29 15:43:56

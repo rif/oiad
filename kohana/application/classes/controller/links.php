@@ -1,12 +1,17 @@
 <?php
 
 defined('SYSPATH') OR die('No Direct Script Access');
+require_once Kohana::find_file('classes', 'factory/PolyFactory');
+require_once Kohana::find_file('classes', 'factory/AbstractScrapper');
 
-Class Controller_Showlinks extends Controller_Template {
+foreach (Kohana::list_files('classes/factory/scrappers') as $filename) {
+    require_once $filename;
+}
 
-    public $template = 'show';
+Class Controller_Links extends Controller {
 
-    public function action_index() {
+     public function action_index() {
+        $view = View::factory('links/show');
         if (!empty($_POST)) {
             ///$model = ORM::factory('link'); // create
             ///$model->values($_POST); // load values to model
@@ -36,8 +41,24 @@ Class Controller_Showlinks extends Controller_Template {
 	    }
         }
 
-        $this->template->title = "OIAD";
+        $view->title = "OIAD";
         $links = ORM::factory('link');
-        $this->template->links = $links->find_all();
+        $view->links = $links->find_all();
+        $this->response->body($view);
+    }
+    
+    public function action_scrapp() {
+        #$this->template->title = "OIAD";
+        $links = ORM::factory('link');
+        $links = $links->where('active', '=', 'T')->find_all();
+        
+        $index = 1;
+        foreach ($links as $link) {
+            $scrapper = PolyFactory::getScrapper($link->host);
+            if ($scrapper) {
+                echo $index++.". <b>" . $link->host . "</b><br />";
+                $scrapper->scrapp($link->host);
+            }
+        }
     }
 }
