@@ -7,11 +7,11 @@ class Camofire extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "CamoFire";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@id='contentLeft']/h1");
+        	$deal->price = $this->_xpath("//div[@id='productInfoBox']/div[@id='left']/div[@class='txtTitleOrange']");
+        	$deal->desc_long = $this->_xpath("//div[@id='contentLeft']/div[5]");
+        	$deal->pictures = $host.$this->_xpath("//div[@id='mainProduct']/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@id='bottomLinks']/a[4]/@href");
     }
 }
 

@@ -7,10 +7,10 @@ class BoardersBestBuy extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Boarders Best Buy";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//span[@class='product-name']");
+        	$deal->price = $this->_xpath("//span[@class='product-price']");
+        	$deal->desc_long = $this->_xpath("//div[@id='product-info']/p[3]");
+        	$deal->pictures = $this->_xpath("//img[@id='main_pic']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

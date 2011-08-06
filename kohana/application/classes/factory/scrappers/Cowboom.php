@@ -7,11 +7,11 @@ class Cowboom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "CowBoom";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='DOTDTitle']");
+        	$deal->price = $this->_xpath("//div[@class='DOTDPrice']");
+        	$deal->desc_long = $this->_xpath("//div[@id='ProdDesc']");
+        	$deal->pictures = $this->_xpath("//div[@class='DOTDImageContainer']/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='DOTDFreeShipContainer']");
     }
 }
 

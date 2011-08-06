@@ -7,11 +7,11 @@ class BowlingballCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Bowlingball.com";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='SVDescription']");
+        	$deal->price = $this->_xpath("///div[@class='SVPrice']");
+        	$deal->desc_long = $this->_xpath("//div[@class='SVDescription']");
+        	$deal->pictures = $this->_xpath("//div[@class='SVImage']/a/img/@src");
+        	$deal->shipping = $this->_xpath("///div[@class='SVDescription2']");
     }
 }
 
