@@ -41,7 +41,7 @@ abstract class AbstractScrapper {
     
     protected function _get_host($host){
         $p = parse_url($host);
-        return "http://".$p['host'];
+        return "http://".$p['host']."/";
     }
 
 }

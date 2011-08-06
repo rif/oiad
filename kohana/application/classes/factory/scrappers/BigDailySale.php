@@ -7,10 +7,10 @@ class BigDailySale extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Big Daily Sale";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='product-pic-name']/div[2]/h2");
+        	$deal->price = $this->_xpath("//div[@class='product-pic-name']/div[2]/span/strong");
+        	$deal->desc_long = $this->_xpath("//div[@class='basic-box']/div[@id='left-col']/div[2]");
+        	$deal->pictures = $this->_xpath("//div[@class='product-pic-name']/div[1]/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

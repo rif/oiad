@@ -7,10 +7,10 @@ class Candiesdelight extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "CandiesDelight";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//a[@class='productnamecolor colors_productname']");
+        	$deal->price = $this->_xpath("//font[@class='pricecolor colors_productprice']");
+        	$deal->desc_long = $this->_xpath("//tr[@class='v65-productDisplay-row']//font[@class='text colors_text']");
+        	$deal->pictures = $this->_get_host($host).$this->_xpath("//table[@class='v65-productDisplay']/tbody/tr[3]/td/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
