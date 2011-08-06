@@ -1059,3 +1059,821 @@
 --
 #0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
 #1 {main}
+2011-08-05 23:18:40 --- ERROR: ErrorException [ 2 ]: simplexml_load_string(): Entity: line 6: parser error : Opening and ending tag mismatch: meta line 5 and CENTER ~ APPPATH/classes/factory/AbstractScrapper.php [ 12 ]
+2011-08-05 23:18:40 --- STRACE: ErrorException [ 2 ]: simplexml_load_string(): Entity: line 6: parser error : Opening and ending tag mismatch: meta line 5 and CENTER ~ APPPATH/classes/factory/AbstractScrapper.php [ 12 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'simplexml_load_...', '/home/rif/Docum...', 12, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/factory/AbstractScrapper.php(12): simplexml_load_string('<!DOCTYPE html ...')
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): AbstractScrapper->scrapp('http://babsbead...')
+#3 [internal function]: Controller_Links->action_scrapp()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
+2011-08-05 23:18:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:18:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:18:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:18:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:22:52 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ')' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 18 ]
+2011-08-05 23:22:52 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected '}', expecting ')' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 18 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:22:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:22:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:22:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:22:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:23:13 --- ERROR: ErrorException [ 2 ]: DOMDocument::loadHTMLFile(): Unexpected end tag : head in http://babsbeadwarehouse.dodshops.com/, line: 19 ~ APPPATH/classes/factory/AbstractScrapper.php [ 14 ]
+2011-08-05 23:23:13 --- STRACE: ErrorException [ 2 ]: DOMDocument::loadHTMLFile(): Unexpected end tag : head in http://babsbeadwarehouse.dodshops.com/, line: 19 ~ APPPATH/classes/factory/AbstractScrapper.php [ 14 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'DOMDocument::lo...', '/home/rif/Docum...', 14, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/factory/AbstractScrapper.php(14): DOMDocument->loadHTMLFile('http://babsbead...')
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): AbstractScrapper->scrapp('http://babsbead...')
+#3 [internal function]: Controller_Links->action_scrapp()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
+2011-08-05 23:23:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:23:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:23:14 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:23:14 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:23:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:23:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:23:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:23:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:24:45 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:24:45 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:24:46 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:24:46 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:26:23 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:26:23 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:26:23 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:26:23 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:26:46 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:26:46 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:26:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:26:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:27:21 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:27:21 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:27:51 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:27:51 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:28:58 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:28:58 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:28:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:28:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:29:12 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_STRING, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 12 ]
+2011-08-05 23:29:12 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected T_STRING, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 12 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:29:12 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:29:12 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:29:12 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:29:12 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:29:17 --- ERROR: ErrorException [ 8 ]: Undefined variable: xpath ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 11 ]
+2011-08-05 23:29:17 --- STRACE: ErrorException [ 8 ]: Undefined variable: xpath ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 11 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(11): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 11, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/factory/AbstractScrapper.php(24): DodShopsScrapper->_fillDetails(Object(Model_Deal), 'http://babsbead...')
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): AbstractScrapper->scrapp('http://babsbead...')
+#3 [internal function]: Controller_Links->action_scrapp()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
+2011-08-05 23:29:17 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:29:17 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:29:18 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:29:18 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:29:53 --- ERROR: ErrorException [ 2048 ]: Declaration of AEbikeScrapper::_fillDetails() should be compatible with that of AbstractScrapper::_fillDetails() ~ APPPATH/classes/factory/scrappers/AEbikeScrapper.php [ 18 ]
+2011-08-05 23:29:53 --- STRACE: ErrorException [ 2048 ]: Declaration of AEbikeScrapper::_fillDetails() should be compatible with that of AbstractScrapper::_fillDetails() ~ APPPATH/classes/factory/scrappers/AEbikeScrapper.php [ 18 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(8): Kohana_Core::error_handler(2048, 'Declaration of ...', '/home/rif/Docum...', 18, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(8): require_once()
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/core.php(496): require('/home/rif/Docum...')
+#3 [internal function]: Kohana_Core::auto_load('controller_link...')
+#4 [internal function]: spl_autoload_call('controller_link...')
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(85): class_exists('controller_link...')
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#8 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#9 {main}
+2011-08-05 23:29:54 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:29:54 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:31:33 --- ERROR: ErrorException [ 2048 ]: Declaration of DodShopsScrapper::_fillDetails() should be compatible with that of AbstractScrapper::_fillDetails() ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 45 ]
+2011-08-05 23:31:33 --- STRACE: ErrorException [ 2048 ]: Declaration of DodShopsScrapper::_fillDetails() should be compatible with that of AbstractScrapper::_fillDetails() ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 45 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(8): Kohana_Core::error_handler(2048, 'Declaration of ...', '/home/rif/Docum...', 45, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(8): require_once()
+#2 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/core.php(496): require('/home/rif/Docum...')
+#3 [internal function]: Kohana_Core::auto_load('controller_link...')
+#4 [internal function]: spl_autoload_call('controller_link...')
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(85): class_exists('controller_link...')
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#8 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#9 {main}
+2011-08-05 23:31:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:31:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:31:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:31:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:32:02 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:32:02 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:32:02 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:32:02 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:33:11 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:33:11 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:33:12 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:33:12 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:34:02 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:34:02 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:34:03 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:34:03 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:34:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:34:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:34:41 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:34:41 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:34:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:34:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:36:21 --- ERROR: ErrorException [ 8 ]: Undefined variable: row ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 16 ]
+2011-08-05 23:36:21 --- STRACE: ErrorException [ 8 ]: Undefined variable: row ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 16 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(16): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/rif/Docum...', 16, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:36:21 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:36:21 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:36:22 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:36:22 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:36:33 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:36:33 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:36:33 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:36:33 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:38:23 --- ERROR: ErrorException [ 8 ]: Undefined property: DOMNodeList::$nodeValue ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:38:23 --- STRACE: ErrorException [ 8 ]: Undefined property: DOMNodeList::$nodeValue ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Undefined prope...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:38:23 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:38:23 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:38:24 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:38:24 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:38:51 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:38:51 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:38:51 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:38:51 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:38:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:38:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:39:08 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:39:08 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:39:08 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:39:08 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:40:27 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:40:27 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:40:27 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:40:27 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:40:46 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:40:46 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:42:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:42:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:42:44 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:42:44 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:43:17 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:43:17 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:43:28 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:43:28 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:43:28 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:43:28 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:43:53 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:43:53 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:43:54 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:43:54 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:04 --- ERROR: ErrorException [ 1 ]: Call to a member function item() on a non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:44:04 --- STRACE: ErrorException [ 1 ]: Call to a member function item() on a non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:44:05 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:05 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:05 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:05 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:23 --- ERROR: ErrorException [ 1 ]: Call to a member function item() on a non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:44:23 --- STRACE: ErrorException [ 1 ]: Call to a member function item() on a non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:44:23 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:23 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:56 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:56 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:44:56 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:44:56 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:45:20 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:45:20 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:45:20 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:45:20 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:45:20 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:45:20 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:45:35 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:45:35 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:45:36 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:45:36 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:45:48 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:45:48 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:45:48 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:45:48 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:46:14 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:46:14 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:46:14 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:46:14 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:46:25 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:46:25 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:47:59 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:47:59 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:47:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:47:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:48:18 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:48:18 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:48:18 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:48:18 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:48:48 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:48:48 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:48:49 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:48:49 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:49:28 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:49:28 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:49:29 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:49:29 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:49:45 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:49:45 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:49:52 --- ERROR: ErrorException [ 2 ]: trim() expects parameter 1 to be string, object given ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:49:52 --- STRACE: ErrorException [ 2 ]: trim() expects parameter 1 to be string, object given ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'trim() expects ...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): trim(Object(DOMNodeList))
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#3 [internal function]: Controller_Links->action_scrapp()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
+2011-08-05 23:49:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:49:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:49:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:49:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:50:06 --- ERROR: ErrorException [ 4096 ]: Object of class DOMNodeList could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:50:06 --- STRACE: ErrorException [ 4096 ]: Object of class DOMNodeList could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(4096, 'Object of class...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:50:06 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:50:06 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:50:06 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:50:06 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:50:44 --- ERROR: ErrorException [ 1 ]: Call to undefined method DOMNodeList::length() ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:50:44 --- STRACE: ErrorException [ 1 ]: Call to undefined method DOMNodeList::length() ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:50:44 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:50:44 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:50:45 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:50:45 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:51:00 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:51:00 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:51:14 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:51:14 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:51:39 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:51:39 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:51:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:51:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:15 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:52:15 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:52:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:16 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:52:16 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected T_PAAMAYIM_NEKUDOTAYIM, expecting ',' or ';' ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-08-05 23:52:16 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:16 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:16 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:16 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:24 --- ERROR: ErrorException [ 4096 ]: Object of class DOMElement could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:52:24 --- STRACE: ErrorException [ 4096 ]: Object of class DOMElement could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(4096, 'Object of class...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:52:24 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:24 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:52:25 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:52:25 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:54:11 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:54:11 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:54:11 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:54:11 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:54:26 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:54:26 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:04 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:55:04 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:55:05 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:05 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:05 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:05 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:19 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:19 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:19 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:19 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:42 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:55:42 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:55:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:55:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:55:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:56:42 --- ERROR: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:56:42 --- STRACE: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(8, 'Trying to get p...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:56:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:56:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:56:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:56:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:59:31 --- ERROR: ErrorException [ 2 ]: trim() expects parameter 1 to be string, object given ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:59:31 --- STRACE: ErrorException [ 2 ]: trim() expects parameter 1 to be string, object given ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'trim() expects ...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): trim(Object(DOMNodeList))
+#2 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#3 [internal function]: Controller_Links->action_scrapp()
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#8 {main}
+2011-08-05 23:59:32 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:59:32 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:59:43 --- ERROR: ErrorException [ 4096 ]: Object of class DOMNodeList could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+2011-08-05 23:59:43 --- STRACE: ErrorException [ 4096 ]: Object of class DOMNodeList could not be converted to string ~ APPPATH/classes/factory/scrappers/DodShopsScrapper.php [ 23 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/application/classes/factory/scrappers/DodShopsScrapper.php(23): Kohana_Core::error_handler(4096, 'Object of class...', '/home/rif/Docum...', 23, Array)
+#1 /home/rif/Documents/webframeworks/kohana/application/classes/controller/links.php(60): DodShopsScrapper->scrapp('http://babsbead...')
+#2 [internal function]: Controller_Links->action_scrapp()
+#3 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client/internal.php(118): ReflectionMethod->invoke(Object(Controller_Links))
+#4 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 /home/rif/Documents/webframeworks/kohana/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#7 {main}
+2011-08-05 23:59:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:59:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-08-05 23:59:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2011-08-05 23:59:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /home/rif/Documents/webframeworks/kohana/index.php(109): Kohana_Request->execute()
+#1 {main}
