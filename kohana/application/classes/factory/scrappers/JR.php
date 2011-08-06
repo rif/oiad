@@ -1,0 +1,18 @@
+<?php
+defined('SYSPATH') OR die('No Direct Script Access');
+
+PolyFactory::addScrapper("http://www.jr.com/promotions/deal-of-the-day/", new JR());
+
+class JR extends AbstractScrapper {
+
+	 protected function _fillDetails($deal, $host){
+	 	$deal->site_name = "J&R";
+        	$deal->desc_short = $this->_xpath("");
+        	$deal->price = $this->_xpath("");
+        	$deal->desc_long = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("");
+        	$deal->shipping = $this->_xpath("");
+    }
+}
+
+?>
