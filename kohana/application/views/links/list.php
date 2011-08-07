@@ -5,7 +5,9 @@
 foreach($links as $link)
 {
 	echo '<li>';
-	echo HTML::anchor($link->host, $link->host)."&nbsp;";
+	$p = parse_url($link->host);
+	echo HTML::anchor($link->host, $p['host'])."&nbsp;";
+	echo $link->active == 'T' ? '<span class="active">&nbsp;</span>&nbsp;' :  '<span class="inactive">&nbsp;</span>&nbsp;';
 	echo HTML::anchor('/links/edit/'.$link->id, 'Edit')."&nbsp;";
 	echo HTML::anchor('/links/scrapp/'.$link->id, 'Scrap')."&nbsp;";
 	echo "</li>";
