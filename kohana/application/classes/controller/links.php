@@ -13,7 +13,7 @@ Class Controller_Links extends Controller_Template {
 	public $template = 'base';
 
      public function action_index() {
-        $view = View::factory('links/show');
+        $view = View::factory('links/list');
         if (!empty($_POST)) {
 		$saved = 0;
 		$links = ORM::factory('link');
@@ -74,6 +74,9 @@ Class Controller_Links extends Controller_Template {
             // check() initializes $model->_validate with a Validation object containing the
             // rules, filters and callbacks from Model_User (e.g. $_rules, $_callbacks..)
             //if ($model->check()) {
+            if(!array_key_exists('active', $_POST)) {
+            	$link->active = 'F';
+            }
             $link->save(); // save the model
             $this->request->redirect(URL::site('/'));
             //} else {

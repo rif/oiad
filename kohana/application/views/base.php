@@ -10,10 +10,11 @@
   			<![endif]-->
     </head>
     <body>
+    	
+    	<div id="container">    
     	<div id="header">
-    	 
-    	</div>
-    	<div id="container">    	
+    	 <h1>One Item A Day</h1>
+    	</div>	
        <div id="sidebar">
        <ul>
         <li><?php echo HTML::anchor('/', 'Home'); ?></li>
@@ -24,7 +25,7 @@
        <div id="content">
    		<?php echo $content; ?>
         </div> <!-- content -->
+         <div id="footer"></div>
         </div> <!-- container -->
-        <div id="footer"></div>
     </body>
 </html>
