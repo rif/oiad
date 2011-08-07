@@ -66,24 +66,23 @@ Class Controller_Links extends Controller_Template {
     }
     
     public function action_edit() {
-        $view = View::factory('links/edit');
+        $view = View::factory('links/edit')->set('values', $_POST)->bind('errors', $errors);
         $link_id = $this->request->param('id');
         $link = ORM::factory('link', $link_id);
         if (!empty($_POST)) {
-            $link->values($_POST); // load values to model
-            // check() initializes $model->_validate with a Validation object containing the
-            // rules, filters and callbacks from Model_User (e.g. $_rules, $_callbacks..)
-            //if ($model->check()) {
-            if(!array_key_exists('active', $_POST)) {
-            	$link->active = 'F';
-            }
-            $link->save(); // save the model
-            $this->request->redirect(URL::site('/'));
-            //} else {
-            // Load errors. The first param is the path to the
-            // message file (e.g. /messages/register.php)
-            //		$this->template->errors = $model->validate()->errors('show');
-            //}          
+			try
+			{
+				$link->values($_POST); 
+				if(!array_key_exists('active', $_POST)) {
+					$link->active = 'F';
+				}
+				$link->save();
+				$this->request->redirect(URL::site('/'));
+			}
+			catch (ORM_Validation_Exception $e)
+			{
+				$errors = $e->errors('models');
+			}
         }
         $view->link = $link;
         $this->template->content = $view;

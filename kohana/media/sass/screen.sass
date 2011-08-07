@@ -4,6 +4,7 @@
 @import blueprint/scaffolding
 @import "blueprint/typography"
 @import "compass/typography/links"
+@import "compass/typography/lists/bullets"
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -20,27 +21,40 @@ html, body
     
 #container
     +container
+    
 #header, #footer
     +column($blueprint-grid-columns)
    
 #sidebar
     $sidebar-columns: floor($blueprint-grid-columns / 3)
     +column($sidebar-columns)
+    a
+        +hover-link
+    ul
+        +no-bullets
+        li
+            font-size: 1.7em    
+    
 #content
     $content-columns: ceil(2 * $blueprint-grid-columns / 3)
     +column($content-columns, true)
+    font-size: 1.2em
     a
         +loud
         font-family: Helvetica, Arial, sans-serif
-        font-size: 16px
+        font-size: 1.5em
         +hover-link
         +link-colors(#6D7582,  #526073, #c0c, #6D7582, #b20811)
 
 
-h1
+#header h1
     font-size: 6em
     color: #b20811
     text-shadow: 0 3px 1px #860000
+    
+h1
+    font-size: 3.5em
+    color: #526073
 
 h2
     font-size: 3em
@@ -52,3 +66,13 @@ form
     // You'll probably want to remove the scaffolding once you start styling your site.
     +blueprint-scaffolding
 
+.active, .inactive
+    background-repeat: no-repeat
+    display: inline-block
+    min-width: 16px
+
+.active
+    background-image: url("../images/ok.png")
+
+.inactive
+    background-image: url("../images/error.png")

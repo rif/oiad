@@ -1,13 +1,12 @@
 <!DOCTYPE html> 
 <html lang="en">
     <head>
-    		<?php
-    		echo HTML::style('media/stylesheets/screen.css', array('media'=>'screen, projection'));
-    		echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));
-    		?>
-    		 <!--[if lt IE 8]>
-    		 	 <?php echo HTML::style('media/stylesheets/ie.cs', array('media'=>'screen, projection')); ?>
-  			<![endif]-->
+    		<title>One Item A Day</title>
+    		<?php echo HTML::style('media/stylesheets/screen.css', array('media'=>'screen, projection')); ?>
+    		
+    		<?php echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));?>
+    		
+    		<!--[if lt IE 8]><?php echo HTML::style('media/stylesheets/ie.cs', array('media'=>'screen, projection')); ?><![endif]-->
     </head>
     <body>
     	
