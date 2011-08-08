@@ -7,11 +7,11 @@ class Easystreetdeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "EasyStreetDeals";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//a[@class='productnamecolor colors_productname']");
+        	$deal->price = $this->_xpath("//font[@class='pricecolor colors_productprice']");
+        	$deal->desc_long = $this->_xpath("//tr[@class='v65-productDisplay-row'][4]/td/font[@class='text colors_text']");
+        	$deal->pictures = $host.$this->_xpath("//tr[@class='v65-productDisplay-row'][3]/td/a/img/@src");
+        	$deal->shipping = $this->_xpath("//tr[@class='v65-productDisplay-row'][4]/td/font[@class='text colors_text']/div[1]");
     }
 }
 

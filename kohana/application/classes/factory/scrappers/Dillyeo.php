@@ -7,11 +7,11 @@ class Dillyeo extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "dillyeo";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//h3[@class='product-name']/a");
+        	$deal->price = $this->_xpath("//span[@class='price']");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//a[@class='product-image']/img/@src");
+        	$deal->shipping = $this->_xpath("//ul[@class='Item2']/li[4]/a/@href");
     }
 }
 

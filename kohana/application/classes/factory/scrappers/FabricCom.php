@@ -7,11 +7,11 @@ class FabricCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Fabric.com";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//a[@id='ctlHomeRightColumn_ctlDealOfTheDay_lnkDealOfTheDayName']");
+        	$deal->price = $this->_xpath("//span[@id='ctlHomeRightColumn_ctlDealOfTheDay_lblDealOfTheDayMessage']");
+        	$deal->desc_long = $this->_xpath("//a[@id='ctlHomeRightColumn_ctlDealOfTheDay_lnkShopNow']/@href");
+        	$deal->pictures = $this->_xpath("//img[@id='ctlHomeRightColumn_ctlDealOfTheDay_imgDealOfTheDayImage']/@src");
+        	$deal->shipping = $this->_xpath("//td[@class='FreeShipping']");
     }
 }
 

@@ -7,10 +7,10 @@ class Dealxpress extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "dealxpress";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@id='381435167819611864-product-title']");
+        	$deal->price = $this->_xpath("//div[@id='381435167819611864-product-price']");
+        	$deal->desc_long = $this->_xpath("//div[@class='paragraph editable-text']");
+        	$deal->pictures = $host.$this->_xpath("//img[@class='product-image']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

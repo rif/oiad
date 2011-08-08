@@ -87,4 +87,12 @@ Class Controller_Links extends Controller_Template {
         $view->link = $link;
         $this->template->content = $view;
     }
+	
+	public function action_toggleactive(){
+		$link_id = $this->request->param('id');
+        $link = ORM::factory('link', $link_id); 
+		$link->active = $link->active == 'T' ? 'F' : 'T';
+		$link->save();
+		$this->template->content = '';
+	}
 }

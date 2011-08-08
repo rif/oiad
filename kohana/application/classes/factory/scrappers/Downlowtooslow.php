@@ -7,11 +7,11 @@ class Downlowtooslow extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "DownLowTooSlow";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//table[@class='curved']//font");
+        	$deal->price = $this->_xpath("//td[@style='font-size:26px;padding-right:6px;']");
+        	$deal->desc_long = $this->_xpath("//td[@style='padding-left:20px;']");
+        	$deal->pictures = $this->_xpath("//div[@id='vmMainPage']//img[@height='340']/@src");
+        	$deal->shipping = $this->_xpath("//table[@class='curved']/tbody/tr[2]/td/div/table/tbody/tr[1]/td[3]");
     }
 }
 

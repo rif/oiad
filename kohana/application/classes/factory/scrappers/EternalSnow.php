@@ -7,11 +7,11 @@ class EternalSnow extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Eternal Snow";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//h2[@class='product-name']/a");
+        	$deal->price = $this->_xpath("//p[@class='special-price']/span");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//li[@class='item first']/a/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='footer-links']/table[1]/tbody/tr/td[1]/ul/li[2]/a/@href");
     }
 }
 

@@ -7,11 +7,11 @@ class DealsClick extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Deals Click";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//span[@id='ctl00_ContentPlaceHolder1_lblModel']");
+        	$deal->price = $this->_xpath("//span[@id='ctl00_ContentPlaceHolder1_lblPrice']");
+        	$deal->desc_long = $this->_xpath("//span[@id='ctl00_ContentPlaceHolder1_lblDeals']/p[1]/font");
+        	$deal->pictures = $host.$this->_xpath("//a[@id='ctl00_ContentPlaceHolder1_HlinkImage']/img/@src");
+        	$deal->shipping = $this->_xpath("//span[@class='smallshipping']/strong");
     }
 }
 

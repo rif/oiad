@@ -6,8 +6,10 @@ foreach($links as $link)
 {
 	echo '<li>';
 	$p = parse_url($link->host);
-	echo HTML::anchor($link->host, $p['host'])."&nbsp;";
-	echo $link->active == 'T' ? '<span class="active">&nbsp;</span>&nbsp;' :  '<span class="inactive">&nbsp;</span>&nbsp;';
+	$content = array_key_exists('host', $p) ? $p['host'] : $link->host;
+	echo HTML::anchor($link->host, $content."&nbsp;");
+	$class = $link->active == 'T' ? 'active':'';
+	echo HTML::anchor(URL::site('/links/toggleactive/'.$link->id), "&nbsp;", array('class'=>'toggle-state '.$class)); 
 	echo HTML::anchor('/links/edit/'.$link->id, 'Edit')."&nbsp;";
 	echo HTML::anchor('/links/scrapp/'.$link->id, 'Scrap')."&nbsp;";
 	echo "</li>";
@@ -30,3 +32,15 @@ foreach($errors as $error)
 	}
 }
 ?>
+
+<script type="text/javascript">
+$(function(){
+$(".toggle-state").click(function(e){
+    var link = $(this);
+    $.get(link.attr("href"), function(result){
+        link.toggleClass("active");
+    });
+    e.preventDefault();
+});
+});
+</script>
