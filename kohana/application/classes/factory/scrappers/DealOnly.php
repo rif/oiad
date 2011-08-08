@@ -7,11 +7,11 @@ class DealOnly extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Deal Only";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//font[@class='PRODNAME']");
+        	$deal->price = $this->_xpath("//font[@class='PRICEC']");
+        	$deal->desc_long = $this->_xpath("//font[@class='SPEC2']");
+        	$deal->pictures = $host.$this->_xpath("//img[@id='mainphoto']/@src");
+        	$deal->shipping = $this->_xpath("/html/body/table/tbody/tr/td[1]/table/tbody/tr[4]/td/table/tbody/tr/td[3]/table[2]/tbody/tr/td");
     }
 }
 

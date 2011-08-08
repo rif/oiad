@@ -1,3 +1,7 @@
+# use glob syntax.
+syntax: glob
+
+*.pyc
 nbproject
 media/.sass-cache
-
+*#

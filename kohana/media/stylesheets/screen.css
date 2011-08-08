@@ -753,18 +753,14 @@ form form.inline p {
 }
 
 /* line 69, ../sass/screen.sass */
-.active, .inactive {
+a.toggle-state {
   background-repeat: no-repeat;
   display: inline-block;
   min-width: 16px;
-}
-
-/* line 74, ../sass/screen.sass */
-.active {
-  background-image: url("../images/ok.png");
-}
-
-/* line 77, ../sass/screen.sass */
-.inactive {
   background-image: url("../images/error.png");
+}
+
+/* line 76, ../sass/screen.sass */
+a.toggle-state.active {
+  background-image: url("../images/ok.png");
 }

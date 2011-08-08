@@ -7,11 +7,11 @@ class Dealdotcom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "dealdotcom";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[class='title]/h3");
+        	$deal->price = $this->_xpath("//h3[@class='price']");
+        	$deal->desc_long = $this->_xpath("//span[@class='description_text']/p");
+        	$deal->pictures = $this->_get_host($host).$this->_xpath("//div[@class='info']/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='shipping']");
     }
 }
 
