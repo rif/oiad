@@ -8,7 +8,7 @@ return array
     'connection'   => array(
             'hostname'   => 'localhost',
             'username'   => 'root',
-            'password'   => '123456',
+            'password'   => 'UARdeveloper',
             'persistent' => FALSE,
             'database'   => 'oiad',
         ),
