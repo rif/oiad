@@ -7,10 +7,10 @@ class GardensAlive extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Gardens Alive!";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//a[@class='red14']/font");
+        	$deal->price = $this->_xpath("//span[@style='color: #CC0000']/b");
+        	$deal->desc_long = $this->_xpath("//td[@width='220']");
+        	$deal->pictures = $host.$this->_xpath("//td[@width='250']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

@@ -7,10 +7,10 @@ class GiveawayOfTheDay extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Giveaway of the Day";
-        	$deal->desc_short = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='text-container']/h1");
         	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_long = $this->_xpath("//div[@class='text-container']/div[1]");
+        	$deal->pictures = $this->_xpath("//div[@class='text-container']/div[1]/p[1]/img[@class='left']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
