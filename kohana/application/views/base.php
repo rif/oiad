@@ -19,7 +19,7 @@
        <ul>
         <li><?php echo HTML::anchor('/', 'Home'); ?></li>
        	<li><?php echo HTML::anchor('/links/scrapp', 'Scrap All Links'); ?></li>
-       	<li><?php echo HTML::anchor('/deals', 'Show Today\'s deals'); ?></li>
+       	<li><?php echo HTML::anchor('/deals', 'Show Today\'s Deals'); ?></li>
        </ul>
        </div>
        <div id="content">

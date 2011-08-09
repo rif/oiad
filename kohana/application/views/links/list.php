@@ -1,4 +1,4 @@
-<h1>Current links</h1>
+<h1>Current Sites</h1>
 
 <ol>
 <?php
@@ -17,7 +17,7 @@ foreach($links as $link)
 ?>
 </ol>
 
-<h2>Add links</h2>
+<h2>Add Site</h2>
 
 <?php
 echo Form::open('/links/index');
