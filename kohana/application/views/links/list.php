@@ -17,7 +17,7 @@ foreach($links as $link)
 ?>
 </ol>
 
-<h2>Add Site</h2>
+<h2>Add Sites</h2>
 
 <?php
 echo Form::open('/links/index');
