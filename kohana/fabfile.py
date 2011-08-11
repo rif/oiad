@@ -11,10 +11,9 @@ def ci():
 @runs_once
 def push():
     print(green('pushing...'))
-    with cd('/home/rif/Documents/prog/oiad/'):
-        local("svn status | awk '{if ($1 == \"?\") print $2 }' | xargs svn add")
-        #comment = prompt('Officail commit comment: ', default='another commit from fabric')
-        #run('svn ci -m "%s"' % comment)
+    #local("svn status %(path)s| awk '{if ($1 == \"?\") print $2 }' | xargs svn add" %{'path': '/home/rif/Documents/prog/oiad/'})
+    comment = prompt('Officail commit comment: ', default='another commit from fabric')
+    local('svn ci -m "%s" /home/rif/Documents/prog/oiad/' % comment)
 
 @task
 @hosts('radu.fericean@dev.upandrunningsoftware.com')

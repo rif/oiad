@@ -46,10 +46,14 @@ Class Controller_Links extends Controller_Template {
         if($link_id != '') {
         	$link = $links->where('id', '=', $link_id)->find();
         	$scrapper = PolyFactory::getScrapper($link->host);
-				if ($scrapper) {
-					$deal_id = $scrapper->scrapp($link->host);
-					$view->content .= HTML::anchor('/deals/showdeal/'.$deal_id, $link->host)."<br />";
-				}
+		 if ($scrapper) {
+			$deal_id = $scrapper->scrapp($link->host);
+			if(is_numeric($deal_id)){
+			     $view->content .= HTML::anchor('/deals/showdeal/'.$deal_id, $link->host)."<br />";
+			} else {
+			   $view->content .= "scrapp failed for ".$link->host." reason:".$deal_id."<br />";
+			}
+		}
         } else {
 			$links = $links->where('active', '=', 'T')->find_all();
 			
@@ -58,7 +62,11 @@ Class Controller_Links extends Controller_Template {
 				$scrapper = PolyFactory::getScrapper($link->host);
 				if ($scrapper) {
 					$deal_id = $scrapper->scrapp($link->host);
-					$view->content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $link->host)."<br />";
+					if(is_numeric($deal_id)){
+						$view->content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $link->host)."<br />";
+					} else {
+						$view->content .= "scrapp failed for ".$link->host." reason:".$deal_id."<br />";
+					}					
 				}
 			}
         }
