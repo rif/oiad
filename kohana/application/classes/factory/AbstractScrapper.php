@@ -16,8 +16,8 @@ abstract class AbstractScrapper {
             $html = new DOMDocument();
             $html->loadHtmlFile($host);
             $this->xpath = new DOMXPath($html);
-         } catch(ErrorException e){
-             return -1;
+         } catch(ErrorException $e){
+             return $e->getMessage();
          }
 
         $deal = ORM::factory('deal');
