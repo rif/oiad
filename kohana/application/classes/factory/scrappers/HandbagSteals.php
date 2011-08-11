@@ -7,11 +7,11 @@ class HandbagSteals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Handbag Steals";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@id='node-50']/h2/a");
+        	$deal->price = $this->_xpath("//div[@class='price_row sale_price clearfix']/div[@class='detail']");
+        	$deal->desc_long = $this->_xpath("//div[@class='product_description']/div[2]");
+        	$deal->pictures = $this->_xpath("//img[@width='170']/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='content']/h3/b");
     }
 }
 
