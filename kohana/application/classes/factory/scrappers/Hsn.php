@@ -7,11 +7,11 @@ class Hsn extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "HSN";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//h1[@id='pdName']");
+        	$deal->price = $this->_xpath("//div[@class='listPriceClearance']");
+        	$deal->desc_long = $this->_xpath("//div[@class='productTabContent']/div[@class='productTabPage'][1]");
+        	$deal->pictures = $this->_xpath("//img[@class='pdMainImage']/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='pdShippingAndHandling']/div[1]");
     }
 }
 

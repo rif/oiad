@@ -6,3 +6,4 @@ nbproject
 media/.sass-cache
 application/logs
 .geanyprj
+.~lock.*

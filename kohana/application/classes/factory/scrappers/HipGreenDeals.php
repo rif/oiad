@@ -7,9 +7,9 @@ class HipGreenDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Hip Green Deals";
-        	$deal->desc_short = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@id='main']/h1[1]/a");
         	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
+        	$deal->desc_long = $this->_xpath("//div[@class='story'][1]/p");
         	$deal->pictures = $this->_xpath("");
         	$deal->shipping = $this->_xpath("");
     }

@@ -7,10 +7,10 @@ class HousewaresDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->site_name = "Housewares Deals";
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='rightcolumn']/h3");
+        	$deal->price = $this->_xpath("//p[@class='price accentcolor']");
+        	$deal->desc_long = $this->_xpath("//p[@class='product-description']");
+        	$deal->pictures = $this->_xpath("//img[@class='RICHFX:imageDragBox()']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
