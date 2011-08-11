@@ -7,13 +7,18 @@ abstract class AbstractScrapper {
     private $xpath;
 
     public function scrapp($host) {
+      
         $today = date('Y-m-d');
         $oldSetting = libxml_use_internal_errors(true);
         libxml_clear_errors();
-
-        $html = new DOMDocument();
-        $html->loadHtmlFile($host);
-        $this->xpath = new DOMXPath($html);
+    
+        try {
+            $html = new DOMDocument();
+            $html->loadHtmlFile($host);
+            $this->xpath = new DOMXPath($html);
+         } catch(ErrorException e){
+             return -1;
+         }
 
         $deal = ORM::factory('deal');
         $deal->where('site_link', '=', $host)->where('pub_date', '=', $today)->find();
@@ -25,7 +30,6 @@ abstract class AbstractScrapper {
 
         libxml_clear_errors();
         libxml_use_internal_errors($oldSetting);
-
         return $deal->id;
     }
 
