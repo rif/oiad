@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.superbiiz.com/landing.php?id=0bc97b49879ca7
 class Superbiiz extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "SuperBiiz";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Superbiiz extends AbstractScrapper {
 }
 
 ?>
+

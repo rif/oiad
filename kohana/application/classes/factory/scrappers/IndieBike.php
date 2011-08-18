@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.indiebike.com/The-Peloton/Deal-of-the-Day",
 class IndieBike extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "indie bike";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class IndieBike extends AbstractScrapper {
 }
 
 ?>
+

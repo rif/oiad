@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.vitabase.com/supplements/daily-deal.aspx", 
 class Vitabase extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "VitaBase";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Vitabase extends AbstractScrapper {
 }
 
 ?>
+

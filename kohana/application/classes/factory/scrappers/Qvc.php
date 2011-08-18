@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.qvc.com/qic/qvcapp.aspx/app.detail/params.i
 class Qvc extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "QVC";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Qvc extends AbstractScrapper {
 }
 
 ?>
+

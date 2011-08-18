@@ -6,7 +6,6 @@ PolyFactory::addScrapper("https://www.friendsandfamilycircle.com/", new FriendsA
 class FriendsAndFamilyCircle extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Friends and Family Circle";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class FriendsAndFamilyCircle extends AbstractScrapper {
 }
 
 ?>
+

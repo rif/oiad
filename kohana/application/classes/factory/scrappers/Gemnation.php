@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.gemnation.com/watches/Deal-Of-The-Day.html"
 class Gemnation extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Gemnation";
         	$deal->desc_short = $this->_xpath("//span[@class='watch-title'][1]");
         	$deal->price = $this->_xpath("//td[@class='our-price-value']");
         	$deal->desc_long = $this->_xpath("//td/span[@class='brand-info']");
@@ -16,3 +15,4 @@ class Gemnation extends AbstractScrapper {
 }
 
 ?>
+

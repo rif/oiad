@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.golfsmith.com/", new Golfsmith());
 class Golfsmith extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Golfsmith";
 			$deal->item_link = $host.$this->_xpath("//p[@id='qbd_buy_button']/a/@href");
         	$deal->desc_short = $this->_xpath("//p[@id='qbd_product_title']/a");
         	$deal->price = $this->_xpath("//p[@id='qbd_pricing_price']");
@@ -17,3 +16,4 @@ class Golfsmith extends AbstractScrapper {
 }
 
 ?>
+

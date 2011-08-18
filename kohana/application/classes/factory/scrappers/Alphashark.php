@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.alphashark.com/", new Alphashark());
 class Alphashark extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "AlphaShark";
         	$deal->desc_short = $this->_xpath("/html/body/form[@id='aspnetForm']/div[@id='page']/div[@id='columns']/div[@id='ctl00_PageContent_pnlContent']/div[@id='rightcol']/h2");
         	$deal->price = $this->_xpath("/html/body/form[@id='aspnetForm']/div[@id='page']/div[@id='columns']/div[@id='ctl00_PageContent_pnlContent']/div[@id='rightcol']/div[@class='price']/div[@class='cost']");
         	$deal->desc_long = $this->_xpath("/html/body/form[@id='aspnetForm']/div[@id='page']/div[@id='columns']/div[@id='ctl00_PageContent_pnlContent']/div[@id='rightcol']/p/strong[1]");
@@ -16,3 +15,4 @@ class Alphashark extends AbstractScrapper {
 }
 
 ?>
+

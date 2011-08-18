@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.joesnewbalanceoutlet.com/", new JoeSNewBala
 class JoeSNewBalanceOutlet extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Joe's New Balance Outlet";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class JoeSNewBalanceOutlet extends AbstractScrapper {
 }
 
 ?>
+

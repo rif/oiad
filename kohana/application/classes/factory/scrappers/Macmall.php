@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.macmall.com/n/Deal-Of-The-Day/macCustomPage
 class Macmall extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "MacMall";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Macmall extends AbstractScrapper {
 }
 
 ?>
+

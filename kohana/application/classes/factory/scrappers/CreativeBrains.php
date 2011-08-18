@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.creativebrainsonline.com/DEAL-OF-THE-DAY_c_
 class CreativeBrains extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Creative Brains";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class CreativeBrains extends AbstractScrapper {
 }
 
 ?>
+

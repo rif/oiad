@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.geeks.com/one-day-deal/", new GeeksCom());
 class GeeksCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Geeks.com";
         	$deal->desc_short = $this->_xpath("//td[@class='productdetheader']");
         	$deal->price = $this->_xpath("/]/td[@class='checkoutprice']/font/b");
         	$deal->desc_long = $this->_xpath("//td[@class='txt11px']/ul");
@@ -16,3 +15,4 @@ class GeeksCom extends AbstractScrapper {
 }
 
 ?>
+

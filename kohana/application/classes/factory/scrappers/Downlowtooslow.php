@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.downlowtooslow.com/", new Downlowtooslow())
 class Downlowtooslow extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "DownLowTooSlow";
         	$deal->desc_short = $this->_xpath("//table[@class='curved']//font");
         	$deal->price = $this->_xpath("//td[@style='font-size:26px;padding-right:6px;']");
         	$deal->desc_long = $this->_xpath("//td[@style='padding-left:20px;']");
@@ -16,3 +15,4 @@ class Downlowtooslow extends AbstractScrapper {
 }
 
 ?>
+

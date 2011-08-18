@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.worldofbags.com/D-O-W", new WorldOfBags());
 class WorldOfBags extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "World of Bags";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class WorldOfBags extends AbstractScrapper {
 }
 
 ?>
+

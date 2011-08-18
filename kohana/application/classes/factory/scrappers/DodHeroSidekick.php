@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.dodhero.com/index.php?main_page=index&cPath
 class DodHeroSidekick extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "DOD Hero Sidekick";
         	$deal->desc_short = $this->_xpath("//h1[@id='productName']");
         	$deal->price = $this->_xpath("//h2[@id='productPrices']");
         	$deal->desc_long = $this->_xpath("//div[@id='productDescription']");
@@ -16,3 +15,4 @@ class DodHeroSidekick extends AbstractScrapper {
 }
 
 ?>
+

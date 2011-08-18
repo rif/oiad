@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.theshoppingchannel.com/home.do", new Shoppi
 class ShoppingChannel extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Shopping Channel";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class ShoppingChannel extends AbstractScrapper {
 }
 
 ?>
+

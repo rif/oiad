@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://closeout.thingfling.com/", new ThingFlingCloseo
 class ThingFlingCloseouts extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Thing Fling Closeouts";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class ThingFlingCloseouts extends AbstractScrapper {
 }
 
 ?>
+

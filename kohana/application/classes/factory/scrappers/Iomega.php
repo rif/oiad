@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://go.iomega.com/en-us/offer/deal-of-day/", new Io
 class Iomega extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "iomega";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Iomega extends AbstractScrapper {
 }
 
 ?>
+

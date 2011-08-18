@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.dailygemdeals.com/", new DailyGemDeals());
 class DailyGemDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Daily Gem Deals";
         	$deal->desc_short = $host.$this->_xpath("/html/body/div[@id='Layer3']/img/@src");
         	$deal->price = $host.$this->_xpath("/html/body/div[@id='Layer13']/img/@src");
         	$deal->desc_long = $this->_xpath("/html/body/div[@id='Layer11']/p/font");
@@ -16,3 +15,4 @@ class DailyGemDeals extends AbstractScrapper {
 }
 
 ?>
+

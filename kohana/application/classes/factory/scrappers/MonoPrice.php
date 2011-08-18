@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.monoprice.com/home/index.asp", new MonoPric
 class MonoPrice extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Mono Price";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class MonoPrice extends AbstractScrapper {
 }
 
 ?>
+

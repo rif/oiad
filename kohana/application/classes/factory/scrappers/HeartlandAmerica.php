@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.heartlandamerica.com/browse/deal_of_day.asp
 class HeartlandAmerica extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Heartland America";
         	$deal->desc_short = $this->_xpath("//span[@class='dod_title']");
         	$deal->price = $this->_xpath("//div[@id='priceblock']/img/@src");
         	$deal->desc_long = $this->_xpath("//div[@id='description']");
@@ -16,3 +15,4 @@ class HeartlandAmerica extends AbstractScrapper {
 }
 
 ?>
+

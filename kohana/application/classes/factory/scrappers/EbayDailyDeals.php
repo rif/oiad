@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://deals.ebay.com/", new EbayDailyDeals());
 class EbayDailyDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "eBay Daily Deals";
         	$deal->desc_short = $this->_xpath("//h2[@id='v4-19']");
         	$deal->price = $this->_xpath("//td[@class='curPrice_style']");
         	$deal->desc_long = $this->_xpath("//a[@id='but_v4-20']/@href");
@@ -16,3 +15,4 @@ class EbayDailyDeals extends AbstractScrapper {
 }
 
 ?>
+

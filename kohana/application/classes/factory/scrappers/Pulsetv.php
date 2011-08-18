@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://deal.pulsetv.com/", new Pulsetv());
 class Pulsetv extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "PulseTV";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Pulsetv extends AbstractScrapper {
 }
 
 ?>
+

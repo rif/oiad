@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.baubleoftheday.com/", new BaubleOfTheDay())
 class BaubleOfTheDay extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Bauble of the Day";
         	$deal->desc_short = $this->_xpath("//h1[@class='dod_product_name']");
         	$deal->price = $this->_xpath("//span[@class='dod_product_sale_price']");
         	$deal->desc_long = $this->_xpath("//td[@class='prodpage_name']");
@@ -16,3 +15,4 @@ class BaubleOfTheDay extends AbstractScrapper {
 }
 
 ?>
+

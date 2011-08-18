@@ -6,7 +6,6 @@ PolyFactory::addScrapper("?", new OverstockCom());
 class OverstockCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Overstock.com";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class OverstockCom extends AbstractScrapper {
 }
 
 ?>
+

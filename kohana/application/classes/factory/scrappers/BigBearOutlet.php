@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.bigbearoutlet.com/servlet/StoreFront", new 
 class BigBearOutlet extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Big Bear Outlet";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class BigBearOutlet extends AbstractScrapper {
 }
 
 ?>
+

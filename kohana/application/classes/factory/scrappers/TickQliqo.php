@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://tick.qliqo.com/", new TickQliqo());
 class TickQliqo extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Tick.Qliqo";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class TickQliqo extends AbstractScrapper {
 }
 
 ?>
+

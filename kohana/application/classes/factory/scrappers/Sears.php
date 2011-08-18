@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.sears.com/shc/s/dap_10153_12605_DAP_WOW+Spe
 class Sears extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Sears";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Sears extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.apress.com/dailydeal/", new Apress());
 class Apress extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Apress";
         	$deal->desc_short = $this->_xpath("//div[@class='product-name']/h2");
         	$deal->price = $this->_xpath("//div[@class='block block-dotd']/p[@class='centred'][2]/a[@class='medium yellow button']");
         	$deal->desc_long = $this->_xpath("//div[@class='product-main-info']/div[@class='short-description std ']");
@@ -16,3 +15,4 @@ class Apress extends AbstractScrapper {
 }
 
 ?>
+

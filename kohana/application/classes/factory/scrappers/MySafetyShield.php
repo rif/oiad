@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.mysafetyshield.com/", new MySafetyShield())
 class MySafetyShield extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "My Safety Shield";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class MySafetyShield extends AbstractScrapper {
 }
 
 ?>
+

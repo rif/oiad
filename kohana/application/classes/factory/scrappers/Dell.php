@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://accessories.us.dell.com/sna/sna.aspx?c=us&cs=19
 class Dell extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Dell";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Dell extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.soccer.com/Navigation.process?Ne=330&Srp=24
 class SoccerCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Soccer.com";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class SoccerCom extends AbstractScrapper {
 }
 
 ?>
+

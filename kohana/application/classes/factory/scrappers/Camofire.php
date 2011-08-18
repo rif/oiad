@@ -6,7 +6,6 @@ PolyFactory::addScrapper("https://www.camofire.com/", new Camofire());
 class Camofire extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "CamoFire";
         	$deal->desc_short = $this->_xpath("//div[@id='contentLeft']/h1");
         	$deal->price = $this->_xpath("//div[@id='productInfoBox']/div[@id='left']/div[@class='txtTitleOrange']");
         	$deal->desc_long = $this->_xpath("//div[@id='contentLeft']/div[5]");
@@ -16,3 +15,4 @@ class Camofire extends AbstractScrapper {
 }
 
 ?>
+

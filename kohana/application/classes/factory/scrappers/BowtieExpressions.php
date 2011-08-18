@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.bowtie-expressions.com/assorted-bow-ties.ht
 class BowtieExpressions extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Bowtie Expressions";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class BowtieExpressions extends AbstractScrapper {
 }
 
 ?>
+

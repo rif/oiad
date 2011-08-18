@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://cinderellawine.com/", new CinderellaWine());
 class CinderellaWine extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Cinderella Wine";
         	$deal->desc_short = $this->_xpath("//a[@class='dyntextval']");
         	$deal->price = $this->_xpath("//p[@id='product-dollars']");
         	$deal->desc_long = $this->_xpath("//p[@id='review']");
@@ -16,3 +15,4 @@ class CinderellaWine extends AbstractScrapper {
 }
 
 ?>
+

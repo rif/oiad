@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.dailysalesforyou.com/Mens-Watch-Deal", new 
 class DailySalesForYouMens extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Daily Sales For You Mens";
         	$deal->desc_short = $this->_xpath("/html/body/div[@class='container']/div[3]/div[@class='span-24 last'][2]/span");
         	$deal->price = $this->_xpath("//span[@style='color:#3974D4; font-weight:bold; font-size:40px;']");
         	$deal->desc_long = $this->_xpath("/html/body/div[@class='container']/div[3]/div[@class='span-12 last']/div/div[@class='span-10 last']");
@@ -16,3 +15,4 @@ class DailySalesForYouMens extends AbstractScrapper {
 }
 
 ?>
+
