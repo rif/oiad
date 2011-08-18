@@ -5,15 +5,14 @@ from fabric.colors import green
 @task
 def ci():
     'Commit localy using mercurial'
-    local('hg ci -m "another commit from fabric"' )
-    local('hg archive ~/Documents/prog/oiad/kohana/')
+    comment = prompt('Commit comment: ', default='another commit from fabric')
+    local('hg ci -m "%s"' % comment)
+    push()
 
 @runs_once
 def push():
     print(green('pushing...'))
-    #local("svn status %(path)s| awk '{if ($1 == \"?\") print $2 }' | xargs svn add" %{'path': '/home/rif/Documents/prog/oiad/'})
-    comment = prompt('Officail commit comment: ', default='another commit from fabric')
-    local('svn ci -m "%s" /home/rif/Documents/prog/oiad/' % comment)
+    local('hg push')
 
 @task
 @hosts('radu.fericean@dev.upandrunningsoftware.com')
