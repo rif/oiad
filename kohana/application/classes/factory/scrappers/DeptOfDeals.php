@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.deptofdeals.com/", new DeptOfDeals());
 class DeptOfDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Dept of Deals";
         	$deal->desc_short = $this->_xpath("//a[@class='productnamecolor colors_productname']");
         	$deal->price = $this->_xpath("//font[@class='pricecolor colors_productprice']");
         	$deal->desc_long = $this->_xpath("//a[@class='productnamecolor colors_productname']");
@@ -16,3 +15,4 @@ class DeptOfDeals extends AbstractScrapper {
 }
 
 ?>
+

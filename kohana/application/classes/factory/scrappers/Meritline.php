@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.meritline.com/dailydeals.aspx", new Meritli
 class Meritline extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Meritline";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Meritline extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.teediculous.com/", new Teediculous());
 class Teediculous extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Teediculous";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Teediculous extends AbstractScrapper {
 }
 
 ?>
+

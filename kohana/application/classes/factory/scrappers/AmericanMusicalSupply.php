@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.americanmusical.com/RSS_Feeds/Ndnd.aspx", n
 class AmericanMusicalSupply extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "American Musical Supply";
         	$deal->desc_short = $this->_xpath("//div[@class='textboxndnd']/a");
         	$deal->price = $this->_xpath("//div[@class='ndndinfort']/div[@class='ndndsaleprices']");
         	$deal->desc_long = $this->_xpath("//div[@class='ndndinfort']");
@@ -16,3 +15,4 @@ class AmericanMusicalSupply extends AbstractScrapper {
 }
 
 ?>
+

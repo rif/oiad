@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.closeoutmania.com/", new Closeoutmania());
 class Closeoutmania extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "CloseoutMania";
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_contentBody_lblTitle']");
         	$deal->price = $this->_xpath("//span[@id='ctl00_contentBody_lblDealPrice']");
         	$deal->desc_long = $this->_xpath("//span[@id='ctl00_contentBody_lblDesc']");
@@ -16,3 +15,4 @@ class Closeoutmania extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.muscleandstrength.com/store/deal.html", new
 class MuscleStrength extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Muscle & Strength";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class MuscleStrength extends AbstractScrapper {
 }
 
 ?>
+

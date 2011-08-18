@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.gardensalive.com/", new GardensAlive());
 class GardensAlive extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Gardens Alive!";
         	$deal->desc_short = $this->_xpath("//a[@class='red14']/font");
         	$deal->price = $this->_xpath("//span[@style='color: #CC0000']/b");
         	$deal->desc_long = $this->_xpath("//td[@width='220']");
@@ -16,3 +15,4 @@ class GardensAlive extends AbstractScrapper {
 }
 
 ?>
+

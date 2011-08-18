@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.weeklycloseouts.com/page/en/home.aspx", new
 class Weeklycloseouts extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "WeeklyCloseOuts";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Weeklycloseouts extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.cowboom.com/deal-of-the-day.cfm", new Cowbo
 class Cowboom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "CowBoom";
         	$deal->desc_short = $this->_xpath("//div[@class='DOTDTitle']");
         	$deal->price = $this->_xpath("//div[@class='DOTDPrice']");
         	$deal->desc_long = $this->_xpath("//div[@id='ProdDesc']");
@@ -16,3 +15,4 @@ class Cowboom extends AbstractScrapper {
 }
 
 ?>
+

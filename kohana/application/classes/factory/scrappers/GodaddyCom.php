@@ -6,7 +6,6 @@ PolyFactory::addScrapper("(need to sign up for it)", new GodaddyCom());
 class GodaddyCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "GoDaddy.com";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class GodaddyCom extends AbstractScrapper {
 }
 
 ?>
+

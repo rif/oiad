@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.watches.yugster.com/default.aspx", new Yugs
 class YugsterWatch extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Yugster Watch";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class YugsterWatch extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.earlstees.com/shop/catalog/", new Earlstees
 class Earlstees extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "EarlsTees";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("//span[@class='productSpecialPrice']");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Earlstees extends AbstractScrapper {
 }
 
 ?>
+

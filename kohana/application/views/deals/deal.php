@@ -1,6 +1,7 @@
-<h1><?php echo $deal->site_name ?></h1>
+<?php $site = ORM::factory('site',$deal->site) ?>
+<h1><?php echo  $site->name; ?></h1>
 <?php
-	echo "<b>Site link: </b>".HTML::anchor($deal->site_link, $deal->site_link)."<br/>"; 
+	echo "<b>Site link: </b>".HTML::anchor($site->page,$site->page)."<br/>"; 
 	echo "<b>Item link: </b>".HTML::anchor($deal->item_link, $deal->item_link)."<br/>"; 
 	echo "<b>Pictures</b>:<br/>";
 	if($deal->pictures){

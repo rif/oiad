@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.rei.com/cj/outlet/deal-of-the-day", new Rei
 class ReiOutlet extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "REI Outlet";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class ReiOutlet extends AbstractScrapper {
 }
 
 ?>
+

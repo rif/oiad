@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.slipperyrockcigars.com/", new SlipperyRockC
 class SlipperyRockCigars extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Slippery Rock Cigars";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class SlipperyRockCigars extends AbstractScrapper {
 }
 
 ?>
+

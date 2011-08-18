@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.skinstore.com/the-daily-special.aspx", new 
 class SkinstoreCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "SkinStore.com";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class SkinstoreCom extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.cellfreeks.com/dealoftheday.asp", new CellF
 class CellFreaks extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Cell Freaks";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class CellFreaks extends AbstractScrapper {
 }
 
 ?>
+

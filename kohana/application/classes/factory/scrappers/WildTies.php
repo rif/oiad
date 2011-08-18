@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.wildties.com/ties/WS225687.html", new WildT
 class WildTies extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Wild Ties";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class WildTies extends AbstractScrapper {
 }
 
 ?>
+

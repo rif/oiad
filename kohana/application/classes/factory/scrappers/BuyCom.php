@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.buy.com/retail/clearance/todays_deals.asp",
 class BuyCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Buy.com";
         	$deal->desc_short = $this->_xpath("//a[@class='productTitle']/b");
         	$deal->price = $this->_xpath("//b[@class='blueText']");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class BuyCom extends AbstractScrapper {
 }
 
 ?>
+

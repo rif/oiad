@@ -3,9 +3,10 @@
 $i = 0;
 foreach($deals as $d)
 {
+	$site = ORM::factory('site',$d->site);
 	echo '<li>';
-	echo HTML::anchor('/deals/showdeal/'.$d->id, $d->site_name)."<br/>";
-	echo "<b>Site link: </b>".HTML::anchor($d->site_link, $d->site_link)."<br/>"; 
+	echo HTML::anchor('/deals/showdeal/'.$d->id, $site->name)."<br/>";
+	echo "<b>Site link: </b>".HTML::anchor($site->page, $site->page)."<br/>"; 
 	echo "<b>Item link: </b>".HTML::anchor($d->item_link, $d->item_link)."<br/>"; 
 	echo "<b>Pictures</b>:<br/>";
 	if($d->pictures){

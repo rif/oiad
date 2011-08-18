@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.alpacadirect.com/results~Sweaters~Clearance
 class AlpacaDirect extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Alpaca Direct";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class AlpacaDirect extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.kachingkachingstore.com/", new KachingKachi
 class KachingKaching extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Kaching Kaching";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class KachingKaching extends AbstractScrapper {
 }
 
 ?>
+

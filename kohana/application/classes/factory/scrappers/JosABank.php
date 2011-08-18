@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.josbank.com/menswear/shop/SubCategory_11001
 class JosABank extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "JoS A Bank";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class JosABank extends AbstractScrapper {
 }
 
 ?>
+

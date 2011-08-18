@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.amazon.com/dp/B004G2LUXO/", new AmazonFreeb
 class AmazonFreebie extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Amazon Freebie";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class AmazonFreebie extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.prohealth.com/index.cfm", new Prohealth());
 class Prohealth extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "ProHealth";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Prohealth extends AbstractScrapper {
 }
 
 ?>
+

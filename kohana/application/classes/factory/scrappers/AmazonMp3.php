@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.amazon.com/MP3-Music-Download/b/ref=topnav_
 class AmazonMp3 extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Amazon MP3";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class AmazonMp3 extends AbstractScrapper {
 }
 
 ?>
+

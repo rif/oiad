@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.electronics-expo.com/index.php?page=item&id
 class ElectronicsExpo extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Electronics Expo";
         	$deal->desc_short = $this->_xpath("//font[@color='#8BC63F']");
         	$deal->price = $this->_xpath("//td[@class='our_price'][2]");
         	$deal->desc_long = $this->_xpath("//div[@class='midbox_display']//ul");
@@ -16,3 +15,4 @@ class ElectronicsExpo extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.sierratradingpost.com/BarnBurners/", new Si
 class SierraTradingPost extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Sierra Trading Post";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class SierraTradingPost extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.housewaresdeals.com/on/demandware.store/Sit
 class HousewaresDeals extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Housewares Deals";
         	$deal->desc_short = $this->_xpath("//div[@class='rightcolumn']/h3");
         	$deal->price = $this->_xpath("//p[@class='price accentcolor']");
         	$deal->desc_long = $this->_xpath("//p[@class='product-description']");
@@ -16,3 +15,4 @@ class HousewaresDeals extends AbstractScrapper {
 }
 
 ?>
+

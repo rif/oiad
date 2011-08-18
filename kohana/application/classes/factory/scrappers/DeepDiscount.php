@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.deepdiscount.com/deals_daily-deep-deal/", n
 class DeepDiscount extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Deep Discount";
         	$deal->desc_short = $this->_xpath("//table[@class='ae_noborder']/tbody/tr[1]/td[2]/div/p[1]/a/strong/span");
         	$deal->price = $this->_xpath("//table[@class='ae_noborder']/tbody/tr[1]/td[2]/div/p[1]/span[2]");
         	$deal->desc_long = $this->_xpath("//table[@class='ae_noborder']/tbody/tr[3]/td/p");
@@ -16,3 +15,4 @@ class DeepDiscount extends AbstractScrapper {
 }
 
 ?>
+

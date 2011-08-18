@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://dealadaygolf.com/weeklydeals.php", new DealADay
 class DealADayGolfWeekly extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Deal A Day Golf Weekly";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class DealADayGolfWeekly extends AbstractScrapper {
 }
 
 ?>
+

@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.woot.com/", new Woot());
 class Woot extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "woot!";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class Woot extends AbstractScrapper {
 }
 
 ?>
+

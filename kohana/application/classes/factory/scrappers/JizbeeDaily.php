@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.jizbee.com/", new JizbeeDaily());
 class JizbeeDaily extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Jizbee Daily";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class JizbeeDaily extends AbstractScrapper {
 }
 
 ?>
+

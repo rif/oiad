@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.barnesandnoble.com/best-deals.asp", new Bar
 class BarnesNoble extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Barnes & Noble";
         	$deal->desc_short = $this->_xpath("//div[@id='dd2-maindeal']/div[@class='dd2-productinfo-wrap']/div[@class='dd2-pricing edlp2']/div[@class='dd2-pricing-padding']/div[@class='dd2-title']/a/span[@class='Title']");
         	$deal->price = $this->_xpath("//div[@id='dd2-maindeal']/div[@class='dd2-productinfo-wrap']/div[@class='dd2-pricing edlp2']/div[@class='dd2-pricing-padding']/div[@class='dd2-todaysprice']");
         	$deal->desc_long = $this->_xpath("//div[@id='dd2-maindeal']/div[@class='dd2-productinfo-wrap']/div[@class='dd2-copy']");
@@ -16,3 +15,4 @@ class BarnesNoble extends AbstractScrapper {
 }
 
 ?>
+

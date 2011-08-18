@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.amazon.com/gp/feature.html/ref=amb_link_858
 class AmazonVideoGame extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Amazon Video Game";
         	$deal->desc_short = $this->_xpath("//tr[@class='small'][1]/td[3]/a[1]");
         	$deal->price = $this->_xpath("//table[@class='amabot_widget']/tbody/tr[@class='small'][2]/td[2]/table/tbody/tr[2]/td[2]/b[@class='price']");
         	$deal->desc_long = $this->_xpath("//table[@class='amabot_widget']/tbody/tr[3]/td");
@@ -16,3 +15,4 @@ class AmazonVideoGame extends AbstractScrapper {
 }
 
 ?>
+

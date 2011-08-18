@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.dealadaywake.com/", new DealADayWake());
 class DealADayWake extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Deal a Day Wake";
         	$deal->desc_short = $this->_xpath("//h1[@class='mp_current_name']");
         	$deal->price = $this->_xpath("//div[@class='mp_current_price']");
         	$deal->desc_long = $this->_xpath("//div[@class='mp_current_content']");
@@ -16,3 +15,4 @@ class DealADayWake extends AbstractScrapper {
 }
 
 ?>
+

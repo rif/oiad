@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.orangeonions.com/category/peel_of_the_day/"
 class OrangeOnions extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "Orange Onions";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
@@ -16,3 +15,4 @@ class OrangeOnions extends AbstractScrapper {
 }
 
 ?>
+
