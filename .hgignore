@@ -7,3 +7,4 @@ media/.sass-cache
 application/logs
 .geanyprj
 .~lock.*
+oiad.sublime-project
