@@ -12,13 +12,13 @@ abstract class AbstractScrapper {
       libxml_clear_errors();
       
       try {
-	$html = new DOMDocument();
-	$html->loadHtmlFile($site->page);
-	$this->xpath = new DOMXPath($html);
+  	    $html = new DOMDocument();
+  	    $html->loadHtmlFile($site->page);
+  	    $this->xpath = new DOMXPath($html);
       } catch(ErrorException $e){
-	return $e->getMessage();
+        return $e->getMessage();
       }
-      
+
       $deal = ORM::factory('deal');
       $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();
       $deal->site = $site;

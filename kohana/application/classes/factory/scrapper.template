@@ -6,7 +6,6 @@ PolyFactory::addScrapper("{{address}}", new {{class}}());
 class {{class}} extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 	$deal->site_name = "{{name}}";
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
