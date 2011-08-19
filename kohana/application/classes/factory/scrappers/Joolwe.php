@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.joolwe.com/steal-of-the-day.html", new Jool
 class Joolwe extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='product-name']/h1");
+        	$deal->price = $this->_xpath("//p[@class='special-price']/span");
+        	$deal->desc_long = $this->_xpath("//div[@class='short-description std']");
+        	$deal->pictures = $this->_xpath("//a[@id='mz1']/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

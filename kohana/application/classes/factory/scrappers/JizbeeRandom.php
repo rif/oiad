@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.jizbee.com/random/", new JizbeeRandom());
 class JizbeeRandom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//td[@class='bigheader']");
+        	$deal->price = $this->_xpath("//span[@class='bluemedium']/font");
+        	$deal->desc_long = $this->_xpath("//div[@id='pageleftbg']/div/p[2]/span[@class='Apple-style-span']");
+        	$deal->desc_long = $this->_xpath("//div[@id='pageleftbg']/div");
         	$deal->shipping = $this->_xpath("");
     }
 }
