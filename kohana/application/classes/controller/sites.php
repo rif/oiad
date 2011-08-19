@@ -45,20 +45,7 @@ Class Controller_Sites extends Controller_Template {
     if($site_id != '') {
       $view->content .= Request::factory("scrapp/index/".$site_id)->execute()->body();
     } else {
-      $sites = $sites->where('active', '=', 'T')->find_all();
-			
-      $index = 1;
-      foreach ($sites as $site) {
-	$scrapper = PolyFactory::getScrapper($site->page);
-	if ($scrapper) {
-	  $deal_id = $scrapper->scrapp($site);
-	  if(is_numeric($deal_id)){
-	    $view->content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $site->page)."<br />";
-	  } else {
-	    $view->content .= "scrapp failed for ".$site->page." reason:".$deal_id."<br />";
-	  }					
-	}
-      }
+      $view->content .= Request::factory("scrapp/all")->execute()->body();
     }
     $this->template->content = $view;
   }
