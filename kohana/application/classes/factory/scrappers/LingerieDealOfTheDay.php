@@ -10,7 +10,7 @@ class LingerieDealOfTheDay extends AbstractScrapper {
         	$deal->price = $this->_xpath("//span[@class='dod_product_sale_price']");
         	$deal->desc_long = $this->_xpath("//div[@id='desc_div']/p[1]");
         	$deal->pictures = $host.$this->_xpath("//img[@id='img_main']/@src");
-        	$deal->shipping = $this->_xpath("//table/tbody/tr/td/p[2]");
+        	$deal->shipping = $this->_xpath("//p[contains(., 'Shipping')]");
     }
 }
 

@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.maczot.com/", new Maczot());
 class Maczot extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@id='product']//h2");
+        	$deal->price = $this->_xpath("//span[@id='zotprice']");
+        	$deal->desc_long = $this->_xpath("//div[@id='description'][1]/p[2]");
+        	$deal->pictures = $this->_xpath("//div[@id='product']//img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
