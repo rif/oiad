@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.newdavincis.com/specials.html", new Newdavi
 class Newdavincis30Minute extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->item_link = $this->_get_host($host).$this->_xpath("//div[@id='davinci_special']/a[2]/@href");
+        	$deal->desc_short = $this->_xpath("//div[@id='weekdaysaleContent']/a");
+        	$deal->price = $this->_xpath("//span[@class='productSpecialPrice']");
+        	$deal->desc_long = $this->_get_host($host).$this->_xpath("//div[@id='davinci_special']/a[2]/@href");
+        	$deal->pictures = $this->_get_host($host).$this->_xpath("//div[@id='weekdaysaleContent']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

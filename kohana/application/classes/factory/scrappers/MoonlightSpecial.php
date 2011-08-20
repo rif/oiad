@@ -6,11 +6,11 @@ PolyFactory::addScrapper("http://www.moonlightspecial.com/", new MoonlightSpecia
 class MoonlightSpecial extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//span[@class='ProductTitle']");
+        	$deal->price = $this->_xpath("//span[@class='ProductPrice']");
+        	$deal->desc_long = $this->_xpath("//div[@id='ProductDetail']");
+        	$deal->pictures = $this->_xpath("//a[contains(@class, 'zoom')]/img/@src");
+        	$deal->shipping = $this->_xpath("//span[@class='ProductShipping']");
     }
 }
 

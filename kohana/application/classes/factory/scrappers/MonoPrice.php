@@ -6,11 +6,12 @@ PolyFactory::addScrapper("http://www.monoprice.com/home/index.asp", new MonoPric
 class MonoPrice extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//a[contains(@title,'View detail information')]/@href");
+        	$deal->desc_short = $this->_xpath("//a[contains(@title,'View detail information')]");
+        	$deal->price = $this->_xpath("//font[@color='#CC0000']");
+        	$deal->desc_long = $this->_xpath("//a[contains(@title,'View detail information')]/@href");
+        	$deal->pictures = $this->_xpath("//img[@class='img']/@src");
+        	$deal->shipping = $this->_xpath("//td[@class='black11px']");
     }
 }
 

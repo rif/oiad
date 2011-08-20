@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://shop.pacsun.com/content.jsp?pageName=sale", new
 class PacsunWomens extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@class='dealContainer']/@href");
+        	$deal->desc_short = $this->_xpath("//li[@class='prod']");
+        	$deal->price = $this->_xpath("//li[@class='price']");
+        	$deal->desc_long = $this->_xpath("//li[@class='prodDetail']");
+        	$deal->pictures = $this->_xpath("//div[@class='dealIMG']/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

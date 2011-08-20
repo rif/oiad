@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.overstockdrugstore.com/index.php", new Over
 class Overstockdrugstore extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@id='dealofdaycontent']/a/@href");
+        	$deal->desc_short = $this->_xpath("//div[@id='dealofdaycontent']/span");
+        	$deal->price = $this->_xpath("//span[@class='ourPrice']");
+        	$deal->desc_long = $this->_xpath("//div[@id='dealofdaycontent']/a/@href");
+        	$deal->pictures = $this->_xpath("//div[@id='dealofdaycontent']/a[1]/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
