@@ -1,7 +1,7 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.newdavincis.com/specials.html", new Newdavincis());
+PolyFactory::addScrapper("http://www.newdavincis.com/specials.html______", new Newdavincis());
 
 class Newdavincis extends AbstractScrapper {
 

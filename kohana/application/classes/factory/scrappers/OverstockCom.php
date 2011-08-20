@@ -1,7 +1,7 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("?", new OverstockCom());
+PolyFactory::addScrapper("http://www.overstock.com/", new OverstockCom());
 
 class OverstockCom extends AbstractScrapper {
 

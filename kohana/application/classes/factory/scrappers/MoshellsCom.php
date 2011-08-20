@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.moshells.com/", new MoshellsCom());
 class MoshellsCom extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+	 		$deal->item_link = $host.$this->_xpath("//div[@class='rgt-top-bnr-lft-text']/h2/a/@href");
+        	$deal->desc_short = $this->_xpath("///div[@class='rgt-top-bnr-lft-text']/h2/a");
+        	$deal->price = $this->_xpath("//div[@class='rgt-bnr-price']");
+        	$deal->desc_long = $host.$this->_xpath("//div[@class='rgt-top-bnr-lft-text']/h2/a/@href");
+        	$deal->pictures = $this->_xpath("//div[@class='rgt-bnr-pro-img']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

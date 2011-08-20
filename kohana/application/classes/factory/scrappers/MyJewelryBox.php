@@ -1,7 +1,7 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.myjewelrybox.com/", new MyJewelryBox());
+PolyFactory::addScrapper("http://www.myjewelrybox.com/dod/", new MyJewelryBox());
 
 class MyJewelryBox extends AbstractScrapper {
 

@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.onetooladay.com/", new OneToolADay());
 class OneToolADay extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='entry']/h2[1]");
+        	$deal->price = $this->_xpath("//b[contains(.,'$')]");
+        	$deal->desc_long = $this->_xpath("//div[@id='info_box']");
+        	$deal->pictures = $this->_xpath("//div[@class='product-image']/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

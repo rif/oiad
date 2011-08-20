@@ -6,11 +6,12 @@ PolyFactory::addScrapper("http://www.omahasteaks.com/servlet/OnlineShopping?Dsp=
 class OmahaSteaks extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@class='lefttopdealoftheday']/a/@href");
+        	$deal->desc_short = $this->_xpath("//div[@class='lefttopdealoftheday']/a");
+        	$deal->price = $this->_xpath("//div[@class='lefttopdealoftheday']/span[2]");
+        	$deal->desc_long = $this->_xpath("//span[@class='componentitems']");
         	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->shipping = $this->_xpath("//div[@class='topnavbar'][1]/a[4]/@href");
     }
 }
 
