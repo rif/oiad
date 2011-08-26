@@ -6,11 +6,11 @@ PolyFactory::addScrapper("http://www.qvc.com/qic/qvcapp.aspx/app.detail/params.i
 class Qvc extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='proddetailsinfo']/div[1]/h1");
+        	$deal->price = $this->_xpath("//li[@class='introprice']");
+        	$deal->desc_long = $this->_xpath("//div[@class='LongDesc']");
+        	$deal->pictures = $this->_xpath("//img[@name='DynObject32Image']/@src");
+        	$deal->shipping = $this->_xpath("//div[@class='pricingcolumn']/ul/li[6]");
     }
 }
 
