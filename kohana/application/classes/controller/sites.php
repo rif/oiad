@@ -56,18 +56,16 @@ Class Controller_Sites extends Controller_Template {
     $site = ORM::factory('site', $site_id);
     if (!empty($_POST)) {
       try
-	{
-	  $site->values($_POST); 
-	  if(!array_key_exists('active', $_POST)) {
-	    $site->active = 'F';
-	  }
-	  $site->save();
-	  $this->request->redirect(URL::site('/'));
-	}
+      {
+      	  $site->values($_POST); 
+      	  if(!array_key_exists('active', $_POST)) $site->active = 'F';
+      	  $site->save();
+      	  $this->request->redirect(URL::site('/'));
+      }
       catch (ORM_Validation_Exception $e)
-	{
-	  $errors = $e->errors('models');
-	}
+      {
+      	  $errors = $e->errors('models');
+      }
     }
     $view->site = $site;
     $this->template->content = $view;

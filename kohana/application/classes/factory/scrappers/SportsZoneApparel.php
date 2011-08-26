@@ -6,11 +6,11 @@ PolyFactory::addScrapper("http://www.sportszoneapparel.com/", new SportsZoneAppa
 class SportsZoneApparel extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//h5/a");
+        	$deal->price = $this->_xpath("//span[@class='price']");
+        	$deal->desc_long = $this->_xpath("//p[@class='product_desc']/a");
+        	$deal->pictures = $host.$this->_xpath("//a[@class='product_image']/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@id='footer']/center/b/a[2]/@href");
     }
 }
 

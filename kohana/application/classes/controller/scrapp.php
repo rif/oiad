@@ -33,6 +33,8 @@ Class Controller_Scrapp extends Controller {
           }
         }
     }
+    $site->last_scrapp = date ("Y-m-d H:m:s");
+    $site->save();
     $this->response->body($content);
   }
       
@@ -60,6 +62,8 @@ Class Controller_Scrapp extends Controller {
           }
         }         
       }
+      $site->last_scrapp = date ("Y-m-d H:m:s");
+      $site->save();
     }
     $this->response->body($content);
   }

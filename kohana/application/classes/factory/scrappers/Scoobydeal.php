@@ -6,11 +6,11 @@ PolyFactory::addScrapper("http://www.scoobydeal.com/", new Scoobydeal());
 class Scoobydeal extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//td[@id='productname']");
+        	$deal->price = $this->_xpath("//div[@id='details']//th");
+        	$deal->desc_long = $this->_xpath("//div[@id='container_info']");
+        	$deal->pictures = $host.$this->_xpath("//div[@id='pic']/img/@src");
+        	$deal->shipping = $this->_xpath("//div[@id='details']//td[@class='blacky']");
     }
 }
 
