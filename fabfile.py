@@ -23,3 +23,7 @@ def deploy():
     'Deploy the app to the target environment'
     run('svn up /data/www/oiad.dev.upandrunningsoftware.com/htdocs/')
 
+@task
+@hosts('radu.fericean@dev.upandrunningsoftware.com')
+def database_reimport():
+    run('mysql --user=root -p oiad < /data/www/oiad.dev.upandrunningsoftware.com/htdocs/schema.sql')
