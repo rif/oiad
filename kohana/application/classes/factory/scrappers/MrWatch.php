@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.mrwatch.com/Hot_Deal_of_the_Day-6_sale.html
 class MrWatch extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+	 		$deal->item_link = $this->_get_host($host).$this->_xpath("///h4/a/@href");
+        	$deal->desc_short = $this->_xpath("///h4/a");
+        	$deal->price = $this->_xpath("//h6");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->pictures = $this->_get_host($host).$this->_xpath("//div[@class='watch_holder_container left']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

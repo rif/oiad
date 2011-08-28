@@ -5,12 +5,10 @@ PolyFactory::addScrapper("http://www.gooddeals18.com/category/deal_of_the_day/",
 
 class GoodDeals18 extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+	 public function scrapp($host) {
+        $items = Feed::parse('http://static.zoovy.com/rss/gooddeals18/DOTD.xml');
+        //$item = $items[0];
+ 		print_r($items);
     }
 }
 

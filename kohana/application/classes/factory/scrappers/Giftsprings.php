@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.giftsprings.com/Merchant2/merchant.mv?Scree
 class Giftsprings extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("/html/body/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[2]/blockquote/font[2]/b/table/tbody/tr/td/table/tbody/tr[2]/td[2]/font/a");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@class='product-name']/a/@href");
+        	$deal->desc_short = $this->_xpath("//div[@class='product-name']/a");
+        	$deal->price = $this->_xpath("//span[@id='price-value']");
+        	$deal->desc_long = $this->_xpath("//div[@class='product-code']");
+        	$deal->pictures = "http://www.giftsprings.com/mm5/".$this->_xpath("//div[@class='product-thumbnail']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
