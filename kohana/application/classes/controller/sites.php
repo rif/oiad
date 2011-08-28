@@ -57,10 +57,11 @@ Class Controller_Sites extends Controller_Template {
     if (!empty($_POST)) {
       try
       {
+          print_r($_POST);
       	  $site->values($_POST); 
       	  if(!array_key_exists('active', $_POST)) $site->active = 'F';
       	  $site->save();
-      	  $this->request->redirect(URL::site('/'));
+      	 // $this->request->redirect(URL::site('/'));
       }
       catch (ORM_Validation_Exception $e)
       {
@@ -69,6 +70,12 @@ Class Controller_Sites extends Controller_Template {
     }
     $view->site = $site;
     $this->template->content = $view;
+  }
+
+  public function action_delete() {
+    $site_id = $this->request->param('id');
+    $site = ORM::factory('site', $site_id);
+    $site->delete();
   }
 	
   public function action_toggleactive(){

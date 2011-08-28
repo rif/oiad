@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.fieldjunky.com/", new FieldJunky());
 class FieldJunky extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("//td[@class='blockTD']/table/tbody/tr[1]/td[@class='padding10px ']/table/tbody/tr[2]/td[@class='offerTd']/form/h2[@class='offerTitle ']/a[@class='bigtitle']");
-        	$deal->price = $this->_xpath("//td[@class='blockTD']/table/tbody/tr[1]/td[@class='padding10px ']/table/tbody/tr[2]/td[@class='offerTd']/form/div[@class='priceBlock']/span[@class='price']");
-        	$deal->desc_long = $host.$this->_xpath("//td[@class='blockTD']/table/tbody/tr[1]/td[@class='padding10px ']/table/tbody/tr[2]/td[@class='offerTd']/form/a[@id='add_so_13930']/@href");
-        	$deal->pictures = $host.$this->_xpath("//td[@class='blockTD']/table/tbody/tr[1]/td[@class='padding10px ']/table/tbody/tr[2]/td[@class='offerTd']/form/a[1]/img[@class='offerImg']/@src");
+	 		$deal->item_link = $host.$this->_xpath("//a[@class='bigtitle']/@href");
+        	$deal->desc_short = $this->_xpath("//a[@class='bigtitle']");
+        	$deal->price = $this->_xpath("//span[@class='price']");
+        	$deal->desc_long = $host.$this->_xpath("//a[@id='add_so_5015']/@href");
+        	$deal->pictures = $host.$this->_xpath("//img[@class='offerImg']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
