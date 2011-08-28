@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.walmart.com/cp/Value-of-the-Day/1058864?pov
 class Walmart extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='BodyLBold']/a");
+        	$deal->price = $this->_xpath("//div[@class='camelPrice']");
+        	$deal->desc_long = $this->_xpath("//div[@class='BodyM Info clearfix']/div[2]");
+        	$deal->pictures = $this->_xpath("//div[@class='ItemImage']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

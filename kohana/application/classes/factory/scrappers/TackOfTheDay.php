@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.tackoftheday.com/", new TackOfTheDay());
 class TackOfTheDay extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//td[@id='tdTOTD']/p[2]/a/@href");
+        	$deal->desc_short = $this->_xpath("//td[@id='tdTOTD']/p[2]/a");
         	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_long = $this->_xpath("//td[@id='tdTOTD']/p[2]");
+        	$deal->pictures = $host.$this->_xpath("//td[@id='tdTOTD']/p[2]/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

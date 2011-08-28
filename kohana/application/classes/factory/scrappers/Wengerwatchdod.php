@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.wengerwatchdod.com/", new Wengerwatchdod())
 class Wengerwatchdod extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//span[@id='lblProductName']");
+        	$deal->price = $this->_xpath("//span[@id='lblOurPrice']");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//img[@id='imgMain']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
