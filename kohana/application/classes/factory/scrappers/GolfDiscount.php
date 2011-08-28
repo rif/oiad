@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.golfdiscount.com/deal_of_the_day", new Golf
 class GolfDiscount extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@class='ptitle-wrap']/h3/a/@href");
+        	$deal->desc_short = $this->_xpath("//div[@class='ptitle-wrap']/h3/a");
+        	$deal->price = $this->_xpath("//span[@class='money']");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//img[@id='product_image_70458']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
