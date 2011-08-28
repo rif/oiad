@@ -9,7 +9,7 @@ class Gearxs extends AbstractScrapper {
         	$deal->desc_short = $this->_xpath("");
         	$deal->price = $this->_xpath("");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//img[@usemap='#FPMap0']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
