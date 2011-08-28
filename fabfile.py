@@ -6,6 +6,7 @@ from fabric.colors import green
 def ci():
     'Commit localy using mercurial'
     comment = prompt('Commit comment: ', default='another commit from fabric')
+    print(green('commiting...'))
     local('hg ci -m "%s"' % comment)
     push()
 
@@ -26,4 +27,5 @@ def deploy():
 @task
 @hosts('radu.fericean@dev.upandrunningsoftware.com')
 def database_reimport():
-    run('mysql --user=root -p oiad < /data/www/oiad.dev.upandrunningsoftware.com/htdocs/schema.sql')
+    print(green('reimporting database...'))
+    run('svn cat https://mayfair.uarss.com/svn/oneitemaday/trunk/schema.sql | mysql --user=root --password=UARdeveloper oiad')
