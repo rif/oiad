@@ -6,10 +6,10 @@ PolyFactory::addScrapper("http://www.winetwitsdeals.com/", new WineTwits());
 class WineTwits extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->desc_short = $this->_xpath("//div[@class='featuredProduct_hdr1']");
+        	$deal->price = $this->_xpath("//font[@class='priceCurrent dealPriceNew']");
+        	$deal->desc_long = $this->_xpath("//div[@class='featuredProduct']");
+        	$deal->pictures = $host.$this->_xpath("//div[@class='featuredProduct']//img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

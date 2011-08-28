@@ -6,11 +6,12 @@ PolyFactory::addScrapper("http://www.superbiiz.com/landing.php?id=0bc97b49879ca7
 class Superbiiz extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+	 		$deal->item_link = $this->_get_host($host).$this->_xpath("//table[@id='right_col']//div/a/@href");
+        	$deal->desc_short = $this->_xpath("//table[@id='right_col']//div/a");
+        	$deal->price = $this->_xpath("//a[@class='dailyspeical']/b/font");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
+        	$deal->pictures = $this->_get_host($host).$this->_xpath("//a[@class='hotitem']/img/@src");
+        	$deal->shipping = $this->_xpath("//table[@id='right_col']//span/small");
     }
 }
 

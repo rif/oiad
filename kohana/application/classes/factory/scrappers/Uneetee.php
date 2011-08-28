@@ -6,10 +6,11 @@ PolyFactory::addScrapper("http://www.uneetee.com/categories/Today%27s-Insaneetee
 class Uneetee extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
+	 		$deal->item_link = $this->_xpath("//div[@class='ProductDetails']/strong/a/@href");
+        	$deal->desc_short = $this->_xpath("//div[@class='ProductDetails']/strong/a");
+        	$deal->price = $this->_xpath("//div[@class='ProductPriceRating']/em");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
+        	$deal->pictures = $this->_xpath("//div[@class='ProductImage']/a/img/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }
