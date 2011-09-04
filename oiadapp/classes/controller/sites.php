@@ -88,18 +88,22 @@ Class Controller_Sites extends Controller_Template {
   public function action_remove_category() {
     $site_id = $this->request->param('id');
     $cat_id = $this->request->param('cid');
-    $site = ORM::factory('site', $cat_id);
+    $site = ORM::factory('site', $site_id);
     $cat = ORM::factory('category', $cat_id);
-    $site->remove('categories', $cat);
+    if($site->has('categories', $cat)){
+      $site->remove('categories', $cat);
+    }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
 
   public function action_add_category() {
     $site_id = $this->request->param('id');
     $cat_id = $this->request->param('cid');
-    $site = ORM::factory('site', $cat_id);
+    $site = ORM::factory('site', $site_id);
     $cat = ORM::factory('category', $cat_id);
-    $site->add('categories', $cat);
+    if(!$site->has('categories', $cat)){
+      $site->add('categories', $cat);
+    }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
 }
