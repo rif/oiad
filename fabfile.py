@@ -13,6 +13,7 @@ def ci():
 @runs_once
 def push():
     print(green('pushing...'))
+    local('hg rebase --svn')
     local('hg push')
 
 @task
