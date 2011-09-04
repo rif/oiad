@@ -1,5 +1,6 @@
 <h1><?php echo  $category->name; ?></h1>
 
+<h3>Sites in this category</h3>
 <ol>
 <?php
     $sites = $category->sites->find_all();
@@ -8,3 +9,4 @@
     }
 ?>
 </ol>
+<?php echo HTML::anchor('/categories/', 'Back');?>
