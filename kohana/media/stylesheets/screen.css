@@ -769,3 +769,13 @@ a.toggle-state.active {
 a#delete-link {
   float: right;
 }
+
+/* line 82, ../sass/screen.sass */
+#enabled_categories {
+  float: left;
+}
+
+/* line 85, ../sass/screen.sass */
+#all_categories {
+  float: right;
+}
