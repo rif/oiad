@@ -38,9 +38,12 @@ Class Controller_Categories extends Controller_Template {
         $this->template->content = $view;
     }
 
+
+
     public function action_delete() {
         $cat_id = $this->request->param('id');
         $cat = ORM::factory('category', $cat_id);
         $cat->delete();
+        $this->request->redirect(URL::site('/categories/index/'));
     }
 }
