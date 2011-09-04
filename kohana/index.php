@@ -6,7 +6,7 @@
  *
  * @see  http://kohanaframework.org/guide/about.install#application
  */
-$application = 'application';
+$application = '../oiadapp';
 
 /**
  * The directory in which your modules are located.
