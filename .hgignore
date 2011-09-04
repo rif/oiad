@@ -3,8 +3,8 @@ syntax: glob
 
 *.pyc
 nbproject
-media/.sass-cache
-application/logs
+.sass-cache
+logs
 .geanyprj
 .~lock.*
-oiad.sublime-project
+*.sublime-*
