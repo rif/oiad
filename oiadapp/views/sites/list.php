@@ -1,19 +1,50 @@
 <h1>Current Sites</h1>
 
-<ol>
+<div id="sites">
+<table>
+<thead>
+
+</thead>
+<tr>
+<th>Site Name</th>
+<th>Active</th>
+<th>Time to next scrapp</th>
+<th>Actions</th>
+</tr>
+<tbody>
 <?php
 foreach($sites as $site)
 {
-	echo '<li>';
-	echo HTML::anchor($site->page, $site->name."&nbsp;");
+	
+	echo '<tr>';
+	echo '<td>'.HTML::anchor($site->page, $site->name."</td>");
 	$class = $site->active == 'T' ? 'active':'';
-	echo HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)); 
-	echo HTML::anchor('/sites/edit/'.$site->id, 'Edit')."&nbsp;";
-	echo HTML::anchor('/sites/scrapp/'.$site->id, 'Scrap')."&nbsp;";
-	echo "</li>";
+	echo '<td>'.HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)).'</td>'; 
+	
+    $refresh = $site->refresh_period;
+    echo '<td style="text-align: center;">';
+	if($refresh) {
+        $next_scrapp = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $now = strtotime("now");
+        $mins = round(($next_scrapp - $now)/60,1);
+        $hours = round(($next_scrapp - $now)/(60*60),1);
+        $time_to_next_scrapp = $hours>1 ? $hours."h" : $mins."min";
+        if ($mins > 0){
+		  echo $time_to_next_scrapp;
+        } else {
+          echo '<span class="expired">Expired</span>';
+        }
+	} else {
+     echo 'NA';
+    }
+    echo '</td>';
+	echo '<td>'.HTML::anchor('/sites/scrapp/'.$site->id, 'Scrapp').' '.HTML::anchor('/sites/edit/'.$site->id, 'Edit')."</td>";
+	echo "</tr>";
 }
 ?>
-</ol>
+</tbody>
+</table>
+</div>
 
 <h2>Add Sites</h2>
 
