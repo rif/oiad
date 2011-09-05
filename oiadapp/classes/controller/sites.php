@@ -49,7 +49,13 @@ Class Controller_Sites extends Controller_Template {
     }
     $this->template->content = $view;
   }
-    
+   
+  public function action_scrapp_expired() {
+    $view = View::factory('sites/scrapp');
+    $view->content = Request::factory("scrapp/expired")->execute()->body();
+    $this->template->content = $view;
+  }
+   
   public function action_edit() {
     $view = View::factory('sites/edit')->set('values', $_POST)->bind('errors', $errors);
     $site_id = $this->request->param('id');

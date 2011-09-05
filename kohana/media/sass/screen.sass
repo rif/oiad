@@ -5,6 +5,7 @@
 @import "blueprint/typography"
 @import "compass/typography/links"
 @import "compass/typography/lists/bullets"
+@import "compass/utilities/tables/scaffolding"
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -33,16 +34,16 @@ html, body
     ul
         +no-bullets
         li
-            font-size: 1.7em    
+            font-size: 1.5em    
     
 #content
     $content-columns: ceil(2 * $blueprint-grid-columns / 3)
     +column($content-columns, true)
-    font-size: 1.2em
+    font-size: 1em
     a
         +loud
         font-family: Helvetica, Arial, sans-serif
-        font-size: 1.5em
+        font-size: 1.25em
         +hover-link
         +link-colors(#6D7582,  #526073, #c0c, #6D7582, #b20811)
 
@@ -63,7 +64,6 @@ h2
  
 form
     +blueprint-form
-    // You'll probably want to remove the scaffolding once you start styling your site.
     +blueprint-scaffolding
 
 a.toggle-state
@@ -84,3 +84,12 @@ a#delete-link
 
 #all_categories
     float: right
+
+.expired
+    color: #b20811
+    font-weight: bold
+#sites
+    table
+        +table-scaffolding
+        $table-color: #7a98c6
+

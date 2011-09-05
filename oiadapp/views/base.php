@@ -19,7 +19,8 @@
        <ul>
         <li><?php echo HTML::anchor('/', 'Home'); ?></li>
         <li><?php echo HTML::anchor('/categories', 'Show All Categories'); ?></li>
-       	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All Links'); ?></li>
+        <li><?php echo HTML::anchor('/sites/scrapp_expired', 'Scrap Expired Sites'); ?></li>
+       	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All Sites'); ?></li>
        	<li><?php echo HTML::anchor('/deals', 'Show Today\'s Deals'); ?></li>
        </ul>
        </div>
