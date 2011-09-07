@@ -79,10 +79,12 @@ Class Controller_Scrapp extends Controller {
 
     foreach ($sites as $site) {
       $refresh = $site->refresh_period;
-      $next_scrapp = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
-      $now = strtotime("now");
-      if($next_scrapp - $now < 0){
-        array_push($expired_sites, $site);
+      if($refresh){
+        $next_scrapp = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $now = strtotime("now");
+        if($next_scrapp - $now < 0){
+          array_push($expired_sites, $site);
+        }
       }
     }
       
