@@ -38,7 +38,7 @@ Class Controller_Scrapp extends Controller {
     $this->response->body($content);
   }
 
-  private function __scrapp($sites){
+  private function scrapp($sites){
     $index = 1;
     $content = '';
     foreach ($sites as $site) {
@@ -68,7 +68,7 @@ Class Controller_Scrapp extends Controller {
     $sites = ORM::factory('site');
     $sites = $sites->where('active', '=', 'T')->find_all();
       
-    $content = __scrapp($sites);
+    $content = $this->scrapp($sites);
     $this->response->body($content);
   }
 
@@ -86,7 +86,7 @@ Class Controller_Scrapp extends Controller {
       }
     }
       
-    $content = __scrapp($expired_sites);
+    $content = $this->scrapp($expired_sites);
     $this->response->body($content);
   }
 }
