@@ -38,7 +38,7 @@ foreach($sites as $site)
      echo 'NA';
     }
     echo '</td>';
-	echo '<td>'.HTML::anchor('/sites/edit/'.$site->id, 'Edit').' '.HTML::anchor('/sites/scrapp/'.$site->id, 'Scrapp')."</td>";
+	echo '<td>'.HTML::anchor('/sites/edit/'.$site->id, 'Edit').' '.HTML::anchor('/sites/scrapp/'.$site->id, 'Scrap')."</td>";
 	echo "</tr>";
 }
 ?>
