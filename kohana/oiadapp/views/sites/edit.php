@@ -4,6 +4,7 @@ echo "<div>".Form::label('name', 'Site name:'); echo Form::input('name', $site->
 echo "<div>".Form::label('page', 'Site DOD page link:'); echo Form::input('page', $site->page)."</div>";
 echo "<div>".Form::label('refresh_period', 'Refresh period: (in minutes)'); echo Form::input('refresh_period', $site->refresh_period)."</div>";
 echo "<div>".Form::label('active', 'Active:'); echo Form::checkbox('active','T', $site->active == 'T')."</div>";
+echo "<div>".Form::label('has_multiple_deals', 'Has multiple deals:'); echo Form::checkbox('has_multiple_deals','T', $site->has_multiple_deals == 'T')."</div>";
 echo "<div>".Form::submit('submit', 'Submit')."</div>";
 echo Form::close();
 
