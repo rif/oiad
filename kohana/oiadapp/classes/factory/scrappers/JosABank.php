@@ -5,13 +5,19 @@ PolyFactory::addScrapper("http://www.josbank.com/menswear/shop/SubCategory_11001
 
 class JosABank extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//div[@class='padding_wrapper']/a/img[contains(@src,'JosBank')]/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+  	$base = "http://www.josbank.com/menswear/shop/";
+    $deal->item_link = $base.$this->_xpath("//div[@class='padding_wrapper']/h2/a/@href", $count);
+    $deal->desc_short = $this->_xpath("//div[@class='padding_wrapper']/h2/a", $count);
+    $deal->price = $this->_xpath("//div[@class='padding_wrapper']//p[@class='cost']/span[@class='promo']", $count);
+    $deal->desc_long = $this->_xpath("", $count);
+    $deal->pictures = $this->_xpath("//div[@class='padding_wrapper']/a/img[contains(@src,'JosBank')]/@src", $count);
+    $deal->shipping = $base.$this->_xpath("//div[@class='padding_wrapper']/a[contains(.,'SHIPPING')]/@href");
+  }
 }
 
 ?>

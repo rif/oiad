@@ -6,7 +6,7 @@ abstract class AbstractScrapper {
 
     private $xpath;
 
-    public function scrapp($site) {      
+    public function scrapp($site) {     
       $today = date('Y-m-d');
       $oldSetting = libxml_use_internal_errors(true);
       libxml_clear_errors();
@@ -30,8 +30,8 @@ abstract class AbstractScrapper {
       } else {
         $result = array();
         $today = date('Y-m-d');
-        $imgs = $this->_mxpath($this->_getDealIterator());
-        foreach($imgs as $count=>$img){
+        $prods = $this->_mxpath($this->_getDealIterator());
+        foreach($prods as $count=>$prod){
           $deal = ORM::factory('deal');
           $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->where('count', '=', $count)->find();
           $deal->site = $site;
