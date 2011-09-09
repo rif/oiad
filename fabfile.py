@@ -26,6 +26,10 @@ def deploy():
     run('svn up /data/www/oiad.dev.upandrunningsoftware.com/htdocs/')
 
 @task
+def dumpdb():
+    local('mysqldump --user=root --password=UARdeveloper --databases oiad --tables sites deals categories categories_sites > schema.sql')
+
+@task
 @hosts('radu.fericean@dev.upandrunningsoftware.com')
 def database_reimport():
     print(green('reimporting database...'))

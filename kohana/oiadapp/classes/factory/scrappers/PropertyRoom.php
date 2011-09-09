@@ -1,17 +1,22 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://propertyroom.com/Catalog.aspx?Category=Steal%20of%20the%20Day&CategoryId=355", new PropertyRoom());
+PolyFactory::addScrapper("http://propertyroom.com/c/steal-of-the-day", new PropertyRoom());
 
 class PropertyRoom extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//img[@id='uxImage']/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+    $deal->item_link = "http://propertyroom.com".$this->_xpath("//a[@id='uxTitle']/@href", $count);
+    $deal->desc_short = $this->_xpath("//a[@id='uxTitle']", $count);
+    $deal->price = $this->_xpath("//div[@id='uxPrice']", $count);
+    $deal->desc_long = $this->_xpath("", $count);
+    $deal->pictures = $this->_xpath("//img[@id='uxImage']/@src", $count);
+    $deal->shipping = "http://propertyroom.com".$this->_xpath("//a[contains(.,'Shipping Information')]/@href");
+  }
 }
 
 ?>

@@ -27,9 +27,6 @@ Class Controller_Sites extends Controller_Template {
 	  $saved++;
 	}        
       }
-      if($saved == 0) {
-	echo "Nothing new!";
-      }
     }
 
     $view->title = "OIAD";
