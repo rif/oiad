@@ -20,10 +20,18 @@ Class Controller_Scrapp extends Controller {
     if ($scrapper) {
         $deal_id = $scrapper->scrapp($site);
         if(is_numeric($deal_id)){
-	        if (php_sapi_name() == 'cli') {
+	  if (php_sapi_name() == 'cli') {
 	             echo $site->name." OK!\n";
           } else {
 	             $content .= HTML::anchor('/deals/showdeal/'.$deal_id, $site->page)."<br />";
+          }
+        } elseif(is_array($deal_id)) {
+          if (php_sapi_name() == 'cli') {
+              echo $site->name." OK!\n";
+          } else {
+              foreach($deal_id as $i=>$id){
+                $content .= HTML::anchor('/deals/showdeal/'.$id, 'Deal #'.$i)."<br />";
+              }
           }
         } else {
           if (php_sapi_name() == 'cli') {
@@ -50,6 +58,15 @@ Class Controller_Scrapp extends Controller {
                echo $site->name." OK!\n";
           } else {
                $content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $site->page)."<br />";
+          }
+        } elseif(is_array($deal_id)) {
+          if (php_sapi_name() == 'cli') {
+              echo $site->name." OK!\n";
+          } else {
+              $index++;
+              foreach($deal_id as $i=>$id){
+                $content .= $index.'_'.$i.". ".HTML::anchor('/deals/showdeal/'.$id, 'Deal #'.$i)."<br />";
+              }
           }
         } else {
           if (php_sapi_name() == 'cli') {

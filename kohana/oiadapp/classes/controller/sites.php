@@ -65,6 +65,7 @@ Class Controller_Sites extends Controller_Template {
       {
       	  $site->values($_POST); 
       	  if(!array_key_exists('active', $_POST)) $site->active = 'F';
+          if(!array_key_exists('has_multiple_deals', $_POST)) $site->has_multiple_deals = 'F';
       	  $site->save();
       	  $this->request->redirect(URL::site('/'));
       }
@@ -111,5 +112,12 @@ Class Controller_Sites extends Controller_Template {
       $site->add('categories', $cat);
     }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
+  }
+  public function action_batch() {
+    $sites = ORM::factory('site')->find_all();
+    foreach($sites as $site){
+        $site->has_multiple_deals = 'F';
+        $site->save();
+    }
   }
 }
