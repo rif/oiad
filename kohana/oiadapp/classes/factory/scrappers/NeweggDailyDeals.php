@@ -5,13 +5,18 @@ PolyFactory::addScrapper("http://www.newegg.com/DailyDeal.aspx?name=DailyDeal", 
 
 class NeweggDailyDeals extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//img[@width='125']/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+    $deal->item_link = $this->_xpath("//div[@class='itemText']/a/@href", $count);
+    $deal->desc_short = $this->_xpath("//div[@class='itemText']/a/span[1]", $count);
+    $deal->price = $this->_xpath("//li[@class='priceFinal']", $count);
+    $deal->desc_long = $this->_xpath("//div[@class='itemText']", $count);
+    $deal->pictures = $this->_xpath("//img[@width='125']/@src", $count);
+    $deal->shipping = $this->_xpath("//li[@class='priceShip']", $count);
+  }
 }
 
 ?>

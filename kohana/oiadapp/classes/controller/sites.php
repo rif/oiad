@@ -113,11 +113,4 @@ Class Controller_Sites extends Controller_Template {
     }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
-  public function action_batch() {
-    $sites = ORM::factory('site')->find_all();
-    foreach($sites as $site){
-        $site->has_multiple_deals = 'F';
-        $site->save();
-    }
-  }
 }
