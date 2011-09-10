@@ -5,13 +5,20 @@ PolyFactory::addScrapper("http://www.harborfreight.com/clearance", new HarborFre
 
 class HarborFreightTools extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("//div[@class='std']/table/tbody/tr[2]/td[2]/a/img/@src");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//img[@width='240']/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+  	$link = $this->_xpath("//img[@width='240']/parent::a/@href", $count);
+  	$link = strpos($link,"www") ? $link : "http://www.harborfreight.com".$link;
+    $deal->item_link = $link;
+    $deal->desc_short = $this->_xpath("", $count);
+    $deal->price = $this->_xpath("", $count);
+    $deal->desc_long = $this->_xpath("", $count);
+    $deal->pictures = $this->_xpath("//img[@width='240']/@src", $count);
+    $deal->shipping = $this->_xpath("", $count);
+  }
 }
 
 ?>
