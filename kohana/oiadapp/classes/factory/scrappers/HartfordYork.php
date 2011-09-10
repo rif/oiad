@@ -5,14 +5,18 @@ PolyFactory::addScrapper("http://www.hartfordyork.com/category/daily-deal", new 
 
 class HartfordYork extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-	 		$deal->item_link = $this->_get_host($host).$this->_xpath("//table[@class='cat-image']//a/@href");
-        	$deal->desc_short = $this->_xpath("//table[@class='cat-image']//a");
-        	$deal->price = $this->_xpath("//span[@class='price']");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("//table[@class='cat-image']//img/@src");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//table[@class='cat-image']//img/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+    $deal->item_link = $this->_xpath("//table[@class='cat-image']//img/following::a[1]/@href", $count);
+    $deal->desc_short = $this->_xpath("//table[@class='cat-image']//img/following::a[1]", $count);
+    $deal->price = $this->_xpath("//span[@class='price']", $count);
+    $deal->desc_long = $this->_xpath("", $count);
+    $deal->pictures = $this->_xpath("//table[@class='cat-image']//img/@src", $count);
+    $deal->shipping = $this->_xpath("", $count);
+  }
 }
 
 ?>

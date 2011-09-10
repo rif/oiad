@@ -12,9 +12,8 @@ $ln = php_sapi_name() == 'cli' ? '\n' : '<br />';
 Class Controller_Scrapp extends Controller {
 
   public function action_index() {
-    $sites = ORM::factory('site');
     $site_id = $this->request->param('id');
-    $site = $sites->where('id', '=', $site_id)->find();
+    $site = ORM::factory('site',  $site_id);    
     $scrapper = PolyFactory::getScrapper($site->page);
     $content = '';
     if ($scrapper) {
@@ -23,14 +22,14 @@ Class Controller_Scrapp extends Controller {
 	  if (php_sapi_name() == 'cli') {
 	             echo $site->name." OK!\n";
           } else {
-	             $content .= HTML::anchor('/deals/showdeal/'.$deal_id, $site->page)."<br />";
+	             $content .= HTML::anchor('/deals/showdeal/'.$deal_id, $site->name)."<br />";
           }
         } elseif(is_array($deal_id)) {
           if (php_sapi_name() == 'cli') {
               echo $site->name." OK!\n";
           } else {
               foreach($deal_id as $i=>$id){
-                $content .= HTML::anchor('/deals/showdeal/'.$id, 'Deal #'.$i)."<br />";
+                $content .= HTML::anchor('/deals/showdeal/'.$id, $site->name.' #'.$i)."<br />";
               }
           }
         } else {
@@ -57,7 +56,7 @@ Class Controller_Scrapp extends Controller {
            if (php_sapi_name() == 'cli') {
                echo $site->name." OK!\n";
           } else {
-               $content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $site->page)."<br />";
+               $content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $site->name)."<br />";
           }
         } elseif(is_array($deal_id)) {
           if (php_sapi_name() == 'cli') {
@@ -65,7 +64,7 @@ Class Controller_Scrapp extends Controller {
           } else {
               $index++;
               foreach($deal_id as $i=>$id){
-                $content .= $index.'_'.$i.". ".HTML::anchor('/deals/showdeal/'.$id, 'Deal #'.$i)."<br />";
+                $content .= $index.'_'.$i.". ".HTML::anchor('/deals/showdeal/'.$id, $site->name.' #'.$i)."<br />";
               }
           }
         } else {

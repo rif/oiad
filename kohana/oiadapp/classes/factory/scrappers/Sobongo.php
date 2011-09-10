@@ -5,13 +5,18 @@ PolyFactory::addScrapper("http://www.sobongo.com/daily-deal", new Sobongo());
 
 class Sobongo extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("");
-        	$deal->price = $this->_xpath("");
-        	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("");
-    }
+  protected function _getDealIterator() {
+    return "//div[@class='thumbnail']/a/img/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+    $deal->item_link = $this->_xpath("//h3[@class='product-name']/a/@href", $count);
+    $deal->desc_short = $this->_xpath("//h3[@class='product-name']/a", $count);
+    $deal->price = $this->_xpath("//div[@class='thumbnail']/div/b", $count);
+    $deal->desc_long = $this->_xpath("", $count);
+    $deal->pictures = $this->_xpath("//div[@class='thumbnail']/a/img/@src", $count);
+    $deal->shipping = $this->_xpath("//div[@class='col-3']/ul/li[1]/a/@href");
+  }
 }
 
 ?>
