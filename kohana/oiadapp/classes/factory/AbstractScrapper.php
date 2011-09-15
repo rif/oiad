@@ -6,11 +6,11 @@ abstract class AbstractScrapper {
 
     private $xpath;
 
-    public function scrapp($site) {     
+    public function scrapp($site) {
       $today = date('Y-m-d');
       $oldSetting = libxml_use_internal_errors(true);
       libxml_clear_errors();
-      
+
       try {
   	    $html = new DOMDocument();
   	    $html->loadHtmlFile($site->page);
@@ -48,7 +48,7 @@ abstract class AbstractScrapper {
       libxml_use_internal_errors($oldSetting);
       return $result;
     }
-    
+
     protected function _fillDetails($deal, $host) {}
     protected function _getDealIterator() {}
     protected function _fillMultipleDetails($deal, $page, $count) {}
@@ -67,7 +67,7 @@ abstract class AbstractScrapper {
       }
       return $result;
     }
-    
+
     protected function _get_host($host){
       $p = parse_url($host);
       return "http://".$p['host']."/";

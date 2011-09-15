@@ -13,7 +13,7 @@ Class Controller_Scrapp extends Controller {
 
   public function action_index() {
     $site_id = $this->request->param('id');
-    $site = ORM::factory('site',  $site_id);    
+    $site = ORM::factory('site',  $site_id);
     $scrapper = PolyFactory::getScrapper($site->page);
     $content = '';
     if ($scrapper) {
@@ -73,17 +73,17 @@ Class Controller_Scrapp extends Controller {
           } else {
                $content .= "scrapp failed for ".$site->page." reason:".$deal_id."<br />";
           }
-        }         
+        }
       }
       $site->last_scrapp = date ("Y-m-d H:i:s");
       $site->save();
     }
   }
-      
+
   public function action_all() {
     $sites = ORM::factory('site');
     $sites = $sites->where('active', '=', 'T')->find_all();
-      
+
     $content = $this->scrapp($sites);
     $this->response->body($content);
   }
@@ -103,7 +103,7 @@ Class Controller_Scrapp extends Controller {
         }
       }
     }
-      
+
     $content = $this->scrapp($expired_sites);
     $this->response->body($content);
   }
