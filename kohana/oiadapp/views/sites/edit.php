@@ -3,8 +3,12 @@ echo Form::open('/sites/edit/'.$site->id);
 echo "<div>".Form::label('name', 'Site name:'); echo Form::input('name', $site->name)."</div>";
 echo "<div>".Form::label('page', 'Site DOD page link:'); echo Form::input('page', $site->page)."</div>";
 echo "<div>".Form::label('refresh_period', 'Refresh period: (in minutes)'); echo Form::input('refresh_period', $site->refresh_period)."</div>";
-echo "<div>".Form::label('active', 'Active:'); echo Form::checkbox('active','T', $site->active == 'T')."</div>";
-echo "<div>".Form::label('has_multiple_deals', 'Has multiple deals:'); echo Form::checkbox('has_multiple_deals','T', $site->has_multiple_deals == 'T')."</div>";
+echo "<div>".Form::label('active', 'Active:'); echo Form::checkbox('active','T', $site->active == 'T');
+echo "&nbsp;".Form::label('has_multiple_deals', 'Has multiple items:'); echo Form::checkbox('has_multiple_deals','T', $site->has_multiple_deals == 'T');
+echo "&nbsp;".Form::label('is_deal', 'Is deal:'); echo Form::checkbox('is_deal','T', $site->is_deal == 'T')."</div>";
+echo "<div>".Form::label('country', 'Country:'); echo Form::input('country', $site->country)."</div>";
+echo "<div>".Form::label('state', 'State:'); echo Form::input('state', $site->state)."</div>";
+echo "<div>".Form::label('city', 'City:'); echo Form::input('city', $site->city)."</div>";
 echo "<div>".Form::submit('submit', 'Submit')."</div>";
 echo Form::close();
 
@@ -44,7 +48,7 @@ echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link
 
 <script type="text/javascript">
 	$('#delete-link').click(function(e){
-		if (confirm("Are you shure you want to delete this site?")) { 
+		if (confirm("Are you shure you want to delete this site?")) {
  			$.get($(this).attr('href'));
  			window.location = '/';
 		}

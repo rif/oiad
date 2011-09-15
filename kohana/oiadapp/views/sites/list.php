@@ -1,5 +1,4 @@
 <h1>Current Sites</h1>
-
 <div id="sites">
 <table>
 <thead>
@@ -15,12 +14,12 @@
 <?php
 foreach($sites as $site)
 {
-	
+
 	echo '<tr>';
 	echo '<td>'.HTML::anchor($site->page, $site->name."</td>");
 	$class = $site->active == 'T' ? 'active':'';
-	echo '<td>'.HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)).'</td>'; 
-	
+	echo '<td>'.HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)).'</td>';
+
     $refresh = $site->refresh_period;
     echo '<td style="text-align: center;">';
 	if($refresh) {
