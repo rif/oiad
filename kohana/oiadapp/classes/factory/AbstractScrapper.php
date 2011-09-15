@@ -10,7 +10,6 @@ abstract class AbstractScrapper {
       $today = date('Y-m-d');
       $oldSetting = libxml_use_internal_errors(true);
       libxml_clear_errors();
-
       try {
   	    $html = new DOMDocument();
   	    $html->loadHtmlFile($site->page);
@@ -27,6 +26,7 @@ abstract class AbstractScrapper {
         $deal->pub_date = $today;
         $deal->save();
         $result = $deal->id;
+
       } else {
         $result = array();
         $today = date('Y-m-d');
@@ -68,8 +68,8 @@ abstract class AbstractScrapper {
       return $result;
     }
 
-    protected function _get_host($host){
-      $p = parse_url($host);
+    protected function _get_host($page){
+      $p = parse_url($page);
       return "http://".$p['host']."/";
     }
 }
