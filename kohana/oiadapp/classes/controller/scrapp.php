@@ -11,10 +11,19 @@ $ln = php_sapi_name() == 'cli' ? '\n' : '<br />';
 
 Class Controller_Scrapp extends Controller {
 
+  protected function _get_host($page){
+      $p = parse_url($page);
+      return "http://".$p['host']."/";
+  }
+
   public function action_index() {
     $site_id = $this->request->param('id');
     $site = ORM::factory('site',  $site_id);
-    $scrapper = PolyFactory::getScrapper($site->page);
+    $page = $site->page;
+    if($site->is_deal){
+      $page = $this->_get_host($site->page);
+    }
+    $scrapper = PolyFactory::getScrapper($page);
     $content = '';
     if ($scrapper) {
         $deal_id = $scrapper->scrapp($site);
@@ -49,7 +58,11 @@ Class Controller_Scrapp extends Controller {
     $index = 1;
     $content = '';
     foreach ($sites as $site) {
-      $scrapper = PolyFactory::getScrapper($site->page);
+      $page = $site->page;
+      if($site->is_deal){
+        $page = $this->_get_host($site->page);
+      }
+      $scrapper = PolyFactory::getScrapper($page);
       if ($scrapper) {
         $deal_id = $scrapper->scrapp($site);
         if(is_numeric($deal_id)){

@@ -7,6 +7,7 @@
 @import compass/typography/links
 @import compass/typography/lists/bullets
 @import compass/utilities/tables/scaffolding
+@import compass/utilities/tables/alternating-rows-and-columns
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -94,4 +95,5 @@ a#delete-link
     table
         +table-scaffolding
         $table-color: #7a98c6
+        +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222)
 

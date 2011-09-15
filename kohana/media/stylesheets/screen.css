@@ -511,7 +511,7 @@ caption {
   color: #111111;
 }
 
-/* line 18, ../sass/screen.sass */
+/* line 19, ../sass/screen.sass */
 html, body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -522,7 +522,7 @@ html, body {
   text-shadow: 0 1px 1px white;
 }
 
-/* line 24, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 #container {
   min-width: 950px;
   width: 80%;
@@ -532,7 +532,7 @@ html, body {
   width: 99%;
 }
 
-/* line 28, ../sass/screen.sass */
+/* line 29, ../sass/screen.sass */
 #header, #footer {
   display: inline;
   float: left;
@@ -541,7 +541,7 @@ html, body {
   margin-right: 1.042%;
 }
 
-/* line 31, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 #sidebar {
   display: inline;
   float: left;
@@ -549,7 +549,7 @@ html, body {
   width: 32.63%;
   margin-right: 1.042%;
 }
-/* line 34, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 #sidebar a {
   text-decoration: none;
 }
@@ -557,7 +557,7 @@ html, body {
 #sidebar a:hover {
   text-decoration: underline;
 }
-/* line 36, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 #sidebar ul {
   list-style: none;
 }
@@ -567,12 +567,12 @@ html, body {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 38, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 #sidebar ul li {
   font-size: 1.5em;
 }
 
-/* line 41, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
 #content {
   display: inline;
   float: left;
@@ -581,7 +581,7 @@ html, body {
   margin-right: 0;
   font-size: 1em;
 }
-/* line 45, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
 #content a {
   color: #111111;
   font-family: Helvetica, Arial, sans-serif;
@@ -610,20 +610,20 @@ html, body {
   color: #cc00cc;
 }
 
-/* line 53, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 #header h1 {
   font-size: 6em;
   color: #b20811;
   text-shadow: 0 3px 1px #860000;
 }
 
-/* line 58, ../sass/screen.sass */
+/* line 59, ../sass/screen.sass */
 h1 {
   font-size: 3.5em;
   color: #526073;
 }
 
-/* line 62, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 h2 {
   font-size: 3em;
   line-height: 1.2em;
@@ -744,7 +744,7 @@ form form.inline p {
   margin-bottom: 0;
 }
 
-/* line 71, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 a.toggle-state {
   background-repeat: no-repeat;
   display: inline-block;
@@ -752,27 +752,27 @@ a.toggle-state {
   background-image: url("../images/error.png");
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 79, ../sass/screen.sass */
 a.toggle-state.active {
   background-image: url("../images/ok.png");
 }
 
-/* line 81, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 a#delete-link {
   float: right;
 }
 
-/* line 84, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 #enabled_categories {
   float: left;
 }
 
-/* line 87, ../sass/screen.sass */
+/* line 88, ../sass/screen.sass */
 #all_categories {
   float: right;
 }
 
-/* line 90, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 .expired {
   color: #b20811;
   font-weight: bold;
@@ -792,4 +792,36 @@ a#delete-link {
 #sites table td.numeric,
 #sites table th.numeric {
   text-align: right;
+}
+/* line 2, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th {
+  background-color: white;
+}
+/* line 4, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th.even, #sites table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td {
+  background-color: #98c67a;
+}
+/* line 9, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td.even, #sites table tr.odd td:nth-child(2n) {
+  background-color: #76a458;
+}
+/* line 12, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td {
+  background-color: #7a98c6;
+}
+/* line 14, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td.even, #sites table tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+/* line 17, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th, #sites table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th.even, #sites table tfoot th:nth-child(2n), #sites table tfoot td.even, #sites table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
 }
