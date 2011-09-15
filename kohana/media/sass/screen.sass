@@ -2,10 +2,11 @@
 @import partials/base
 @import blueprint
 @import blueprint/scaffolding
-@import "blueprint/typography"
-@import "compass/typography/links"
-@import "compass/typography/lists/bullets"
-@import "compass/utilities/tables/scaffolding"
+@import blueprint/typography
+@import blueprint/liquid
+@import compass/typography/links
+@import compass/typography/lists/bullets
+@import compass/utilities/tables/scaffolding
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -19,13 +20,14 @@ html, body
     background-color: #D0D9D9
     color: #2B2C2F
     text-shadow: 0 1px 1px white
-    
+
 #container
     +container
-    
+    width: 99%
+
 #header, #footer
     +column($blueprint-grid-columns)
-   
+
 #sidebar
     $sidebar-columns: floor($blueprint-grid-columns / 3)
     +column($sidebar-columns)
@@ -34,8 +36,8 @@ html, body
     ul
         +no-bullets
         li
-            font-size: 1.5em    
-    
+            font-size: 1.5em
+
 #content
     $content-columns: ceil(2 * $blueprint-grid-columns / 3)
     +column($content-columns, true)
@@ -52,7 +54,7 @@ html, body
     font-size: 6em
     color: #b20811
     text-shadow: 0 3px 1px #860000
-    
+
 h1
     font-size: 3.5em
     color: #526073
@@ -61,7 +63,7 @@ h2
     font-size: 3em
     line-height: 1.2em
     color: #526073
- 
+
 form
     +blueprint-form
     +blueprint-scaffolding
