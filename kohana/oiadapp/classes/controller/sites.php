@@ -10,10 +10,8 @@ class Controller_Sites extends Controller_Template {
       $saved = 0;
       $sites = ORM::factory('site');
       foreach(explode("\n", $_POST['pages']) as $page){
-        echo "page: ".$page;
 	$this_site = $sites->where('page', '=', $page)->find_all();
 	if(count($this_site) == 0){
-          echo "adding site";
 	  $site = ORM::factory('site');
 	  $site->page = $page;
 	  $site->save();
