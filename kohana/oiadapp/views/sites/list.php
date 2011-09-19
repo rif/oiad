@@ -49,7 +49,7 @@ foreach($sites as $site)
 
 <?php
 echo Form::open('/sites/index');
-echo Form::label('pages', 'Sites DOD page links (one per line):')."<br/>";
+echo Form::label('pages', 'DOD page links (one per line):')."<br/>";
 echo Form::textarea('pages', '')."<br/>";
 echo Form::submit('submit', 'Load');
 echo Form::close();
