@@ -9,6 +9,7 @@ echo "&nbsp;".Form::label('is_deal', 'Is deal:'); echo Form::checkbox('is_deal',
 echo "<div>".Form::label('country', 'Country:'); echo Form::input('country', $site->country)."</div>";
 echo "<div>".Form::label('state', 'State:'); echo Form::input('state', $site->state)."</div>";
 echo "<div>".Form::label('city', 'City:'); echo Form::input('city', $site->city)."</div>";
+echo "<div>".Form::label('cookie', 'Cookie:'); echo Form::input('cookie', $site->cookie)."</div>";
 echo "<div>".Form::submit('submit', 'Submit')."</div>";
 echo Form::close();
 

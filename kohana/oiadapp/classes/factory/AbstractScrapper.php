@@ -10,9 +10,15 @@ abstract class AbstractScrapper {
       $today = date('Y-m-d');
       $oldSetting = libxml_use_internal_errors(true);
       libxml_clear_errors();
+      $context = NULL;
+      if ($site->cookie){
+        $opts = array('http' => array('header'=> 'Cookie: '.$site->cookie."\r\n"));
+        $context = stream_context_create($opts);
+      }
+      $contents = file_get_contents($site->page, false, $context);
       try {
   	    $html = new DOMDocument();
-  	    $html->loadHtmlFile($site->page);
+  	    $html->loadHtml($contents);
   	    $this->xpath = new DOMXPath($html);
       } catch(ErrorException $e){
         return $e->getMessage();
