@@ -1,12 +1,5 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-require_once Kohana::find_file('classes', 'factory/PolyFactory');
-require_once Kohana::find_file('classes', 'factory/AbstractScrapper');
-
-foreach (Kohana::list_files('classes/factory/scrappers') as $filename) {
-    require_once $filename;
-}
-
 class Controller_Sites extends Controller_Template {
 
   public $template = 'base';
@@ -17,9 +10,10 @@ class Controller_Sites extends Controller_Template {
       $saved = 0;
       $sites = ORM::factory('site');
       foreach(explode("\n", $_POST['pages']) as $page){
-	$this_site = $sites->where('page', '=', $page)->find();
-
-	if(count ($this_site) == 0){
+        echo "page: ".$page;
+	$this_site = $sites->where('page', '=', $page)->find_all();
+	if(count($this_site) == 0){
+          echo "adding site";
 	  $site = ORM::factory('site');
 	  $site->page = $page;
 	  $site->save();
