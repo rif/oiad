@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.harborfreight.com/clearance", new HarborFreightTools());
 
-class HarborFreightTools extends AbstractScrapper {
+class HarborFreightTools extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[@width='240']/@src";

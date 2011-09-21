@@ -10,14 +10,12 @@ class PolyFactory {
         self::$scrappers[$site] = $scrapper;
     }
 
-    public static function getScrapper($site) {        
+    public static function getScrapper($site) {
         if (array_key_exists($site, self::$scrappers)) {
             return self::$scrappers[$site];
         }
         return Null;
     }
-
-
 }
 
 ?>

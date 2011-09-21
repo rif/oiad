@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.graveyardmall.com/categories/Daily-Deal/", new Graveyardmall());
 
-class Graveyardmall extends AbstractScrapper {
+class Graveyardmall extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//div[@class='ProductImage']/a/img/@src";

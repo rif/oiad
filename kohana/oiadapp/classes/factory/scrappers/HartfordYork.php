@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.hartfordyork.com/category/daily-deal", new HartfordYork());
 
-class HartfordYork extends AbstractScrapper {
+class HartfordYork extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//table[@class='cat-image']//img/@src";

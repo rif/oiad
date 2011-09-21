@@ -2,6 +2,8 @@
 
 require_once Kohana::find_file('classes', 'factory/PolyFactory');
 require_once Kohana::find_file('classes', 'factory/AbstractScrapper');
+require_once Kohana::find_file('classes', 'factory/AbstractMultipleScrapper');
+require_once Kohana::find_file('classes', 'factory/AbstractFeedScrapper');
 
 foreach (Kohana::list_files('classes/factory/scrappers') as $filename) {
     require_once $filename;

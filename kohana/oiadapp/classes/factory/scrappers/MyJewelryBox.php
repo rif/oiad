@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.myjewelrybox.com/", new MyJewelryBox());
 
-class MyJewelryBox extends AbstractScrapper {
+class MyJewelryBox extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//div[@class='box-body']//img/@src";

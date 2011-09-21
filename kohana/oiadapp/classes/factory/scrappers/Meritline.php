@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.meritline.com/dailydeals.aspx", new Meritline());
 
-class Meritline extends AbstractScrapper {
+class Meritline extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[contains(@src,'/product')]/@src";

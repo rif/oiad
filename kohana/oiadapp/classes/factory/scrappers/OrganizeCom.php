@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.organize.com/", new OrganizeCom());
 
-class OrganizeCom extends AbstractScrapper {
+class OrganizeCom extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//div[@id='switchNew']//a/img/@src";

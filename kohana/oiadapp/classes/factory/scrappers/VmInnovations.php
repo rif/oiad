@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.vminnovations.com/", new VmInnovations());
 
-class VmInnovations extends AbstractScrapper {
+class VmInnovations extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "";
