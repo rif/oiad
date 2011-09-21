@@ -52,7 +52,7 @@ class Controller_Sites extends Controller_Template {
       try
       {
       	  $site->values($_POST);
-      	  if(!array_key_exists('active', $_POST)) $site->active = 'F';          
+      	  if(!array_key_exists('active', $_POST)) $site->active = 'F';
           if(!array_key_exists('is_deal', $_POST)) $site->is_deal = 'F';
       	  $site->save();
       	  $this->request->redirect(URL::site('/'));
