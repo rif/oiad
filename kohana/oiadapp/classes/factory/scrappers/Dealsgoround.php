@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.dealsgoround.com/", new Dealsgoround());
 
-class Dealsgoround extends AbstractScrapper {
+class Dealsgoround extends AbstractMultipleScrapper {
     protected function _getDealIterator() {
     return "//div[@class='overview']/img/@src";
   }

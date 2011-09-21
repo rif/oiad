@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://tippr.com/", new Tippr());
 
-class Tippr extends AbstractScrapper {
+class Tippr extends AbstractMultipleScrapper {
     protected function _getDealIterator() {
     return "//div[@class='exhibit-image']/a/img/@src";
   }

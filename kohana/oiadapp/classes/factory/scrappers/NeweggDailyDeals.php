@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.newegg.com/DailyDeal.aspx?name=DailyDeal", new NeweggDailyDeals());
 
-class NeweggDailyDeals extends AbstractScrapper {
+class NeweggDailyDeals extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[@width='125']/@src";

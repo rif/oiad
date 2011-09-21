@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://dealadaygolf.com/weeklydeals.php", new DealADayGolfWeekly());
 
-class DealADayGolfWeekly extends AbstractScrapper {
+class DealADayGolfWeekly extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[@class='main_image']/@src";

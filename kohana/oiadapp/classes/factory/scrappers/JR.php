@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.jr.com/promotions/deal-of-the-day/", new JR());
 
-class JR extends AbstractScrapper {
+class JR extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//div[@class='calloutContent']//img[@class='productImage ']/@src";

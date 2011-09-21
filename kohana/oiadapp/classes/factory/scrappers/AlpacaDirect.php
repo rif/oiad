@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.alpacadirect.com/results~Sweaters~Clearance~category~26~secondary~2.htm", new AlpacaDirect());
 
-class AlpacaDirect extends AbstractScrapper {
+class AlpacaDirect extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[contains(@src, 'product_images')]/@src";

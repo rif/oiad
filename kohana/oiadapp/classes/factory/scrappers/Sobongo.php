@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.sobongo.com/daily-deal", new Sobongo());
 
-class Sobongo extends AbstractScrapper {
+class Sobongo extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//div[@class='thumbnail']/a/img/@src";

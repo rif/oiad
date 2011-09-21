@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.the-house.com/dealoftheday.html", new TheHouseBoardshop());
 
-class TheHouseBoardshop extends AbstractScrapper {
+class TheHouseBoardshop extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//table[@class='category-product-table']//img[@width='110']/@src";

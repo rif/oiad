@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://www.thedealmap.com/", new Dealmap());
 
-class Dealmap extends AbstractScrapper {
+class Dealmap extends AbstractMultipleScrapper {
     protected function _getDealIterator() {
     return "//img[contains(@class,'deal-image')]/@src";
   }

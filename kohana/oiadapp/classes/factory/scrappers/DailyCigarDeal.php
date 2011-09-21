@@ -3,7 +3,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 PolyFactory::addScrapper("http://dailycigardeal.com/", new DailyCigarDeal());
 
-class DailyCigarDeal extends AbstractScrapper {
+class DailyCigarDeal extends AbstractMultipleScrapper {
 
   protected function _getDealIterator() {
     return "//img[@id='bigImg']/@src";
