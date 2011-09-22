@@ -2,20 +2,22 @@
 <div id="sites">
 <table>
 <thead>
-
-</thead>
 <tr>
-<th>Site Name</th>
-<th>Active</th>
-<th>Time to next scrapp</th>
-<th>Actions</th>
+    <th>#</th>
+    <th>Site Name</th>
+    <th>Active</th>
+    <th>Time to next scrapp</th>
+    <th>Actions</th>
 </tr>
+</thead>
 <tbody>
 <?php
-foreach($sites as $site)
+$tr_classes = Array('odd','even');
+foreach($sites as $i=>$site)
 {
 
-	echo '<tr>';
+	echo '<tr class="'.$tr_classes[$i%2].'">';
+    echo '<td>'.($i + 1).'</td>';
 	echo '<td>'.HTML::anchor($site->page, $site->name."</td>");
 	$class = $site->active == 'T' ? 'active':'';
 	echo '<td>'.HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)).'</td>';

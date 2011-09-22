@@ -6,7 +6,6 @@ PolyFactory::addScrapper("http://www.yugster.com/dspYoursUntilGone.aspx", new Yu
 class YugsterYug extends AbstractScrapper {
 
 	 protected function _fillDetails($deal, $host){
-	 		echo("test");
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_cphMainBody_ucProdView_lblOfferTitle']");
         	$deal->price = $this->_xpath("//span[@id='ctl00_cphMainBody_ucProdView_lblYugsterPrice']");
         	$deal->desc_long = $this->_xpath("//span[@id='ctl00_cphMainBody_ucProdView_lblProductInformation']");
