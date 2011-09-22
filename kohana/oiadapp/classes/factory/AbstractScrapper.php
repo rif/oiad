@@ -14,8 +14,8 @@ abstract class AbstractScrapper {
         $opts = array('http' => array('header'=> 'Cookie: '.$site->cookie."\r\n"));
         $context = stream_context_create($opts);
       }
-      $contents = file_get_contents($site->page, false, $context);
       try {
+        $contents = file_get_contents($site->page, false, $context);
   	    $html = new DOMDocument();
   	    $html->loadHtml($contents);
   	    $this->xpath = new DOMXPath($html);

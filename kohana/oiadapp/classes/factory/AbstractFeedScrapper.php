@@ -8,7 +8,6 @@ abstract class AbstractFeedScrapper extends AbstractScrapper {
       $today = date('Y-m-d');
 
       $items = Feed::parse($site->page);
-
       $deal = ORM::factory('deal');
       $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();
       $deal->site = $site;

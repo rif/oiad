@@ -1,17 +1,17 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.priceplunge.com/", new PricePlunge());
+PolyFactory::addScrapper("http://feeds.feedburner.com/PricePlungeDailyDeals", new PricePlunge());
 
-class PricePlunge extends AbstractScrapper {
-
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("//div[@id='featured-product-info']/h1");
-        	$deal->price = $this->_xpath("//div[@class='price-tag-middle']");
-        	$deal->desc_long = $this->_xpath("//div[@class='product-text']");
-        	$deal->pictures = $this->_xpath("//img[@id='pika-large']/@src");
-        	$deal->shipping = $this->_xpath("");
-    }
+class PricePlunge extends AbstractFeedScrapper {
+  protected function _fillFeedDetails($deal, $item){
+    $deal->item_link = $item['link'];
+    $deal->desc_short = $item['merchant_name'];
+    $deal->price = $item['price'];
+    $deal->desc_long = $item['description'].$item['details'];
+    $deal->pictures = $item['image_url'];
+    $deal->shipping = '';
+  }
 }
 
 ?>

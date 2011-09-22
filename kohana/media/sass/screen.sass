@@ -6,8 +6,7 @@
 @import blueprint/liquid
 @import compass/typography/links
 @import compass/typography/lists/bullets
-@import compass/utilities/tables/scaffolding
-@import compass/utilities/tables/alternating-rows-and-columns
+@import compass/utilities/tables
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -30,7 +29,7 @@ html, body
     +column($blueprint-grid-columns)
 
 #sidebar
-    $sidebar-columns: floor($blueprint-grid-columns / 3)
+    $sidebar-columns: floor($blueprint-grid-columns / 4)
     +column($sidebar-columns)
     a
         +hover-link
@@ -40,7 +39,7 @@ html, body
             font-size: 1.5em
 
 #content
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3)
+    $content-columns: ceil(3 * $blueprint-grid-columns / 4)
     +column($content-columns, true)
     font-size: 1em
     a
@@ -48,7 +47,7 @@ html, body
         font-family: Helvetica, Arial, sans-serif
         font-size: 1.25em
         +hover-link
-        +link-colors(#6D7582,  #526073, #c0c, #6D7582, #b20811)
+        +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
 
 
 #header h1
@@ -94,6 +93,5 @@ a#delete-link
 #sites
     table
         +table-scaffolding
-        $table-color: #7a98c6
-        +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222)
-
+        $table-color : #d0dbea
+        +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)
