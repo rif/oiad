@@ -22,7 +22,7 @@ Class Controller_Scrapp extends Controller {
     $site_id = $this->request->param('id');
     $site = ORM::factory('site',  $site_id);
     $page = $site->page;
-    if($site->is_deal){
+    if($site->is_deal == 'T'){
       $page = $this->_get_host($site->page);
     }
     $scrapper = PolyFactory::getScrapper($page);
