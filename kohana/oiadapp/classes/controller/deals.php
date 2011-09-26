@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
 Class Controller_Deals extends Controller_Template {
-    public $template = 'base';
+    public $template = 'backend';
 
      public function action_index() {
         $view = View::factory('deals/list');

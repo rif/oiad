@@ -2,7 +2,7 @@
 
 class Controller_Sites extends Controller_Template {
 
-  public $template = 'base';
+  public $template = 'backend';
 
   public function action_index() {
     $view = View::factory('sites/list');

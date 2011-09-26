@@ -116,6 +116,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)(/<cid>)))')
 	->defaults(array(
-		'controller' => 'sites',
+		'controller' => 'oiad',
 		'action'     => 'index',
 	));
