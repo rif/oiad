@@ -4,7 +4,7 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 abstract class AbstractMultipleScrapper extends AbstractScrapper {
 
-    protected function loadDeal($site){
+    protected function loadDeal($site, $pageToScrapp){
       $today = date('Y-m-d');
       $result = array();
       $items = $this->xpath->query($this->_getDealIterator());
@@ -12,7 +12,7 @@ abstract class AbstractMultipleScrapper extends AbstractScrapper {
         $deal = ORM::factory('deal');
         $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->where('count', '=', $i)->find();
         $deal->site = $site;
-        $this->_fillMultipleDetails($deal, $site->page, $i);
+        $this->_fillMultipleDetails($deal, $pageToScrapp, $i);
         $deal->count = $i;
         $deal->pub_date = $today;
         $deal->save();
