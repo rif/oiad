@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
     		<title>One Item A Day</title>
-    		<?php echo HTML::style('media/stylesheets/screen.css', array('media'=>'screen, projection')); ?>
+    		<?php echo HTML::style('media/stylesheets/backend.css', array('media'=>'screen, projection')); ?>
 
     		<?php echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));?>
 
@@ -16,8 +16,9 @@
     	 <h1>One Item A Day</h1>
     	</div>
        <div id="sidebar">
-       <ul>
-        <li><?php echo HTML::anchor('/', 'Home'); ?></li>
+       <ul>        
+        <li><?php echo HTML::anchor('/sites', 'Home'); ?></li>
+        <li><?php echo HTML::anchor('/', 'Back to frontend'); ?></li>
         <li><?php echo HTML::anchor('/categories', 'Show All Categories'); ?></li>
         <li><?php echo HTML::anchor('/sites/scrapp_expired', 'Scrap Expired Sites'); ?></li>
        	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All Sites'); ?></li>

@@ -1,0 +1,97 @@
+@import blueprint/reset
+@import partials/base
+@import blueprint
+@import blueprint/scaffolding
+@import blueprint/typography
+@import blueprint/liquid
+@import compass/typography/links
+@import compass/typography/lists/bullets
+@import compass/utilities/tables
+
+$blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
+$blueprint-fixed-font-family: "andale mono", "lucida console", monospace
+$blueprint-font-size: 16px
+
++blueprint-typography
++blueprint-typography-defaults
+
+html, body
+    +blueprint-typography-body
+    background-color: #D0D9D9
+    color: #2B2C2F
+    text-shadow: 0 1px 1px white
+
+#container
+    +container
+    width: 99%
+
+#header, #footer
+    +column($blueprint-grid-columns)
+
+#sidebar
+    $sidebar-columns: floor($blueprint-grid-columns / 4)
+    +column($sidebar-columns)
+    a
+        +hover-link
+    ul
+        +no-bullets
+        li
+            font-size: 1.5em
+
+#content
+    $content-columns: ceil(3 * $blueprint-grid-columns / 4)
+    +column($content-columns, true)
+    font-size: 1em
+    a
+        +loud
+        font-family: Helvetica, Arial, sans-serif
+        font-size: 1.25em
+        +hover-link
+        +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
+
+
+#header h1
+    font-size: 6em
+    color: #b20811
+    text-shadow: 0 3px 1px #860000
+
+h1
+    font-size: 3.5em
+    color: #526073
+
+h2
+    font-size: 3em
+    line-height: 1.2em
+    color: #526073
+
+form
+    +blueprint-form
+    +blueprint-scaffolding
+
+a.toggle-state
+    background-repeat: no-repeat
+    display: inline-block
+    min-width: 16px
+    background-image: url("../images/error.png")
+
+
+a.toggle-state.active
+    background-image: url("../images/ok.png")
+
+a#delete-link
+    float: right
+
+#enabled_categories
+    float: left
+
+#all_categories
+    float: right
+
+.expired
+    color: #b20811
+    font-weight: bold
+#sites
+    table
+        +table-scaffolding
+        $table-color : #d0dbea
+        +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)

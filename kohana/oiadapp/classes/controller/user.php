@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 class Controller_User extends Controller_Template {
 
-  public $template = 'base';
+  public $template = 'backend';
 
   public function action_register() {
     $view = View::factory('user/register');
