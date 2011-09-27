@@ -567,25 +567,19 @@ html, body {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 38, ../sass/screen.sass */
-#sidebar ul li {
-  font-size: 1.5em;
-}
 
-/* line 41, ../sass/screen.sass */
+/* line 40, ../sass/screen.sass */
 #content {
   display: inline;
   float: left;
   overflow: hidden;
   width: 74.72%;
   margin-right: 0;
-  font-size: 1em;
 }
-/* line 45, ../sass/screen.sass */
+/* line 43, ../sass/screen.sass */
 #content a {
   color: #111111;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.25em;
   text-decoration: none;
   color: #515761;
 }
@@ -610,218 +604,28 @@ html, body {
   color: #cc00cc;
 }
 
-/* line 53, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 #header h1 {
-  font-size: 6em;
   color: #b20811;
   text-shadow: 0 3px 1px #860000;
 }
 
-/* line 58, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 h1 {
-  font-size: 3.5em;
   color: #526073;
 }
 
-/* line 62, ../sass/screen.sass */
+/* line 57, ../sass/screen.sass */
 h2 {
-  font-size: 3em;
   line-height: 1.2em;
   color: #526073;
 }
 
-/* line 18, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form label {
-  font-weight: bold;
+/* line 62, ../sass/screen.sass */
+#oiad-deals .deal-body {
+  display: none;
 }
-/* line 19, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
-}
-/* line 20, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form legend {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-/* line 26, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
-}
-/* line 27, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.title {
-  font-size: 1.5em;
-}
-/* line 29, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-/* line 30, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form select {
-  margin: 0.5em 0;
-}
-/* line 55, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form fieldset {
-  border: 1px solid #cccccc;
-}
-/* line 58, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
-form textarea {
-  background-color: #fff;
-  border: 1px solid #bbbbbb;
-}
-/* line 61, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
-form textarea:focus {
-  border-color: #666666;
-}
-/* line 65, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form select {
-  background-color: #fff;
-  border-width: 1px;
-  border-style: solid;
-}
-/* line 44, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
-  width: 300px;
-}
-/* line 46, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form textarea {
-  width: 390px;
-  height: 250px;
-}
-/* line 39, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
-}
-/* line 42, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form .border {
-  border-right: 1px solid #eeeeee;
-}
-/* line 45, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form .colborder {
-  padding-right: 2.084%;
-  margin-right: 2.084%;
-  border-right: 1px solid #eeeeee;
-}
-/* line 47, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form hr {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  width: 100%;
-  height: 0.083em;
-  margin: 0;
-  margin-left: 2.084%;
-  margin-right: 2.084%;
-  border: none;
-}
-/* line 49, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  width: 100%;
-  height: 0.083em;
-  margin: 0;
-  margin-left: 2.084%;
-  margin-right: 2.084%;
-  border: none;
-  background: white;
-  color: white;
-}
-/* line 51, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form form.inline {
-  line-height: 3;
-}
-/* line 6, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form form.inline p {
-  margin-bottom: 0;
-}
-
-/* line 71, ../sass/screen.sass */
-a.toggle-state {
-  background-repeat: no-repeat;
-  display: inline-block;
-  min-width: 16px;
-  background-image: url("../images/error.png");
-}
-
-/* line 78, ../sass/screen.sass */
-a.toggle-state.active {
-  background-image: url("../images/ok.png");
-}
-
-/* line 81, ../sass/screen.sass */
-a#delete-link {
-  float: right;
-}
-
-/* line 84, ../sass/screen.sass */
-#enabled_categories {
-  float: left;
-}
-
-/* line 87, ../sass/screen.sass */
-#all_categories {
-  float: right;
-}
-
-/* line 90, ../sass/screen.sass */
-.expired {
+/* line 64, ../sass/screen.sass */
+#oiad-deals a.category-link.selected {
   color: #b20811;
-  font-weight: bold;
-}
-
-/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#sites table th {
-  text-align: center;
-  font-weight: bold;
-}
-/* line 6, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#sites table td,
-#sites table th {
-  padding: 2px;
-}
-/* line 8, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#sites table td.numeric,
-#sites table th.numeric {
-  text-align: right;
-}
-/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table th {
-  background-color: white;
-}
-/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table th.even, #sites table th:nth-child(2n) {
-  background-color: #dddddd;
-}
-/* line 7, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tr.odd td {
-  background-color: #dbead0;
-}
-/* line 9, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tr.odd td.even, #sites table tr.odd td:nth-child(2n) {
-  background-color: #b9c8ae;
-}
-/* line 12, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tr.even td {
-  background-color: #d0dbea;
-}
-/* line 14, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tr.even td.even, #sites table tr.even td:nth-child(2n) {
-  background-color: #aeb9c8;
-}
-/* line 17, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tfoot th, #sites table tfoot td {
-  background-color: white;
-}
-/* line 19, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#sites table tfoot th.even, #sites table tfoot th:nth-child(2n), #sites table tfoot td.even, #sites table tfoot td:nth-child(2n) {
-  background-color: #dddddd;
 }
