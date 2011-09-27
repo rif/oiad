@@ -36,62 +36,30 @@ html, body
     ul
         +no-bullets
         li
-            font-size: 1.5em
 
 #content
     $content-columns: ceil(3 * $blueprint-grid-columns / 4)
     +column($content-columns, true)
-    font-size: 1em
     a
         +loud
-        font-family: Helvetica, Arial, sans-serif
-        font-size: 1.25em
+        font-family: Helvetica, Arial, sans-serif        
         +hover-link
         +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
 
 
-#header h1
-    font-size: 6em
+#header h1    
     color: #b20811
     text-shadow: 0 3px 1px #860000
 
-h1
-    font-size: 3.5em
+h1    
     color: #526073
 
-h2
-    font-size: 3em
+h2  
     line-height: 1.2em
     color: #526073
 
-form
-    +blueprint-form
-    +blueprint-scaffolding
-
-a.toggle-state
-    background-repeat: no-repeat
-    display: inline-block
-    min-width: 16px
-    background-image: url("../images/error.png")
-
-
-a.toggle-state.active
-    background-image: url("../images/ok.png")
-
-a#delete-link
-    float: right
-
-#enabled_categories
-    float: left
-
-#all_categories
-    float: right
-
-.expired
-    color: #b20811
-    font-weight: bold
-#sites
-    table
-        +table-scaffolding
-        $table-color : #d0dbea
-        +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)
+#oiad-deals
+    .deal-body
+        display: none
+    a.category-link.selected
+        color: #b20811
