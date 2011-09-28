@@ -16,7 +16,7 @@
         <a href="/"><img src="/media/images/logo.png" alt="logo"/></a>
        <ul>
         <li><?php echo HTML::anchor('/', 'Home'); ?></li>
-        <li><?php echo HTML::anchor('/', 'Daily Deals'); ?></li>
+        <li><?php echo HTML::anchor('/oiad/deals', 'Daily Deals'); ?></li>
         <li><?php echo HTML::anchor('/sites', 'Administration'); ?></li>
        </ul>
        Comercials
