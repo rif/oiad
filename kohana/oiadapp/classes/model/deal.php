@@ -3,5 +3,10 @@
 
 class Model_Deal extends ORM
 {
-    protected $_belongs_to = array('site' => array('foreign_key' => 'id',));
+    protected $_belongs_to = array(
+        'parent_site' => array(
+            'model'       => 'site',
+            'foreign_key' => 'site',
+        ),
+    );
 }

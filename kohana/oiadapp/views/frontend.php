@@ -12,17 +12,11 @@
     <body>
 
     	<div id="container">
-    	<div id="header">
-    	 <h1>One Item A Day</h1>
-    	</div>
        <div id="sidebar">
-        Site Logo
+        <a href="/"><img src="/media/images/logo.png" alt="logo"/></a>
        <ul>
         <li><?php echo HTML::anchor('/', 'Home'); ?></li>
         <li><?php echo HTML::anchor('/', 'Daily Deals'); ?></li>
-        <li><?php echo HTML::anchor('/', 'Other Deals'); ?></li>
-       	<li><?php echo HTML::anchor('/', 'Black Friday'); ?></li>
-       	<li><?php echo HTML::anchor('/', 'Show Today\'s Deals'); ?></li>
         <li><?php echo HTML::anchor('/sites', 'Administration'); ?></li>
        </ul>
        Comercials

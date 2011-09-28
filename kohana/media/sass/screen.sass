@@ -6,7 +6,7 @@
 @import blueprint/liquid
 @import compass/typography/links
 @import compass/typography/lists/bullets
-@import compass/utilities/tables
+@import compass/css3
 
 $blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 $blueprint-fixed-font-family: "andale mono", "lucida console", monospace
@@ -29,7 +29,7 @@ html, body
     +column($blueprint-grid-columns)
 
 #sidebar
-    $sidebar-columns: floor($blueprint-grid-columns / 4)
+    $sidebar-columns: floor($blueprint-grid-columns / 5)
     +column($sidebar-columns)
     a
         +hover-link
@@ -38,18 +38,13 @@ html, body
         li
 
 #content
-    $content-columns: ceil(3 * $blueprint-grid-columns / 4)
+    $content-columns: ceil(4 * $blueprint-grid-columns / 5)
     +column($content-columns, true)
     a
         +loud
         font-family: Helvetica, Arial, sans-serif        
         +hover-link
         +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
-
-
-#header h1    
-    color: #b20811
-    text-shadow: 0 3px 1px #860000
 
 h1    
     color: #526073
@@ -58,8 +53,37 @@ h2
     line-height: 1.2em
     color: #526073
 
-#oiad-deals
-    .deal-body
-        display: none
+#oiad-items  
     a.category-link.selected
         color: #b20811
+        
+#items-grid
+    padding-top: 10px
+    .item
+        +border-radius
+        +box-shadow(#303030 2px 2px 6px)
+        +column(7)
+        overflow: auto
+        padding: 5px
+        font-size: 11px
+        margin-bottom: 20px
+        border: 2px solid #06c
+        height: 160px
+        .item-title
+            font-size: 1.2em
+            font-weight: bold
+        .item-body
+            img
+                float: left
+                margin-right: 5px
+                height: 80px
+            .item-price
+                font-weight: bold
+                font-size: 1.3em
+                color: #B20811
+            .item-desc_long
+                width: 120px
+                text-overflow: ellipsis
+                white-space:nowrap
+                overflow:hidden
+ 
