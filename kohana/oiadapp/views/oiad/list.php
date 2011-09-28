@@ -1,4 +1,5 @@
 <div id="oiad-items">
+<span>Filter by category:</span>
 <?php
 foreach($categories as $cat){
     echo '<a class="category-link selected" href="#">'.$cat->name.'</a>&nbsp;';
@@ -6,10 +7,13 @@ foreach($categories as $cat){
 ?>
 <div id="items-grid">
 <?php
-foreach($deals as $d)
+foreach($sites as $site)
 {
-    $site = $d->parent_site;
-    $site_categories = $site->categories->find_all();    
+    $site_categories = $site->categories->find_all();   
+    $today = date('Y-m-d');
+    $deals = $site->deals->where('pub_date', '=', $today)->find_all();    
+    foreach($deals as $d){
+    if(!$d->id) break;
 ?>
     <div class="item <?php foreach($site_categories as $c){echo $c->name.' ';}?>" >
     <?php echo HTML::anchor($d->item_link ,truncate($d->desc_short, 35, " "), array('class'=>'item-title')); ?>
@@ -25,6 +29,7 @@ foreach($deals as $d)
     </div><!-- item-body -->
     </div><!-- item -->
 <?php
+}
 }
 ?>
 </div> <!-- items-grid -->

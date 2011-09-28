@@ -8,10 +8,17 @@ class Controller_Oiad extends Controller_Template {
         $view = View::factory('oiad/list');
         
         $view->categories = ORM::factory('category')->find_all();
-
-        $deals = ORM::factory('deal');
-        $today = date('Y-m-d');
-        $view->deals = $deals->where('pub_date', '=', $today)->find_all();
+        $view->sites = ORM::factory('site')->where('is_deal','=','F')->find_all();
+        
+        $this->template->content = $view;
+    }
+    
+     public function action_deals() {
+        $view = View::factory('oiad/list');
+        
+        $view->categories = ORM::factory('category')->find_all();
+        $view->sites = ORM::factory('site')->where('is_deal','=','T')->find_all();
+        
         $this->template->content = $view;
     }
 }
