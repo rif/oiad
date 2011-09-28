@@ -4,7 +4,7 @@
 class Model_Site extends ORM
 {
     protected $_has_many = array(
-        'deals' => array('foreign_key' => 'id'),
+        'deals' => array('foreign_key' => 'site'),
         'categories' => array(
             'model'   => 'category',
             'through' => 'categories_sites',
