@@ -50,7 +50,7 @@ echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link
 	$('#delete-link').click(function(e){
 		if (confirm("Are you shure you want to delete this site?")) {
  			$.get($(this).attr('href'));
- 			window.location = '/';
+ 			window.location = '/sites';
 		}
 		e.preventDefault();
 	});
