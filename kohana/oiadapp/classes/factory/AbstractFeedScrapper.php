@@ -12,7 +12,9 @@ abstract class AbstractFeedScrapper extends AbstractScrapper {
       $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();
       $deal->site = $site;
       $deal->item_link = $site->page;
-      $this->_fillFeedDetails($deal, $items[0]);
+      if(count($items)>0) {
+        $this->_fillFeedDetails($deal, $items[0]);
+      }
       $deal->pub_date = $today;
       $deal->save();
       return $deal->id;
