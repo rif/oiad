@@ -4,7 +4,7 @@ return array(
 
 	'driver'       => 'ORM',
 	'hash_method'  => 'sha256',
-	'hash_key'     => 'IW3Oug6r9C4PPhGLSESZhqN27ekJSk0H3LbIgUoaHWfloCXXZAmwKk1AoFNApE4',
+	'hash_key'     => 'kmlLlWh5WQxSyjFp9QSZ2IeJ5hvcVelCkcEmAv4iwYusLk7t2xEFSoUBEfCKR6x',
 	'lifetime'     => 1209600,
 	'session_type' => Session::$default,
 	'session_key'  => 'auth_user',

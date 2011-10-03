@@ -21,6 +21,17 @@
        </ul>
        Comercials
        </div>
+       <div id="auth">
+       <?php 
+       $auth = Auth::instance();
+       $user =ORM::factory('user', $auth->get_user());
+       if($auth->logged_in()!= 0){
+          echo 'Hello '.HTML::anchor('/user/profile', $user->username).'! '.HTML::anchor('/user/logout', 'Logout');
+       } else {
+          echo HTML::anchor('/user/login', 'Login').' or '.HTML::anchor('/user/register', 'Register');
+       }
+       ?>
+       </div> <!-- auth -->
        <div id="content">
    		<?php echo $content; ?>
         </div> <!-- content -->
