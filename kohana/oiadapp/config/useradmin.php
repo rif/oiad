@@ -76,5 +76,5 @@ return array(
      * - You must have the reCaptcha library (e.g. http://recaptcha.net) in your vendors directory. (bundled in the default repo)
      * - You must set the private and public key in /config/recaptcha.php from https://www.google.com/recaptcha/admin/create
      */
-    'captcha' => true,
+    'captcha' => false,
     );
