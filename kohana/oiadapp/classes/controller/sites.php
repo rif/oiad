@@ -1,8 +1,9 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-require_once Kohana::find_file('classes', 'controller/login_controller');
 
-class Controller_Sites extends Controller_Admin {
+class Controller_Sites extends Controller_App {
+
+  public $auth_required = array('admin');
 
   public function action_index() {
     $view = View::factory('sites/list');

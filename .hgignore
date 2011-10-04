@@ -8,3 +8,4 @@ logs
 .geanyprj
 .~lock.*
 *.sublime-*
+.git*
