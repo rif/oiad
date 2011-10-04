@@ -23,6 +23,7 @@
        </div>
        <div id="auth">
        <?php 
+       $session = Session::instance();
        $auth = Auth::instance();
        $user =ORM::factory('user', $auth->get_user());
        if($auth->logged_in()!= 0){

@@ -2,9 +2,11 @@
 
 require_once Kohana::find_file('classes', 'controller/login_controller');
 
-Class Controller_Deals extends Controller_Admin {
+Class Controller_Deals extends Controller_App {
 
-     public function action_index() {
+    public $auth_required = array('admin');
+
+    public function action_index() {
         $view = View::factory('deals/list');
         
         $deals = ORM::factory('deal');
