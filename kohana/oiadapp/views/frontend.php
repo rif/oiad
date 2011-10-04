@@ -15,20 +15,20 @@
        <div id="sidebar">
         <a href="/"><img src="/media/images/logo.png" alt="logo"/></a>
        <ul>
-        <li><?php echo HTML::anchor('/', 'Home'); ?></li>
-        <li><?php echo HTML::anchor('/oiad/deals', 'Daily Deals'); ?></li>
-        <li><?php echo HTML::anchor('/sites', 'Administration'); ?></li>
+        <li><?php echo HTML::anchor('/', __('Home')); ?></li>
+        <li><?php echo HTML::anchor('/oiad/deals', __('Daily Deals')); ?></li>
+        <li><?php echo HTML::anchor('/sites', __('Administration')); ?></li>
        </ul>
-       Comercials
+       Commercials
        </div>
        <div id="auth">
        <?php 
        $auth = Auth::instance();
        $user =ORM::factory('user', $auth->get_user());
        if($auth->logged_in()!= 0){
-          echo 'Hello '.HTML::anchor('/user/profile', $user->username).'! '.HTML::anchor('/user/logout', 'Logout');
+          echo 'Hello '.HTML::anchor('/user/profile', $user->username).'! '.HTML::anchor('/user/logout', __('Logout'));
        } else {
-          echo HTML::anchor('/user/login', 'Login').' or '.HTML::anchor('/user/register', 'Register');
+          echo HTML::anchor('/user/login', 'Login').' or '.HTML::anchor('/user/register', __('Register'));
        }
        ?>
       </div> <!-- auth -->

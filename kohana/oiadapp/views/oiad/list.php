@@ -1,5 +1,5 @@
 <div id="oiad-items">
-<span>Filter by category:</span>
+<span><?php echo __('Filter by category'); ?>:</span>
 <?php
 foreach($categories as $cat){
     echo '<a class="category-link selected" href="#">'.$cat->name.'</a>&nbsp;';
