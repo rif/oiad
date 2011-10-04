@@ -1,7 +1,8 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-Class Controller_Deals extends Controller_Template {
-    public $template = 'backend';
+require_once Kohana::find_file('classes', 'controller/login_controller');
+
+Class Controller_Deals extends Controller_Admin {
 
      public function action_index() {
         $view = View::factory('deals/list');

@@ -675,3 +675,14 @@ h2 {
   width: 120px;
   text-overflow: ellipsis;
 }
+
+/* line 93, ../sass/screen.sass */
+.error {
+  color: red;
+}
+
+/* line 96, ../sass/screen.sass */
+.message {
+  padding: 10px;
+  background-color: yellow;
+}

@@ -13,7 +13,9 @@ class Controller_User extends Controller_Template {
     }
  
     #Load the view
-    $content = $this->template->content = View::factory('user/register');    
+    $content = $this->template->content = View::factory('user/register')
+            ->bind('errors', $errors)
+            ->bind('message', $message);
  
     #If there is a post and $_POST is not empty
     if ($_POST)
@@ -38,6 +40,10 @@ class Controller_User extends Controller_Template {
         #redirect to the user account
         $this->request->redirect('/');  
       } catch (ORM_Validation_Exception $e) {
+        // Set failure message
+        $message = 'There were errors, please see form below.';
+                 
+        // Set errors using custom messages
         $errors = $e->errors('models');
       }
     }   
@@ -51,15 +57,16 @@ class Controller_User extends Controller_Template {
       $this->request->redirect('/');   
     }
  
-    $content = $this->template->content = View::factory('user/login');  
+    $content = $this->template->content = View::factory('user/login')->bind('message', $message);;  
  
     #If there is a post and $_POST is not empty
     if ($_POST)
     {
       $auth = Auth::instance();
- 
+      $remember = array_key_exists('remember', $this->request->post()) ? (bool) $_POST['remember'] : FALSE;
+
       #Check Auth
-      $status = $auth->login($_POST['username'], $_POST['password'], true);
+      $status = $auth->login($_POST['username'], $_POST['password'], $remember);
  
       #If the post data validates using the rules setup in the user model
       if ($status)
@@ -68,7 +75,7 @@ class Controller_User extends Controller_Template {
         $this->request->redirect('/');
       }else
       {
-        echo 'login failed!';
+        $message = 'Login failed';
       }
     }
   }
@@ -80,7 +87,17 @@ class Controller_User extends Controller_Template {
   }
 
   public function action_profile() {
-    $this->request->redirect('/'); 
+    $this->template->content = View::factory('user/profile')
+        ->bind('user', $user);
+     
+    // Load the user information
+    $user = Auth::instance()->get_user();
+     
+    // if a user is not logged in, redirect to login page
+    if (!$user)
+    {
+        Request::current()->redirect('user/login');
+    }
   }
 }
 ?>

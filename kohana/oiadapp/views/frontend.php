@@ -31,8 +31,8 @@
           echo HTML::anchor('/user/login', 'Login').' or '.HTML::anchor('/user/register', 'Register');
        }
        ?>
-       </div> <!-- auth -->
-       <div id="content">
+      </div> <!-- auth -->
+      <div id="content">
    		<?php echo $content; ?>
         </div> <!-- content -->
          <div id="footer"></div>

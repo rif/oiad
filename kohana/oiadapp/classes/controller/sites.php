@@ -1,25 +1,8 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-class Controller_Sites extends Controller_Template {
+require_once Kohana::find_file('classes', 'controller/login_controller');
 
-  public $template = 'backend';
-  public $auth_required = array('admin'); //Auth is required to access this controller
-
-  public function before() {
-    parent::before();
-
-    #Open session
-    $this->session= Session::instance();
-
-    if ($this->auth_required != FALSE && Auth::instance()->logged_in($this->auth_required) == FALSE) {
-      if (Auth::instance()->logged_in()){
-        echo "Permission denied!";
-        $this->request->redirect('/');
-      } else {
-        $this->request->redirect('user/login');
-      }
-    }
-  }
+class Controller_Sites extends Controller_Admin {
 
   public function action_index() {
     $view = View::factory('sites/list');
