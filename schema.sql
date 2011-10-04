@@ -159,7 +159,7 @@ CREATE TABLE `roles_users` (
 
 LOCK TABLES `roles_users` WRITE;
 /*!40000 ALTER TABLE `roles_users` DISABLE KEYS */;
-INSERT INTO `roles_users` VALUES (1,1),(1,2);
+INSERT INTO `roles_users` VALUES (1,1),(8,1),(1,2);
 /*!40000 ALTER TABLE `roles_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,6 +198,31 @@ INSERT INTO `sites` VALUES (2,'1 Day Sports','http://www.1daysports.com/','T',NU
 UNLOCK TABLES;
 
 --
+-- Table structure for table `user_identity`
+--
+
+DROP TABLE IF EXISTS `user_identity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_identity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `provider` varchar(255) NOT NULL,
+  `identity` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_identity`
+--
+
+LOCK TABLES `user_identity` WRITE;
+/*!40000 ALTER TABLE `user_identity` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_identity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user_tokens`
 --
 
@@ -209,14 +234,13 @@ CREATE TABLE `user_tokens` (
   `user_id` int(11) unsigned NOT NULL,
   `user_agent` varchar(40) NOT NULL,
   `token` varchar(40) NOT NULL,
-  `type` varchar(100) NOT NULL,
   `created` int(10) unsigned NOT NULL,
   `expires` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq_token` (`token`),
   KEY `fk_user_id` (`user_id`),
   CONSTRAINT `user_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +249,6 @@ CREATE TABLE `user_tokens` (
 
 LOCK TABLES `user_tokens` WRITE;
 /*!40000 ALTER TABLE `user_tokens` DISABLE KEYS */;
-INSERT INTO `user_tokens` VALUES (4,1,'3dcde569624cdc73d3d10d72c31d108237c01496','1c5f77bac36a467ccc3f301e06b977d6735d24f3','',0,1318875445);
 /*!40000 ALTER TABLE `user_tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,15 +261,21 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `email` varchar(254) NOT NULL,
+  `email` varchar(127) NOT NULL,
   `username` varchar(32) NOT NULL DEFAULT '',
-  `password` varchar(64) NOT NULL,
+  `password` char(64) NOT NULL,
   `logins` int(10) unsigned NOT NULL DEFAULT '0',
   `last_login` int(10) unsigned DEFAULT NULL,
+  `reset_token` char(64) NOT NULL DEFAULT '',
+  `status` varchar(20) NOT NULL DEFAULT '',
+  `last_failed_login` datetime NOT NULL,
+  `failed_login_count` int(11) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq_username` (`username`),
   UNIQUE KEY `uniq_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -255,7 +284,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin@mailinator.com','admin','b672a23e21a6fe7f6bf89af0fd41cb2ff286beea3c4cdbef856f6d7d0be20904',8,1317723937);
+INSERT INTO `users` VALUES (1,'test@test.com','admin','b672a23e21a6fe7f6bf89af0fd41cb2ff286beea3c4cdbef856f6d7d0be20904',4,1317743803,'','','2011-10-04 10:56:40',0,'0000-00-00 00:00:00','2011-10-04 10:56:44'),(8,'rif@mailinator.com','rif','da796e9e374af1087c651d9eab15feabed265fd3d7bd97e2c76ce19cab2e0bfe',4,1317742321,'jgt7dh369446685f31z4jjx846hduvmp','','2011-10-04 10:01:41',0,'2011-10-04 09:11:04','2011-10-04 10:32:01');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -268,4 +297,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-10-04 13:31:06
+-- Dump completed on 2011-10-04 18:59:53
