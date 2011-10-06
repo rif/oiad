@@ -23,22 +23,13 @@ class Controller_Oiad extends Controller_Template {
     }
 
     public function action_location() {
-        include("geoipcity.inc");
-        include("geoipregionvars.php");
-        $gi = geoip_open("/usr/local/share/GeoIP/GeoIPCity.dat",GEOIP_STANDARD);
+        $view = View::factory('oiad/location');
 
-        $record = geoip_record_by_addr($gi,"24.24.24.24");
-        print $record->country_code . " " . $record->country_code3 . " " . $record->country_name . "\n";
-        print $record->region . " " . $GEOIP_REGION_NAME[$record->country_code][$record->region] . "\n";
-        print $record->city . "\n";
-        print $record->postal_code . "\n";
-        print $record->latitude . "\n";
-        print $record->longitude . "\n";
-        print $record->metro_code . "\n";
-        print $record->area_code . "\n";
-        print $record->continent_code . "\n";
-
+        include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
+        $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);
+        $view->record = geoip_record_by_addr($gi,"89.123.151.196");
         geoip_close($gi);
+        $this->template->content = $view;
     }
 }
 ?>
