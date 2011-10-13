@@ -1,7 +1,5 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-require_once Kohana::find_file('classes', 'controller/login_controller');
-
 Class Controller_Categories extends Controller_App {
 
   public $auth_required = array('admin');
