@@ -13,7 +13,7 @@ foreach($cities as $c){
 </select>
 
 <?php
-echo '<span>'.Form::submit('submit', 'Submit').'</span>';
+echo '<div>'.Form::submit('submit', 'Submit').'</div>';
 echo Form::close();
 ?>
 
