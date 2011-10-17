@@ -52,10 +52,12 @@
       $("#edit-cities").fancybox({
       'transitionIn' :  'elastic',
       'transitionOut'   :  'elastic',
+      'scrolling'    :  'no',
+      'height'       :  250,
       'speedIn'      :  400, 
       'speedOut'     :  200, 
-      'overlayShow'  :  true,      
-      'height'        :  '600px',      
+      'overlayShow'  :  true,        
+      'autoDimensions': false          
       });
    });
 </script>
