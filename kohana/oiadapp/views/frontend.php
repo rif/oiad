@@ -41,8 +41,6 @@
        } else {
           echo HTML::anchor('/user/login', 'Login').' or '.HTML::anchor('/user/register', __('Register'));
        }
-       echo '&nbsp;';
-       echo HTML::anchor('/preferences', 'Preferences');
        ?>
       </div> <!-- auth -->
       <div id="content">
