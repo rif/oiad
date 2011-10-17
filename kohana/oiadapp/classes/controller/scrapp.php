@@ -30,7 +30,7 @@ Class Controller_Scrapp extends Controller {
     if ($scrapper) {
         $deal_id = $scrapper->scrapp($site);
         if(is_numeric($deal_id)){
-	  if (php_sapi_name() == 'cli') {
+	        if (php_sapi_name() == 'cli') {
 	             echo $site->name." OK!\n";
           } else {
 	             $content .= HTML::anchor('/deals/showdeal/'.$deal_id, $site->name)."<br />";

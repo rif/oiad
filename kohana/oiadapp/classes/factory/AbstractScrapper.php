@@ -48,13 +48,20 @@ abstract class AbstractScrapper {
     }
 
     protected function loadDeal($site, $pageToScrapp){
-      $today = date('Y-m-d');
+      $today = date('Y-m-d');      
       $deal = ORM::factory('deal');
-      $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();
+      $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();      
       $deal->site = $site;
       $deal->item_link = $pageToScrapp;
       $this->_fillDetails($deal, $pageToScrapp);
       $deal->pub_date = $today;
+      // the site automatic deactivation
+      $lastDeal = ORM::factory('deal')->where('site', '=', $site->id)->where('pub_date', '<', $today)->order_by('pub_date', 'desc')->find();            
+      if($deal->desc_short == $lastDeal){
+        $site->active = 'F';
+        $site->save();
+        return 'The site is inactive!';
+      }
       $deal->save();
       return $deal->id;
     }
