@@ -10,7 +10,7 @@ echo '<div class="site-label">'.Form::label('country', 'Country: '); echo Form::
 echo '<div class="site-label">'.Form::label('state', 'State: '); echo Form::input('state', $site->state)."</div>";
 echo '<div class="site-label">'.Form::label('city', 'City: '); echo Form::input('city', $site->city)."</div>";
 echo '<div class="site-label">'.Form::label('cookie', 'Cookie: '); echo Form::input('cookie', $site->cookie)."</div>";
-echo '<div class="site-label">'.Form::submit('submit', 'Submit')."</div>";
+echo '<div>'.Form::submit('submit', 'Submit')."</div>";
 echo Form::close();
 
 echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link'));

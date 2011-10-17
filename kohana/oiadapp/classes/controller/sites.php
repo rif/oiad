@@ -11,13 +11,13 @@ class Controller_Sites extends Controller_App {
       $saved = 0;
       $sites = ORM::factory('site');
       foreach(explode("\n", $_POST['pages']) as $page){
-	$this_site = $sites->where('page', '=', $page)->find_all();
-	if(count($this_site) == 0){
-	  $site = ORM::factory('site');
-	  $site->page = $page;
-	  $site->save();
-	  $saved++;
-	}
+      	$this_site = $sites->where('page', '=', $page)->find_all();
+      	if(count($this_site) == 0){
+      	  $site = ORM::factory('site');
+      	  $site->page = $page;
+      	  $site->save();
+      	  $saved++;
+      	}
       }
     }
 
@@ -102,5 +102,4 @@ class Controller_Sites extends Controller_App {
     }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
-
 }
