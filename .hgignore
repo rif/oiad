@@ -9,3 +9,4 @@ logs
 .~lock.*
 *.sublime-*
 .git*
+kohana/adminer
