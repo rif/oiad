@@ -668,12 +668,14 @@ form fieldset {
   border: 1px solid #cccccc;
 }
 /* line 58, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password], form textarea {
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
+form textarea {
   background-color: #fff;
   border: 1px solid #bbbbbb;
 }
 /* line 61, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
+form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
+form textarea:focus {
   border-color: #666666;
 }
 /* line 65, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -782,11 +784,13 @@ a#delete-link {
   font-weight: bold;
 }
 /* line 6, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#sites table td, #sites table th {
+#sites table td,
+#sites table th {
   padding: 2px;
 }
 /* line 8, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#sites table td.numeric, #sites table th.numeric {
+#sites table td.numeric,
+#sites table th.numeric {
   text-align: right;
 }
 /* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
@@ -820,4 +824,10 @@ a#delete-link {
 /* line 19, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 #sites table tfoot th.even, #sites table tfoot th:nth-child(2n), #sites table tfoot td.even, #sites table tfoot td:nth-child(2n) {
   background-color: #dddddd;
+}
+
+/* line 99, ../sass/backend.sass */
+.site-label > label {
+  width: 250px;
+  display: inline-block;
 }
