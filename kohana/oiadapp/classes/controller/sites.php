@@ -102,4 +102,16 @@ class Controller_Sites extends Controller_App {
     }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
+
+  public function action_check_activity() {
+    $view = View::factory('sites/scrapp');
+    $site_id = $this->request->param('id');
+    $view->content = '';
+    if($site_id != '') {
+      $view->content .= Request::factory("scrapp/index/".$site_id)->execute()->body();
+    } else {
+      $view->content .= Request::factory("scrapp/all")->execute()->body();
+    }
+    $this->template->content = $view;
+  }
 }

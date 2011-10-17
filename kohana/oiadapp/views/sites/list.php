@@ -6,6 +6,7 @@
     <th>#</th>
     <th>Site Name</th>
     <th>Active</th>
+    <th>Type</th>
     <th>Time to next scrapp</th>
     <th>Actions</th>
 </tr>
@@ -21,7 +22,7 @@ foreach($sites as $i=>$site)
 	echo '<td>'.HTML::anchor($site->page, $site->name."</td>");
 	$class = $site->active == 'T' ? 'active':'';
 	echo '<td>'.HTML::anchor(URL::site('/sites/toggleactive/'.$site->id), "&nbsp;", array('class'=>'toggle-state '.$class)).'</td>';
-
+    echo '<td>'.$site->type.'</td>';
     $refresh = $site->refresh_period;
     echo '<td style="text-align: center;">';
 	if($refresh && ($site->active == 'T')) {
