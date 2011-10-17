@@ -1,12 +1,15 @@
 <?php
+echo $pref->cities;
+echo strpos($pref->cities, 'Abilene, TX');
 echo Form::open('/preferences');
 ?>
 <select data-placeholder="Choose a city..." style="width: 380px" multiple="multiple" id="cities-select" name="cities[]" size="10">
 <option value=""></option> 
 <?php
+$favCities = explode('|', $pref->cities);
 foreach($cities as $c){	
-	$pos = strpos($pref->cities, $c) || $pref->cities == $c;
-	$selected = ($pos === true) ? 'selected="selected"' : '';		
+	$sel = in_array($c, $favCities) || $pref->cities == $c;
+	$selected = $sel ? 'selected="selected"' : '';		
     echo '<option value="'.$c.'" '.$selected.'>'.$c.'</option>';
 }
 ?>
