@@ -27,6 +27,7 @@
         <li><?php echo HTML::anchor('/sites/scrapp_expired', 'Scrap Expired Sites'); ?></li>
        	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All Sites'); ?></li>
        	<li><?php echo HTML::anchor('/deals', 'Show Today\'s Deals'); ?></li>
+        <li><?php echo HTML::anchor('/admin_user', 'User Administration'); ?></li>
        </ul>
        </div>
        <div id="auth">

@@ -15,7 +15,7 @@ class Controller_Preferences extends Controller_App {
       $pref->user = $user;
       $pref->cities = implode('|',$_POST['cities']);
       $pref->save();      
-      echo implode(', ',$_POST['cities']);      
+      echo implode(', ',$_POST['cities']);
       return;
     }
     $sites = ORM::factory('site')->where('is_deal','=','T')->select('city')->distinct(true)->order_by('city')->find_all();
