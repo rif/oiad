@@ -65,16 +65,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
-/* line 11, ../sass/screen.sass */
+/* line 18, ../sass/screen.sass */
 .cf {
   zoom: 1;
 }
-/* line 12, ../sass/screen.sass */
+/* line 19, ../sass/screen.sass */
 .cf:before {
   content: "";
   display: table;
 }
-/* line 15, ../sass/screen.sass */
+/* line 22, ../sass/screen.sass */
 .cf:after {
   content: "";
   display: table;
@@ -84,13 +84,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* For IE 6/7 (trigger hasLayout) */
 /* GLOBAL STYLES
  *__________________________________________________ */
-/* line 26, ../sass/screen.sass */
+/* line 33, ../sass/screen.sass */
 html {
   background: #202b5f;
   /* default background - deal of the day */
 }
 
-/* line 30, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 body {
   font: 14px/100% Arial, "FreeSans", sans-serif;
   /* Win/Mac, Win/Mac, Linux, generic */
@@ -103,115 +103,115 @@ body {
 
 /* COLOR CHANGING LOGIC STYLES
  *__________________________________________________ */
-/* line 43, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 html.deal-of-the-day {
   background: #202b5f;
 }
-/* line 45, ../sass/screen.sass */
+/* line 52, ../sass/screen.sass */
 html.coupon-of-the-day {
   background: #27592c;
 }
-/* line 47, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 html.other-deals {
   background: #491317;
 }
-/* line 49, ../sass/screen.sass */
+/* line 56, ../sass/screen.sass */
 html.black-friday {
   background: #231f20;
 }
-/* line 51, ../sass/screen.sass */
+/* line 58, ../sass/screen.sass */
 html.items-of-the-day {
   background: #e97b24;
 }
-/* line 53, ../sass/screen.sass */
+/* line 60, ../sass/screen.sass */
 html.deal-of-the-day #main-menu {
   background: url("../images/main-menu-deal-of-the-day.png") left top no-repeat #202b5f;
 }
-/* line 55, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 html.coupon-of-the-day #main-menu {
   background: url("../images/main-menu-coupon-of-the-day.png") left top no-repeat #27592c;
 }
-/* line 57, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
 html.other-deals #main-menu {
   background: url("../images/main-menu-other-deals.png") left top no-repeat #491317;
 }
-/* line 59, ../sass/screen.sass */
+/* line 66, ../sass/screen.sass */
 html.black-friday #main-menu {
   background: url("../images/main-menu-black-friday.png") left top no-repeat #231f20;
 }
-/* line 61, ../sass/screen.sass */
+/* line 68, ../sass/screen.sass */
 html.items-of-the-day #main-menu {
   background: url("../images/main-menu-items-of-the-day.png") left top no-repeat #e97b24;
 }
-/* line 63, ../sass/screen.sass */
+/* line 70, ../sass/screen.sass */
 html.deal-of-the-day #inner-content {
   border-top: 4px solid #202b5f;
   border-left: 4px solid #202b5f;
 }
-/* line 66, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 html.coupon-of-the-day #inner-content {
   border-top: 4px solid #27592c;
   border-left: 4px solid #27592c;
 }
-/* line 69, ../sass/screen.sass */
+/* line 76, ../sass/screen.sass */
 html.other-deals #inner-content {
   border-top: 4px solid #491317;
   border-left: 4px solid #491317;
 }
-/* line 72, ../sass/screen.sass */
+/* line 79, ../sass/screen.sass */
 html.black-friday #inner-content {
   border-top: 4px solid #231f20;
   border-left: 4px solid #231f20;
 }
-/* line 75, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 html.items-of-the-day #inner-content {
   border-top: 4px solid #e97b24;
   border-left: 4px solid #e97b24;
 }
-/* line 78, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 html.deal-of-the-day #sidebar li.active {
   border: solid #202b5f;
 }
-/* line 80, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 html.coupon-of-the-day #sidebar li.active {
   border: solid #27592c;
 }
-/* line 82, ../sass/screen.sass */
+/* line 89, ../sass/screen.sass */
 html.other-deals #sidebar li.active {
   border: solid #491317;
 }
-/* line 84, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 html.black-friday #sidebar li.active {
   border: solid #231f20;
 }
-/* line 86, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 html.items-of-the-day #sidebar li.active {
   border: solid #e97b24;
 }
-/* line 88, ../sass/screen.sass */
+/* line 95, ../sass/screen.sass */
 html.deal-of-the-day #footer {
   border: solid #202b5f;
 }
-/* line 90, ../sass/screen.sass */
+/* line 97, ../sass/screen.sass */
 html.coupon-of-the-day #footer {
   border: solid #27592c;
 }
-/* line 92, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 html.other-deals #footer {
   border: solid #491317;
 }
-/* line 94, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 html.black-friday #footer {
   border: solid #231f20;
 }
-/* line 96, ../sass/screen.sass */
+/* line 103, ../sass/screen.sass */
 html.items-of-the-day #footer {
   border: solid #e97b24;
 }
 
 /* HEADER STYLES
  *__________________________________________________ */
-/* line 102, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 #header {
   width: 948px;
   height: 129px;
@@ -220,7 +220,7 @@ html.items-of-the-day #footer {
   top: 0;
 }
 
-/* line 109, ../sass/screen.sass */
+/* line 116, ../sass/screen.sass */
 .logo {
   position: absolute;
   top: 9px;
@@ -228,7 +228,7 @@ html.items-of-the-day #footer {
 }
 
 /* MAIN MENU STYLES */
-/* line 116, ../sass/screen.sass */
+/* line 123, ../sass/screen.sass */
 #main-menu {
   position: absolute;
   right: 0;
@@ -241,14 +241,14 @@ html.items-of-the-day #footer {
   z-index: 100;
   padding-left: 113px;
 }
-/* line 127, ../sass/screen.sass */
+/* line 134, ../sass/screen.sass */
 #main-menu li {
   float: left;
   margin-left: 21px;
   height: 27px;
   font: 20px/100% "Times New Roman", serif;
 }
-/* line 133, ../sass/screen.sass */
+/* line 140, ../sass/screen.sass */
 #main-menu li a:link, #main-menu li a:visited {
   font-size: 20px;
   line-height: 27px;
@@ -256,49 +256,49 @@ html.items-of-the-day #footer {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 139, ../sass/screen.sass */
+/* line 146, ../sass/screen.sass */
 #main-menu li a:hover {
   text-decoration: underline;
 }
 
 /* SECONDARY STYLES */
-/* line 144, ../sass/screen.sass */
+/* line 151, ../sass/screen.sass */
 #secondary-menu {
   position: absolute;
   right: 28px;
   top: 62px;
 }
-/* line 148, ../sass/screen.sass */
+/* line 155, ../sass/screen.sass */
 #secondary-menu li {
   float: left;
   color: #2d86c7;
   margin-left: 5px;
 }
-/* line 153, ../sass/screen.sass */
+/* line 160, ../sass/screen.sass */
 #secondary-menu li a:link, #secondary-menu li a:visited {
   font-size: 18px;
   color: #202b5f;
   text-decoration: none;
 }
-/* line 157, ../sass/screen.sass */
+/* line 164, ../sass/screen.sass */
 #secondary-menu li a:hover {
   text-decoration: underline;
 }
 
 /* HEADER SEARCH FORM STYLES */
-/* line 163, ../sass/screen.sass */
+/* line 170, ../sass/screen.sass */
 #header form {
   position: absolute;
   top: 14px;
   right: 26px;
 }
-/* line 167, ../sass/screen.sass */
+/* line 174, ../sass/screen.sass */
 #header input {
   font: 14px/100% Arial, "FreeSans", sans-serif;
   /* Win/Mac, Win/Mac, Linux, generic */
   float: left;
 }
-/* line 171, ../sass/screen.sass */
+/* line 178, ../sass/screen.sass */
 #header input.search-input {
   width: 177px;
   height: 30px;
@@ -311,13 +311,13 @@ html.items-of-the-day #footer {
 
 /* CONTENT STYLES
  *__________________________________________________ */
-/* line 183, ../sass/screen.sass */
+/* line 190, ../sass/screen.sass */
 #content {
   margin-top: 4px;
 }
 
 /* INNER CONTENT STYLES */
-/* line 188, ../sass/screen.sass */
+/* line 195, ../sass/screen.sass */
 #inner-content {
   float: right;
   width: 836px;
@@ -327,13 +327,13 @@ html.items-of-the-day #footer {
   padding-top: 7px;
 }
 
-/* line 196, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 #container {
   padding: 7px;
 }
 
 /* PROMO LISTING STYLES */
-/* line 201, ../sass/screen.sass */
+/* line 208, ../sass/screen.sass */
 #promo-listing li {
   margin-bottom: 22px;
   float: left;
@@ -344,45 +344,45 @@ html.items-of-the-day #footer {
 }
 
 /* PAGER STYLES */
-/* line 211, ../sass/screen.sass */
+/* line 218, ../sass/screen.sass */
 #pager {
   margin: 22px 0 12px 7px;
   float: left;
 }
-/* line 214, ../sass/screen.sass */
+/* line 221, ../sass/screen.sass */
 #pager li {
   float: left;
   margin-right: 14px;
 }
-/* line 217, ../sass/screen.sass */
+/* line 224, ../sass/screen.sass */
 #pager li:first-child {
   color: #2d86c7;
   margin-right: 7px;
 }
-/* line 221, ../sass/screen.sass */
+/* line 228, ../sass/screen.sass */
 #pager li a:link, #pager li a:visited {
   text-decoration: none;
   color: #202b5f;
 }
-/* line 224, ../sass/screen.sass */
+/* line 231, ../sass/screen.sass */
 #pager li a:hover {
   text-decoration: underline;
 }
 
 /* ITEMS PER PAGE FORM STYLES */
-/* line 229, ../sass/screen.sass */
+/* line 236, ../sass/screen.sass */
 #item-page-form {
   margin: 6px 190px 0 0;
   float: right;
 }
-/* line 232, ../sass/screen.sass */
+/* line 239, ../sass/screen.sass */
 #item-page-form label {
   float: left;
   color: #2d86c7;
   margin-right: 8px;
   padding-top: 15px;
 }
-/* line 237, ../sass/screen.sass */
+/* line 244, ../sass/screen.sass */
 #item-page-form input {
   font: 14px/100% Arial, "FreeSans", sans-serif;
   /* Win/Mac, Win/Mac, Linux, generic */
@@ -394,7 +394,7 @@ html.items-of-the-day #footer {
   width: 19px;
   border: 2px solid #202b5f;
 }
-/* line 247, ../sass/screen.sass */
+/* line 254, ../sass/screen.sass */
 #item-page-form input.submit {
   padding: 0;
   border: 0;
@@ -404,20 +404,20 @@ html.items-of-the-day #footer {
 }
 
 /* SIDEBAR STYLES */
-/* line 256, ../sass/screen.sass */
+/* line 263, ../sass/screen.sass */
 #sidebar {
   width: 95px;
   padding-left: 8px;
   border-left: 5px solid white;
   float: left;
 }
-/* line 261, ../sass/screen.sass */
+/* line 268, ../sass/screen.sass */
 #sidebar li {
   width: 98px;
   height: 134px;
   margin-bottom: 6px;
 }
-/* line 265, ../sass/screen.sass */
+/* line 272, ../sass/screen.sass */
 #sidebar li.active {
   width: 99px;
   height: 126px;
@@ -425,54 +425,54 @@ html.items-of-the-day #footer {
   border-width: 4px 0 4px 0 !important;
   background: white;
 }
-/* line 272, ../sass/screen.sass */
+/* line 279, ../sass/screen.sass */
 #sidebar li a:link, #sidebar li a:visited {
   display: block;
   width: 90px;
   height: 134px;
   text-indent: -9999px;
 }
-/* line 277, ../sass/screen.sass */
+/* line 284, ../sass/screen.sass */
 #sidebar li a.anch-deal-of-the-day {
   background: url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent;
 }
-/* line 279, ../sass/screen.sass */
+/* line 286, ../sass/screen.sass */
 #sidebar li.active a.anch-deal-of-the-day {
   margin-top: -4px;
   background: url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent;
 }
-/* line 282, ../sass/screen.sass */
+/* line 289, ../sass/screen.sass */
 #sidebar li a.anch-coupon-of-the-day {
   background: url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent;
 }
-/* line 284, ../sass/screen.sass */
+/* line 291, ../sass/screen.sass */
 #sidebar li.active a.anch-coupon-of-the-day {
   margin-top: -4px;
   background: url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent;
 }
-/* line 287, ../sass/screen.sass */
+/* line 294, ../sass/screen.sass */
 #sidebar li a.anch-other-deals {
   background: url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent;
 }
-/* line 289, ../sass/screen.sass */
+/* line 296, ../sass/screen.sass */
 #sidebar li.active a.anch-other-deals {
   margin-top: -4px;
   background: url(../images/but-sidebar-sprite.jpg) -90px -268px no-repeat transparent;
 }
-/* line 292, ../sass/screen.sass */
+/* line 299, ../sass/screen.sass */
 #sidebar li a.anch-black-friday {
   background: url(../images/but-sidebar-sprite.jpg) left -402px no-repeat transparent;
 }
-/* line 294, ../sass/screen.sass */
+/* line 301, ../sass/screen.sass */
 #sidebar li.active a.anch-black-friday {
   margin-top: -4px;
   background: url(../images/but-sidebar-sprite.jpg) -90px -402px no-repeat transparent;
 }
-/* line 297, ../sass/screen.sass */
+/* line 304, ../sass/screen.sass */
 #sidebar li a.anch-items-of-the-day {
   background: url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent;
 }
-/* line 299, ../sass/screen.sass */
+/* line 306, ../sass/screen.sass */
 #sidebar li.active a.anch-items-of-the-day {
   margin-top: -3px;
   background: url(../images/but-sidebar-sprite.jpg) -90px -536px no-repeat transparent;
@@ -480,7 +480,7 @@ html.items-of-the-day #footer {
 
 /* FOOTER STYLES
  *__________________________________________________ */
-/* line 306, ../sass/screen.sass */
+/* line 313, ../sass/screen.sass */
 #footer {
   border: solid #202b5f;
   border-width: 1px 0 !important;
@@ -490,48 +490,48 @@ html.items-of-the-day #footer {
 }
 
 /* FOOTER MENU STYLES */
-/* line 315, ../sass/screen.sass */
+/* line 322, ../sass/screen.sass */
 #footer-menu {
   margin: 9px 0 0 6px;
   color: #202b5f;
 }
-/* line 318, ../sass/screen.sass */
+/* line 325, ../sass/screen.sass */
 #footer-menu li {
   float: left;
   background: url(../images/bullet-footer.gif) left center no-repeat transparent;
   padding-left: 12px;
   margin-right: 5px;
 }
-/* line 323, ../sass/screen.sass */
+/* line 330, ../sass/screen.sass */
 #footer-menu li:first-child {
   background: none;
   padding: 0;
 }
-/* line 327, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 #footer-menu li a:link, #footer-menu li a:visited {
   color: #699cd3;
   text-decoration: none;
 }
-/* line 330, ../sass/screen.sass */
+/* line 337, ../sass/screen.sass */
 #footer-menu li a:hover {
   text-decoration: underline;
 }
 
 /* SOCIAL BUTTONS MENU STYLES */
-/* line 335, ../sass/screen.sass */
+/* line 342, ../sass/screen.sass */
 #social-menu {
   position: absolute;
   right: 190px;
   top: 6px;
 }
-/* line 339, ../sass/screen.sass */
+/* line 346, ../sass/screen.sass */
 #social-menu li {
   float: left;
   margin-left: 37px;
 }
 
 /* COPYRIGHT STYLES */
-/* line 345, ../sass/screen.sass */
+/* line 352, ../sass/screen.sass */
 #footer p {
   position: absolute;
   left: 6px;
@@ -539,7 +539,7 @@ html.items-of-the-day #footer {
   font-size: 13px;
 }
 
-/* line 352, ../sass/screen.sass */
+/* line 358, ../sass/screen.sass */
 #promo-listing .item {
   overflow: auto;
   padding: 5px;
@@ -547,30 +547,123 @@ html.items-of-the-day #footer {
   margin-bottom: 20px;
   height: 160px;
 }
-/* line 358, ../sass/screen.sass */
+/* line 364, ../sass/screen.sass */
 #promo-listing .item .item-title {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 362, ../sass/screen.sass */
+/* line 368, ../sass/screen.sass */
 #promo-listing .item .item-body img {
   float: left;
   margin-right: 5px;
   height: 80px;
 }
-/* line 366, ../sass/screen.sass */
+/* line 372, ../sass/screen.sass */
 #promo-listing .item .item-body .item-price {
   font-weight: bold;
   font-size: 1.3em;
   color: #b20811;
 }
-/* line 370, ../sass/screen.sass */
+/* line 376, ../sass/screen.sass */
 #promo-listing .item .item-body .item-desc_long {
   width: 120px;
   text-overflow: ellipsis;
 }
 
-/* line 376, ../sass/screen.sass */
+/* line 382, ../sass/screen.sass */
 .error {
   color: red;
+}
+
+/* line 385, ../sass/screen.sass */
+#container {
+  font-size: 1em;
+}
+
+/* line 393, ../sass/screen.sass */
+a.toggle-state {
+  background-repeat: no-repeat;
+  display: inline-block;
+  min-width: 16px;
+  background-image: url("../images/error.png");
+}
+
+/* line 400, ../sass/screen.sass */
+a.toggle-state.active {
+  background-image: url("../images/ok.png");
+}
+
+/* line 403, ../sass/screen.sass */
+a#delete-link {
+  float: right;
+}
+
+/* line 406, ../sass/screen.sass */
+#enabled_categories {
+  float: left;
+}
+
+/* line 409, ../sass/screen.sass */
+#all_categories {
+  float: right;
+}
+
+/* line 412, ../sass/screen.sass */
+.expired {
+  color: #b20811;
+  font-weight: bold;
+}
+
+/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table td,
+#sites table th {
+  padding: 2px;
+}
+/* line 8, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table td.numeric,
+#sites table th.numeric {
+  text-align: right;
+}
+/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th {
+  background-color: white;
+}
+/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th.even, #sites table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td {
+  background-color: #dbead0;
+}
+/* line 9, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td.even, #sites table tr.odd td:nth-child(2n) {
+  background-color: #b9c8ae;
+}
+/* line 12, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td {
+  background-color: #d0dbea;
+}
+/* line 14, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td.even, #sites table tr.even td:nth-child(2n) {
+  background-color: #aeb9c8;
+}
+/* line 17, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th, #sites table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th.even, #sites table tfoot th:nth-child(2n), #sites table tfoot td.even, #sites table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
+
+/* line 421, ../sass/screen.sass */
+.site-label > label {
+  width: 250px;
+  display: inline-block;
 }

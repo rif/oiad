@@ -1,9 +1,3 @@
-<span><?php echo __('Filter by category'); ?>:</span>
-<?php
-foreach($categories as $cat){
-    echo '<a class="category-link selected" href="#">'.$cat->name.'</a>&nbsp;';
-}
-?>
 
 <ul id="promo-listing" class="cf">
 <?php
@@ -77,13 +71,3 @@ function truncate($string, $limit, $break=".", $pad="...")
   return $string;
 }
 ?>
-
-<script type="text/javascript">
-    $(function(){
-        $(".category-link").click(function(e){
-            $(this).toggleClass('selected');
-            $("div[class*='" + $(this).text() + "']").fadeToggle();
-            e.preventDefault();
-        });       
-    });
-</script>
