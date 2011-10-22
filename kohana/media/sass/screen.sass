@@ -1,98 +1,350 @@
-@import blueprint/reset
+@import compass/reset
 @import partials/base
-@import blueprint
-@import blueprint/scaffolding
-@import blueprint/typography
-@import blueprint/liquid
 @import compass/typography/links
 @import compass/typography/lists/bullets
 @import compass/css3
 
-$blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
-$blueprint-fixed-font-family: "andale mono", "lucida console", monospace
-$blueprint-font-size: 16px
 
-+blueprint-typography
-+blueprint-typography-defaults
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+/* For modern browsers
 
-html, body
-    +blueprint-typography-body
-    background-color: #D0D9D9
-    color: #2B2C2F
-    text-shadow: 0 1px 1px white
+.cf
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
 
-#container
-    +container
-    width: 99%
+/* For IE 6/7 (trigger hasLayout)
 
-#header, #footer
-    +column($blueprint-grid-columns)
+/* GLOBAL STYLES
+ *__________________________________________________
 
-#sidebar
-    $sidebar-columns: floor($blueprint-grid-columns / 5)
-    +column($sidebar-columns)
+html
+  background: #202b5f
+  /* default background - deal of the day
+
+body
+  font: 14px / 100% Arial, "FreeSans", sans-serif
+  /* Win/Mac, Win/Mac, Linux, generic
+  width: 948px
+  background: white
+  margin: 0 auto
+  padding-top: 129px
+  position: relative
+
+/* COLOR CHANGING LOGIC STYLES
+ *__________________________________________________
+
+html
+  &.deal-of-the-day
+    background: #202b5f
+  &.coupon-of-the-day
+    background: #27592c
+  &.other-deals
+    background: #491317
+  &.black-friday
+    background: #231f20
+  &.items-of-the-day
+    background: #e97b24
+  &.deal-of-the-day #main-menu
+    background: url('../images/main-menu-deal-of-the-day.png') left top no-repeat #202b5f
+  &.coupon-of-the-day #main-menu
+    background: url('../images/main-menu-coupon-of-the-day.png') left top no-repeat #27592c
+  &.other-deals #main-menu
+    background: url('../images/main-menu-other-deals.png') left top no-repeat #491317
+  &.black-friday #main-menu
+    background: url('../images/main-menu-black-friday.png') left top no-repeat #231f20
+  &.items-of-the-day #main-menu
+    background: url('../images/main-menu-items-of-the-day.png') left top no-repeat #e97b24
+  &.deal-of-the-day #inner-content
+    border-top: 4px solid #202b5f
+    border-left: 4px solid #202b5f
+  &.coupon-of-the-day #inner-content
+    border-top: 4px solid #27592c
+    border-left: 4px solid #27592c
+  &.other-deals #inner-content
+    border-top: 4px solid #491317
+    border-left: 4px solid #491317
+  &.black-friday #inner-content
+    border-top: 4px solid #231f20
+    border-left: 4px solid #231f20
+  &.items-of-the-day #inner-content
+    border-top: 4px solid #e97b24
+    border-left: 4px solid #e97b24
+  &.deal-of-the-day #sidebar li.active
+    border: solid #202b5f
+  &.coupon-of-the-day #sidebar li.active
+    border: solid #27592c
+  &.other-deals #sidebar li.active
+    border: solid #491317
+  &.black-friday #sidebar li.active
+    border: solid #231f20
+  &.items-of-the-day #sidebar li.active
+    border: solid #e97b24
+  &.deal-of-the-day #footer
+    border: solid #202b5f
+  &.coupon-of-the-day #footer
+    border: solid #27592c
+  &.other-deals #footer
+    border: solid #491317
+  &.black-friday #footer
+    border: solid #231f20
+  &.items-of-the-day #footer
+    border: solid #e97b24
+
+/* HEADER STYLES
+ *__________________________________________________
+
+#header
+  width: 948px
+  height: 129px
+  position: absolute
+  left: 0
+  top: 0
+
+.logo
+  position: absolute
+  top: 9px
+  left: 5px
+
+/* MAIN MENU STYLES
+
+#main-menu
+  position: absolute
+  right: 0
+  top: 95px
+  width: 829px
+  height: 27px
+  background: url('../images/main-menu-deal-of-the-day.png') left top no-repeat #202b5f
+  border-color: #946638
+  border-width: 1px 0
+  z-index: 100
+  padding-left: 113px
+  li
+    float: left
+    margin-left: 21px
+    height: 27px
+    font: 20px / 100% "Times New Roman", serif
     a
-        +hover-link
-    ul
-        +no-bullets
-        li
+      &:link, &:visited
+        font-size: 20px
+        line-height: 27px
+        color: white
+        text-decoration: none
+        font-weight: bold
+      &:hover
+        text-decoration: underline
 
-#auth
-    float: right
+/* SECONDARY STYLES
+
+#secondary-menu
+  position: absolute
+  right: 28px
+  top: 62px
+  li
+    float: left
+    color: #2d86c7
+    margin-left: 5px
+    a
+      &:link, &:visited
+        font-size: 18px
+        color: #202b5f
+        text-decoration: none
+      &:hover
+        text-decoration: underline
+
+/* HEADER SEARCH FORM STYLES
+
+#header
+  form
+    position: absolute
+    top: 14px
+    right: 26px
+  input
+    font: 14px / 100% Arial, "FreeSans", sans-serif
+    /* Win/Mac, Win/Mac, Linux, generic
+    float: left
+    &.search-input
+      width: 177px
+      height: 30px
+      line-height: 28px
+      padding: 0 8px
+      border: 1px solid #2d86c7
+      color: #202b5f
+      margin-right: 3px
+
+/* CONTENT STYLES
+ *__________________________________________________
 
 #content
-    $content-columns: ceil(4 * $blueprint-grid-columns / 5)
-    +column($content-columns, true)
+  margin-top: 4px
+
+/* INNER CONTENT STYLES
+
+#inner-content
+  float: right
+  width: 836px
+  min-height: 690px
+  border-top: 4px solid #202b5f
+  border-left: 4px solid #202b5f
+  padding-top: 7px
+
+#container
+  padding: 7px
+
+/* PROMO LISTING STYLES
+
+#promo-listing li
+  margin-bottom: 22px
+  float: left
+  width: 204px
+  height: 174px
+  margin: 0 0 7px 7px
+  border: 2px solid #2d86c7
+
+/* PAGER STYLES
+
+#pager
+  margin: 22px 0 12px 7px
+  float: left
+  li
+    float: left
+    margin-right: 14px
+    &:first-child
+      color: #2d86c7
+      margin-right: 7px
     a
-        +loud
-        font-family: Helvetica, Arial, sans-serif        
-        +hover-link
-        +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
+      &:link, &:visited
+        text-decoration: none
+        color: #202b5f
+      &:hover
+        text-decoration: underline
 
-h1    
-    color: #526073
+/* ITEMS PER PAGE FORM STYLES
 
-h2  
-    line-height: 1.2em
-    color: #526073
+#item-page-form
+  margin: 6px 190px 0 0
+  float: right
+  label
+    float: left
+    color: #2D86C7
+    margin-right: 8px
+    padding-top: 15px
+  input
+    font: 14px / 100% Arial, "FreeSans", sans-serif
+    /* Win/Mac, Win/Mac, Linux, generic
+    height: 28px
+    line-height: 28px
+    float: left
+    color: #2D86C7
+    padding: 0 5px
+    width: 19px
+    border: 2px solid #202B5F
+    &.submit
+      padding: 0
+      border: 0
+      width: 33px
+      height: 32px
+      margin-left: 4px
 
-#oiad-items  
-    a.category-link.selected
-        color: #b20811
-        
-#items-grid
-    padding-top: 10px
-    .item
-        +border-radius
-        +box-shadow(#303030 2px 2px 6px)
-        +column(7)
-        overflow: auto
-        padding: 5px
-        font-size: 11px
-        margin-bottom: 20px
-        border: 2px solid #06c
-        height: 160px
-        .item-title
-            font-size: 1.2em
-            font-weight: bold
-        .item-body
-            img
-                float: left
-                margin-right: 5px
-                height: 80px
-            .item-price
-                font-weight: bold
-                font-size: 1.3em
-                color: #B20811
-            .item-desc_long
-                width: 120px
-                text-overflow: ellipsis
-                white-space:nowrap
-                overflow:hidden
- 
-.error 
-    color: red
+/* SIDEBAR STYLES
 
-.message
-    padding: 10px
-    background-color: yellow
+#sidebar
+  width: 95px
+  padding-left: 8px
+  border-left: 5px solid white
+  float: left
+  li
+    width: 98px
+    height: 134px
+    margin-bottom: 6px
+    &.active
+      width: 99px
+      height: 126px
+      border: solid #202b5f
+      border-width: 4px 0 4px 0 !important
+      background: white
+    a
+      &:link, &:visited
+        display: block
+        width: 90px
+        height: 134px
+        text-indent: -9999px
+      &.anch-deal-of-the-day
+        background: url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent
+    &.active a.anch-deal-of-the-day
+      margin-top: -4px
+      background: url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent
+    a.anch-coupon-of-the-day
+      background: url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent
+    &.active a.anch-coupon-of-the-day
+      margin-top: -4px
+      background: url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent
+    a.anch-other-deals
+      background: url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent
+    &.active a.anch-other-deals
+      margin-top: -4px
+      background: url(../images/but-sidebar-sprite.jpg) -90px -268px no-repeat transparent
+    a.anch-black-friday
+      background: url(../images/but-sidebar-sprite.jpg) left -402px no-repeat transparent
+    &.active a.anch-black-friday
+      margin-top: -4px
+      background: url(../images/but-sidebar-sprite.jpg) -90px -402px no-repeat transparent
+    a.anch-items-of-the-day
+      background: url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent
+    &.active a.anch-items-of-the-day
+      margin-top: -3px
+      background: url(../images/but-sidebar-sprite.jpg) -90px -536px no-repeat transparent
+
+/* FOOTER STYLES
+ *__________________________________________________
+
+#footer
+  border: solid #202b5f
+  border-width: 1px 0 !important
+  height: 45px
+  color: #699CD3
+  position: relative
+
+/* FOOTER MENU STYLES
+
+#footer-menu
+  margin: 9px 0 0 6px
+  color: #202b5f
+  li
+    float: left
+    background: url(../images/bullet-footer.gif) left center no-repeat transparent
+    padding-left: 12px
+    margin-right: 5px
+    &:first-child
+      background: none
+      padding: 0
+    a
+      &:link, &:visited
+        color: #699CD3
+        text-decoration: none
+      &:hover
+        text-decoration: underline
+
+/* SOCIAL BUTTONS MENU STYLES
+
+#social-menu
+  position: absolute
+  right: 190px
+  top: 6px
+  li
+    float: left
+    margin-left: 37px
+
+/* COPYRIGHT STYLES
+
+#footer p
+  position: absolute
+  left: 6px
+  bottom: 5px
+  font-size: 13px
+
