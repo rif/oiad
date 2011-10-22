@@ -58,7 +58,7 @@
             </a>
             
             <ul id="main-menu">
-                <?php if($user->has('roles', $role)){?>
+                <?php if( ! $user->has('roles', $role)){?>
                 <li><a href="#" title="View Sports Category">Sports</a></li>
                 <li><a href="#" title="View Fashion Category">Fashion</a></li>
                 <li><a href="#" title="View Electronics Category">Electronics</a></li>
