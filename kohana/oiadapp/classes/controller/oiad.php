@@ -2,7 +2,7 @@
 
 class Controller_Oiad extends Controller_Template {
 
-    public $template = 'frontend';
+    public $template = 'base';
 
     public function action_index() {
         $view = View::factory('oiad/list');

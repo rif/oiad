@@ -1,3 +1,4 @@
+<!--
 <div id="oiad-items">
 <span><?php echo __('Filter by category'); ?>:</span>
 <?php
@@ -26,14 +27,14 @@ foreach($sites as $site)
     <div class="item-desc-long"><?php echo truncate($d->desc_long, 200, " "); ?></div>
     <div class="item-price"><?php echo $d->price; ?></div>
     <div class="item-shipping"><?php echo $d->shipping; ?></div>
-    </div><!-- item-body -->
-    </div><!-- item -->
+    </div>
+    </div>
 <?php
 }
 }
 ?>
-</div> <!-- items-grid -->
-</div> <!-- oiad -items -->
+</div> 
+</div> 
 
 <?php
 // Original PHP code by Chirp Internet: www.chirp.com.au
@@ -54,6 +55,48 @@ function truncate($string, $limit, $break=".", $pad="...")
   return $string;
 }
 ?>
+-->
+<!-- Promo Listing -->
+                <ul id="promo-listing" class="cf">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- /Promo Listing End -->
+                
+                <ul id="pager">
+                    <li>More: </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                </ul>
+                
+                <form action="#" method="post" id="item-page-form">
+                    <div>
+                        <label>Items per page</label>
+                        <input type="text" value="" />
+                        <input class="submit" type="image" src="media/images/but-item-page-form.png" alt="Show items per page" />
+                    </div>
+                </form>
+
 
 <script type="text/javascript">
     $(function(){
