@@ -1,0 +1,386 @@
+/* Eric Meyer's CSS Reset v2.0 - Minified version */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+/* GLOBAL STYLES
+__________________________________________________*/
+
+html {
+     background: #202b5f; /* default background - deal of the day */
+}
+
+body {
+    font: 14px/100% Arial, "FreeSans", sans-serif; /* Win/Mac, Win/Mac, Linux, generic */
+    width: 948px;
+    background: white;
+    margin: 0 auto;
+    padding-top: 129px;
+    position: relative;
+}
+
+/* COLOR CHANGING LOGIC STYLES
+__________________________________________________*/
+
+html.deal-of-the-day  { background: #202b5f; }
+html.coupon-of-the-day  { background: #27592c; }
+html.other-deals  { background: #491317; }
+html.black-friday  { background: #231f20; }
+html.items-of-the-day  { background: #e97b24; }
+
+
+    html.deal-of-the-day #main-menu { background: url('../images/main-menu-deal-of-the-day.png') left top no-repeat #202b5f; }
+    html.coupon-of-the-day #main-menu { background: url('../images/main-menu-coupon-of-the-day.png') left top no-repeat #27592c; }
+    html.other-deals #main-menu { background: url('../images/main-menu-other-deals.png') left top no-repeat #491317; }
+    html.black-friday #main-menu { background: url('../images/main-menu-black-friday.png') left top no-repeat #231f20; }
+    html.items-of-the-day #main-menu { background: url('../images/main-menu-items-of-the-day.png') left top no-repeat #e97b24; }
+
+
+    html.deal-of-the-day #inner-content { border-top: 4px solid #202b5f; border-left: 4px solid #202b5f; }
+    html.coupon-of-the-day #inner-content { border-top: 4px solid #27592c; border-left: 4px solid #27592c; }
+    html.other-deals #inner-content { border-top: 4px solid #491317; border-left: 4px solid #491317; }
+    html.black-friday #inner-content { border-top: 4px solid #231f20; border-left: 4px solid #231f20; }
+    html.items-of-the-day #inner-content { border-top: 4px solid #e97b24; border-left: 4px solid #e97b24; }
+
+
+    html.deal-of-the-day #sidebar li.active { border: solid #202b5f; }
+    html.coupon-of-the-day #sidebar li.active { border: solid #27592c; }
+    html.other-deals #sidebar li.active { border: solid #491317; }
+    html.black-friday #sidebar li.active { border: solid #231f20; }
+    html.items-of-the-day #sidebar li.active { border: solid #e97b24; }
+
+    
+    html.deal-of-the-day #footer { border: solid #202b5f; }
+    html.coupon-of-the-day #footer { border: solid #27592c; }
+    html.other-deals #footer { border: solid #491317; }
+    html.black-friday #footer { border: solid #231f20; }
+    html.items-of-the-day #footer { border: solid #e97b24; }
+
+
+/* HEADER STYLES
+__________________________________________________*/
+
+    #header {
+        width: 948px;
+        height: 129px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+        .logo {
+            position: absolute;
+            top: 9px;
+            left: 5px;
+        }
+        
+        /* MAIN MENU STYLES */       
+        #main-menu {
+            position: absolute;
+            right: 0;
+            top: 95px;
+            width: 829px;
+            height: 27px;
+            background: url('../images/main-menu-deal-of-the-day.png') left top no-repeat #202b5f;
+            border-color: #946638;
+            border-width: 1px 0;
+            z-index: 100;
+            padding-left: 113px;
+        }
+        
+            #main-menu li {
+                float: left;
+                margin-left: 21px;
+                height: 27px;
+                font: 20px/100% "Times New Roman", serif;
+            }
+             
+                #main-menu li a:link, #main-menu li a:visited {
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                
+                #main-menu li a:hover {
+                    text-decoration: underline;
+                }
+        
+        /* SECONDARY STYLES */
+        #secondary-menu {
+            position: absolute;
+            right: 28px;
+            top: 62px;
+        }
+        
+            #secondary-menu li {
+                float: left;
+                color: #2d86c7;
+                margin-left: 5px;
+            }
+            
+                #secondary-menu li a:link, #secondary-menu li a:visited {
+                    font-size: 18px;
+                    color: #202b5f;
+                    text-decoration: none;
+                }
+                
+                #secondary-menu li a:hover {
+                    text-decoration: underline;
+                }
+
+            
+        /* HEADER SEARCH FORM STYLES */
+        #header form {
+            position: absolute;
+            top: 14px;
+            right: 26px;
+        }
+            
+            #header input {
+                font: 14px/100% Arial, "FreeSans", sans-serif; /* Win/Mac, Win/Mac, Linux, generic */
+                float: left;
+            }
+            
+                #header input.search-input {
+                    width: 177px;
+                    height: 30px;
+                    line-height: 28px;
+                    padding: 0 8px;
+                    border: 1px solid #2d86c7;
+                    color: #202b5f;
+                    margin-right: 3px;
+                }
+
+
+/* CONTENT STYLES
+__________________________________________________*/
+
+#content { margin-top: 4px; }
+
+    /* INNER CONTENT STYLES */
+    #inner-content {
+       float: right;
+       width: 836px;
+       border-top: 4px solid #202b5f;
+       border-left: 4px solid #202b5f;
+       padding-top: 7px;
+    }
+    
+        /* PROMO LISTING STYLES */
+        #promo-listing li {
+            margin-bottom: 22px;
+        }
+        
+            #promo-listing li {
+                float: left;
+                width: 204px;
+                height: 174px;
+                margin: 0 0 7px 7px;
+                border: 2px solid #2d86c7;
+            }
+        
+        /* PAGER STYLES */
+        #pager {
+            margin: 22px 0 12px 7px;
+            float: left;
+        }
+        
+            #pager li {
+                float: left;
+                margin-right: 14px;
+            }
+    
+                #pager li:first-child {
+                    color: #2d86c7;
+                    margin-right: 7px;
+                }
+            
+            
+                #pager li a:link, #pager li a:visited{
+                    text-decoration: none;
+                    color: #202b5f;
+                }
+    
+                #pager li a:hover{
+                    text-decoration: underline;
+                }
+        
+        /* ITEMS PER PAGE FORM STYLES */
+        #item-page-form {
+            margin: 6px 190px 0 0;
+            float: right;
+        }
+        
+            #item-page-form label {
+                float: left;
+                color: #2D86C7;
+                margin-right: 8px;
+                padding-top: 15px;
+            }
+            
+            #item-page-form input {
+                font: 14px/100% Arial, "FreeSans", sans-serif; /* Win/Mac, Win/Mac, Linux, generic */
+                height: 28px;
+                line-height: 28px;
+                float: left;
+                color: #2D86C7;
+                padding: 0 5px;
+                width: 19px;
+                border: 2px solid #202B5F;
+            }
+            
+            #item-page-form input.submit {
+                padding: 0;
+                border: 0; 
+                width: 33px;
+                height: 32px;
+                margin-left: 4px;
+            }
+            
+            
+    /* SIDEBAR STYLES */
+    #sidebar {
+        width: 95px;
+        padding-left: 8px;
+        border-left: 5px solid white;
+        float: left;
+    }
+        
+        #sidebar li {
+            width: 98px;
+            height: 134px;
+            margin-bottom: 6px; 
+        }
+        
+            #sidebar li.active {
+                width: 99px;
+                height: 126px;
+                border: solid #202b5f;
+                border-width: 4px 0 4px 0 !important;
+                background: white;
+            }
+
+            #sidebar li a:link, #sidebar li a:visited {
+                display: block;
+                width: 90px;
+                height: 134px;
+                text-indent: -9999px;
+            }
+            
+            #sidebar li a.anch-deal-of-the-day {
+                background: url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent;
+            }
+            #sidebar li.active a.anch-deal-of-the-day {
+                margin-top: -4px;
+                background: url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent;
+            }
+            
+            #sidebar li a.anch-coupon-of-the-day {
+                background: url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent;
+            }
+            #sidebar li.active a.anch-coupon-of-the-day {
+                margin-top: -4px;
+                background: url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent;
+            }
+            
+            #sidebar li a.anch-other-deals {
+                background: url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent;
+            }
+            #sidebar li.active a.anch-other-deals {
+                margin-top: -4px;
+                background: url(../images/but-sidebar-sprite.jpg) -90px -268px no-repeat transparent;
+            }
+            
+            #sidebar li a.anch-black-friday {
+                background: url(../images/but-sidebar-sprite.jpg) left -402px no-repeat transparent;
+            }
+            #sidebar li.active a.anch-black-friday {
+                margin-top: -4px;
+                background: url(../images/but-sidebar-sprite.jpg) -90px -402px no-repeat transparent;
+            }
+            
+            #sidebar li a.anch-items-of-the-day {
+                background: url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent;
+            }
+            #sidebar li.active a.anch-items-of-the-day {
+                margin-top: -3px;
+                background: url(../images/but-sidebar-sprite.jpg) -90px -536px no-repeat transparent;
+            }
+            
+
+/* FOOTER STYLES
+__________________________________________________*/
+
+#footer {
+    border: solid #202b5f;
+    border-width: 1px 0 !important;
+    height: 45px;
+    color: #699CD3;
+    position: relative;
+}
+
+    /* FOOTER MENU STYLES */
+    #footer-menu {
+        margin: 9px 0 0 6px;
+        color: #202b5f;
+    }
+    
+        #footer-menu li {
+            float: left;
+            background: url(../images/bullet-footer.gif) left center no-repeat transparent;
+            padding-left: 12px;
+            margin-right: 5px;
+        }
+        
+            #footer-menu li:first-child {
+                background: none;
+                padding: 0;
+            }
+            
+            #footer-menu li a:link, #footer-menu li a:visited {
+                color: #699CD3;
+                text-decoration: none;
+            }
+            
+            #footer-menu li a:hover {
+                text-decoration: underline;
+            }
+        
+        
+    /* SOCIAL BUTTONS MENU STYLES */
+    #social-menu {
+        position: absolute;
+        right: 190px;
+        top: 6px;
+    }
+    
+        #social-menu li {
+            float: left;
+            margin-left: 37px;
+        }
+    
+    
+    /* COPYRIGHT STYLES */
+    #footer p {
+        position: absolute;
+        left: 6px;
+        bottom: 5px;
+        font-size: 13px;
+    }
