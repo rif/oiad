@@ -538,3 +538,39 @@ html.items-of-the-day #footer {
   bottom: 5px;
   font-size: 13px;
 }
+
+/* line 352, ../sass/screen.sass */
+#promo-listing .item {
+  overflow: auto;
+  padding: 5px;
+  font-size: 11px;
+  margin-bottom: 20px;
+  height: 160px;
+}
+/* line 358, ../sass/screen.sass */
+#promo-listing .item .item-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 362, ../sass/screen.sass */
+#promo-listing .item .item-body img {
+  float: left;
+  margin-right: 5px;
+  height: 80px;
+}
+/* line 366, ../sass/screen.sass */
+#promo-listing .item .item-body .item-price {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #b20811;
+}
+/* line 370, ../sass/screen.sass */
+#promo-listing .item .item-body .item-desc_long {
+  width: 120px;
+  text-overflow: ellipsis;
+}
+
+/* line 376, ../sass/screen.sass */
+.error {
+  color: red;
+}
