@@ -1,9 +1,1 @@
-/* line 1, ../sass/ie.sass */
-#pager, #item-page-form {
-  padding-bottom: 12px;
-}
-
-/* line 4, ../sass/ie.sass */
-#secondary-menu li a {
-  position: relative;
-}
+#pager,#item-page-form{padding-bottom:12px}#secondary-menu li a{position:relative}
