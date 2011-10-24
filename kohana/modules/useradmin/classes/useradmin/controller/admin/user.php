@@ -53,7 +53,7 @@ class Useradmin_Controller_Admin_User extends Controller_App {
 			'auto_hide' => false, 
 			'view' => 'pagination/useradmin'
 		));
-		// Get the items for the query
+		// Get the items for the querykohana/modules/useradmin/views/user/admin/index.php
 		$sort = isset($_GET['sort']) ? $_GET['sort'] : 'username'; // set default sorting direction here
 		$dir = isset($_GET['dir']) ? 'DESC' : 'ASC';
 		$result = $user->limit($pagination->items_per_page)

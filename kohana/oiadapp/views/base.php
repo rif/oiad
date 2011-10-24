@@ -31,17 +31,16 @@
         <!-- Content -->
         <div id="content" class="cf">
             <div id="inner-content" class="cf">
-                <div id="container">
-                <?php echo $content; ?> 
-                </div>                               
+                <?php echo $content; ?>                       
             </div>
             <div id="sidebar">
+            	<?php $c = strlen($category) ? '&category='.$category: '';?>
                 <ul>
-                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=deal-of-the-day&category='.$category;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=coupon-of-the-day&category='.$category;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=other-deals&category='.$category;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
-                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=black-friday&category='.$category;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
-                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=items-of-the-day&category='.$category;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=deal-of-the-day'.$c;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=other-deals'.$c;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
+                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=black-friday'.$c;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
+                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=items-of-the-day'.$c;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
                 </ul>
             </div>
         </div>
@@ -61,8 +60,9 @@
             <ul id="main-menu">
                 <?php if( ! $user->has('roles', $role)){                	
                 	$categories = ORM::factory('category')->find_all();
+					echo '<li><a class="category-link" href="?section='.$section.'">All</a></li>';
 					foreach($categories as $cat){
- 					   echo '<li><a class="category-link selected" href="?section='.$section.'&category='.$cat->name.'">'.ucwords($cat->name).'</a></li>';
+ 					   echo '<li><a class="category-link" href="?section='.$section.'&category='.$cat->name.'">'.ucwords($cat->name).'</a></li>';
 					}
                 } else { ?>
                 <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
@@ -119,4 +119,15 @@
         </div>
         <!-- /Footer End -->
     </body>
+    <script type="javascript">
+    	$(function(){
+		    // Make left sidebar and content the same height
+		    var H = 0;
+		    $("#content > div").slice(0, 2).each(function(i){
+		        var h = $("#content > div").eq(i).height();
+		        if(h > H) H = h;
+		    });
+		    $("#content > div").height(H);
+		});
+    </script>
 </html>

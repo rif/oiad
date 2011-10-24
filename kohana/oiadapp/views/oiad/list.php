@@ -1,6 +1,6 @@
-
 <ul id="promo-listing" class="cf">
 <?php
+$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
 foreach($sites as $site)
 {      
     $today = date('Y-m-d');
@@ -27,26 +27,17 @@ foreach($sites as $site)
 }
 }
 ?>
-</ul> 
-<ul id="pager">
-    <li>More: </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">6</a></li>
-    <li><a href="#">7</a></li>
-    <li><a href="#">8</a></li>
-    <li><a href="#">9</a></li>
-    <li><a href="#">10</a></li>
 </ul>
+
+<div id="pager">
+<?php echo $paging->render('pagination/floating'); ?>
+</div> 
 
 <form action="#" method="post" id="item-page-form">
     <div>
         <label>Items per page</label>
         <input type="text" value="" />
-        <input class="submit" type="image" src="media/images/but-item-page-form.png" alt="Show items per page" />
+        <input class="submit" type="image" src="/media/images/but-item-<?php echo $section; ?>.png" alt="Show items per page" />        
     </div>
 </form>
 
