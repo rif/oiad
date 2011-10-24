@@ -2,15 +2,14 @@
 <ul id="promo-listing" class="cf">
 <?php
 foreach($sites as $site)
-{
-    $site_categories = $site->categories->find_all();   
+{      
     $today = date('Y-m-d');
     $deals = $site->deals->where('pub_date', '=', $today)->find_all();    
     foreach($deals as $d){
     if(!$d->id) break;
 ?>
     <li>
-    <div class="item <?php foreach($site_categories as $c){echo $c->name.' ';}?>" >
+    <div class="item" >
     <?php echo HTML::anchor($d->item_link ,truncate($d->desc_short, 35, " "), array('class'=>'item-title')); ?>
    <div class="item-body">
        <?php if($d->pictures){
