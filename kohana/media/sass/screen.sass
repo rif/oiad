@@ -186,6 +186,7 @@ html
 
 #content
   margin-top: 4px
+  position: relative
 
 /* INNER CONTENT STYLES
 
@@ -195,10 +196,7 @@ html
   min-height: 690px
   border-top: 4px solid $blue
   border-left: 4px solid $blue
-  padding-top: 7px
-
-#container
-  padding: 7px
+  padding: 7px 0 45px 0
 
 /* PROMO LISTING STYLES
 
@@ -213,8 +211,9 @@ html
 /* PAGER STYLES
 
 #pager
-  margin: 22px 0 12px 7px
-  float: left
+  position: absolute
+  bottom: 12px
+  left: 118px            
   li
     float: left
     margin-right: 14px
@@ -231,8 +230,9 @@ html
 /* ITEMS PER PAGE FORM STYLES
 
 #item-page-form
-  margin: 6px 190px 0 0
-  float: right
+  position: absolute
+  bottom: 12px
+  right: 190px
   label
     float: left
     color: $light-blue
@@ -281,12 +281,12 @@ html
       &.anch-deal-of-the-day
         background: url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent
     &.active a.anch-deal-of-the-day
-      margin-top: -4px
+      margin-top: -3px
       background: url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent
     a.anch-coupon-of-the-day
       background: url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent
     &.active a.anch-coupon-of-the-day
-      margin-top: -4px
+      margin-top: -5px
       background: url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent
     a.anch-other-deals
       background: url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent
@@ -297,7 +297,7 @@ html
       background: url(../images/but-sidebar-sprite.jpg) left -402px no-repeat transparent
     &.active a.anch-black-friday
       margin-top: -4px
-      background: url(../images/but-sidebar-sprite.jpg) -90px -402px no-repeat transparent
+      background: url(../images/but-sidebar-sprite.jpg) -90px -400px no-repeat transparent
     a.anch-items-of-the-day
       background: url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent
     &.active a.anch-items-of-the-day
@@ -379,7 +379,7 @@ html
 .error 
   color: red
 
-#container    
+#inner-content
   font-size: 1em
 //  a
 //    font-family: Helvetica, Arial, sans-serif

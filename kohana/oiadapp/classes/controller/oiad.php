@@ -4,19 +4,9 @@ class Controller_Oiad extends Controller_Template {
 
     public $template = 'base';
 
-    public function action_index() {
-        $view = View::factory('oiad/list');
+    public function action_index() {        
 		$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
-		$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
-         /*$pagination = new Pagination(array(
-			'total_items' => $total, 
-			'items_per_page' => 9,  // set this to 30 or 15 for the real thing, now just for testing purposes...
-			'auto_hide' => false,			
-		));
-		$result = $user->limit($pagination->items_per_page)
-			->offset($pagination->offset)
-			->order_by($sort, $dir)
-			->find_all();*/
+		$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';         
 			
 		if(strlen($category)){
 			$category = ORM::factory('category')->where('name','=',$category)->find();
@@ -24,23 +14,28 @@ class Controller_Oiad extends Controller_Template {
 		} else {			
 			$sites = ORM::factory('site');
 		}	
-        $sites = $sites->where('type','=',$section)->where('is_deal','=','F')->find_all();
-       	/*$this->template->content = View::factory('user/admin/index')
-			->set('users', $result)
-			->set('paging', $pagination)
-			->set('default_sort', $sort);*/
-		$view->sites = $sites;
-        $this->template->content = $view;
+        $sites = $sites->where('type','=',$section);
+		$total = 9;//$sites->count_all();
+		$pagination = new Pagination(array(
+			'total_items' => $total, 
+			'items_per_page' => 9,
+			'auto_hide' => false,			
+		));
+		$result = $sites->limit($pagination->items_per_page)
+			->offset($pagination->offset)			
+			->find_all();       	
+		
+		$this->template->content = View::factory('oiad/list')
+			->set('sites', $result)
+			->set('paging', $pagination);         
     }        
 
-    public function action_location() {
-        $view = View::factory('oiad/location');
-
+    public function action_location() {        
         include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
-        $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);
-        $view->record = geoip_record_by_addr($gi,"89.123.151.196");
-        geoip_close($gi);
-        $this->template->content = $view;
+        $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
+        $this->template->content = View::factory('oiad/location')
+			->set('record', geoip_record_by_addr($gi,"89.123.151.196"));
+		geoip_close($gi);
     }
 }
 ?>
