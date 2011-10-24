@@ -1,5 +1,6 @@
 <?php 
 	$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
+	$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
 ?>
 <!DOCTYPE html>
 
@@ -36,11 +37,11 @@
             </div>
             <div id="sidebar">
                 <ul>
-                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="?section=deal-of-the-day" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="?section=coupon-of-the-day" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="?section=other-deals" title="Other deals" class="anch-other-deals">Other deals</a></li>
-                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="?section=black-friday" title="Black friday" class="anch-black-friday">Black friday</a></li>
-                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="?section=items-of-the-day" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=deal-of-the-day&category='.$category;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=coupon-of-the-day&category='.$category;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=other-deals&category='.$category;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
+                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=black-friday&category='.$category;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
+                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=items-of-the-day&category='.$category;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
                 </ul>
             </div>
         </div>
@@ -61,7 +62,7 @@
                 <?php if( ! $user->has('roles', $role)){                	
                 	$categories = ORM::factory('category')->find_all();
 					foreach($categories as $cat){
- 					   echo '<li><a class="category-link selected" cat="'.$cat->name.'" href="#">'.ucwords($cat->name).'</a></li>';
+ 					   echo '<li><a class="category-link selected" href="?section='.$section.'&category='.$cat->name.'">'.ucwords($cat->name).'</a></li>';
 					}
                 } else { ?>
                 <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
@@ -75,16 +76,14 @@
             
             <ul id="secondary-menu">
                 <li><a href="/" title="One Item A Day Homepage">Home</a></li>
-                <li>|</li>
-                <li>
+                <li>|</li>                
                 <?php 
                    if($auth->logged_in()!= 0){
-                      echo HTML::anchor('/user/profile', $user->username).'<li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
+                      echo '<li>'.HTML::anchor('/user/profile', $user->username).'</li><li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
                    } else {
-                      echo HTML::anchor('/user/login', 'Login').'<li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
+                      echo '<li>'.HTML::anchor('/user/login', 'Login').'</li><li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
                    }
                 ?>
-                </li>
                 <li>|</li>
                 <li><a href="/static/about" title="View Contact">Contact</a></li>
                 <li>|</li>
@@ -120,15 +119,4 @@
         </div>
         <!-- /Footer End -->
     </body>
-    <script type="text/javascript" charset="utf-8">
-      $(function(){
-        $("input, textarea, select, button").uniform();
-        $(".category-link").click(function(){
-        	console.log("click");
-            $(this).toggleClass('selected');
-            $("div[class*='" + $(this).attr("cat") + "']").parent().fadeToggle();
-            return false;
-        });  
-      });
-    </script>
 </html>
