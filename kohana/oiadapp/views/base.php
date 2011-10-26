@@ -14,16 +14,11 @@
         <?php echo HTML::style('media/stylesheets/screen.css', array('media'=>'screen, projection'));?>                
   		<?php echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));?>
         <!--[if lt IE 8]><?php echo HTML::style('media/stylesheets/ie.css', array('media'=>'screen, projection'));?><![endif]-->
-        <?php echo HTML::style('media/stylesheets/chosen.css', array('media'=>'screen, projection'));?>	
         <?php echo HTML::style('media/fancybox/jquery.fancybox-1.3.4.css', array('media'=>'screen, projection'));?>
-        <?php echo HTML::style('media/stylesheets/uniform.default.css', array('media'=>'screen, projection'));?>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-        <script>!window.jQuery && document.write('<script src="/media/js/jquery-1.6.4.min.js" type="text/javascript"><\/script>')</script>
-        <?php echo HTML::script('media/js/jquery.uniform.min.js');?>
+        <script>!window.jQuery && document.write('<script src="/media/js/jquery-1.6.4.min.js" type="text/javascript"><\/script>')</script>        
         <?php echo HTML::script('media/fancybox/jquery.fancybox-1.3.4.pack.js');?>        
-        <?php echo HTML::script('media/fancybox/jquery.easing-1.3.pack.js');?>
-        
-        <?php echo HTML::script('media/js/chosen.jquery.min.js');?>
+        <?php echo HTML::script('media/fancybox/jquery.easing-1.3.pack.js');?>        
     </head>
     
     <body>
@@ -119,15 +114,4 @@
         </div>
         <!-- /Footer End -->
     </body>
-    <script type="javascript">
-    	$(function(){
-		    // Make left sidebar and content the same height
-		    var H = 0;
-		    $("#content > div").slice(0, 2).each(function(i){
-		        var h = $("#content > div").eq(i).height();
-		        if(h > H) H = h;
-		    });
-		    $("#content > div").height(H);
-		});
-    </script>
 </html>

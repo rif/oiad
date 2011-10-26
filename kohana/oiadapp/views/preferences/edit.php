@@ -1,9 +1,7 @@
 <?php
-echo $pref->cities;
-echo strpos($pref->cities, 'Abilene, TX');
 echo Form::open('/preferences');
 ?>
-<select data-placeholder="Choose a city..." style="width: 380px" multiple="multiple" id="cities-select" name="cities[]" size="10">
+<select style="width: 380px" multiple="multiple" id="cities-select" name="cities[]" size="10">
 <option value=""></option> 
 <?php
 $favCities = explode('|', $pref->cities);
@@ -21,8 +19,7 @@ echo Form::close();
 ?>
 
 <script type="text/javascript">
-	$(function(){
-		$("#cities-select").chosen();
+	$(function(){		
 		$('form').submit(function(){
 			$.post($(this).attr("action"), $(this).serialize(), function(data){
 				$("#cities").text(data);

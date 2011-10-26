@@ -10,16 +10,16 @@ foreach($sites as $site)
 ?>
     <li>
     <div class="item" >
-    <?php echo HTML::anchor($d->item_link ,truncate($d->desc_short, 35, " "), array('class'=>'item-title')); ?>
+    <?php echo HTML::anchor(htmlspecialchars($d->item_link) ,truncate($d->desc_short, 35, " "), array('class'=>'item-title')); ?>
    <div class="item-body">
        <?php if($d->pictures){
         foreach(explode('|', $d->pictures) as $p){
-            echo '<a href="'.$d->item_link.'"><img src="'.$p.'" alt="'.$p.'"/></a>';
+            echo '<a href="'.htmlspecialchars($d->item_link).'"><img src="'.$p.'" alt="'.$p.'"/></a>';
         }        
     }?>
-    <div class="item-desc-long"><?php echo truncate($d->desc_long, 200, " "); ?></div>
-    <div class="item-price"><?php echo $d->price; ?></div>
-    <div class="item-shipping"><?php echo $d->shipping; ?></div>
+    <div class="item-desc-long"><?php echo htmlspecialchars(truncate($d->desc_long, 200, " ")); ?></div>
+    <div class="item-price"><?php echo htmlspecialchars($d->price); ?></div>
+    <div class="item-shipping"><?php echo htmlspecialchars($d->shipping); ?></div>
     </div> <!-- item-body -->
     </div><!-- item-->
     </li>
