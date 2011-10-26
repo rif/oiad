@@ -29,7 +29,10 @@
                 <?php echo $content; ?>                       
             </div>
             <div id="sidebar">
-            	<?php $c = strlen($category) ? '&category='.$category: '';?>
+            	<?php
+            	$c = strlen($category) ? '&category='.$category: '';
+				$c = htmlspecialchars($c);
+            	?>
                 <ul>
                     <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=deal-of-the-day'.$c;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
                     <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
@@ -57,7 +60,8 @@
                 	$categories = ORM::factory('category')->find_all();
 					echo '<li><a class="category-link" href="?section='.$section.'">All</a></li>';
 					foreach($categories as $cat){
- 					   echo '<li><a class="category-link" href="?section='.$section.'&category='.$cat->name.'">'.ucwords($cat->name).'</a></li>';
+						$param = htmlspecialchars("?section={$section}&category={$cat->name}");
+ 					   echo '<li><a class="category-link" href="'.$param.'">'.ucwords($cat->name).'</a></li>';
 					}
                 } else { ?>
                 <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
