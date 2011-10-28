@@ -1,6 +1,7 @@
 <?php 
 	$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
 	$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
+	$css_array = $js_array = array();
 ?>
 <!DOCTYPE html>
 
@@ -14,9 +15,10 @@
         <?php echo HTML::style('media/stylesheets/screen.css', array('media'=>'screen, projection'));?>                
   		<?php echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));?>
         <!--[if lt IE 8]><?php echo HTML::style('media/stylesheets/ie.css', array('media'=>'screen, projection'));?><![endif]-->
+        <?php echo HTML::style('media/stylesheets/chosen.css', array('media'=>'screen, projection'));?>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
         <script>!window.jQuery && document.write('<script src="/media/js/jquery-1.6.4.min.js" type="text/javascript"><\/script>')</script>        
-            
+        <?php echo HTML::script('media/js/chosen.jquery.min.js');?>           
     </head>
     
     <body>

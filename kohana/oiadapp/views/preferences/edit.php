@@ -1,7 +1,4 @@
-<?php
-echo Form::open('/preferences');
-?>
-<select style="width: 380px" multiple="multiple" id="cities-select" name="cities[]" size="10">
+<select data-placeholder="Choose a city..." style="width: 450px" multiple="multiple" id="cities-select" name="cities[]" size="10">
 <option value=""></option> 
 <?php
 $favCities = explode('|', $pref->cities);
@@ -13,18 +10,15 @@ foreach($cities as $c){
 ?>
 </select>
 
-<?php
-echo Form::close();
-?>
-
 <script type="text/javascript">
-	$(function(){		
-		$('form').submit(function(){
-			$.post($(this).attr("action"), $(this).serialize(), function(data){
-				$("#cities").text(data);
+	$(function(){
+		$("#cities-select").chosen().change(function(){
+			var selected_cities = "";
+			$("option:selected", this).each(function(){
+				selected_cities += $(this).val() + "|";				
 			});
-			$.fancybox.close();
-			return false;
+			$.post("/preferences", {'cities': selected_cities});
 		});
+		
 	});
 </script>
