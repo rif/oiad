@@ -14,7 +14,6 @@ foreach($cities as $c){
 </select>
 
 <?php
-echo '<div>'.Form::submit('submit', 'Submit').'</div>';
 echo Form::close();
 ?>
 

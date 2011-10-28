@@ -6,27 +6,40 @@ class Controller_Oiad extends Controller_Template {
 
     public function action_index() {        
 		$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
-		$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';         
+		$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
+		$items_per_page = (isset($_POST['items_per_page']) && strlen($_POST['items_per_page'])) ? $_POST['items_per_page'] : 0;
+		
+		if($items_per_page>0){
+			Session::instance()->set('items_per_page', $items_per_page);
+		} 
 			
 		if(strlen($category)){
 			$category = ORM::factory('category')->where('name','=',$category)->find();
 			$sites = $category->sites;	
 		} else {			
 			$sites = ORM::factory('site');
-		}	
-        $sites = $sites->where('type','=',$section);
-		$total = 9;//$sites->count_all();
+		}			
+        $sites = $sites->where('type','=',$section)->find_all();
+		$today = date('Y-m-d');
+			
+		$deals = array();
+		foreach($sites as $site) {          		
+    		$dd = $site->deals->where('pub_date', '=', $today)->find_all();
+			foreach ($dd as $d) {
+				array_push($deals, $d);
+			}
+		}
+						
 		$pagination = new Pagination(array(
-			'total_items' => $total, 
-			'items_per_page' => 9,
-			'auto_hide' => false,			
-		));
-		$result = $sites->limit($pagination->items_per_page)
-			->offset($pagination->offset)			
-			->find_all();       	
-		
+			'total_items' => count($deals),	
+			'items_per_page' => Session::instance()->get('items_per_page', 9)			
+		));		
+			
+		//$result = $sites->limit($pagination->items_per_page)->offset($pagination->offset)->find_all();
+		$result = array_slice($deals, $pagination->offset, $pagination->items_per_page);
+						
 		$this->template->content = View::factory('oiad/list')
-			->set('sites', $result)
+			->set('deals', $result)
 			->set('paging', $pagination);         
     }        
 
