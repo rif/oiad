@@ -46,18 +46,35 @@
       <?php echo Html::anchor('preferences', __('Edit'), array("id"=>"edit-cities")); ?>
    </div>
 </div>
-
+<div id="dialog-form" title="Prefered cities"></div>
 <script type="text/javascript">
    $(function(){
-      $("#edit-cities").fancybox({
-      'transitionIn' :  'elastic',
-      'transitionOut'   :  'elastic',
-      'scrolling'    :  'no',
-      'height'       :  250,
-      'speedIn'      :  400, 
-      'speedOut'     :  200, 
-      'overlayShow'  :  true,        
-      'autoDimensions': false          
-      });
+      $( "#dialog-form" ).dialog({
+			autoOpen: false,
+			height: 300,
+			width: 400,
+			modal: true,
+			buttons: {
+				"Submit": function() {
+					$('#dialog-form>form').submit();
+					console.log($(this));
+					console.log($( "#dialog-form" ));					
+					$( this ).dialog( "close" );
+				},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			close: function() {
+				$("#dialog-form").html("");				
+			}
+		});
+
+		$( "#edit-cities" ).click(function() {
+			$("#dialog-form").load($(this).attr("href"), function(){
+				$("#dialog-form").dialog( "open" );
+			});
+			return false;
+	   });
    });
 </script>

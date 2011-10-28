@@ -1,12 +1,7 @@
 <ul id="promo-listing" class="cf">
 <?php
 $section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
-foreach($sites as $site)
-{      
-    $today = date('Y-m-d');
-    $deals = $site->deals->where('pub_date', '=', $today)->find_all();    
-    foreach($deals as $d){
-    if(!$d->id) break;
+foreach($deals as $d){
 ?>
     <li>
     <div class="item" >
@@ -25,7 +20,6 @@ foreach($sites as $site)
     </li>
 <?php
 }
-}
 ?>
 </ul>
 
@@ -36,7 +30,7 @@ foreach($sites as $site)
 <form action="#" method="post" id="item-page-form">
     <div>
         <label>Items per page</label>
-        <input type="text" value="" />
+        <input type="text" name="items_per_page" value="<?php echo $paging->items_per_page; ?>" />
         <input class="submit" type="image" src="/media/images/but-item-<?php echo $section; ?>.png" alt="Show items per page" />        
     </div>
 </form>
