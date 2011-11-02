@@ -34,11 +34,11 @@
 				$c = htmlspecialchars($c);
             	?>
                 <ul>
-                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=deal-of-the-day'.$c;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=other-deals'.$c;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
-                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=black-friday'.$c;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
-                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '?section=items-of-the-day'.$c;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=deal-of-the-day'.$c;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=other-deals'.$c;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
+                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=black-friday'.$c;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
+                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=items-of-the-day'.$c;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
                 </ul>
             </div>
         </div>

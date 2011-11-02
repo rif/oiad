@@ -36,7 +36,7 @@
          echo '<br style="clear: both;"></p>';
       }
       ?>
-      <h2>Preffered cities</h2>      
+      <h2>My cities</h2>      
    </div>
 </div>
 <div id="dialog-form" title="Preffered cities"></div>
