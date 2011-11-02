@@ -75,6 +75,7 @@ class Useradmin_Controller_Admin_User extends Controller_App {
 	 */
 	public function action_edit($id = NULL)
 	{
+		$id = $this->request->param('id');
 		// set the template title (see Controller_App for implementation)
 		$this->template->title = __('Edit user');
 		// load the content from view
@@ -85,12 +86,12 @@ class Useradmin_Controller_Admin_User extends Controller_App {
 			//FIXME: Use Model_User in the controller insteat ORM::factory() for model generic driver compatibility
 			// sample code paths for edit and create
 			if (is_numeric($id))
-			{
+			{				
 				// EDIT: load the model with ID
 				$user = ORM::factory('user', $id);
 			}
 			else
-			{
+			{				
 				// CREATE: do not specify id
 				$user = ORM::factory('user');
 			}
@@ -178,7 +179,7 @@ class Useradmin_Controller_Admin_User extends Controller_App {
 		}
 		// if an ID is set, load the information
 		if (is_numeric($id))
-		{
+		{			
 			// instantiatiate a new model
 			$user = ORM::factory('user', $id);
 			$view->set('data', $user->as_array());
@@ -191,7 +192,7 @@ class Useradmin_Controller_Admin_User extends Controller_App {
 			$view->set('user_roles', $roles);
 		}
 		else
-		{
+		{			
 			$view->set('user_roles', array(
 				'login' => 'login'
 			));

@@ -11,8 +11,7 @@ class Controller_Oiad extends Controller_Template {
 		
 		if($items_per_page>0){
 			Session::instance()->set('items_per_page', $items_per_page);
-		} 
-		echo Request::$client_ip;
+		} 		
 		if(strlen($category)){
 			$category = ORM::factory('category')->where('name','=',$category)->find();
 			$sites = $category->sites;

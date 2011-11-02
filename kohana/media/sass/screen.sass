@@ -40,6 +40,28 @@ body
   padding-top: 129px
   position: relative
 
+h1
+  padding: 15px 0
+  font-size: 32px
+  font-style: normal
+  font-weight: bold
+  text-transform: none
+  letter-spacing: -1px
+  line-height: 1.2em
+  color: white
+  text-shadow: black 1px 1px 2px
+
+h2
+  padding: 15px 0
+  font-size: 25px
+  font-style: normal
+  font-weight: bold
+  text-transform: none
+  letter-spacing: -1px
+  line-height: 1.2em
+  color: white
+  text-shadow: black 1px 1px 2px 
+
 /* COLOR CHANGING LOGIC STYLES
  *__________________________________________________
 
@@ -381,11 +403,6 @@ html
 
 #inner-content
   font-size: 1em
-//  a
-//    font-family: Helvetica, Arial, sans-serif
-//    font-size: 1.2em
-//    +hover-link
-//    +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
 
 a.toggle-state
   background-repeat: no-repeat
@@ -400,12 +417,6 @@ a.toggle-state.active
 a#delete-link
   float: right
 
-#enabled_categories
-  float: left
-
-#all_categories
-  float: right
-
 .expired
   color: #b20811
   font-weight: bold
@@ -418,3 +429,43 @@ a#delete-link
 .site-label>label,
   width: 250px
   display: inline-block
+
+.clear
+  clear: both
+
+
+.table
+  width: 100%
+  border-collapse: collapse
+  margin-bottom: 15px
+  th
+    padding: 10px
+    font-weight: bold
+    text-align: left
+    &.first
+      width: 30px
+    &.last
+      width: 200px
+  .checkbox
+    margin-left: 10px
+  td
+    padding: 10px
+    &.last
+      text-align: right
+  th
+    background: #eaeaea
+    color: #222
+    font-weight: normal
+  td
+    border-bottom: 1px solid #eaeaea
+  tr.even
+    background: #f8f8f8
+
+
+
+#site-edit, #categories
+  a
+    font-family: Helvetica, Arial, sans-serif
+    font-size: 1.2em
+    +hover-link
+    +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)

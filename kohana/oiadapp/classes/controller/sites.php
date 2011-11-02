@@ -106,4 +106,9 @@ class Controller_Sites extends Controller_App {
     }
     $this->request->redirect(URL::site('/sites/edit/'.$site_id));
   }
+  
+  public function action_showdeal() {
+ 	$this->template->content = View::factory('sites/deal')
+		->set('deal', ORM::factory('deal', $this->request->param('id')));
+  }
 }
