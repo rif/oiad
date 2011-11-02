@@ -33,14 +33,14 @@ Class Controller_Scrapp extends Controller {
 	        if (php_sapi_name() == 'cli') {
 	             echo $site->name." OK!\n";
           } else {
-	             $content .= HTML::anchor('/deals/showdeal/'.$deal_id, $site->name)."<br />";
+	             $content .= HTML::anchor('/sites/showdeal/'.$deal_id, $site->name)."<br />";
           }
         } elseif(is_array($deal_id)) {
           if (php_sapi_name() == 'cli') {
               echo $site->name." OK!\n";
           } else {
               foreach($deal_id as $i=>$id){
-                $content .= HTML::anchor('/deals/showdeal/'.$id, $site->name.' #'.$i)."<br />";
+                $content .= HTML::anchor('/sites/showdeal/'.$id, $site->name.' #'.$i)."<br />";
               }
           }
         } else {
@@ -71,7 +71,7 @@ Class Controller_Scrapp extends Controller {
            if (php_sapi_name() == 'cli') {
                echo $site->name." OK!\n";
           } else {
-               $content .= ($index++).". ".HTML::anchor('/deals/showdeal/'.$deal_id, $site->name)."<br />";
+               $content .= ($index++).". ".HTML::anchor('/sites/showdeal/'.$deal_id, $site->name)."<br />";
           }
         } elseif(is_array($deal_id)) {
           if (php_sapi_name() == 'cli') {
@@ -79,7 +79,7 @@ Class Controller_Scrapp extends Controller {
           } else {
               $index++;
               foreach($deal_id as $i=>$id){
-                $content .= $index.'_'.$i.". ".HTML::anchor('/deals/showdeal/'.$id, $site->name.' #'.$i)."<br />";
+                $content .= $index.'_'.$i.". ".HTML::anchor('/sites/showdeal/'.$id, $site->name.' #'.$i)."<br />";
               }
           }
         } else {

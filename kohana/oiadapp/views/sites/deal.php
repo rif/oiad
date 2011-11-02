@@ -16,5 +16,5 @@
 	echo "<b>Price</b>:".$deal->price."<br/>";
 	echo "<b>Shipping</b>:".$deal->shipping."<br/>";
 	echo "<br/>";
-	echo HTML::anchor('/deals/', 'Back');
+	echo HTML::anchor('/sites/', 'Back');
 ?>

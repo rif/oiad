@@ -67,8 +67,7 @@
                 <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
                 <li><?php echo HTML::anchor('/categories', 'Categories'); ?></li>
                 <li><?php echo HTML::anchor('/sites/scrapp_expired', 'Scrap Expired'); ?></li>
-               	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All '); ?></li>
-               	<li><?php echo HTML::anchor('/deals', 'Show Today\'s Deals'); ?></li>
+               	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All '); ?></li>               	
                 <li><?php echo HTML::anchor('/admin_user', 'User Admin'); ?></li>
                 <?php } ?>
             </ul>
@@ -84,7 +83,7 @@
                    }
                 ?>
                 <li>|</li>
-                <li><a href="/static/about" title="View Contact">Contact</a></li>
+                <li><a href="/static/contact" title="View Contact">Contact</a></li>
                 <li>|</li>
                 <li><a href="/static/info" title="View Site Info ">Site Info</a></li>
             </ul>

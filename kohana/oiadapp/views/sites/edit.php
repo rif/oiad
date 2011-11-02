@@ -1,4 +1,6 @@
+<div id="site-edit">
 <?php
+echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link'));
 echo Form::open('/sites/edit/'.$site->id);
 echo '<div class="site-label">'.Form::label('name', 'Site name: '); echo Form::input('name', $site->name)."</div>";
 echo '<div class="site-label">'.Form::label('page', 'Site DOD page link: '); echo Form::input('page', $site->page)."</div>";
@@ -12,31 +14,48 @@ echo '<div class="site-label">'.Form::label('city', 'City: '); echo Form::input(
 echo '<div class="site-label">'.Form::label('cookie', 'Cookie: '); echo Form::input('cookie', $site->cookie)."</div>";
 echo '<div>'.Form::submit('submit', 'Submit')."</div>";
 echo Form::close();
-
-echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link'));
 ?>
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-<div id="enabled_categories">
-<h4>Site's categories</h4>
-<ol>
-<?php
-    $categories = $site->categories->find_all();
-    foreach($categories as $cat){
-        echo "<li>".$cat->name." ".HTML::anchor('/sites/remove_category/'.$site->id.'/'.$cat->id, 'Remove')."</li>";
-    }
-?>
-</ol>
+<div class="clear"></div>
+<div id="categories">
+<hr />
+<h2>Categories</h2>
+<table class="table">
+	<tbody>
+	<?php
+		$tr_classes = Array('odd','even');
+	    $all_categories = ORM::factory('category')->find_all();
+	    foreach($all_categories as $i=>$cat){
+	    	echo '<tr class="'.$tr_classes[$i%2].'">';
+	    	if (!$site->has('categories', $cat)){
+	    		echo '<td class="large">'.$cat->name."</td>";
+	    		echo '<td>'.HTML::anchor('/sites/add_category/'.$site->id.'/'.$cat->id, 'Add')."</td>";
+			} else {
+	        	echo '<td class="large">'.$cat->name.'</td>';
+	        	echo '<td>'.HTML::anchor('/sites/remove_category/'.$site->id.'/'.$cat->id, 'Remove')."</td>";
+			}
+			echo '</tr>';
+	    }
+	?>
+	</tbody>
+</table>
 </div>
 
-<!--
-<h4>Today's deal</h4>
+<div id="timesincescrapp">
+	<hr />	
+	<?php
+		$last_scrapp = strtotime($site->last_scrapp);
+        $now = strtotime("now");
+        $mins = round(($now - $last_scrapp)/60,1);
+        $hours = round(($now - $last_scrapp)/(60*60),1);
+        $time_since_last_scrapp = $hours>1 ? $hours."h" : $mins."min";		
+	?>
+	<h2>Time since last scrap: <?php echo $time_since_last_scrapp; ?></h2>
+</div>
 
 <div id="todaydeal">
+<hr />
+<h2>Today's deal</h2>
+
 <?php
 	echo "<b>Site link: </b>".HTML::anchor($site->page,$site->page)."<br/>"; 
 	echo "<b>Item link: </b>".HTML::anchor($deal->item_link, $deal->item_link)."<br/>"; 
@@ -53,25 +72,10 @@ echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link
 	echo "<b>Price</b>:".$deal->price."<br/>";
 	echo "<b>Shipping</b>:".$deal->shipping."<br/>";
 	echo "<br/>";
-	echo HTML::anchor('/deals/', 'Back');
+	echo HTML::anchor('/sites/', 'Back');
 ?>
 </div>
--->
-
-<div id="all_categories">
-<h4>Other categories</h4>
-<ul>
-<?php
-	$all_categories = ORM::factory('category')->find_all();
-	foreach ($all_categories as $cat) {
-		if (!$site->has('categories', $cat)){
-			echo "<li>".$cat->name." ".HTML::anchor('/sites/add_category/'.$site->id.'/'.$cat->id, 'Add')."</li>";
-		}
-	}
-?>
-</ul>
-</div>
-
+</div><!-- site edit -->
 
 
 <script type="text/javascript">
