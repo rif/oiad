@@ -12,10 +12,30 @@ class Controller_Oiad extends Controller_Template {
 		if($items_per_page>0){
 			Session::instance()->set('items_per_page', $items_per_page);
 		} 
-			
+		echo Request::$client_ip;
 		if(strlen($category)){
 			$category = ORM::factory('category')->where('name','=',$category)->find();
-			$sites = $category->sites;	
+			$sites = $category->sites;
+			if($category == 'coupon-of-the-day'){
+				$auth = Auth::instance();
+				$cities = null;			
+				if($auth->logged_in()!= 0){
+					// if logged=in get preffered cities				
+                	$user =ORM::factory('user', $auth->get_user());
+					$preferences = ORM::factory('preference')->where('user','=',$user->id)->find();
+					$cities = $preferences->cities;
+				} else {
+					// else get location by ip
+					include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
+        			$gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
+        			$record = geoip_record_by_addr($gi,Request::$client_ip);
+					geoip_close($gi);
+					$cities = $record->city;
+				}
+				if ($cities){
+					$sites = $sites->where('city','=',$cities);
+				}	
+			}				
 		} else {			
 			$sites = ORM::factory('site');
 		}			
@@ -32,7 +52,7 @@ class Controller_Oiad extends Controller_Template {
 						
 		$pagination = new Pagination(array(
 			'total_items' => count($deals),	
-			'items_per_page' => Session::instance()->get('items_per_page', 9)			
+			'items_per_page' => Session::instance()->get('items_per_page', 9) // default items per page in 9			
 		));		
 			
 		//$result = $sites->limit($pagination->items_per_page)->offset($pagination->offset)->find_all();
