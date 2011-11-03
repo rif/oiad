@@ -9,7 +9,7 @@ class Goingtoday extends AbstractScrapper {
         	$deal->desc_short = $this->_xpath("//span[@class='ProductTitle']");
         	$deal->price = $this->_xpath("//span[@class='ProductPrice']");
         	$deal->desc_long = $this->_xpath("//div[@id='ProductDetail']");
-        	$deal->pictures = $this->_xpath("//td[@id='ContentLeft']/a/img/@src");
+        	$deal->pictures = $this->_xpath("//td[@id='ContentLeft']/img/@src");
         	$deal->shipping = $this->_xpath("//span[@class='ProductShipping']");
     }
 }

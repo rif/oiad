@@ -9,7 +9,7 @@ class GameDealDaily extends AbstractScrapper {
         	$deal->desc_short = $this->_xpath("//div[@id='body_middle_medium']/h2");
         	$deal->price = $this->_xpath("//div[@id='body_middle_medium']/p[1]");
         	$deal->desc_long = $this->_xpath("//div[@id='body_middle_medium']/p[2]");
-        	$deal->pictures = $host.$this->_xpath("//img[@id='image0']/@src");
+        	$deal->pictures = $this->_xpath("//img[@id='image0']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

@@ -10,7 +10,7 @@ class SearsOutlet extends AbstractScrapper {
         	$deal->desc_short = $this->_xpath("//p[@class='product_deal']");
         	$deal->price = $this->_xpath("//p[@class='price_deal']/strong");
         	$deal->desc_long = $this->_xpath("");
-        	$deal->pictures = $host.$this->_xpath("//img[@id='product_img']/@src");
+        	$deal->pictures = $this->_xpath("//img[@id='product_img']/@src");
         	$deal->shipping = $this->_xpath("");
     }
 }

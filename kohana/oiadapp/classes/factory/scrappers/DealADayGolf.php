@@ -5,13 +5,18 @@ PolyFactory::addScrapper("http://dealadaygolf.com/", new DealADayGolf());
 
 class DealADayGolf extends AbstractScrapper {
 
-	 protected function _fillDetails($deal, $host){
-        	$deal->desc_short = $this->_xpath("//td[@class='bigDescription']/h1");
-        	$deal->price = $this->_xpath("//td[@class='priceBig']");
-        	$deal->desc_long = $this->_xpath("//td[@class='descriptionText']");
-        	$deal->pictures = $this->_xpath("//div[@id='bigImages']/img/@src");
-        	$deal->shipping = $this->_xpath("");
-    }
+	 protected function _getDealIterator() {
+    return "//img[@class='main_image']/@src";
+  }
+
+  protected function _fillMultipleDetails($deal, $page, $count){
+    $deal->item_link = $this->_xpath("//td[@class='bigDescription'][1]/div[@class='pad20 ']/a/@href", $count);
+    $deal->desc_short = $this->_xpath("//td[@class='bigDescription']//h2", $count);
+    $deal->desc_long = $this->_xpath("//td[@class='bigDescription']//ul", $count);
+    $deal->price = $this->_xpath("//td[@class='priceBig']", $count).','.$this->_xpath("//td[@class='priceBig']/following-sibling::td[1]", $count);
+    $deal->pictures = $this->_xpath("//img[@class='main_image']/@src", $count);
+    $deal->shipping = $this->_xpath("//div[@id='Menu']//a[contains(.,'Shipping')]/@href");
+  }
 }
 
 ?>

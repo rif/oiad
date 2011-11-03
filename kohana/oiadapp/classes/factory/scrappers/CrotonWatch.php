@@ -8,7 +8,7 @@ class CrotonWatch extends AbstractScrapper {
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='lblProductName']");
         	$deal->price = $this->_xpath("//span[@id='lblOurPrice']");
-        	$deal->desc_long = $this->_xpath("");
+        	$deal->desc_long = $this->_xpath("//td[@class='basictext']/div");
         	$deal->pictures = $this->_xpath("//img[@id='imgMain']/@src");
         	$deal->shipping = $this->_xpath("///ul[@class='links']/li[9]/a/@href");
     }

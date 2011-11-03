@@ -9,7 +9,7 @@ class DealADay extends AbstractScrapper {
         	$deal->desc_short = $this->_xpath("//span[@class='brandD']");
         	$deal->price = $this->_xpath("//span[@class='priceg']");
         	$deal->desc_long = $this->_xpath("//font[2]");
-        	$deal->pictures = $host.$this->_xpath("//a[@rel='lightbox']/img/@src");
+        	$deal->pictures = $host.$this->_xpath("//a[@class='buylink']/img/@src");
         	$deal->shipping = $this->_xpath("//span[@class='pricegh']");
     }
 }
