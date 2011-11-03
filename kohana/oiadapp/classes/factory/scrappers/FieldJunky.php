@@ -9,7 +9,7 @@ class FieldJunky extends AbstractScrapper {
 	 		$deal->item_link = $host.$this->_xpath("//a[@class='bigtitle']/@href");
         	$deal->desc_short = $this->_xpath("//a[@class='bigtitle']");
         	$deal->price = $this->_xpath("//span[@class='price']");
-        	$deal->desc_long = $host.$this->_xpath("//a[@id='add_so_5015']/@href");
+        	$deal->desc_long = $this->_xpath("//ul");
         	$deal->pictures = $host.$this->_xpath("//img[@class='offerImg']/@src");
         	$deal->shipping = $this->_xpath("");
     }
