@@ -3,11 +3,15 @@
 @import compass/utilities/tables
 
 $blue: #202b5f
-$green: #27592c
-$red: #491317
-$black: #231f20
-$orange: #e97b24
 $light-blue: #2D86C7
+$green: #27592c
+$light-green: #49B749
+$red: #491317
+$light-red: #C42D2D
+$black: #231f20
+$light-black: #767676
+$orange: #e97b24
+$light-orange: #F8BB4E
 
 /* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
 /* For modern browsers
@@ -65,62 +69,41 @@ h2
 /* COLOR CHANGING LOGIC STYLES
  *__________________________________________________
 
+=color-changer($color, $color-light, $image)
+  background: $color
+  & #header input.search-input
+    border: 1px solid $color-light
+  & #main-menu
+    background: url('../images/' + $image) left top no-repeat $color
+  & #secondary-menu li
+    color: $color-light
+  & #secondary-menu li a
+    color: $color
+  & #item-page-form label, & #item-page-form input
+    color: $color
+  & #inner-content
+    border-top: 4px solid $color
+    border-left: 4px solid $color
+  & #promo-listing li
+    border: 2px solid $color-light
+  & #sidebar li.active
+    border: solid $color
+  & #footer
+    border: solid $color
+    & p, & #footer-menu li a
+      color: $color
+
 html
   &.deal-of-the-day
-    background: $blue
+    +color-changer($blue, $light-blue, 'main-menu-deal-of-the-day.png')
   &.coupon-of-the-day
-    background: $green
+    +color-changer($green, $light-green, 'main-menu-coupon-of-the-day.png')
   &.other-deals
-    background: $red
+    +color-changer($red, $light-red, 'main-menu-other-deals.png')
   &.black-friday
-    background: $black
+    +color-changer($black, $light-black, 'main-menu-black-friday.png')
   &.items-of-the-day
-    background: $orange
-  &.deal-of-the-day #main-menu
-    background: url('../images/main-menu-deal-of-the-day.png') left top no-repeat $blue
-  &.coupon-of-the-day #main-menu
-    background: url('../images/main-menu-coupon-of-the-day.png') left top no-repeat $green
-  &.other-deals #main-menu
-    background: url('../images/main-menu-other-deals.png') left top no-repeat $red
-  &.black-friday #main-menu
-    background: url('../images/main-menu-black-friday.png') left top no-repeat $black
-  &.items-of-the-day #main-menu
-    background: url('../images/main-menu-items-of-the-day.png') left top no-repeat $orange
-  &.deal-of-the-day #inner-content
-    border-top: 4px solid $blue
-    border-left: 4px solid $blue
-  &.coupon-of-the-day #inner-content
-    border-top: 4px solid $green
-    border-left: 4px solid $green
-  &.other-deals #inner-content
-    border-top: 4px solid $red
-    border-left: 4px solid $red
-  &.black-friday #inner-content
-    border-top: 4px solid $black
-    border-left: 4px solid $black
-  &.items-of-the-day #inner-content
-    border-top: 4px solid $orange
-    border-left: 4px solid $orange
-  &.deal-of-the-day #sidebar li.active
-    border: solid $blue
-  &.coupon-of-the-day #sidebar li.active
-    border: solid $green
-  &.other-deals #sidebar li.active
-    border: solid $red
-  &.black-friday #sidebar li.active
-    border: solid $black
-  &.items-of-the-day #sidebar li.active
-    border: solid $orange
-  &.deal-of-the-day #footer
-    border: solid $blue
-  &.coupon-of-the-day #footer
-    border: solid $green
-  &.other-deals #footer
-    border: solid $red
-  &.black-friday #footer
-    border: solid $black
-  &.items-of-the-day #footer
-    border: solid $orange
+    +color-changer($orange, $light-orange, 'main-menu-items-of-the-day.png')
 
 /* HEADER STYLES
  *__________________________________________________
@@ -172,13 +155,11 @@ html
   right: 28px
   top: 62px
   li
-    float: left
-    color: $light-blue
+    float: left    
     margin-left: 5px
     a
       &:link, &:visited
-        font-size: 18px
-        color: $blue
+        font-size: 18px        
         text-decoration: none
       &:hover
         text-decoration: underline
@@ -198,8 +179,7 @@ html
       width: 177px
       height: 30px
       line-height: 28px
-      padding: 0 8px
-      border: 1px solid $light-blue
+      padding: 0 8px      
       color: $blue
       margin-right: 3px
 
@@ -227,8 +207,7 @@ html
   float: left
   width: 204px
   height: 174px
-  margin: 0 0 7px 7px
-  border: 2px solid $light-blue
+  margin: 0 0 7px 7px  
 
 /* PAGER STYLES
 
