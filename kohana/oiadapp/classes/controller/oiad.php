@@ -51,6 +51,7 @@ class Controller_Oiad extends Controller_Template {
 						
 		$pagination = new Pagination(array(
 			'total_items' => count($deals),	
+			'count_in' => 3,
 			'items_per_page' => Session::instance()->get('items_per_page', 9) // default items per page in 9			
 		));		
 			
