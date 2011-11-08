@@ -359,6 +359,10 @@ html
   font-size: 11px
   margin-bottom: 20px    
   height: 160px
+  a
+    +hover-link
+    +link-colors(#1B2B8E,  #526073, #c0c, #1B2B8E, #b20811)
+    
   .item-title
     font-size: 1.2em
     font-weight: bold
@@ -366,10 +370,11 @@ html
     img
       float: left
       margin-right: 5px
-      height: 80px
+      max-height: 120px
+      max-width: 80px
     .item-price
       font-weight: bold
-      font-size: 1.3em
+      font-size: 1.6em
       color: #B20811
     .item-desc_long
       width: 120px
@@ -448,3 +453,6 @@ a#delete-link
     font-size: 1.2em
     +hover-link
     +link-colors(#515761,  #526073, #c0c, #6D7582, #b20811)
+
+.hidden
+  display: none

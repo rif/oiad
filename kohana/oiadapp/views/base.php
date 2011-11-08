@@ -4,6 +4,7 @@
 	$css_array = $js_array = array();
 	$session = Session::instance();
     $auth = Auth::instance();
+	$user =ORM::factory('user', $auth->get_user());
 ?>
 <!DOCTYPE html>
 
@@ -51,9 +52,7 @@
         <!-- Header -->
         <div id="header">
             <a href="/" class="logo" title="One Item A Day Homepage">
-                <?php echo HTML::image('media/images/logo-'.$section.'.png', array('alt' => 'One Item A Day Logo'));
-                
-                $user =ORM::factory('user', $auth->get_user());
+                <?php echo HTML::image('media/images/logo-'.$section.'.png', array('alt' => 'One Item A Day Logo'));                              
                 $role = ORM::factory('role', array('name' => 'admin'));
                 ?>
             </a>

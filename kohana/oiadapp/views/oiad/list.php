@@ -5,17 +5,23 @@ foreach($deals as $d){
 ?>
     <li>
     <div class="item" >
-    <?php echo HTML::anchor(htmlspecialchars($d->item_link) ,truncate($d->desc_short, 35, " "), array('class'=>'item-title')); ?>
+    <?php echo HTML::anchor('/oiad/showdeal/'.$d->id ,truncate($d->desc_short, 70, " "), array('class'=>'item-title')); ?>
    <div class="item-body">
-       <?php if($d->pictures){
-        foreach(explode('|', $d->pictures) as $p){
-            echo '<a href="'.htmlspecialchars($d->item_link).'"><img src="'.$p.'" alt="'.$p.'"/></a>';
-        }        
-    }?>
-    <div class="item-desc-long"><?php echo htmlspecialchars(truncate($d->desc_long, 200, " ")); ?></div>
+	<?php echo '<a href="/oiad/showdeal/'.$d->id.'"><img src="'.$d->pictures.'" alt="'.$d->pictures.'"/></a>';?>    
     <div class="item-price"><?php echo htmlspecialchars($d->price); ?></div>
     <div class="item-shipping"><?php echo htmlspecialchars($d->shipping); ?></div>
-    <?php echo HTML::anchor('/markmysite/'.$d->site, 'Mark as favorite'); ?>
+    
+    <?php     	
+		$a1 = array('class'=>'fav');
+		$a2 = array('class'=>'fav');
+		if($user and $user->has('sites', $d->site)){
+			$a2['class'] .= ' hidden';
+		} else {
+			$a1['class'] .= ' hidden';
+		}
+		echo HTML::anchor('/preferences/unmarkmysite/'.$d->site, 'UnMark as favorite', $a1);
+    	echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
+    ?>
     </div> <!-- item-body -->
     </div><!-- item-->
     </li>
@@ -56,3 +62,14 @@ function truncate($string, $limit, $break=".", $pad="...")
   return $string;
 }
 ?>
+<script type="text/javascript" charset="utf-8">
+	$(function(){		
+		$(".item").on("click", "a.fav", function(){	
+			var link = $(this); 		
+			$.get($(this).attr("href"), function(){
+				$("a.fav", link.parent()).toggleClass("hidden")
+			});
+			return false;
+		});		
+	});
+</script>

@@ -42,8 +42,6 @@
 <div id="dialog-form" title="Preffered cities"></div>
 <script type="text/javascript">
    $(function(){
-		$("#dialog-form").load("/preferences", function(){
-			
-		});
+		$("#dialog-form").load("/preferences", function(){});
    });
 </script>
