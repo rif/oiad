@@ -36,7 +36,17 @@
          echo '<br style="clear: both;"></p>';
       }
       ?>
-      <h2>My cities</h2>      
+      
+      <h2>My cities</h2>
+      <?php
+      	include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
+    	$gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
+    	$record = geoip_record_by_addr($gi,Request::$client_ip);
+		geoip_close($gi);
+		if($record){
+			echo 'Your current calculated location: '.$record->city;
+		}
+       ?>      
    </div>
 </div>
 <div id="dialog-form" title="Preffered cities"></div>

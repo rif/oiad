@@ -31,13 +31,15 @@ class Controller_Oiad extends Controller_Template {
 				$preferences = ORM::factory('preference')->where('user','=',$user->id)->find();
 				$cities = $preferences->cities;
 			} 
-			if($auth->logged_in() == 0 || !$cities){		
+			if($auth->logged_in() == 0 || !strlen($cities)){		
 				// else get location by ip
 				include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
     			$gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
     			$record = geoip_record_by_addr($gi,Request::$client_ip);
 				geoip_close($gi);
-				$cities = $record->city;
+				if($record){
+					$cities = $record->city;
+				}
 			}		
 			if ($cities){
 				$cities = explode("|", trim($cities, '|'));
