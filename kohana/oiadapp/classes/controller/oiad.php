@@ -40,10 +40,8 @@ class Controller_Oiad extends Controller_Template {
 				$cities = $record->city;*/
 			}		
 			if ($cities){
-				$cities = explode("|", $cities);
-				foreach ($cities as $city) {
-					$sites = $sites->where('city','=',$city);	
-				}				
+				$cities = explode("|", trim($cities, '|'));
+				$sites = $sites->where('city', 'in', $cities);				
 			}	
 		}
 
@@ -76,7 +74,7 @@ class Controller_Oiad extends Controller_Template {
 		$this->template->content = View::factory('oiad/list')
 			->set('deals', $result)
 			->set('user', $user)
-			->set('paging', $pagination);         
+			->set('paging', $pagination);       
     }        
 
     public function action_location() {        
@@ -84,7 +82,7 @@ class Controller_Oiad extends Controller_Template {
         $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
         $this->template->content = View::factory('oiad/location')
 			->set('record', geoip_record_by_addr($gi,"89.123.151.196"));
-		geoip_close($gi);
+		geoip_close($gi);				
     }
 	
 	public function action_showdeal() {
