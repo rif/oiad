@@ -9,6 +9,10 @@ class Model_Site extends ORM
             'model'   => 'category',
             'through' => 'categories_sites',
             ),
+        'users' => array(
+        	'model'   => 'user',
+        	'through' => 'user_sites',
+    	),
     );
     
      /*public function rules()

@@ -14,31 +14,46 @@ class Controller_Oiad extends Controller_Template {
 		} 		
 		if(strlen($category)){
 			$category = ORM::factory('category')->where('name','=',$category)->find();
-			$sites = $category->sites;
-			if($category == 'coupon-of-the-day'){
-				$auth = Auth::instance();
-				$cities = null;			
-				if($auth->logged_in()!= 0){
-					// if logged=in get preffered cities				
-                	$user =ORM::factory('user', $auth->get_user());
-					$preferences = ORM::factory('preference')->where('user','=',$user->id)->find();
-					$cities = $preferences->cities;
-				} else {
-					// else get location by ip
-					include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
-        			$gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
-        			$record = geoip_record_by_addr($gi,Request::$client_ip);
-					geoip_close($gi);
-					$cities = $record->city;
-				}
-				if ($cities){
-					$sites = $sites->where('city','=',$cities);
-				}	
-			}				
+			$sites = $category->sites;							
 		} else {			
 			$sites = ORM::factory('site');
-		}			
-        $sites = $sites->where('type','=',$section)->find_all();
+		}
+		
+		// select prefered cities for coupons
+		if($section == 'coupon-of-the-day'){
+			$auth = Auth::instance();
+			$cities = null;			
+			if($auth->logged_in()!= 0){					
+				// if logged=in get preffered cities				
+            	$user =ORM::factory('user', $auth->get_user());
+				$preferences = ORM::factory('preference')->where('user','=',$user->id)->find();
+				$cities = $preferences->cities;
+			} 
+			if($auth->logged_in() == 0 || !$cities){		
+				// else get location by ip
+				/*include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
+    			$gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
+    			$record = geoip_record_by_addr($gi,Request::$client_ip);
+				geoip_close($gi);
+				$cities = $record->city;*/
+			}		
+			if ($cities){
+				$cities = explode("|", $cities);
+				foreach ($cities as $city) {
+					$sites = $sites->where('city','=',$city);	
+				}				
+			}	
+		}
+
+		// select prefered sites 
+		if	($section == 'items-of-the-day'){
+			$auth = Auth::instance();
+			$user =ORM::factory('user', $auth->get_user());
+			$sites = $user->sites->find_all();
+		} else {
+			// all sites remain in this section (after categrory and cities have been filtered)
+        	$sites = $sites->where('type','=',$section)->find_all();
+		}
 		$today = date('Y-m-d');
 			
 		$deals = array();
@@ -70,5 +85,12 @@ class Controller_Oiad extends Controller_Template {
 			->set('record', geoip_record_by_addr($gi,"89.123.151.196"));
 		geoip_close($gi);
     }
+	
+	public function action_markmysite(){
+		$site_id = $this->request->param('id');		
+		$auth = Auth::instance();
+		$user =ORM::factory('user', $auth->get_user());
+		$user->add('sites', $site_id);										
+	}
 }
 ?>
