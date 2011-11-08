@@ -7,7 +7,9 @@ class Controller_Oiad extends Controller_Template {
     public function action_index() {        
 		$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
 		$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
-		$items_per_page = (isset($_POST['items_per_page']) && strlen($_POST['items_per_page'])) ? $_POST['items_per_page'] : 0;
+		$items_per_page = (isset($_POST['items_per_page']) && strlen($_POST['items_per_page'])) ? $_POST['items_per_page'] : 0;		
+		$auth = Auth::instance();
+		$user = ORM::factory('user', $auth->get_user());
 		
 		if($items_per_page>0){
 			Session::instance()->set('items_per_page', $items_per_page);
@@ -46,9 +48,7 @@ class Controller_Oiad extends Controller_Template {
 		}
 
 		// select prefered sites 
-		if	($section == 'items-of-the-day'){
-			$auth = Auth::instance();
-			$user =ORM::factory('user', $auth->get_user());
+		if	($section == 'items-of-the-day'){			
 			$sites = $user->sites->find_all();
 		} else {
 			// all sites remain in this section (after categrory and cities have been filtered)
@@ -75,6 +75,7 @@ class Controller_Oiad extends Controller_Template {
 						
 		$this->template->content = View::factory('oiad/list')
 			->set('deals', $result)
+			->set('user', $user)
 			->set('paging', $pagination);         
     }        
 
@@ -86,11 +87,9 @@ class Controller_Oiad extends Controller_Template {
 		geoip_close($gi);
     }
 	
-	public function action_markmysite(){
-		$site_id = $this->request->param('id');		
-		$auth = Auth::instance();
-		$user =ORM::factory('user', $auth->get_user());
-		$user->add('sites', $site_id);										
-	}
+	public function action_showdeal() {
+ 	$this->template->content = View::factory('oiad/deal')
+		->set('deal', ORM::factory('deal', $this->request->param('id')));
+  }
 }
 ?>
