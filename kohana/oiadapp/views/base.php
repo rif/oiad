@@ -37,12 +37,12 @@
 				$c = htmlspecialchars($c);
             	?>
                 <ul>
-                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=deal-of-the-day'.$c;?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=other-deals'.$c;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
-                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=black-friday'.$c;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
+                    <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=deal-of-the-day'.$c);?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=coupon-of-the-day'.$c);?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=other-deals'.$c);?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
+                    <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=black-friday'.$c);?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
                     <?php if($auth->logged_in()!= 0) { ?>
-                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=items-of-the-day'.$c;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
+                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=items-of-the-day'.$c);?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
                     <?php } ?>
                 </ul>
             </div>
@@ -66,11 +66,11 @@
  					   echo '<li><a class="category-link" href="'.$param.'">'.ucwords($cat->name).'</a></li>';
 					}
                 } else { ?>
-                <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
-                <li><?php echo HTML::anchor('/categories', 'Categories'); ?></li>
-                <li><?php echo HTML::anchor('/sites/scrapp_expired', 'Scrap Expired'); ?></li>
-               	<li><?php echo HTML::anchor('/sites/scrapp', 'Scrap All '); ?></li>               	
-                <li><?php echo HTML::anchor('/admin_user', 'User Admin'); ?></li>
+                <li><?php echo HTML::anchor(URL::site('/sites'), 'Sites'); ?></li>        
+                <li><?php echo HTML::anchor(URL::site('/categories'), 'Categories'); ?></li>
+                <li><?php echo HTML::anchor(URL::site('/sites/scrapp_expired'), 'Scrap Expired'); ?></li>
+               	<li><?php echo HTML::anchor(URL::site('/sites/scrapp'), 'Scrap All '); ?></li>               	
+                <li><?php echo HTML::anchor(URL::site('/admin_user'), 'User Admin'); ?></li>
                 <?php } ?>
             </ul>
             
@@ -79,15 +79,15 @@
                 <li>|</li>                
                 <?php 
                    if($auth->logged_in()!= 0){
-                      echo '<li>'.HTML::anchor('/user/profile', $user->username).'</li><li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
+                      echo '<li>'.HTML::anchor(URL::site('/user/profile'), $user->username).'</li><li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
                    } else {
-                      echo '<li>'.HTML::anchor('/user/login', 'Login').'</li><li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
+                      echo '<li>'.HTML::anchor(URL::site('/user/login'), 'Login').'</li><li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
                    }
                 ?>
                 <li>|</li>
-                <li><a href="/static/contact" title="View Contact">Contact</a></li>
+                <li><a href="<?php echo URL::site('/static/contact');?>" title="View Contact">Contact</a></li>
                 <li>|</li>
-                <li><a href="/static/info" title="View Site Info ">Site Info</a></li>
+                <li><a href="<?php echo URL::site('/static/info');?>" title="View Site Info ">Site Info</a></li>
             </ul>
             
             <form action="#" method="post">
@@ -102,13 +102,13 @@
         <!-- Footer -->
         <div id="footer">
             <ul id="footer-menu">
-                <li><a href="/static/about">About Us</a></li>
-                <li><a href="/static/faq">FAQ</a></li>
-                <li><a href="/static/link">Link To Us</a></li>
-                <li><a href="/static/privacy">Privacy Policy</a></li>
-                <li><a href="/static/terms">Terms of Use</a></li>
-                <li><a href="/static/info">Site Info</a></li>
-                <li><a href="/static/contact">Contact</a></li>
+                <li><a href="<?php echo URL::site('/static/about');?>">About Us</a></li>
+                <li><a href="<?php echo URL::site('/static/faq');?>">FAQ</a></li>
+                <li><a href="<?php echo URL::site('/static/link');?>">Link To Us</a></li>
+                <li><a href="<?php echo URL::site('/static/privacy');?>">Privacy Policy</a></li>
+                <li><a href="<?php echo URL::site('/static/terms');?>">Terms of Use</a></li>
+                <li><a href="<?php echo URL::site('/static/info');?>">Site Info</a></li>
+                <li><a href="<?php echo URL::site('/static/contact');?>">Contact</a></li>
             </ul>
             <ul id="social-menu">
                 <li><a href="#"><img src="/media/images/ico-facebook.png" alt="Facebook" title="View our Facebook page" /></a></li>

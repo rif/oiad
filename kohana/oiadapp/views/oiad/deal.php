@@ -1,3 +1,4 @@
+<div id="deal">
 <?php $site = ORM::factory('site',$deal->site) ?>
 <h1><?php echo  $site->name; ?></h1>
 <?php
@@ -18,3 +19,4 @@
 	echo "<br/>";
 	echo HTML::anchor('/', 'Back');
 ?>
+</div>

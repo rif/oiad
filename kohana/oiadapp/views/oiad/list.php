@@ -11,16 +11,18 @@ foreach($deals as $d){
     <div class="item-price"><?php echo htmlspecialchars($d->price); ?></div>
     <div class="item-shipping"><?php echo htmlspecialchars($d->shipping); ?></div>
     
-    <?php     	
-		$a1 = array('class'=>'fav');
-		$a2 = array('class'=>'fav');
-		if($user and $user->has('sites', $d->site)){
-			$a2['class'] .= ' hidden';
-		} else {
-			$a1['class'] .= ' hidden';
+    <?php  
+    	if(strlen($user)){    		
+			$a1 = array('class'=>'fav');
+			$a2 = array('class'=>'fav');
+			if($user->has('sites', $d->site)){
+				$a2['class'] .= ' hidden';
+			} else {
+				$a1['class'] .= ' hidden';
+			}
+			echo HTML::anchor('/preferences/unmarkmysite/'.$d->site, 'UnMark as favorite', $a1);
+    		echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
 		}
-		echo HTML::anchor('/preferences/unmarkmysite/'.$d->site, 'UnMark as favorite', $a1);
-    	echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
     ?>
     </div> <!-- item-body -->
     </div><!-- item-->
