@@ -2,6 +2,8 @@
 	$section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
 	$category = (isset($_GET['category']) && strlen($_GET['category'])) ? $_GET['category'] : '';
 	$css_array = $js_array = array();
+	$session = Session::instance();
+    $auth = Auth::instance();
 ?>
 <!DOCTYPE html>
 
@@ -16,7 +18,7 @@
   		<?php echo HTML::style('media/stylesheets/print.css', array('media'=>'print'));?>
         <!--[if lt IE 8]><?php echo HTML::style('media/stylesheets/ie.css', array('media'=>'screen, projection'));?><![endif]-->
         <?php echo HTML::style('media/stylesheets/chosen.css', array('media'=>'screen, projection'));?>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script-->
         <script>!window.jQuery && document.write('<script src="/media/js/jquery-1.7.min.js" type="text/javascript"><\/script>')</script>        
         <?php echo HTML::script('media/js/chosen.jquery.min.js');?>           
     </head>
@@ -38,7 +40,9 @@
                     <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=coupon-of-the-day'.$c;?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
                     <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=other-deals'.$c;?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
                     <li<?php echo ((!strcmp($section, 'black-friday')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=black-friday'.$c;?>" title="Black friday" class="anch-black-friday">Black friday</a></li>
+                    <?php if($auth->logged_in()!= 0) { ?>
                     <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo '/?section=items-of-the-day'.$c;?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -48,8 +52,7 @@
         <div id="header">
             <a href="/" class="logo" title="One Item A Day Homepage">
                 <?php echo HTML::image('media/images/logo-'.$section.'.png', array('alt' => 'One Item A Day Logo'));
-                $session = Session::instance();
-                $auth = Auth::instance();
+                
                 $user =ORM::factory('user', $auth->get_user());
                 $role = ORM::factory('role', array('name' => 'admin'));
                 ?>

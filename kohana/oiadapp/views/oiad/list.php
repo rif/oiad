@@ -15,6 +15,7 @@ foreach($deals as $d){
     <div class="item-desc-long"><?php echo htmlspecialchars(truncate($d->desc_long, 200, " ")); ?></div>
     <div class="item-price"><?php echo htmlspecialchars($d->price); ?></div>
     <div class="item-shipping"><?php echo htmlspecialchars($d->shipping); ?></div>
+    <?php echo HTML::anchor('/markmysite/'.$d->site, 'Mark as favorite'); ?>
     </div> <!-- item-body -->
     </div><!-- item-->
     </li>
