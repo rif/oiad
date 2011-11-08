@@ -77,10 +77,11 @@ class Controller_Oiad extends Controller_Template {
 			->set('paging', $pagination);       
     }        
 
-    public function action_location() {        
+    public function action_location() {    	       
         include_once Kohana::find_file('classes', 'vendor/geoipcity', 'inc');
-        $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);                
+        $gi = geoip_open(Kohana::find_file('classes', 'vendor/GeoLiteCity','dat'),GEOIP_STANDARD);		                
         $this->template->content = View::factory('oiad/location')
+			->set('your_ip', Request::$client_ip)
 			->set('record', geoip_record_by_addr($gi,"89.123.151.196"));
 		geoip_close($gi);				
     }
