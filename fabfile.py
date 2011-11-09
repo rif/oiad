@@ -34,4 +34,4 @@ def dumpdb():
 @hosts('radu.fericean@dev.upandrunningsoftware.com')
 def database_reimport():
     print(green('reimporting database...'))
-    run('svn cat https://mayfair.uarss.com/svn/oneitemaday/trunk/schema.sql | mysql --user=root --password=UARdeveloper oiad')
+    run('svn cat https://mayfair.uarss.com/svn/oneitemaday/trunk/schema.sql | mysql --user=oiad --password=oiaddev oiad')
