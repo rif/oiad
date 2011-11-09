@@ -7,8 +7,8 @@ return array
     'type'         =>  'mysql',
     'connection'   => array(
             'hostname'   => 'localhost',
-            'username'   => 'root',
-            'password'   => 'UARdeveloper',
+            'username'   => 'oiad',
+            'password'   => 'oiaddev',
             'persistent' => FALSE,
             'database'   => 'oiad',
         ),
