@@ -2,11 +2,11 @@
 
 defined('SYSPATH') OR die('No Direct Script Access');
 
-abstract class AbstractScrapper {
+abstract class AbstractScraper {
 
     protected $xpath;
 
-    public function scrapp($site) {
+    public function scrape($site) {
       $oldSetting = libxml_use_internal_errors(true);
       libxml_clear_errors();
       $context = NULL;
@@ -14,21 +14,21 @@ abstract class AbstractScrapper {
         $opts = array('http' => array('header'=> 'Cookie: '.$site->cookie."\r\n"));
         $context = stream_context_create($opts);
       }
-      $pageToScrapp = $site->page;
+      $pageToScrape = $site->page;
       try {
         /*
         Some sites have just a link to the deal, a link that is always changings.
-        This for loop will load the initial page and if the derived scrapper
+        This for loop will load the initial page and if the derived scraper
         provides a different link than it will reaload the second page.
         */
         for($i=0; $i<2; $i++){
-          $contents = file_get_contents($pageToScrapp, false, $context);
+          $contents = file_get_contents($pageToScrape, false, $context);
   	      $html = new DOMDocument();
   	      $html->loadHtml($contents);
   	      $this->xpath = new DOMXPath($html);
           
-          $pageToScrapp = $this->_getPageToScrap($site->page);                
-          if($pageToScrapp == $site->page){
+          $pageToScrape = $this->_getPageToScrap($site->page);                
+          if($pageToScrape == $site->page){
             break;
           } 
         }            
@@ -36,7 +36,7 @@ abstract class AbstractScrapper {
         return $e->getMessage();
       }
       
-      $result = $this->loadDeal($site, $pageToScrapp);
+      $result = $this->loadDeal($site, $pageToScrape);
        
       libxml_clear_errors();
       libxml_use_internal_errors($oldSetting);
@@ -47,13 +47,13 @@ abstract class AbstractScrapper {
       return $page;
     }
 
-    protected function loadDeal($site, $pageToScrapp){
+    protected function loadDeal($site, $pageToScrape){
       $today = date('Y-m-d');      
       $deal = ORM::factory('deal');
       $deal->where('site', '=', $site->id)->where('pub_date', '=', $today)->find();      
       $deal->site = $site;
-      $deal->item_link = $pageToScrapp;
-      $this->_fillDetails($deal, $pageToScrapp);
+      $deal->item_link = $pageToScrape;
+      $this->_fillDetails($deal, $pageToScrape);
       $deal->pub_date = $today;
       // the site automatic deactivation
       $lastDeal = ORM::factory('deal')->where('site', '=', $site->id)->where('pub_date', '<', $today)->order_by('pub_date', 'desc')->find();            

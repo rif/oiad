@@ -2,9 +2,9 @@
 
 defined('SYSPATH') OR die('No Direct Script Access');
 
-abstract class AbstractFeedScrapper extends AbstractScrapper {
+abstract class AbstractFeedScraper extends AbstractScraper {
 
-    public function scrapp($site) {
+    public function scrape($site) {
       $today = date('Y-m-d');
 
       $items = Feed::parse($site->page);

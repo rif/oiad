@@ -66,11 +66,11 @@
  					   echo '<li><a class="category-link" href="'.$param.'">'.ucwords($cat->name).'</a></li>';
 					}
                 } else { ?>
-                <li><?php echo HTML::anchor(URL::site('/sites'), 'Sites'); ?></li>        
-                <li><?php echo HTML::anchor(URL::site('/categories'), 'Categories'); ?></li>
-                <li><?php echo HTML::anchor(URL::site('/sites/scrapp_expired'), 'Scrap Expired'); ?></li>
-               	<li><?php echo HTML::anchor(URL::site('/sites/scrapp'), 'Scrap All '); ?></li>               	
-                <li><?php echo HTML::anchor(URL::site('/admin_user'), 'User Admin'); ?></li>
+                <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
+                <li><?php echo HTML::anchor('/categories', 'Categories'); ?></li>
+                <li><?php echo HTML::anchor('/sites/scrape_expired', 'Scrap Expired'); ?></li>
+               	<li><?php echo HTML::anchor('/sites/scrape', 'Scrap All '); ?></li>               	
+                <li><?php echo HTML::anchor('/admin_user', 'User Admin'); ?></li>
                 <?php } ?>
             </ul>
             
@@ -79,9 +79,9 @@
                 <li>|</li>                
                 <?php 
                    if($auth->logged_in()!= 0){
-                      echo '<li>'.HTML::anchor(URL::site('/user/profile'), $user->username).'</li><li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
+                      echo '<li>'.HTML::anchor('/user/profile', $user->username).'</li><li>|</li><li>'.HTML::anchor('/user/logout', __('Logout')).'</li>';
                    } else {
-                      echo '<li>'.HTML::anchor(URL::site('/user/login'), 'Login').'</li><li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
+                      echo '<li>'.HTML::anchor('/user/login', 'Login').'</li><li>|</li><li>'.HTML::anchor('/user/register', __('Register')).'</li>';
                    }
                 ?>
                 <li>|</li>

@@ -1,17 +1,17 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
 require_once Kohana::find_file('classes', 'factory/PolyFactory');
-require_once Kohana::find_file('classes', 'factory/AbstractScrapper');
-require_once Kohana::find_file('classes', 'factory/AbstractMultipleScrapper');
-require_once Kohana::find_file('classes', 'factory/AbstractFeedScrapper');
+require_once Kohana::find_file('classes', 'factory/AbstractScraper');
+require_once Kohana::find_file('classes', 'factory/AbstractMultipleScraper');
+require_once Kohana::find_file('classes', 'factory/AbstractFeedScraper');
 
-foreach (Kohana::list_files('classes/factory/scrappers') as $filename) {
+foreach (Kohana::list_files('classes/factory/scrapers') as $filename) {
     require_once $filename;
 }
 
 $ln = php_sapi_name() == 'cli' ? '\n' : '<br />';
 
-Class Controller_Scrapp extends Controller {
+Class Controller_Scrape extends Controller {
 
   protected function _get_host($page){
       $p = parse_url($page);
@@ -25,15 +25,15 @@ Class Controller_Scrapp extends Controller {
     if($site->is_deal == 'T'){
       $page = $this->_get_host($site->page);
     }
-    $scrapper = PolyFactory::getScrapper($page);
+    $scraper = PolyFactory::getScraper($page);
     $content = '';
-    if ($scrapper) {
-        $deal_id = $scrapper->scrapp($site);
+    if ($scraper) {
+        $deal_id = $scraper->scrape($site);
         if(is_numeric($deal_id)){
-	        if (php_sapi_name() == 'cli') {
-	             echo $site->name." OK!\n";
+          if (php_sapi_name() == 'cli') {
+               echo $site->name." OK!\n";
           } else {
-	             $content .= HTML::anchor('/sites/showdeal/'.$deal_id, $site->name)."<br />";
+               $content .= HTML::anchor('/sites/showdeal/'.$deal_id, $site->name)."<br />";
           }
         } elseif(is_array($deal_id)) {
           if (php_sapi_name() == 'cli') {
@@ -47,16 +47,16 @@ Class Controller_Scrapp extends Controller {
           if (php_sapi_name() == 'cli') {
                $content .= $site->name." ".$deal_id."\n";
           } else {
-               $content .= "scrapp failed for ".$site->page." reason:".$deal_id."<br />";
+               $content .= "scrape failed for ".$site->page." reason:".$deal_id."<br />";
           }
         }
     }
-    $site->last_scrapp = date ("Y-m-d H:i:s");
+    $site->last_scrape = date ("Y-m-d H:i:s");
     $site->save();
     $this->response->body($content);
   }
 
-  private function scrapp($sites){
+  private function scrape($sites){
     $index = 1;
     $content = '';
     foreach ($sites as $site) {
@@ -64,9 +64,9 @@ Class Controller_Scrapp extends Controller {
       if($site->is_deal){
         $page = $this->_get_host($site->page);
       }
-      $scrapper = PolyFactory::getScrapper($page);
-      if ($scrapper) {
-        $deal_id = $scrapper->scrapp($site);
+      $scraper = PolyFactory::getScraper($page);
+      if ($scraper) {
+        $deal_id = $scraper->scrape($site);
         if(is_numeric($deal_id)){
            if (php_sapi_name() == 'cli') {
                echo $site->name." OK!\n";
@@ -86,11 +86,11 @@ Class Controller_Scrapp extends Controller {
           if (php_sapi_name() == 'cli') {
                echo $site->name." ".$deal_id."\n";
           } else {
-               $content .= "scrapp failed for ".$site->page." reason:".$deal_id."<br />";
+               $content .= "scrape failed for ".$site->page." reason:".$deal_id."<br />";
           }
         }
       }
-      $site->last_scrapp = date ("Y-m-d H:i:s");
+      $site->last_scrape = date ("Y-m-d H:i:s");
       $site->save();
     }
   }
@@ -99,7 +99,7 @@ Class Controller_Scrapp extends Controller {
     $sites = ORM::factory('site');
     $sites = $sites->where('active', '=', 'T')->find_all();
 
-    $content = $this->scrapp($sites);
+    $content = $this->scrape($sites);
     $this->response->body($content);
   }
 
@@ -111,15 +111,15 @@ Class Controller_Scrapp extends Controller {
     foreach ($sites as $site) {
       $refresh = $site->refresh_period;
       if($refresh){
-        $next_scrapp = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrape));
         $now = strtotime("now");
-        if($next_scrapp - $now < 0){
+        if($next_scrape - $now < 0){
           array_push($expired_sites, $site);
         }
       }
     }
 
-    $content = $this->scrapp($expired_sites);
+    $content = $this->scrape($expired_sites);
     $this->response->body($content);
   }
 }

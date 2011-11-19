@@ -27,21 +27,21 @@ class Controller_Sites extends Controller_App {
     $this->template->content = $view;
   }
 
-  public function action_scrapp() {
-    $view = View::factory('sites/scrapp');
+  public function action_scrape() {
+    $view = View::factory('sites/scrape');
     $site_id = $this->request->param('id');
     $view->content = '';
     if($site_id != '') {
-      $view->content .= Request::factory("scrapp/index/".$site_id)->execute()->body();
+      $view->content .= Request::factory("scrape/index/".$site_id)->execute()->body();
     } else {
-      $view->content .= Request::factory("scrapp/all")->execute()->body();
+      $view->content .= Request::factory("scrape/all")->execute()->body();
     }
     $this->template->content = $view;
   }
 
-  public function action_scrapp_expired() {
-    $view = View::factory('sites/scrapp');
-    $view->content = Request::factory("scrapp/expired")->execute()->body();
+  public function action_scrape_expired() {
+    $view = View::factory('sites/scrape');
+    $view->content = Request::factory("scrape/expired")->execute()->body();
     $this->template->content = $view;
   }
 

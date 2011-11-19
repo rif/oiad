@@ -4,15 +4,15 @@ defined('SYSPATH') OR die('No Direct Script Access');
 
 class PolyFactory {
 
-    private static $scrappers = array();
+    private static $scrapers = array();
 
-    public static function addScrapper($site, $scrapper) {
-        self::$scrappers[$site] = $scrapper;
+    public static function addScraper($site, $scraper) {
+        self::$scrapers[$site] = $scraper;
     }
 
-    public static function getScrapper($site) {
-        if (array_key_exists($site, self::$scrappers)) {
-            return self::$scrappers[$site];
+    public static function getScraper($site) {
+        if (array_key_exists($site, self::$scrapers)) {
+            return self::$scrapers[$site];
         }
         return Null;
     }

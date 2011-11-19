@@ -7,7 +7,7 @@
     <th>Site Name</th>
     <th>Active</th>
     <th>Type</th>
-    <th>Time to next scrapp</th>
+    <th>Time to next scrape</th>
     <th>Actions</th>
 </tr>
 </thead>
@@ -26,13 +26,13 @@ foreach($sites as $i=>$site)
     $refresh = $site->refresh_period;
     echo '<td style="text-align: center;">';
 	if($refresh && ($site->active == 'T')) {
-        $next_scrapp = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
         $now = strtotime("now");
-        $mins = round(($next_scrapp - $now)/60,1);
-        $hours = round(($next_scrapp - $now)/(60*60),1);
-        $time_to_next_scrapp = $hours>1 ? $hours."h" : $mins."min";
+        $mins = round(($next_scrape - $now)/60,1);
+        $hours = round(($next_scrape - $now)/(60*60),1);
+        $time_to_next_scrape = $hours>1 ? $hours."h" : $mins."min";
         if ($mins > 0){
-		  echo $time_to_next_scrapp;
+		  echo $time_to_next_scrape;
         } else {
           echo '<span class="expired">Expired</span>';
         }
@@ -40,7 +40,7 @@ foreach($sites as $i=>$site)
      echo 'NA';
     }
     echo '</td>';
-	echo '<td>'.HTML::anchor('/sites/edit/'.$site->id, 'Edit').' '.HTML::anchor('/sites/scrapp/'.$site->id, 'Scrap')."</td>";
+	echo '<td>'.HTML::anchor('/sites/edit/'.$site->id, 'Edit').' '.HTML::anchor('/sites/scrape/'.$site->id, 'Scrape')."</td>";
 	echo "</tr>";
 }
 ?>
