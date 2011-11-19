@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.scrappindealsnsteals.com/Todays-Daily-Deal_c_8.html", new ScrappinDealsNSteals());
+PolyFactory::addScraper("http://www.scrappindealsnsteals.com/Todays-Daily-Deal_c_8.html", new ScrappinDealsNSteals());
 
-class ScrappinDealsNSteals extends AbstractMultipleScrapper {
+class ScrappinDealsNSteals extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[contains(@id,'qv_')]/@src";

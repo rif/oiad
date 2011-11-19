@@ -40,16 +40,16 @@ echo Form::close();
 </table>
 </div>
 
-<div id="timesincescrapp">
+<div id="timesincescrape">
 	<hr />	
 	<?php
-		$last_scrapp = strtotime($site->last_scrapp);
+		$last_scrape = strtotime($site->last_scrape);
         $now = strtotime("now");
-        $mins = round(($now - $last_scrapp)/60,1);
-        $hours = round(($now - $last_scrapp)/(60*60),1);
-        $time_since_last_scrapp = $hours>1 ? $hours."h" : $mins."min";		
+        $mins = round(($now - $last_scrape)/60,1);
+        $hours = round(($now - $last_scrape)/(60*60),1);
+        $time_since_last_scrape = $hours>1 ? $hours."h" : $mins."min";		
 	?>
-	<h2>Time since last scrap: <?php echo $time_since_last_scrapp; ?></h2>
+	<h2>Time since last scrap: <?php echo $time_since_last_scrape; ?></h2>
 </div>
 
 <div id="todaydeal">
