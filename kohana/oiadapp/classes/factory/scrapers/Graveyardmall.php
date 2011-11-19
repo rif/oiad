@@ -16,7 +16,7 @@ class Graveyardmall extends AbstractMultipleScraper {
     $deal->price = count($prices)>1 ? $prices[1] : $prices[0];
     $deal->desc_long =  $this->_xpath("", $count);
     $deal->pictures = $this->_xpath("//div[@class='ProductImage']/a/img/@src", $count);
-    $deal->shipping = $this->_xpath("//div[@id='Menu']//a[contains(.,'Shipping')]/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

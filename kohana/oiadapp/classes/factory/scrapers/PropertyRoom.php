@@ -15,7 +15,7 @@ class PropertyRoom extends AbstractMultipleScraper {
     $deal->price = $this->_xpath("//div[@id='uxPrice']", $count);
     $deal->desc_long = $this->_xpath("", $count);
     $deal->pictures = $this->_xpath("//img[@id='uxImage']/@src", $count);
-    $deal->shipping = "http://propertyroom.com".$this->_xpath("//a[contains(.,'Shipping Information')]/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

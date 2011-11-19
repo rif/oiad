@@ -10,7 +10,7 @@ class SpecialtyStoreServices extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@id='UnitCost']");
         	$deal->desc_long = $this->_xpath("//span[@id='desc']");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//img[@id='ProductImage']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//a[@class='blue'][2]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

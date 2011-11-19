@@ -11,7 +11,7 @@ class OmahaSteaks extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@class='lefttopdealoftheday']/span[2]");
         	$deal->desc_long = $this->_xpath("//span[@class='componentitems']");
         	$deal->pictures = $this->_xpath("");
-        	$deal->shipping = $this->_xpath("//div[@class='topnavbar'][1]/a[4]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

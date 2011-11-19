@@ -10,7 +10,7 @@ class SportsZoneApparel extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='price']");
         	$deal->desc_long = $this->_xpath("//p[@class='product_desc']/a");
         	$deal->pictures = $host.$this->_xpath("//a[@class='product_image']/img/@src");
-        	$deal->shipping = $this->_xpath("//div[@id='footer']/center/b/a[2]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

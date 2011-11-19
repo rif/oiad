@@ -16,7 +16,7 @@ class JosABank extends AbstractMultipleScraper {
     $deal->price = $this->_xpath("//div[@class='padding_wrapper']//p[@class='cost']/span[@class='promo']", $count);
     $deal->desc_long = $this->_xpath("", $count);
     $deal->pictures = $this->_xpath("//div[@class='padding_wrapper']/a/img[contains(@src,'JosBank')]/@src", $count);
-    $deal->shipping = $base.$this->_xpath("//div[@class='padding_wrapper']/a[contains(.,'SHIPPING')]/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

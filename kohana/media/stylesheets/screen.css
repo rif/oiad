@@ -1,1 +1,884 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}.cf{zoom:1}.cf:before{content:"";display:table}.cf:after{content:"";display:table;clear:both}html{background:#202b5f}body{font:14px/100% Arial,"FreeSans",sans-serif;width:948px;background:#fff;margin:0 auto;padding-top:129px;position:relative}h1{padding:15px 0;font-size:32px;font-style:normal;font-weight:bold;text-transform:none;letter-spacing:-1px;line-height:1.2em;color:#fff;text-shadow:#000 1px 1px 2px}h2{padding:15px 0;font-size:25px;font-style:normal;font-weight:bold;text-transform:none;letter-spacing:-1px;line-height:1.2em;color:#fff;text-shadow:#000 1px 1px 2px}html.deal-of-the-day{background:#202b5f}html.deal-of-the-day #header input.search-input{border:1px solid #2d86c7}html.deal-of-the-day #main-menu{background:url("../images/main-menu-deal-of-the-day.png") left top no-repeat #202b5f}html.deal-of-the-day #secondary-menu li{color:#2d86c7}html.deal-of-the-day #secondary-menu li a{color:#202b5f}html.deal-of-the-day #item-page-form label,html.deal-of-the-day #item-page-form input{color:#202b5f}html.deal-of-the-day #inner-content{border-top:4px solid #202b5f;border-left:4px solid #202b5f}html.deal-of-the-day #promo-listing li{border:2px solid #2d86c7}html.deal-of-the-day #sidebar li.active{border:solid #202b5f}html.deal-of-the-day #footer{border:solid #202b5f}html.deal-of-the-day #footer p,html.deal-of-the-day #footer #footer-menu li a{color:#202b5f}html.coupon-of-the-day{background:#27592c}html.coupon-of-the-day #header input.search-input{border:1px solid #49b749}html.coupon-of-the-day #main-menu{background:url("../images/main-menu-coupon-of-the-day.png") left top no-repeat #27592c}html.coupon-of-the-day #secondary-menu li{color:#49b749}html.coupon-of-the-day #secondary-menu li a{color:#27592c}html.coupon-of-the-day #item-page-form label,html.coupon-of-the-day #item-page-form input{color:#27592c}html.coupon-of-the-day #inner-content{border-top:4px solid #27592c;border-left:4px solid #27592c}html.coupon-of-the-day #promo-listing li{border:2px solid #49b749}html.coupon-of-the-day #sidebar li.active{border:solid #27592c}html.coupon-of-the-day #footer{border:solid #27592c}html.coupon-of-the-day #footer p,html.coupon-of-the-day #footer #footer-menu li a{color:#27592c}html.other-deals{background:#491317}html.other-deals #header input.search-input{border:1px solid #c42d2d}html.other-deals #main-menu{background:url("../images/main-menu-other-deals.png") left top no-repeat #491317}html.other-deals #secondary-menu li{color:#c42d2d}html.other-deals #secondary-menu li a{color:#491317}html.other-deals #item-page-form label,html.other-deals #item-page-form input{color:#491317}html.other-deals #inner-content{border-top:4px solid #491317;border-left:4px solid #491317}html.other-deals #promo-listing li{border:2px solid #c42d2d}html.other-deals #sidebar li.active{border:solid #491317}html.other-deals #footer{border:solid #491317}html.other-deals #footer p,html.other-deals #footer #footer-menu li a{color:#491317}html.black-friday{background:#231f20}html.black-friday #header input.search-input{border:1px solid #767676}html.black-friday #main-menu{background:url("../images/main-menu-black-friday.png") left top no-repeat #231f20}html.black-friday #secondary-menu li{color:#767676}html.black-friday #secondary-menu li a{color:#231f20}html.black-friday #item-page-form label,html.black-friday #item-page-form input{color:#231f20}html.black-friday #inner-content{border-top:4px solid #231f20;border-left:4px solid #231f20}html.black-friday #promo-listing li{border:2px solid #767676}html.black-friday #sidebar li.active{border:solid #231f20}html.black-friday #footer{border:solid #231f20}html.black-friday #footer p,html.black-friday #footer #footer-menu li a{color:#231f20}html.items-of-the-day{background:#e97b24}html.items-of-the-day #header input.search-input{border:1px solid #f8bb4e}html.items-of-the-day #main-menu{background:url("../images/main-menu-items-of-the-day.png") left top no-repeat #e97b24}html.items-of-the-day #secondary-menu li{color:#f8bb4e}html.items-of-the-day #secondary-menu li a{color:#e97b24}html.items-of-the-day #item-page-form label,html.items-of-the-day #item-page-form input{color:#e97b24}html.items-of-the-day #inner-content{border-top:4px solid #e97b24;border-left:4px solid #e97b24}html.items-of-the-day #promo-listing li{border:2px solid #f8bb4e}html.items-of-the-day #sidebar li.active{border:solid #e97b24}html.items-of-the-day #footer{border:solid #e97b24}html.items-of-the-day #footer p,html.items-of-the-day #footer #footer-menu li a{color:#e97b24}#header{width:948px;height:129px;position:absolute;left:0;top:0}.logo{position:absolute;top:9px;left:5px}#main-menu{position:absolute;right:0;top:95px;width:829px;height:27px;background:url("../images/main-menu-deal-of-the-day.png") left top no-repeat #202b5f;border-color:#946638;border-width:1px 0;z-index:100;padding-left:113px}#main-menu li{float:left;margin-left:21px;height:27px;font:20px/100% "Times New Roman",serif}#main-menu li a:link,#main-menu li a:visited{font-size:20px;line-height:27px;color:#fff;text-decoration:none;font-weight:bold}#main-menu li a:hover{text-decoration:underline}#secondary-menu{position:absolute;right:28px;top:62px}#secondary-menu li{float:left;margin-left:5px}#secondary-menu li a:link,#secondary-menu li a:visited{font-size:18px;text-decoration:none}#secondary-menu li a:hover{text-decoration:underline}#header form{position:absolute;top:14px;right:26px}#header input{font:14px/100% Arial,"FreeSans",sans-serif;float:left}#header input.search-input{width:177px;height:30px;line-height:28px;padding:0 8px;color:#202b5f;margin-right:3px}#content{margin-top:4px;position:relative}#inner-content{float:right;width:836px;min-height:690px;border-top:4px solid #202b5f;border-left:4px solid #202b5f;padding:7px 0 45px 0}#promo-listing li{margin-bottom:22px;float:left;width:204px;height:174px;margin:0 0 7px 7px}#pager{position:absolute;bottom:12px;left:118px}#pager li{float:left;margin-right:14px}#pager li:first-child{color:#2d86c7;margin-right:7px}#pager li a:link,#pager li a:visited{text-decoration:none;color:#202b5f}#pager li a:hover{text-decoration:underline}#item-page-form{position:absolute;bottom:12px;right:190px}#item-page-form label{float:left;color:#2d86c7;margin-right:8px;padding-top:15px}#item-page-form input{font:14px/100% Arial,"FreeSans",sans-serif;height:28px;line-height:28px;float:left;color:#2d86c7;padding:0 5px;width:19px;border:2px solid #202b5f}#item-page-form input.submit{padding:0;border:0;width:33px;height:32px;margin-left:4px}#sidebar{width:95px;padding-left:8px;border-left:5px solid #fff;float:left}#sidebar li{width:98px;height:134px;margin-bottom:6px}#sidebar li.active{width:99px;height:126px;border:solid #202b5f;border-width:4px 0 4px 0 !important;background:#fff}#sidebar li a:link,#sidebar li a:visited{display:block;width:90px;height:134px;text-indent:-9999px}#sidebar li a.anch-deal-of-the-day{background:url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent}#sidebar li.active a.anch-deal-of-the-day{margin-top:-3px;background:url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent}#sidebar li a.anch-coupon-of-the-day{background:url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent}#sidebar li.active a.anch-coupon-of-the-day{margin-top:-5px;background:url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent}#sidebar li a.anch-other-deals{background:url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent}#sidebar li.active a.anch-other-deals{margin-top:-4px;background:url(../images/but-sidebar-sprite.jpg) -90px -268px no-repeat transparent}#sidebar li a.anch-black-friday{background:url(../images/but-sidebar-sprite.jpg) left -402px no-repeat transparent}#sidebar li.active a.anch-black-friday{margin-top:-4px;background:url(../images/but-sidebar-sprite.jpg) -90px -400px no-repeat transparent}#sidebar li a.anch-items-of-the-day{background:url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent}#sidebar li.active a.anch-items-of-the-day{margin-top:-3px;background:url(../images/but-sidebar-sprite.jpg) -90px -536px no-repeat transparent}#footer{border:solid #202b5f;border-width:1px 0 !important;height:45px;color:#699cd3;position:relative}#footer-menu{margin:9px 0 0 6px;color:#202b5f}#footer-menu li{float:left;background:url(../images/bullet-footer.gif) left center no-repeat transparent;padding-left:12px;margin-right:5px}#footer-menu li:first-child{background:none;padding:0}#footer-menu li a:link,#footer-menu li a:visited{color:#699cd3;text-decoration:none}#footer-menu li a:hover{text-decoration:underline}#social-menu{position:absolute;right:190px;top:6px}#social-menu li{float:left;margin-left:37px}#footer p{position:absolute;left:6px;bottom:5px;font-size:13px}#promo-listing .item{overflow:auto;padding:5px;font-size:11px;margin-bottom:20px;height:160px}#promo-listing .item a{text-decoration:none;color:#1b2b8e}#promo-listing .item a:hover{text-decoration:underline}#promo-listing .item a:visited{color:#1b2b8e}#promo-listing .item a:focus{color:#b20811}#promo-listing .item a:hover{color:#526073}#promo-listing .item a:active{color:#c0c}#promo-listing .item .item-title{font-size:1.2em;font-weight:bold}#promo-listing .item .item-body img{float:left;margin-right:5px;max-height:120px;max-width:80px}#promo-listing .item .item-body .item-price{font-weight:bold;font-size:1.6em;color:#b20811}#promo-listing .item .item-body .item-desc_long{width:120px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#deal a{text-decoration:none;color:#1b2b8e}#deal a:hover{text-decoration:underline}#deal a:visited{color:#1b2b8e}#deal a:focus{color:#b20811}#deal a:hover{color:#526073}#deal a:active{color:#c0c}.error{color:red}#inner-content{font-size:1em}a.toggle-state{background-repeat:no-repeat;display:inline-block;min-width:16px;background-image:url("../images/error.png")}a.toggle-state.active{background-image:url("../images/ok.png")}a#delete-link{float:right}.expired{color:#b20811;font-weight:bold}#sites table th{text-align:center;font-weight:bold}#sites table td,#sites table th{padding:2px}#sites table td.numeric,#sites table th.numeric{text-align:right}#sites table th{background-color:#fff}#sites table th.even,#sites table th:nth-child(2n){background-color:#ddd}#sites table tr.odd td{background-color:#dbead0}#sites table tr.odd td.even,#sites table tr.odd td:nth-child(2n){background-color:#b9c8ae}#sites table tr.even td{background-color:#d0dbea}#sites table tr.even td.even,#sites table tr.even td:nth-child(2n){background-color:#aeb9c8}#sites table tfoot th,#sites table tfoot td{background-color:#fff}#sites table tfoot th.even,#sites table tfoot th:nth-child(2n),#sites table tfoot td.even,#sites table tfoot td:nth-child(2n){background-color:#ddd}.site-label > label{width:250px;display:inline-block}.clear{clear:both}.table{width:100%;border-collapse:collapse;margin-bottom:15px}.table th{padding:10px;font-weight:bold;text-align:left}.table th.first{width:30px}.table th.last{width:200px}.table .checkbox{margin-left:10px}.table td{padding:10px}.table td.last{text-align:right}.table th{background:#eaeaea;color:#222;font-weight:normal}.table td{border-bottom:1px solid #eaeaea}.table tr.even{background:#f8f8f8}#site-edit a,#categories a{font-family:Helvetica,Arial,sans-serif;font-size:1.2em;text-decoration:none;color:#515761}#site-edit a:hover,#categories a:hover{text-decoration:underline}#site-edit a:visited,#categories a:visited{color:#6d7582}#site-edit a:focus,#categories a:focus{color:#b20811}#site-edit a:hover,#categories a:hover{color:#526073}#site-edit a:active,#categories a:active{color:#c0c}.hidden{display:none}
+/* line 17, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+/* line 17, ../sass/screen.sass */
+.cf {
+  zoom: 1;
+}
+/* line 18, ../sass/screen.sass */
+.cf:before {
+  content: "";
+  display: table;
+}
+/* line 21, ../sass/screen.sass */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+/* GLOBAL STYLES
+ *__________________________________________________ */
+/* line 32, ../sass/screen.sass */
+html {
+  background: #202b5f;
+  /* default background - deal of the day */
+}
+
+/* line 36, ../sass/screen.sass */
+body {
+  font: 14px/100% Arial, "FreeSans", sans-serif;
+  /* Win/Mac, Win/Mac, Linux, generic */
+  width: 948px;
+  background: white;
+  margin: 0 auto;
+  padding-top: 129px;
+  position: relative;
+}
+
+/* line 45, ../sass/screen.sass */
+h1 {
+  padding: 15px 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+  color: white;
+  text-shadow: black 1px 1px 2px;
+}
+
+/* line 56, ../sass/screen.sass */
+h2 {
+  padding: 15px 0;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+  color: white;
+  text-shadow: black 1px 1px 2px;
+}
+
+/* COLOR CHANGING LOGIC STYLES
+ *__________________________________________________ */
+/* line 95, ../sass/screen.sass */
+html.deal-of-the-day {
+  background: #202b5f;
+}
+/* line 72, ../sass/screen.sass */
+html.deal-of-the-day #header input.search-input {
+  border: 1px solid #2d86c7;
+}
+/* line 74, ../sass/screen.sass */
+html.deal-of-the-day #main-menu {
+  background: url("../images/main-menu-deal-of-the-day.png") left top no-repeat #202b5f;
+}
+/* line 76, ../sass/screen.sass */
+html.deal-of-the-day #secondary-menu li {
+  color: #2d86c7;
+}
+/* line 78, ../sass/screen.sass */
+html.deal-of-the-day #secondary-menu li a {
+  color: #202b5f;
+}
+/* line 80, ../sass/screen.sass */
+html.deal-of-the-day #item-page-form label, html.deal-of-the-day #item-page-form input {
+  color: #202b5f;
+}
+/* line 82, ../sass/screen.sass */
+html.deal-of-the-day #inner-content {
+  border-top: 4px solid #202b5f;
+  border-left: 4px solid #202b5f;
+}
+/* line 85, ../sass/screen.sass */
+html.deal-of-the-day #promo-listing li {
+  border: 2px solid #2d86c7;
+}
+/* line 87, ../sass/screen.sass */
+html.deal-of-the-day #sidebar li.active {
+  border: solid #202b5f;
+}
+/* line 89, ../sass/screen.sass */
+html.deal-of-the-day #footer {
+  border: solid #202b5f;
+}
+/* line 91, ../sass/screen.sass */
+html.deal-of-the-day #footer p, html.deal-of-the-day #footer #footer-menu li a {
+  color: #202b5f;
+}
+/* line 97, ../sass/screen.sass */
+html.coupon-of-the-day {
+  background: #27592c;
+}
+/* line 72, ../sass/screen.sass */
+html.coupon-of-the-day #header input.search-input {
+  border: 1px solid #49b749;
+}
+/* line 74, ../sass/screen.sass */
+html.coupon-of-the-day #main-menu {
+  background: url("../images/main-menu-coupon-of-the-day.png") left top no-repeat #27592c;
+}
+/* line 76, ../sass/screen.sass */
+html.coupon-of-the-day #secondary-menu li {
+  color: #49b749;
+}
+/* line 78, ../sass/screen.sass */
+html.coupon-of-the-day #secondary-menu li a {
+  color: #27592c;
+}
+/* line 80, ../sass/screen.sass */
+html.coupon-of-the-day #item-page-form label, html.coupon-of-the-day #item-page-form input {
+  color: #27592c;
+}
+/* line 82, ../sass/screen.sass */
+html.coupon-of-the-day #inner-content {
+  border-top: 4px solid #27592c;
+  border-left: 4px solid #27592c;
+}
+/* line 85, ../sass/screen.sass */
+html.coupon-of-the-day #promo-listing li {
+  border: 2px solid #49b749;
+}
+/* line 87, ../sass/screen.sass */
+html.coupon-of-the-day #sidebar li.active {
+  border: solid #27592c;
+}
+/* line 89, ../sass/screen.sass */
+html.coupon-of-the-day #footer {
+  border: solid #27592c;
+}
+/* line 91, ../sass/screen.sass */
+html.coupon-of-the-day #footer p, html.coupon-of-the-day #footer #footer-menu li a {
+  color: #27592c;
+}
+/* line 99, ../sass/screen.sass */
+html.other-deals {
+  background: #491317;
+}
+/* line 72, ../sass/screen.sass */
+html.other-deals #header input.search-input {
+  border: 1px solid #c42d2d;
+}
+/* line 74, ../sass/screen.sass */
+html.other-deals #main-menu {
+  background: url("../images/main-menu-other-deals.png") left top no-repeat #491317;
+}
+/* line 76, ../sass/screen.sass */
+html.other-deals #secondary-menu li {
+  color: #c42d2d;
+}
+/* line 78, ../sass/screen.sass */
+html.other-deals #secondary-menu li a {
+  color: #491317;
+}
+/* line 80, ../sass/screen.sass */
+html.other-deals #item-page-form label, html.other-deals #item-page-form input {
+  color: #491317;
+}
+/* line 82, ../sass/screen.sass */
+html.other-deals #inner-content {
+  border-top: 4px solid #491317;
+  border-left: 4px solid #491317;
+}
+/* line 85, ../sass/screen.sass */
+html.other-deals #promo-listing li {
+  border: 2px solid #c42d2d;
+}
+/* line 87, ../sass/screen.sass */
+html.other-deals #sidebar li.active {
+  border: solid #491317;
+}
+/* line 89, ../sass/screen.sass */
+html.other-deals #footer {
+  border: solid #491317;
+}
+/* line 91, ../sass/screen.sass */
+html.other-deals #footer p, html.other-deals #footer #footer-menu li a {
+  color: #491317;
+}
+/* line 101, ../sass/screen.sass */
+html.items-of-the-day {
+  background: #e97b24;
+}
+/* line 72, ../sass/screen.sass */
+html.items-of-the-day #header input.search-input {
+  border: 1px solid #f8bb4e;
+}
+/* line 74, ../sass/screen.sass */
+html.items-of-the-day #main-menu {
+  background: url("../images/main-menu-items-of-the-day.png") left top no-repeat #e97b24;
+}
+/* line 76, ../sass/screen.sass */
+html.items-of-the-day #secondary-menu li {
+  color: #f8bb4e;
+}
+/* line 78, ../sass/screen.sass */
+html.items-of-the-day #secondary-menu li a {
+  color: #e97b24;
+}
+/* line 80, ../sass/screen.sass */
+html.items-of-the-day #item-page-form label, html.items-of-the-day #item-page-form input {
+  color: #e97b24;
+}
+/* line 82, ../sass/screen.sass */
+html.items-of-the-day #inner-content {
+  border-top: 4px solid #e97b24;
+  border-left: 4px solid #e97b24;
+}
+/* line 85, ../sass/screen.sass */
+html.items-of-the-day #promo-listing li {
+  border: 2px solid #f8bb4e;
+}
+/* line 87, ../sass/screen.sass */
+html.items-of-the-day #sidebar li.active {
+  border: solid #e97b24;
+}
+/* line 89, ../sass/screen.sass */
+html.items-of-the-day #footer {
+  border: solid #e97b24;
+}
+/* line 91, ../sass/screen.sass */
+html.items-of-the-day #footer p, html.items-of-the-day #footer #footer-menu li a {
+  color: #e97b24;
+}
+
+/* HEADER STYLES
+ *__________________________________________________ */
+/* line 107, ../sass/screen.sass */
+#header {
+  width: 948px;
+  height: 129px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 114, ../sass/screen.sass */
+.logo {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+}
+
+/* MAIN MENU STYLES */
+/* line 121, ../sass/screen.sass */
+#main-menu {
+  position: absolute;
+  right: 0;
+  top: 95px;
+  width: 829px;
+  height: 27px;
+  background: url("../images/main-menu-deal-of-the-day.png") left top no-repeat #202b5f;
+  border-color: #946638;
+  border-width: 1px 0;
+  z-index: 100;
+  padding-left: 113px;
+}
+/* line 132, ../sass/screen.sass */
+#main-menu li {
+  float: left;
+  margin-left: 21px;
+  height: 27px;
+  font: 20px/100% "Times New Roman", serif;
+}
+/* line 138, ../sass/screen.sass */
+#main-menu li a:link, #main-menu li a:visited {
+  font-size: 20px;
+  line-height: 27px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* line 144, ../sass/screen.sass */
+#main-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* SECONDARY STYLES */
+/* line 149, ../sass/screen.sass */
+#secondary-menu {
+  position: absolute;
+  right: 28px;
+  top: 62px;
+}
+/* line 153, ../sass/screen.sass */
+#secondary-menu li {
+  float: left;
+  margin-left: 5px;
+}
+/* line 157, ../sass/screen.sass */
+#secondary-menu li a:link, #secondary-menu li a:visited {
+  font-size: 18px;
+  text-decoration: none;
+}
+/* line 160, ../sass/screen.sass */
+#secondary-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER SEARCH FORM STYLES */
+/* line 166, ../sass/screen.sass */
+#header form {
+  position: absolute;
+  top: 14px;
+  right: 26px;
+}
+/* line 170, ../sass/screen.sass */
+#header input {
+  font: 14px/100% Arial, "FreeSans", sans-serif;
+  /* Win/Mac, Win/Mac, Linux, generic */
+  float: left;
+}
+/* line 174, ../sass/screen.sass */
+#header input.search-input {
+  width: 177px;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #202b5f;
+  margin-right: 3px;
+}
+
+/* CONTENT STYLES
+ *__________________________________________________ */
+/* line 185, ../sass/screen.sass */
+#content {
+  margin-top: 4px;
+  position: relative;
+}
+
+/* INNER CONTENT STYLES */
+/* line 191, ../sass/screen.sass */
+#inner-content {
+  float: right;
+  width: 836px;
+  min-height: 690px;
+  border-top: 4px solid #202b5f;
+  border-left: 4px solid #202b5f;
+  padding: 7px 0 45px 0;
+}
+
+/* PROMO LISTING STYLES */
+/* line 201, ../sass/screen.sass */
+#promo-listing li {
+  margin-bottom: 22px;
+  float: left;
+  width: 204px;
+  height: 174px;
+  margin: 0 0 7px 7px;
+}
+
+/* PAGER STYLES */
+/* line 210, ../sass/screen.sass */
+#pager {
+  position: absolute;
+  bottom: 12px;
+  left: 118px;
+}
+/* line 214, ../sass/screen.sass */
+#pager li {
+  float: left;
+  margin-right: 14px;
+}
+/* line 217, ../sass/screen.sass */
+#pager li:first-child {
+  color: #2d86c7;
+  margin-right: 7px;
+}
+/* line 221, ../sass/screen.sass */
+#pager li a:link, #pager li a:visited {
+  text-decoration: none;
+  color: #202b5f;
+}
+/* line 224, ../sass/screen.sass */
+#pager li a:hover {
+  text-decoration: underline;
+}
+
+/* ITEMS PER PAGE FORM STYLES */
+/* line 229, ../sass/screen.sass */
+#item-page-form {
+  position: absolute;
+  bottom: 12px;
+  right: 190px;
+}
+/* line 233, ../sass/screen.sass */
+#item-page-form label {
+  float: left;
+  color: #2d86c7;
+  margin-right: 8px;
+  padding-top: 15px;
+}
+/* line 238, ../sass/screen.sass */
+#item-page-form input {
+  font: 14px/100% Arial, "FreeSans", sans-serif;
+  /* Win/Mac, Win/Mac, Linux, generic */
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  color: #2d86c7;
+  padding: 0 5px;
+  width: 19px;
+  border: 2px solid #202b5f;
+}
+/* line 248, ../sass/screen.sass */
+#item-page-form input.submit {
+  padding: 0;
+  border: 0;
+  width: 33px;
+  height: 32px;
+  margin-left: 4px;
+}
+
+/* SIDEBAR STYLES */
+/* line 257, ../sass/screen.sass */
+#sidebar {
+  width: 95px;
+  padding-left: 8px;
+  border-left: 5px solid white;
+  float: left;
+}
+/* line 262, ../sass/screen.sass */
+#sidebar li {
+  width: 98px;
+  height: 134px;
+  margin-bottom: 6px;
+}
+/* line 266, ../sass/screen.sass */
+#sidebar li.active {
+  width: 99px;
+  height: 126px;
+  border: solid #202b5f;
+  border-width: 4px 0 4px 0 !important;
+  background: white;
+}
+/* line 273, ../sass/screen.sass */
+#sidebar li a:link, #sidebar li a:visited {
+  display: block;
+  width: 90px;
+  height: 134px;
+  text-indent: -9999px;
+}
+/* line 278, ../sass/screen.sass */
+#sidebar li a.anch-deal-of-the-day {
+  background: url(../images/but-sidebar-sprite.jpg) left top no-repeat transparent;
+}
+/* line 280, ../sass/screen.sass */
+#sidebar li.active a.anch-deal-of-the-day {
+  margin-top: -3px;
+  background: url(../images/but-sidebar-sprite.jpg) -90px top no-repeat transparent;
+}
+/* line 283, ../sass/screen.sass */
+#sidebar li a.anch-coupon-of-the-day {
+  background: url(../images/but-sidebar-sprite.jpg) left -134px no-repeat transparent;
+}
+/* line 285, ../sass/screen.sass */
+#sidebar li.active a.anch-coupon-of-the-day {
+  margin-top: -5px;
+  background: url(../images/but-sidebar-sprite.jpg) -90px -134px no-repeat transparent;
+}
+/* line 288, ../sass/screen.sass */
+#sidebar li a.anch-other-deals {
+  background: url(../images/but-sidebar-sprite.jpg) left -268px no-repeat transparent;
+}
+/* line 290, ../sass/screen.sass */
+#sidebar li.active a.anch-other-deals {
+  margin-top: -4px;
+  background: url(../images/but-sidebar-sprite.jpg) -90px -268px no-repeat transparent;
+}
+/* line 293, ../sass/screen.sass */
+#sidebar li a.anch-items-of-the-day {
+  background: url(../images/but-sidebar-sprite.jpg) left -536px no-repeat transparent;
+}
+/* line 295, ../sass/screen.sass */
+#sidebar li.active a.anch-items-of-the-day {
+  margin-top: -3px;
+  background: url(../images/but-sidebar-sprite.jpg) -90px -536px no-repeat transparent;
+}
+
+/* FOOTER STYLES
+ *__________________________________________________ */
+/* line 302, ../sass/screen.sass */
+#footer {
+  border: solid #202b5f;
+  border-width: 1px 0 !important;
+  height: 45px;
+  color: #699cd3;
+  position: relative;
+}
+
+/* FOOTER MENU STYLES */
+/* line 311, ../sass/screen.sass */
+#footer-menu {
+  margin: 9px 0 0 6px;
+  color: #202b5f;
+}
+/* line 314, ../sass/screen.sass */
+#footer-menu li {
+  float: left;
+  background: url(../images/bullet-footer.gif) left center no-repeat transparent;
+  padding-left: 12px;
+  margin-right: 5px;
+}
+/* line 319, ../sass/screen.sass */
+#footer-menu li:first-child {
+  background: none;
+  padding: 0;
+}
+/* line 323, ../sass/screen.sass */
+#footer-menu li a:link, #footer-menu li a:visited {
+  color: #699cd3;
+  text-decoration: none;
+}
+/* line 326, ../sass/screen.sass */
+#footer-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* SOCIAL BUTTONS MENU STYLES */
+/* line 331, ../sass/screen.sass */
+#social-menu {
+  position: absolute;
+  right: 190px;
+  top: 6px;
+}
+/* line 335, ../sass/screen.sass */
+#social-menu li {
+  float: left;
+  margin-left: 37px;
+}
+
+/* COPYRIGHT STYLES */
+/* line 341, ../sass/screen.sass */
+#footer p {
+  position: absolute;
+  left: 6px;
+  bottom: 5px;
+  font-size: 13px;
+}
+
+/* line 347, ../sass/screen.sass */
+#promo-listing .item {
+  overflow: auto;
+  padding: 5px;
+  font-size: 11px;
+  margin-bottom: 20px;
+  height: 160px;
+}
+/* line 353, ../sass/screen.sass */
+#promo-listing .item a {
+  text-decoration: none;
+  color: #1b2b8e;
+}
+/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#promo-listing .item a:hover {
+  text-decoration: underline;
+}
+/* line 18, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#promo-listing .item a:visited {
+  color: #1b2b8e;
+}
+/* line 21, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#promo-listing .item a:focus {
+  color: #b20811;
+}
+/* line 24, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#promo-listing .item a:hover {
+  color: #526073;
+}
+/* line 27, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#promo-listing .item a:active {
+  color: #cc00cc;
+}
+/* line 357, ../sass/screen.sass */
+#promo-listing .item .item-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 361, ../sass/screen.sass */
+#promo-listing .item .item-body img {
+  float: left;
+  margin-right: 5px;
+  max-height: 120px;
+  max-width: 80px;
+}
+/* line 366, ../sass/screen.sass */
+#promo-listing .item .item-body .item-price {
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #b20811;
+}
+/* line 370, ../sass/screen.sass */
+#promo-listing .item .item-body .item-desc_long {
+  width: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 376, ../sass/screen.sass */
+#deal a {
+  text-decoration: none;
+  color: #1b2b8e;
+}
+/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#deal a:hover {
+  text-decoration: underline;
+}
+/* line 18, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#deal a:visited {
+  color: #1b2b8e;
+}
+/* line 21, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#deal a:focus {
+  color: #b20811;
+}
+/* line 24, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#deal a:hover {
+  color: #526073;
+}
+/* line 27, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#deal a:active {
+  color: #cc00cc;
+}
+
+/* line 380, ../sass/screen.sass */
+.error {
+  color: red;
+}
+
+/* line 383, ../sass/screen.sass */
+#inner-content {
+  font-size: 1em;
+}
+
+/* line 386, ../sass/screen.sass */
+a.toggle-state {
+  background-repeat: no-repeat;
+  display: inline-block;
+  min-width: 16px;
+  background-image: url("../images/error.png");
+}
+
+/* line 393, ../sass/screen.sass */
+a.toggle-state.active {
+  background-image: url("../images/ok.png");
+}
+
+/* line 396, ../sass/screen.sass */
+a#delete-link {
+  float: right;
+}
+
+/* line 399, ../sass/screen.sass */
+.expired {
+  color: #b20811;
+  font-weight: bold;
+}
+
+/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table td,
+#sites table th {
+  padding: 2px;
+}
+/* line 8, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#sites table td.numeric,
+#sites table th.numeric {
+  text-align: right;
+}
+/* line 2, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th {
+  background-color: white;
+}
+/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table th.even, #sites table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td {
+  background-color: #dbead0;
+}
+/* line 9, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.odd td.even, #sites table tr.odd td:nth-child(2n) {
+  background-color: #b9c8ae;
+}
+/* line 12, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td {
+  background-color: #d0dbea;
+}
+/* line 14, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tr.even td.even, #sites table tr.even td:nth-child(2n) {
+  background-color: #aeb9c8;
+}
+/* line 17, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th, #sites table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#sites table tfoot th.even, #sites table tfoot th:nth-child(2n), #sites table tfoot td.even, #sites table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
+
+/* line 408, ../sass/screen.sass */
+.site-label > label {
+  width: 250px;
+  display: inline-block;
+}
+
+/* line 412, ../sass/screen.sass */
+.clear {
+  clear: both;
+}
+
+/* line 416, ../sass/screen.sass */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+/* line 420, ../sass/screen.sass */
+.table th {
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+/* line 424, ../sass/screen.sass */
+.table th.first {
+  width: 30px;
+}
+/* line 426, ../sass/screen.sass */
+.table th.last {
+  width: 200px;
+}
+/* line 428, ../sass/screen.sass */
+.table .checkbox {
+  margin-left: 10px;
+}
+/* line 430, ../sass/screen.sass */
+.table td {
+  padding: 10px;
+}
+/* line 432, ../sass/screen.sass */
+.table td.last {
+  text-align: right;
+}
+/* line 434, ../sass/screen.sass */
+.table th {
+  background: #eaeaea;
+  color: #222222;
+  font-weight: normal;
+}
+/* line 438, ../sass/screen.sass */
+.table td {
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 440, ../sass/screen.sass */
+.table tr.even {
+  background: #f8f8f8;
+}
+
+/* line 446, ../sass/screen.sass */
+#site-edit a, #categories a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #515761;
+}
+/* line 4, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#site-edit a:hover, #categories a:hover {
+  text-decoration: underline;
+}
+/* line 18, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#site-edit a:visited, #categories a:visited {
+  color: #6d7582;
+}
+/* line 21, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#site-edit a:focus, #categories a:focus {
+  color: #b20811;
+}
+/* line 24, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#site-edit a:hover, #categories a:hover {
+  color: #526073;
+}
+/* line 27, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#site-edit a:active, #categories a:active {
+  color: #cc00cc;
+}
+
+/* line 452, ../sass/screen.sass */
+.hidden {
+  display: none;
+}

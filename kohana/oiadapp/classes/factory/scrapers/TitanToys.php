@@ -10,7 +10,7 @@ class TitanToys extends AbstractScraper {
         	$deal->price = $this->_xpath("//td[@class='star-product-price']");
         	$deal->desc_long = $this->_xpath("//td[@class='star-product']");
         	$deal->pictures = $host.$this->_xpath("//img[@width='120']/@src");
-        	$deal->shipping = $host.$this->_xpath("//a[contains(.,'Shipping')]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

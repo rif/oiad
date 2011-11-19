@@ -10,7 +10,7 @@ class EternalSnow extends AbstractScraper {
         	$deal->price = $this->_xpath("//p[@class='special-price']/span");
         	$deal->desc_long = $this->_xpath("");
         	$deal->pictures = $this->_xpath("//li[@class='item first']/a/img/@src");
-        	$deal->shipping = $this->_xpath("//div[@class='footer-links']/table[1]/tbody/tr/td[1]/ul/li[2]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

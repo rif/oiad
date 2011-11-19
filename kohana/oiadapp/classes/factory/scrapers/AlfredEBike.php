@@ -10,7 +10,7 @@ class AlfredEBike extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@class='sespecialprice']");
         	$deal->desc_long = $this->_xpath("//td[@class='seitemcontent']/ul/li");
         	$deal->pictures = "http://aebike.com".$this->_xpath("//div[@class='seimagecaption']/img/@src");
-        	$deal->shipping = 'See description';
+        	$deal->shipping = '';
     }
 }
 

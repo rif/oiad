@@ -10,7 +10,7 @@ class ToolidayAccessory extends AbstractScraper {
         	$deal->price = $this->_xpath("//p[@class='special-price']/span[2]");
         	$deal->desc_long = $this->_xpath("//div[@class='proddesc']");
         	$deal->pictures = $this->_xpath("//img[@id='tdayprodimage']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//div[@class='footer-list2']/ul/li[2]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

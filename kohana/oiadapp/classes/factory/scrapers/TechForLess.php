@@ -10,7 +10,7 @@ class TechForLess extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='ypdblulinks']");
         	$deal->desc_long = $this->_xpath("//div[@id='productdetailswrap']//p");
         	$deal->pictures = $this->_xpath("//div[@id='productimg']/img/@src");
-        	$deal->shipping = $this->_xpath("//div[@id='bottomnav']/ul[2]/li[4]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

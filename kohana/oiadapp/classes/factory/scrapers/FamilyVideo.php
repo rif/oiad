@@ -10,7 +10,7 @@ class FamilyVideo extends AbstractScraper {
         	$deal->price = $this->_xpath("///span[@class='products_specials_price']");
         	$deal->desc_long = $this->_xpath("");
         	$deal->pictures = "http://www.familyvideo.com/catalog/".$this->_xpath("//img[@width='144']/@src");
-        	$deal->shipping = $this->_xpath("//td[@class='footer']/nobr[1]/a[@class='footerText']/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

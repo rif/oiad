@@ -15,7 +15,7 @@ class DealADayGolf extends AbstractScraper {
     $deal->desc_long = $this->_xpath("//td[@class='bigDescription']//ul", $count);
     $deal->price = $this->_xpath("//td[@class='priceBig']", $count).','.$this->_xpath("//td[@class='priceBig']/following-sibling::td[1]", $count);
     $deal->pictures = $this->_xpath("//img[@class='main_image']/@src", $count);
-    $deal->shipping = $this->_xpath("//div[@id='Menu']//a[contains(.,'Shipping')]/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

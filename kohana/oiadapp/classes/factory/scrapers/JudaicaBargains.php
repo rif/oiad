@@ -10,7 +10,7 @@ class JudaicaBargains extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='style2']");
         	$deal->desc_long = $this->_xpath("//td[@colspan='2']");
         	$deal->pictures = $host.$this->_xpath("//img[@width='350']/@src");
-        	$deal->shipping = $this->_xpath("//a[contains(@href, 'shipping')]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

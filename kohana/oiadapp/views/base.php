@@ -39,10 +39,15 @@
                 <ul>
                     <li<?php echo ((!strcmp($section, 'deal-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=deal-of-the-day'.$c);?>" title="Deal of the day" class="anch-deal-of-the-day">Deal of the day</a></li>
                     <li<?php echo ((!strcmp($section, 'coupon-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=coupon-of-the-day'.$c);?>" title="Coupon of the day" class="anch-coupon-of-the-day">Coupon of the day</a></li>
-                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=other-deals'.$c);?>" title="Other deals" class="anch-other-deals">Other deals</a></li>
-                    <?php if($auth->logged_in()!= 0) { ?>
-                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=items-of-the-day'.$c);?>" title="Items of the day" class="anch-items-of-the-day">Items of the day</a></li>
-                    <?php } ?>
+                    <li<?php echo ((!strcmp($section, 'other-deals')) ? ' class="active"' : ''); ?>><a href="<?php echo URL::site('/?section=other-deals'.$c);?>" title="Other deals" class="anch-other-deals">Other deals</a></li>                    
+                    <li<?php echo ((!strcmp($section, 'items-of-the-day')) ? ' class="active"' : ''); ?>>
+                        <?php if($auth->logged_in()!= 0) { ?>
+                        <a href="<?php echo URL::site('/?section=items-of-the-day'.$c);?>" title="Items of the day" class="anch-items-of-the-day">
+                        Items of the day</a>
+                        <?php } else { ?>
+                        <a href="<?php echo URL::site('/user/register');?>" title="Items of the day" class="anch-items-of-the-day">
+                        <?php } ?>
+                    </li>                    
                 </ul>
             </div>
         </div>

@@ -10,7 +10,7 @@ class ReiOutlet extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='salePrice']");
         	$deal->desc_long = $this->_xpath("//div[@id='prodInfoColLeft']");
         	$deal->pictures = $this->_xpath("//img[@id='featuredImg']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//ul[@class='col4']/li[7]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

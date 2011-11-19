@@ -10,7 +10,7 @@ class Netaya extends AbstractScraper {
         	$deal->price = $this->_xpath("//p[@class='price']");
         	$deal->desc_long = $this->_xpath("//div[@class='item_description']");
         	$deal->pictures = $this->_xpath("//span[@id='enlarge1']/a/@href");
-        	$deal->shipping = $this->_xpath("//div[@class='bottom_links_box'][2]/ul/li[1]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

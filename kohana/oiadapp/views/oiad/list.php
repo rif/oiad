@@ -21,7 +21,7 @@ foreach($deals as $d){
 				$a1['class'] .= ' hidden';
 			}
 			echo HTML::anchor('/preferences/unmarkmysite/'.$d->site, 'UnMark as favorite', $a1);
-    		echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
+    	echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
 		}
     ?>
     </div> <!-- item-body -->
@@ -39,7 +39,8 @@ foreach($deals as $d){
 <form action="#" method="post" id="item-page-form">
     <div>
         <label>Items per page</label>
-        <input type="text" name="items_per_page" value="<?php echo $paging->items_per_page; ?>" />
+        <?php echo Form::select('items_per_page', array(15=>'15', 30=>'30', 45=>'45', $all=>'all',), $paging->items_per_page); ?>
+        <!--input type="text" name="items_per_page" value="<?php echo $paging->items_per_page; ?>" /-->
         <input class="submit" type="image" src="/media/images/but-item-<?php echo $section; ?>.png" alt="Show items per page" />        
     </div>
 </form>
