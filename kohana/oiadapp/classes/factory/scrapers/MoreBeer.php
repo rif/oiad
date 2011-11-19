@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://morebeer.com/", new MoreBeer());
+PolyFactory::addScraper("http://morebeer.com/", new MoreBeer());
 
-class MoreBeer extends AbstractScrapper {
+class MoreBeer extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='dod-container']//td[2]/b[1]");

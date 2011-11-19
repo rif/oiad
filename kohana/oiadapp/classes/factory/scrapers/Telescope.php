@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.telescope.com/", new Telescope());
+PolyFactory::addScraper("http://www.telescope.com/", new Telescope());
 
-class Telescope extends AbstractScrapper {
+class Telescope extends AbstractScraper {
 
 	protected function _getPageToScrap($page) {
     	return $this->_xpath("//div[@id='home-cms-area3']/div/div[@class='homekicker']/a[1]/@href");

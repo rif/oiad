@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://shop.pacsun.com/content.jsp?pageName=sale", new PacsunMens());
+PolyFactory::addScraper("http://shop.pacsun.com/content.jsp?pageName=sale", new PacsunMens());
 
-class PacsunMens extends AbstractScrapper {
+class PacsunMens extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.eternalsnow.com/steal-of-the-day.html", new EternalSnow());
+PolyFactory::addScraper("http://www.eternalsnow.com/steal-of-the-day.html", new EternalSnow());
 
-class EternalSnow extends AbstractScrapper {
+class EternalSnow extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h2[@class='product-name']/a");

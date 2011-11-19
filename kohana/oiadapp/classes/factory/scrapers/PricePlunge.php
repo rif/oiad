@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://feeds.feedburner.com/PricePlungeDailyDeals", new PricePlunge());
+PolyFactory::addScraper("http://feeds.feedburner.com/PricePlungeDailyDeals", new PricePlunge());
 
-class PricePlunge extends AbstractFeedScrapper {
+class PricePlunge extends AbstractFeedScraper {
   protected function _fillFeedDetails($deal, $item){
     $deal->item_link = $item['link'];
     $deal->desc_short = $item['merchant_name'];

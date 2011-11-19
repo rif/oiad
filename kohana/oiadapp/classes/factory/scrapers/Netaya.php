@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://deal.netaya.com/", new Netaya());
+PolyFactory::addScraper("http://deal.netaya.com/", new Netaya());
 
-class Netaya extends AbstractScrapper {
+class Netaya extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='item_banner']/p");

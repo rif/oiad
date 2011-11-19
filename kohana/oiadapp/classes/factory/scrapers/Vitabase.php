@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.vitabase.com/supplements/daily-deal.aspx", new Vitabase());
+PolyFactory::addScraper("http://www.vitabase.com/supplements/daily-deal.aspx", new Vitabase());
 
-class Vitabase extends AbstractScrapper {
+class Vitabase extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//label[@class='featured']");

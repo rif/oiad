@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.roozt.com/", new Roozt());
+PolyFactory::addScraper("http://www.roozt.com/", new Roozt());
 
-class Roozt extends AbstractScrapper {
+class Roozt extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@class='deal_title']");

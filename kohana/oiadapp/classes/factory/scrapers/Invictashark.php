@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://invicta.chronoshark.com/", new Invictashark());
+PolyFactory::addScraper("http://invicta.chronoshark.com/", new Invictashark());
 
-class Invictashark extends AbstractScrapper {
+class Invictashark extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='rightcol']/h2");

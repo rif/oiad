@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.justdeals.com/", new Justdeals());
+PolyFactory::addScraper("http://www.justdeals.com/", new Justdeals());
 
-class Justdeals extends AbstractMultipleScrapper {
+class Justdeals extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[contains(@class,'imagecache-wheel_thumb')]/@src";

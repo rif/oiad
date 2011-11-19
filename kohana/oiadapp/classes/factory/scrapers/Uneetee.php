@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.uneetee.com/categories/Today%27s-Insaneetee-Deal/", new Uneetee());
+PolyFactory::addScraper("http://www.uneetee.com/categories/Today%27s-Insaneetee-Deal/", new Uneetee());
 
-class Uneetee extends AbstractScrapper {
+class Uneetee extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@class='ProductDetails']/strong/a/@href");

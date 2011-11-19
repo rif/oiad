@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.onetooladay.com/", new OneToolADay());
+PolyFactory::addScraper("http://www.onetooladay.com/", new OneToolADay());
 
-class OneToolADay extends AbstractScrapper {
+class OneToolADay extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='entry']/h2[1]");

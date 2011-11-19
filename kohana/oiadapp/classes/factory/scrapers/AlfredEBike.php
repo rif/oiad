@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://aebike.com/get/deal/", new AlfredEBike());
+PolyFactory::addScraper("http://aebike.com/get/deal/", new AlfredEBike());
 
-class AlfredEBike extends AbstractScrapper {
+class AlfredEBike extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@class='seitemcontent']/h1/div/div");

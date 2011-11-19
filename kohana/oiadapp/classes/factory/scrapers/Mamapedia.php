@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://deals.mamapedia.com/", new Mamapedia());
+PolyFactory::addScraper("http://deals.mamapedia.com/", new Mamapedia());
 
-class Mamapedia extends AbstractMultipleScrapper {
+class Mamapedia extends AbstractMultipleScraper {
     protected function _getDealIterator() {
     return "//img[@class='deal_photo size388']/@src";
   }

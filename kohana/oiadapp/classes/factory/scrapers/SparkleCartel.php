@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.sparklecartel.com/", new SparkleCartel());
+PolyFactory::addScraper("http://www.sparklecartel.com/", new SparkleCartel());
 
-class SparkleCartel extends AbstractScrapper {
+class SparkleCartel extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='right_col']/h1");

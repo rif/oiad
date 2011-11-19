@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.fractionprice.com/cust/dailydealsteal.asp", new FractionPrice());
+PolyFactory::addScraper("http://www.fractionprice.com/cust/dailydealsteal.asp", new FractionPrice());
 
-class FractionPrice extends AbstractScrapper {
+class FractionPrice extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//font[@color='#3D3F42']");

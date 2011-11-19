@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://search.rockbottomgolf.com/dealoftheday.html", new RockBottomGolf());
+PolyFactory::addScraper("http://search.rockbottomgolf.com/dealoftheday.html", new RockBottomGolf());
 
-class RockBottomGolf extends AbstractScrapper {
+class RockBottomGolf extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@class='infoheading1']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.wuslu.com/", new Wuslu());
+PolyFactory::addScraper("http://www.wuslu.com/", new Wuslu());
 
-class Wuslu extends AbstractScrapper {
+class Wuslu extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//p[@class='head-txt']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.familyvideo.com/catalog/pod_history.php", new FamilyVideo());
+PolyFactory::addScraper("http://www.familyvideo.com/catalog/pod_history.php", new FamilyVideo());
 
-class FamilyVideo extends AbstractScrapper {
+class FamilyVideo extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='detail_subhead']");

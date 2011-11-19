@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.shadeshark.com/", new Shadeshark());
+PolyFactory::addScraper("http://www.shadeshark.com/", new Shadeshark());
 
-class Shadeshark extends AbstractScrapper {
+class Shadeshark extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='rightcol']/h2");

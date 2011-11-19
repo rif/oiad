@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.shop-denali.com/Default.aspx", new Denali());
+PolyFactory::addScraper("http://www.shop-denali.com/Default.aspx", new Denali());
 
-class Denali extends AbstractScrapper {
+class Denali extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

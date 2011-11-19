@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.cowboom.com/deal-of-the-day.cfm", new Cowboom());
+PolyFactory::addScraper("http://www.cowboom.com/deal-of-the-day.cfm", new Cowboom());
 
-class Cowboom extends AbstractScrapper {
+class Cowboom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='DOTDTitle']");

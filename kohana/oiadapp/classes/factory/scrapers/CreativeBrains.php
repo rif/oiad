@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.creativebrainsonline.com/DEAL-OF-THE-DAY_c_22.html", new CreativeBrains());
+PolyFactory::addScraper("http://www.creativebrainsonline.com/DEAL-OF-THE-DAY_c_22.html", new CreativeBrains());
 
-class CreativeBrains extends AbstractScrapper {
+class CreativeBrains extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.dealko.com/sale", new Dealko());
+PolyFactory::addScraper("http://www.dealko.com/sale", new Dealko());
 
-class Dealko extends AbstractScrapper {
+class Dealko extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='SaleTagPanel']/div[1]");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://savvyfamilies.dailycart.com/", new Savvyfamilies());
+PolyFactory::addScraper("http://savvyfamilies.dailycart.com/", new Savvyfamilies());
 
-class Savvyfamilies extends AbstractMultipleScrapper {
+class Savvyfamilies extends AbstractMultipleScraper {
     protected function _getDealIterator() {
       return "//div[@class='left']/a/img/@src";
   }

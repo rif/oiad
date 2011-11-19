@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://tigzoo.com/", new Tigzoo());
+PolyFactory::addScraper("http://tigzoo.com/", new Tigzoo());
 
-class Tigzoo extends AbstractScrapper {
+class Tigzoo extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h2[@class='title']/a");

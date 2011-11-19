@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.walmart.com/cp/Value-of-the-Day/1058864?povid=cat14503-env172199-module101210-lLink1_VOD", new Walmart());
+PolyFactory::addScraper("http://www.walmart.com/cp/Value-of-the-Day/1058864?povid=cat14503-env172199-module101210-lLink1_VOD", new Walmart());
 
-class Walmart extends AbstractScrapper {
+class Walmart extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='BodyLBold']/a");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://sellout.woot.com/", new SelloutWoot());
+PolyFactory::addScraper("http://sellout.woot.com/", new SelloutWoot());
 
-class SelloutWoot extends AbstractScrapper {
+class SelloutWoot extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h2[@class='fn']");

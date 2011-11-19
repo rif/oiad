@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.watchismo.com/", new Watchismo());
+PolyFactory::addScraper("http://www.watchismo.com/", new Watchismo());
 
-class Watchismo extends AbstractScrapper {
+class Watchismo extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//div[@class='featured-products-item']/a/@href");

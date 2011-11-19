@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.chronoshark.com/", new Chronoshark());
+PolyFactory::addScraper("http://www.chronoshark.com/", new Chronoshark());
 
-class Chronoshark extends AbstractScrapper {
+class Chronoshark extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='rightcol']/h2");

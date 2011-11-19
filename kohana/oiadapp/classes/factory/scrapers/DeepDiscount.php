@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.deepdiscount.com/deals_daily-deep-deal/", new DeepDiscount());
+PolyFactory::addScraper("http://www.deepdiscount.com/deals_daily-deep-deal/", new DeepDiscount());
 
-class DeepDiscount extends AbstractScrapper {
+class DeepDiscount extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//table[@class='ae_noborder']/tbody/tr[1]/td[2]/div/p[1]/a/strong/span");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.overstockdrugstore.com/index.php", new Overstockdrugstore());
+PolyFactory::addScraper("http://www.overstockdrugstore.com/index.php", new Overstockdrugstore());
 
-class Overstockdrugstore extends AbstractScrapper {
+class Overstockdrugstore extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@id='dealofdaycontent']/a/@href");

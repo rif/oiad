@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.froobi.com/watch-1.html", new FroobiWatch());
+PolyFactory::addScraper("http://www.froobi.com/watch-1.html", new FroobiWatch());
 
-class FroobiWatch extends AbstractScrapper {
+class FroobiWatch extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@class='perfume_heading']");

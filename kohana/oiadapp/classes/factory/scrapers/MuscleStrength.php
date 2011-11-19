@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.muscleandstrength.com/store/deal.html", new MuscleStrength());
+PolyFactory::addScraper("http://www.muscleandstrength.com/store/deal.html", new MuscleStrength());
 
-class MuscleStrength extends AbstractScrapper {
+class MuscleStrength extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//table[@class='deal-table']//h1");

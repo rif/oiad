@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.myjewelrybox.com/", new MyJewelryBox());
+PolyFactory::addScraper("http://www.myjewelrybox.com/", new MyJewelryBox());
 
-class MyJewelryBox extends AbstractMultipleScrapper {
+class MyJewelryBox extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='box-body']//img/@src";

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.closeoutmania.com/", new Closeoutmania());
+PolyFactory::addScraper("http://www.closeoutmania.com/", new Closeoutmania());
 
-class Closeoutmania extends AbstractScrapper {
+class Closeoutmania extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_contentBody_lblTitle']");

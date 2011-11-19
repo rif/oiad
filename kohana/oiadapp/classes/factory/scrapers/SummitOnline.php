@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://sale.summitonline.com/", new SummitOnline());
+PolyFactory::addScraper("http://sale.summitonline.com/", new SummitOnline());
 
-class SummitOnline extends AbstractMultipleScrapper {
+class SummitOnline extends AbstractMultipleScraper {
 
 	protected function _getDealIterator() {
     return "//img[@class='topTenCarouselImage']/@src";

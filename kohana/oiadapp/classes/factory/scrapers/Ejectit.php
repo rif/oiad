@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.ejectit.com/", new Ejectit());
+PolyFactory::addScraper("http://www.ejectit.com/", new Ejectit());
 
-class Ejectit extends AbstractScrapper {
+class Ejectit extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='Header']");

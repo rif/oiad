@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://go.iomega.com/en-us/offer/deal-of-day/", new Iomega());
+PolyFactory::addScraper("http://go.iomega.com/en-us/offer/deal-of-day/", new Iomega());
 
-class Iomega extends AbstractScrapper {
+class Iomega extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='dealDay']//td[@style='padding-top:10px;']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.skyauction.com/deal-of-the-day.do", new SkyAuction());
+PolyFactory::addScraper("http://www.skyauction.com/deal-of-the-day.do", new SkyAuction());
 
-class SkyAuction extends AbstractScrapper {
+class SkyAuction extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//td[@class='title']/a/@href");

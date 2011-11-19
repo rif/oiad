@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.mrwatch.com/Hot_Deal_of_the_Day-6_sale.html", new MrWatch());
+PolyFactory::addScraper("http://www.mrwatch.com/Hot_Deal_of_the_Day-6_sale.html", new MrWatch());
 
-class MrWatch extends AbstractScrapper {
+class MrWatch extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_get_host($host).$this->_xpath("///h4/a/@href");

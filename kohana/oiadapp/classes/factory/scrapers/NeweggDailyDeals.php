@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.newegg.com/DailyDeal.aspx?name=DailyDeal", new NeweggDailyDeals());
+PolyFactory::addScraper("http://www.newegg.com/DailyDeal.aspx?name=DailyDeal", new NeweggDailyDeals());
 
-class NeweggDailyDeals extends AbstractMultipleScrapper {
+class NeweggDailyDeals extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[@width='125']/@src";

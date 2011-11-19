@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://kids.woot.com/", new KidsWoot());
+PolyFactory::addScraper("http://kids.woot.com/", new KidsWoot());
 
-class KidsWoot extends AbstractScrapper {
+class KidsWoot extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='productDescription']/h2[@class='fn']");

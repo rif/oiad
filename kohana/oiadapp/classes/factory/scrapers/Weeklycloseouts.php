@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.weeklycloseouts.com/page/en/home.aspx", new Weeklycloseouts());
+PolyFactory::addScraper("http://www.weeklycloseouts.com/page/en/home.aspx", new Weeklycloseouts());
 
-class Weeklycloseouts extends AbstractScrapper {
+class Weeklycloseouts extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//a[@id='weeklydeals_m_v3_wd_today_m_HL_Title']");

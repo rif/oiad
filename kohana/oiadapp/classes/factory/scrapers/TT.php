@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tandtdailydeals.com/", new TT());
+PolyFactory::addScraper("http://www.tandtdailydeals.com/", new TT());
 
-class TT extends AbstractScrapper {
+class TT extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@id='dnn_ctr392_sotdDisplay1_tdProductName']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.wiredforwine.com/Featured_Wine.htm", new WiredForWine());
+PolyFactory::addScraper("http://www.wiredforwine.com/Featured_Wine.htm", new WiredForWine());
 
-class WiredForWine extends AbstractScrapper {
+class WiredForWine extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//li[@id='catProdTd_2519784']/h2/a");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.dodgenie.com", new DodGenie());
+PolyFactory::addScraper("http://www.dodgenie.com", new DodGenie());
 
-class DodGenie extends AbstractScrapper {
+class DodGenie extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@id='productName']");

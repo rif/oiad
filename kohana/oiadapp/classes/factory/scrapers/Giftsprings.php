@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.giftsprings.com/Merchant2/merchant.mv?Screen=CTGY&Category_Code=daily-special", new Giftsprings());
+PolyFactory::addScraper("http://www.giftsprings.com/Merchant2/merchant.mv?Screen=CTGY&Category_Code=daily-special", new Giftsprings());
 
-class Giftsprings extends AbstractScrapper {
+class Giftsprings extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@class='product-name']/a/@href");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.monoprice.com/home/index.asp", new MonoPrice());
+PolyFactory::addScraper("http://www.monoprice.com/home/index.asp", new MonoPrice());
 
-class MonoPrice extends AbstractScrapper {
+class MonoPrice extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//a[contains(@title,'View detail information')]/@href");

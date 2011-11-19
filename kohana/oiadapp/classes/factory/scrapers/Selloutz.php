@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("https://www.selloutz.com", new Selloutz());
+PolyFactory::addScraper("https://www.selloutz.com", new Selloutz());
 
-class Selloutz extends AbstractScrapper {
+class Selloutz extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='vmMainPage']//h1");

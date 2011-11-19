@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.the-house.com/dealoftheday.html", new TheHouseBoardshop());
+PolyFactory::addScraper("http://www.the-house.com/dealoftheday.html", new TheHouseBoardshop());
 
-class TheHouseBoardshop extends AbstractMultipleScrapper {
+class TheHouseBoardshop extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//table[@class='category-product-table']//img[@width='110']/@src";

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://gameaccess.ca/Game-Store-DealOfTheDay.htm", new GameAccess());
+PolyFactory::addScraper("http://gameaccess.ca/Game-Store-DealOfTheDay.htm", new GameAccess());
 
-class GameAccess extends AbstractScrapper {
+class GameAccess extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='verdana_12px_grey']/strong");

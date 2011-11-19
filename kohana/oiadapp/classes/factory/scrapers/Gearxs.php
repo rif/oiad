@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.gearxs.com/store/", new Gearxs());
+PolyFactory::addScraper("http://www.gearxs.com/store/", new Gearxs());
 
-class Gearxs extends AbstractScrapper {
+class Gearxs extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

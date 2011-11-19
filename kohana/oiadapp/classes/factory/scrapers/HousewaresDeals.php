@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.housewaresdeals.com/on/demandware.store/Sites-HousewaresDeals-Site/default/Home-Show", new HousewaresDeals());
+PolyFactory::addScraper("http://www.housewaresdeals.com/on/demandware.store/Sites-HousewaresDeals-Site/default/Home-Show", new HousewaresDeals());
 
-class HousewaresDeals extends AbstractScrapper {
+class HousewaresDeals extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='rightcolumn']/h3");

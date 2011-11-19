@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.skinstore.com/the-daily-special.aspx", new SkinstoreCom());
+PolyFactory::addScraper("http://www.skinstore.com/the-daily-special.aspx", new SkinstoreCom());
 
-class SkinstoreCom extends AbstractScrapper {
+class SkinstoreCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='BreadCrumbAnchor']//h2/a");

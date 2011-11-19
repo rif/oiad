@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.rubybag.com/", new Rubybag());
+PolyFactory::addScraper("http://www.rubybag.com/", new Rubybag());
 
-class Rubybag extends AbstractScrapper {
+class Rubybag extends AbstractScraper {
 
 	protected function _getPageToScrap($page) {
     	return "http://www.rubybag.com".$this->_xpath("//a[contains(.,'Deal of the Day')]/@href");

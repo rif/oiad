@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://getarock.com/", new GetARock());
+PolyFactory::addScraper("http://getarock.com/", new GetARock());
 
-class GetARock extends AbstractScrapper {
+class GetARock extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

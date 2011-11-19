@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://propertyroom.com/c/steal-of-the-day", new PropertyRoom());
+PolyFactory::addScraper("http://propertyroom.com/c/steal-of-the-day", new PropertyRoom());
 
-class PropertyRoom extends AbstractMultipleScrapper {
+class PropertyRoom extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[@id='uxImage']/@src";

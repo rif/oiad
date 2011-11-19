@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.vminnovations.com/", new VmInnovations());
+PolyFactory::addScraper("http://www.vminnovations.com/", new VmInnovations());
 
-class VmInnovations extends AbstractMultipleScrapper {
+class VmInnovations extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "";

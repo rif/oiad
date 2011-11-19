@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.amazon.com/dp/B004G2LUXO/", new AmazonFreebie());
+PolyFactory::addScraper("http://www.amazon.com/dp/B004G2LUXO/", new AmazonFreebie());
 
-class AmazonFreebie extends AbstractScrapper {
+class AmazonFreebie extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='btAsinTitle']");

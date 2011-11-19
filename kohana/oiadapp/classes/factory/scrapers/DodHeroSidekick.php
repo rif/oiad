@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.dodhero.com/index.php?main_page=index&cPath=9", new DodHeroSidekick());
+PolyFactory::addScraper("http://www.dodhero.com/index.php?main_page=index&cPath=9", new DodHeroSidekick());
 
-class DodHeroSidekick extends AbstractScrapper {
+class DodHeroSidekick extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@id='productName']");

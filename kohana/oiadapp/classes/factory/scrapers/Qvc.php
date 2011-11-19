@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.qvc.com/qic/qvcapp.aspx/app.detail/params.item.tsv!.tpl.tsv.CM_SCID.TSV", new Qvc());
+PolyFactory::addScraper("http://www.qvc.com/qic/qvcapp.aspx/app.detail/params.item.tsv!.tpl.tsv.CM_SCID.TSV", new Qvc());
 
-class Qvc extends AbstractScrapper {
+class Qvc extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='proddetailsinfo']/div[1]/h1");

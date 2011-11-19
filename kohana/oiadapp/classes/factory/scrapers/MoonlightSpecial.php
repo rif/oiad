@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.moonlightspecial.com/", new MoonlightSpecial());
+PolyFactory::addScraper("http://www.moonlightspecial.com/", new MoonlightSpecial());
 
-class MoonlightSpecial extends AbstractScrapper {
+class MoonlightSpecial extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='ProductTitle']");

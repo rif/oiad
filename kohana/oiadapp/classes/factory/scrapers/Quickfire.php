@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.quickfiredeal.com/", new Quickfire());
+PolyFactory::addScraper("http://www.quickfiredeal.com/", new Quickfire());
 
-class Quickfire extends AbstractScrapper {
+class Quickfire extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@class='dod_product_name']");

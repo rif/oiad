@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.jomadeals.com/", new JomaDealsWatches());
+PolyFactory::addScraper("http://www.jomadeals.com/", new JomaDealsWatches());
 
-class JomaDealsWatches extends AbstractScrapper {
+class JomaDealsWatches extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//table[@id='ctl00_Body_tblMain']//span");

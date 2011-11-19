@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://tippr.com/", new Tippr());
+PolyFactory::addScraper("http://tippr.com/", new Tippr());
 
-class Tippr extends AbstractMultipleScrapper {
+class Tippr extends AbstractMultipleScraper {
     protected function _getDealIterator() {
     return "//div[@class='exhibit-image']/a/img/@src";
   }

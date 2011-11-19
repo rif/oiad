@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.onecall.com/", new OneCall());
+PolyFactory::addScraper("http://www.onecall.com/", new OneCall());
 
-class OneCall extends AbstractScrapper {
+class OneCall extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

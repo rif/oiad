@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.golfsmith.com/", new Golfsmith());
+PolyFactory::addScraper("http://www.golfsmith.com/", new Golfsmith());
 
-class Golfsmith extends AbstractScrapper {
+class Golfsmith extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 			$deal->item_link = $host.$this->_xpath("//p[@id='qbd_buy_button']/a/@href");

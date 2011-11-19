@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.szul.com/szd", new Szul());
+PolyFactory::addScraper("http://www.szul.com/szd", new Szul());
 
-class Szul extends AbstractScrapper {
+class Szul extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_ctl00_mContents_mainContent_lblTitle']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.ewatches.com/cust/hourlydeal.asp", new EwatchesHourly());
+PolyFactory::addScraper("http://www.ewatches.com/cust/hourlydeal.asp", new EwatchesHourly());
 
-class EwatchesHourly extends AbstractScrapper {
+class EwatchesHourly extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@class='details']/font[1]");

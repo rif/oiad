@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.shindigz.com/party/news/rss.cfm", new Shindigz());
+PolyFactory::addScraper("http://www.shindigz.com/party/news/rss.cfm", new Shindigz());
 
-class Shindigz extends AbstractFeedScrapper {
+class Shindigz extends AbstractFeedScraper {
   protected function _fillFeedDetails($deal, $item){
     $deal->item_link = $item['link'];
     $deal->desc_short = $item['title'];

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://riptapparel.com/", new Ript());
+PolyFactory::addScraper("http://riptapparel.com/", new Ript());
 
-class Ript extends AbstractScrapper {
+class Ript extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@class='heading']/a");

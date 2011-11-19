@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.qliqo.com/", new Qliqo());
+PolyFactory::addScraper("http://www.qliqo.com/", new Qliqo());
 
-class Qliqo extends AbstractScrapper {
+class Qliqo extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@class='title']/a");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.watchdiscounters.com/cust/dailydealsteal.asp", new Watchdiscounters());
+PolyFactory::addScraper("http://www.watchdiscounters.com/cust/dailydealsteal.asp", new Watchdiscounters());
 
-class Watchdiscounters extends AbstractScrapper {
+class Watchdiscounters extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//table[@style='border: 2px solid #003366;']//a/@href");

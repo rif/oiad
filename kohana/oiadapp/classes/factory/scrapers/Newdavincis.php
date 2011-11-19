@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.newdavincis.com/specials.html______", new Newdavincis());
+PolyFactory::addScraper("http://www.newdavincis.com/specials.html______", new Newdavincis());
 
-class Newdavincis extends AbstractScrapper {
+class Newdavincis extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

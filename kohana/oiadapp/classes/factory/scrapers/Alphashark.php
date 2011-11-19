@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.alphashark.com/", new Alphashark());
+PolyFactory::addScraper("http://www.alphashark.com/", new Alphashark());
 
-class Alphashark extends AbstractScrapper {
+class Alphashark extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("/html/body/form[@id='aspnetForm']/div[@id='page']/div[@id='columns']/div[@id='ctl00_PageContent_pnlContent']/div[@id='rightcol']/h2");

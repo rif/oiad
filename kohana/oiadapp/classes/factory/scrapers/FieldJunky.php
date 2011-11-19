@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.fieldjunky.com/", new FieldJunky());
+PolyFactory::addScraper("http://www.fieldjunky.com/", new FieldJunky());
 
-class FieldJunky extends AbstractScrapper {
+class FieldJunky extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//a[@class='bigtitle']/@href");

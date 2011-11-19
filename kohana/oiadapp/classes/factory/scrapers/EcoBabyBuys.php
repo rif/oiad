@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("https://www.ecobabybuys.com/", new EcoBabyBuys());
+PolyFactory::addScraper("https://www.ecobabybuys.com/", new EcoBabyBuys());
 
-class EcoBabyBuys extends AbstractScrapper {
+class EcoBabyBuys extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='brandname']");

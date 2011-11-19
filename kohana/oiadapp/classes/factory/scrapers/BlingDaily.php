@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://blingdaily.com/", new BlingDaily());
+PolyFactory::addScraper("http://blingdaily.com/", new BlingDaily());
 
-class BlingDaily extends AbstractScrapper {
+class BlingDaily extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.lacrosse.com/Navigation.process?Ne=330&Srp=24&N=840", new LacrosseCom());
+PolyFactory::addScraper("http://www.lacrosse.com/Navigation.process?Ne=330&Srp=24&N=840", new LacrosseCom());
 
-class LacrosseCom extends AbstractScrapper {
+class LacrosseCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
       		$deal->desc_short = $this->_xpath("//p[@class='headline']");

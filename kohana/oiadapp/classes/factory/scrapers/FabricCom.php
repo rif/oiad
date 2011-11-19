@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.fabric.com/Index.aspx", new FabricCom());
+PolyFactory::addScraper("http://www.fabric.com/Index.aspx", new FabricCom());
 
-class FabricCom extends AbstractScrapper {
+class FabricCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//a[@id='ctlHomeRightColumn_ctlDealOfTheDay_lnkDealOfTheDayName']");

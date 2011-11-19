@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.wineexpress.com/", new WineExpress());
+PolyFactory::addScraper("http://www.wineexpress.com/", new WineExpress());
 
-class WineExpress extends AbstractScrapper {
+class WineExpress extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//a[@class='wow_grn']/@href");

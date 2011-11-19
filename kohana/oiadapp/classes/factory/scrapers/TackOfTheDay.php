@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tackoftheday.com/", new TackOfTheDay());
+PolyFactory::addScraper("http://www.tackoftheday.com/", new TackOfTheDay());
 
-class TackOfTheDay extends AbstractScrapper {
+class TackOfTheDay extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//td[@id='tdTOTD']/p[2]/a/@href");

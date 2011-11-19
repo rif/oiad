@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.bombdeez.com/", new Bombdeez());
+PolyFactory::addScraper("http://www.bombdeez.com/", new Bombdeez());
 
-class Bombdeez extends AbstractScrapper {
+class Bombdeez extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

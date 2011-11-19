@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.newegg.com/Special/ShellShocker.aspx", new Newegg());
+PolyFactory::addScraper("http://www.newegg.com/Special/ShellShocker.aspx", new Newegg());
 
-class Newegg extends AbstractScrapper {
+class Newegg extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//a[@id='shellShockerViewDetails']/@href");

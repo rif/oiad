@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www2.pulsetv.com/deals.asp", new Pulsetv2());
+PolyFactory::addScraper("http://www2.pulsetv.com/deals.asp", new Pulsetv2());
 
-class Pulsetv2 extends AbstractScrapper {
+class Pulsetv2 extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

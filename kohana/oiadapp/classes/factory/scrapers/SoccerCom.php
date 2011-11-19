@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.soccer.com/Navigation.process?Ne=330&Srp=24&N=837", new SoccerCom());
+PolyFactory::addScraper("http://www.soccer.com/Navigation.process?Ne=330&Srp=24&N=837", new SoccerCom());
 
-class SoccerCom extends AbstractScrapper {
+class SoccerCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_get_host($host).$this->_xpath("//p[@class='productName']/a/@href");

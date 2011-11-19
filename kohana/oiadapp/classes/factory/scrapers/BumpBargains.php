@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.bumpbargains.com/", new BumpBargains());
+PolyFactory::addScraper("http://www.bumpbargains.com/", new BumpBargains());
 
-class BumpBargains extends AbstractScrapper {
+class BumpBargains extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

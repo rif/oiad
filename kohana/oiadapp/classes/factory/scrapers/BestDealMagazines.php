@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.bestdealmagazines.com/deal.asp", new BestDealMagazines());
+PolyFactory::addScraper("http://www.bestdealmagazines.com/deal.asp", new BestDealMagazines());
 
-class BestDealMagazines extends AbstractScrapper {
+class BestDealMagazines extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("/html/body/table/tbody/tr/td/table[2]/tbody/tr/td[2]/table[2]/tbody/tr/td/div/font/b");

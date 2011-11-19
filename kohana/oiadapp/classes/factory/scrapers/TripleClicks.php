@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tripleclicks.com/", new TripleClicks());
+PolyFactory::addScraper("http://www.tripleclicks.com/", new TripleClicks());
 
-class TripleClicks extends AbstractScrapper {
+class TripleClicks extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//div[@class='MSOLLghtGrayBody']//span/a/@href");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.orsdirect.com/", new OrsDirect());
+PolyFactory::addScraper("http://www.orsdirect.com/", new OrsDirect());
 
-class OrsDirect extends AbstractScrapper {
+class OrsDirect extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//font[@size='2']/b");
