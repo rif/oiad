@@ -77,8 +77,10 @@ h2
     color: $color-light
   & #secondary-menu li a
     color: $color
-  & #item-page-form label, & #item-page-form input
+  & #item-page-form label, & #item-page-form input        
+  & #item-page-form select
     color: $color
+    border: 2px solid $color
   & #inner-content
     border-top: 4px solid $color
     border-left: 4px solid $color
@@ -235,16 +237,13 @@ html
     color: $light-blue
     margin-right: 8px
     padding-top: 15px
-  input
+  select
     font: 14px / 100% Arial, "FreeSans", sans-serif
     /* Win/Mac, Win/Mac, Linux, generic
-    height: 28px
+    height: 32px
     line-height: 28px
-    float: left
-    color: $light-blue
-    padding: 0 5px
-    width: 19px
-    border: 2px solid $blue
+    float: left    
+    padding: 0 5px    
     &.submit
       padding: 0
       border: 0
