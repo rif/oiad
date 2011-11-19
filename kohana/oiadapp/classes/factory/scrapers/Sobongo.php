@@ -15,7 +15,7 @@ class Sobongo extends AbstractMultipleScraper {
     $deal->price = $this->_xpath("//div[@class='thumbnail']/div/b", $count);
     $deal->desc_long = $this->_xpath("", $count);
     $deal->pictures = $this->_xpath("//div[@class='thumbnail']/a/img/@src", $count);
-    $deal->shipping = $this->_xpath("//div[@class='col-3']/ul/li[1]/a/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

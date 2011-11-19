@@ -10,7 +10,7 @@ class DaySports extends AbstractScraper {
         	$deal->price = $this->_xpath("/html/body/div[@id='main']/div[@id='content']/div[@id='price']");
         	$deal->desc_long = $this->_xpath("/html/body/div[@id='main']/div[@id='content']/div[@id='description']");
         	$deal->pictures = $this->_xpath("//div[@id='image']/img[@class='imgsize']/@src");
-        	$deal->shipping = 'See description';
+        	$deal->shipping = '';
     }
 }
 

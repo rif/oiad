@@ -10,7 +10,7 @@ class SierraTradingPost extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@id='displayPrice']");
         	$deal->desc_long = $this->_xpath("//div[@class='overviewDescription']");
         	$deal->pictures = $this->_xpath("//img[@id='largeImage']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//a[contains(.,'Shipping')]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

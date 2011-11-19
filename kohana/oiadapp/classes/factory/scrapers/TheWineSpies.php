@@ -10,7 +10,7 @@ class TheWineSpies extends AbstractScraper {
         	$deal->price = $this->_xpath("//tr[@class='price']/td[2]");
         	$deal->desc_long = $this->_xpath("//div[@class='winery-says']/p[1]");
         	$deal->pictures = $host.$this->_xpath("//img[@id='wine-thumb']/@src");
-        	$deal->shipping = $host.$this->_xpath("//div[@id='footer']/p[1]/a[4]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

@@ -11,7 +11,7 @@ class WineExpress extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@style='padding-top:5px;font-size:11px;']");
         	$deal->desc_long = $this->_xpath("//a[@style='color:#000000;text-decoration:none;']");
         	$deal->pictures = $host.$this->_xpath("//td[@class='imageBorderWow']/a/img/@src");
-        	$deal->shipping = $host.$this->_xpath("//a[contains(.,'Shipping')]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

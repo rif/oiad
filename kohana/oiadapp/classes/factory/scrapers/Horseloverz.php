@@ -16,7 +16,7 @@ class Horseloverz extends AbstractMultipleScraper {
     $deal->price = $this->_xpath("//font[@class='ProductPrice']", $count);
     $deal->desc_long = $this->_xpath("", $count);
     $deal->pictures = $this->_xpath("//td[@class='DialogBox']//img[contains(@src, 'use_cbeq_image_medium')]/@src", $count);
-    $deal->shipping = $host.$this->_xpath("//div[@id='footer_left']/ul[@id='help']/li[3]/a/@href");
+    $deal->shipping = $this->_xpath("");
   }
 }
 

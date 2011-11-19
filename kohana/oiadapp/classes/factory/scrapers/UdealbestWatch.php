@@ -10,7 +10,7 @@ class UdealbestWatch extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='Apple-style-span']/span/font");
         	$deal->desc_long = $this->_xpath("//div[@class='paragraph editable-text']");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//img[@class='galleryImageBorder']/@src");
-        	$deal->shipping = $this->_xpath("//div[@id='footer-contents']/a[2]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

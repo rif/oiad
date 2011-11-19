@@ -10,7 +10,7 @@ class NothingButSoftware extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@id='DealPriceCell']");
         	$deal->desc_long = $this->_xpath("//div[@id='DailDealDescription']");
         	$deal->pictures = $this->_xpath("//img[@id='DailyDealImage']/@src");
-        	$deal->shipping = $this->_xpath("//a[@class='footer'][3]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

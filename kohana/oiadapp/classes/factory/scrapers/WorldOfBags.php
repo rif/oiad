@@ -10,7 +10,7 @@ class WorldOfBags extends AbstractScraper {
         	$deal->price = $this->_xpath("//p[@id='sale-price']");
         	$deal->desc_long = $this->_xpath("//div[@id='prodContent'][1]/p");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//div[@id='item-image']/a[2]/img/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//div[@id='footer']/div[@class='left']/ul[2]/li[4]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

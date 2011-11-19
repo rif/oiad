@@ -10,7 +10,7 @@ class IndieBike extends AbstractScraper {
         	$deal->price = $this->_xpath("//font[@size='3']");
         	$deal->desc_long = $this->_xpath("");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//tr[@id='handle_itemMainPortlet']//img[@border='0']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//div[@id='div__footer']/div/div[1]/div[2]/a[6]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

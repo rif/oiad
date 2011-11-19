@@ -10,7 +10,7 @@ class UdealbestWireless extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@class='product-large-price']/div[2]");
         	$deal->desc_long = $this->_xpath("//div[@class='paragraph editable-text']");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//img[contains(@src, 'uploads')]/@src");
-        	$deal->shipping = $this->_xpath("//div[@id='footer-contents']/a[2]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

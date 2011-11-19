@@ -10,7 +10,7 @@ class Dillyeo extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='price']");
         	$deal->desc_long = $this->_xpath("");
         	$deal->pictures = $this->_xpath("//a[@class='product-image']/img/@src");
-        	$deal->shipping = $this->_xpath("//ul[@class='Item2']/li[4]/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

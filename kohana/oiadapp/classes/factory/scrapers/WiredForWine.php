@@ -10,7 +10,7 @@ class WiredForWine extends AbstractScraper {
         	$deal->price = $this->_xpath("//td[@class='final']");
         	$deal->desc_long = $this->_xpath("//div[@class='wine_center']");
         	$deal->pictures = $this->_get_host($host).$this->_xpath("//div[@class='wine_left']/a/img/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//a[contains(.,'Shipping')]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

@@ -10,7 +10,7 @@ class OrangeOnions extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@class='ztitle']/span");
         	$deal->desc_long = $this->_xpath("//div[@id='prodDescElement']");
         	$deal->pictures = $this->_xpath("//img[@height='350']/@src");
-        	$deal->shipping = $this->_xpath("//div[@class='footlinks']/a[3]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

@@ -10,7 +10,7 @@ class RedTagSports extends AbstractScraper {
         	$deal->price = $this->_xpath("//span[@class='rate']");
         	$deal->desc_long = $this->_xpath("//div[@id='content']");
         	$deal->pictures = $this->_xpath("//div[@class='content_left']/a/img/@src");
-        	$deal->shipping = $this->_xpath("//div[@class='textwidget']/p/a/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 

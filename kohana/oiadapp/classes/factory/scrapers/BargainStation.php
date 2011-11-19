@@ -10,7 +10,7 @@ class BargainStation extends AbstractScraper {
         	$deal->price = $this->_xpath("//div[@id='DealPriceCell']");
         	$deal->desc_long = $this->_xpath("//div[@id='DailDealDescription']");
         	$deal->pictures = $this->_xpath("//img[@id='DailyDealImage']/@src");
-        	$deal->shipping = $this->_get_host($host).$this->_xpath("//div[@class='checkout-footer checkout-footer-100col'][2]/a[@class='underlined'][1]/@href");
+        	$deal->shipping = $this->_xpath("");
     }
 }
 
