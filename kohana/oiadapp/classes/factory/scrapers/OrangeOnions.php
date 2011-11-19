@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.orangeonions.com/category/peel_of_the_day/", new OrangeOnions());
+PolyFactory::addScraper("http://www.orangeonions.com/category/peel_of_the_day/", new OrangeOnions());
 
-class OrangeOnions extends AbstractScrapper {
+class OrangeOnions extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@class='ztxt']/h1");

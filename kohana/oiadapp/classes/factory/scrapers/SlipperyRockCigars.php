@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.slipperyrockcigars.com/", new SlipperyRockCigars());
+PolyFactory::addScraper("http://www.slipperyrockcigars.com/", new SlipperyRockCigars());
 
-class SlipperyRockCigars extends AbstractScrapper {
+class SlipperyRockCigars extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->item_link = $host.$this->_xpath("//div[@class='boxContentLeft'][2]/span[@class='txtCopy']/a[@class='txtDefault']/@href");

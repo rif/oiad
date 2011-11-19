@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://fridays.qrs1.net/greatdealsapp/19qske9t.html", new Tgifriday());
+PolyFactory::addScraper("http://fridays.qrs1.net/greatdealsapp/19qske9t.html", new Tgifriday());
 
-class Tgifriday extends AbstractScrapper {
+class Tgifriday extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

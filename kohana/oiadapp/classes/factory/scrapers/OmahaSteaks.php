@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.omahasteaks.com/servlet/OnlineShopping?Dsp=237", new OmahaSteaks());
+PolyFactory::addScraper("http://www.omahasteaks.com/servlet/OnlineShopping?Dsp=237", new OmahaSteaks());
 
-class OmahaSteaks extends AbstractScrapper {
+class OmahaSteaks extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@class='lefttopdealoftheday']/a/@href");

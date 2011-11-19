@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://dailydeals.target.com/", new Target());
+PolyFactory::addScraper("http://dailydeals.target.com/", new Target());
 
-class Target extends AbstractScrapper {
+class Target extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//p[@class='siteLink']/a");

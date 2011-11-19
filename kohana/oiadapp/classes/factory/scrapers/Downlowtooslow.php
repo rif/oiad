@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.downlowtooslow.com/", new Downlowtooslow());
+PolyFactory::addScraper("http://www.downlowtooslow.com/", new Downlowtooslow());
 
-class Downlowtooslow extends AbstractScrapper {
+class Downlowtooslow extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//table[@class='curved']//font");

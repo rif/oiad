@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.yugster.com/dspYoursUntilGone.aspx", new YugsterYug());
+PolyFactory::addScraper("http://www.yugster.com/dspYoursUntilGone.aspx", new YugsterYug());
 
-class YugsterYug extends AbstractScrapper {
+class YugsterYug extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_cphMainBody_ucProdView_lblOfferTitle']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tomobuys.com/servlet/StoreFront", new TomoBuys());
+PolyFactory::addScraper("http://www.tomobuys.com/servlet/StoreFront", new TomoBuys());
 
-class TomoBuys extends AbstractScrapper {
+class TomoBuys extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@width='359']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.maczot.com/", new Maczot());
+PolyFactory::addScraper("http://www.maczot.com/", new Maczot());
 
-class Maczot extends AbstractScrapper {
+class Maczot extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='product']//h2");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.microcenter.com/", new MicroCenter());
+PolyFactory::addScraper("http://www.microcenter.com/", new MicroCenter());
 
-class MicroCenter extends AbstractScrapper {
+class MicroCenter extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

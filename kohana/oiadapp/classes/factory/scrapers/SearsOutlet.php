@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.searsoutlet.com/", new SearsOutlet());
+PolyFactory::addScraper("http://www.searsoutlet.com/", new SearsOutlet());
 
-class SearsOutlet extends AbstractScrapper {
+class SearsOutlet extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@class='deal_img']/a/@href");

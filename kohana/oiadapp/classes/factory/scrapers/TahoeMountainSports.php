@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tahoemountainsports.com/", new TahoeMountainSports());
+PolyFactory::addScraper("http://www.tahoemountainsports.com/", new TahoeMountainSports());
 
-class TahoeMountainSports extends AbstractScrapper {
+class TahoeMountainSports extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//div[@style='margin:5px 0;']/a/@href");

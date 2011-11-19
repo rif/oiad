@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://feeds.feedburner.com/DiamondShark-DailyDealRSSFeed/", new Diamondshark());
+PolyFactory::addScraper("http://feeds.feedburner.com/DiamondShark-DailyDealRSSFeed/", new Diamondshark());
 
-class Diamondshark extends AbstractFeedScrapper {
+class Diamondshark extends AbstractFeedScraper {
   protected function _fillFeedDetails($deal, $item){
     $deal->item_link = $item['link'];
     $deal->desc_short = $item['merchant_name'];

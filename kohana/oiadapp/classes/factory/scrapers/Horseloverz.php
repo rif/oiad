@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.horseloverz.com/c-Deals-of-the-Day-1020.html", new Horseloverz());
+PolyFactory::addScraper("http://www.horseloverz.com/c-Deals-of-the-Day-1020.html", new Horseloverz());
 
-class Horseloverz extends AbstractMultipleScrapper {
+class Horseloverz extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//td[@class='DialogBox']//img[contains(@src, 'use_cbeq_image_medium')]/@src";

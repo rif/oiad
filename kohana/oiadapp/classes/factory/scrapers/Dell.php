@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://accessories.us.dell.com/sna/sna.aspx?c=us&cs=19&l=en&s=dhs&~topic=daily_deals_available&~srd=true&sk=Daily_Deals&scat=prod&~srd=true&sk=daily_deals&scat=prod", new Dell());
+PolyFactory::addScraper("http://accessories.us.dell.com/sna/sna.aspx?c=us&cs=19&l=en&s=dhs&~topic=daily_deals_available&~srd=true&sk=Daily_Deals&scat=prod&~srd=true&sk=daily_deals&scat=prod", new Dell());
 
-class Dell extends AbstractScrapper {
+class Dell extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.directron.com/", new Direction());
+PolyFactory::addScraper("http://www.directron.com/", new Direction());
 
-class Direction extends AbstractScrapper {
+class Direction extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//div[@id='divsearchd']/a/@href");

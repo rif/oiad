@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://thewinespies.com/", new TheWineSpies());
+PolyFactory::addScraper("http://thewinespies.com/", new TheWineSpies());
 
-class TheWineSpies extends AbstractScrapper {
+class TheWineSpies extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h2[@id='wine-name']");

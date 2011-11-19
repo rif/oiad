@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.lolshirts.com/", new Lolshirts());
+PolyFactory::addScraper("http://www.lolshirts.com/", new Lolshirts());
 
-class Lolshirts extends AbstractScrapper {
+class Lolshirts extends AbstractScraper {
 
 	protected function _getPageToScrap($page) {
       return $this->_xpath("//li[@id='feature-0']/a/@href");

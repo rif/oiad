@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.serveraday.com/", new ServerADay());
+PolyFactory::addScraper("http://www.serveraday.com/", new ServerADay());
 
-class ServerADay extends AbstractScrapper {
+class ServerADay extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='content_text']/h1/font");

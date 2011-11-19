@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.upscaletime.com/", new UpscaleTime());
+PolyFactory::addScraper("http://www.upscaletime.com/", new UpscaleTime());
 
-class UpscaleTime extends AbstractScrapper {
+class UpscaleTime extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//div[@class='featured-products-item'][1]/a/@href");

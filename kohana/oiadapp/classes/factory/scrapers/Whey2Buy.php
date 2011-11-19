@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.whey2buy.com/", new Whey2Buy());
+PolyFactory::addScraper("http://www.whey2buy.com/", new Whey2Buy());
 
-class Whey2Buy extends AbstractScrapper {
+class Whey2Buy extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='c4']/span[@class='c3']");

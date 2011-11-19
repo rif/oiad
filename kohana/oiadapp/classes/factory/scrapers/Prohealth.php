@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.prohealth.com/index.cfm", new Prohealth());
+PolyFactory::addScraper("http://www.prohealth.com/index.cfm", new Prohealth());
 
-class Prohealth extends AbstractScrapper {
+class Prohealth extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

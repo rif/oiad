@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.sierratradingpost.com/BarnBurners/", new SierraTradingPost());
+PolyFactory::addScraper("http://www.sierratradingpost.com/BarnBurners/", new SierraTradingPost());
 
-class SierraTradingPost extends AbstractScrapper {
+class SierraTradingPost extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//form[@id='addToCartForm']/h1");

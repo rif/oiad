@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.joylot.com/store_pages/Joy-Of-The-Day.cfm", new Joylot());
+PolyFactory::addScraper("http://www.joylot.com/store_pages/Joy-Of-The-Day.cfm", new Joylot());
 
-class Joylot extends AbstractScrapper {
+class Joylot extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//font[@size='4']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.midnightbox.com/", new MidnightBox());
+PolyFactory::addScraper("http://www.midnightbox.com/", new MidnightBox());
 
-class MidnightBox extends AbstractScrapper {
+class MidnightBox extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='productRight']/h1");

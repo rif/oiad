@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.performancebike.com/", new PerformanceBicycle());
+PolyFactory::addScraper("http://www.performancebike.com/", new PerformanceBicycle());
 
-class PerformanceBicycle extends AbstractScrapper {
+class PerformanceBicycle extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//a[@title='Deal of the Day']/@href");

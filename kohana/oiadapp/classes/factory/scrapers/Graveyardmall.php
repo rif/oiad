@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.graveyardmall.com/categories/Daily-Deal/", new Graveyardmall());
+PolyFactory::addScraper("http://www.graveyardmall.com/categories/Daily-Deal/", new Graveyardmall());
 
-class Graveyardmall extends AbstractMultipleScrapper {
+class Graveyardmall extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='ProductImage']/a/img/@src";

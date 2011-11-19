@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.superjeweler.com/IOD/default.asp", new SuperJeweler());
+PolyFactory::addScraper("http://www.superjeweler.com/IOD/default.asp", new SuperJeweler());
 
-class SuperJeweler extends AbstractScrapper {
+class SuperJeweler extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='itemnamebar']");

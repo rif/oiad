@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.liquidationchannel.com/", new LiquidationChannel());
+PolyFactory::addScraper("http://www.liquidationchannel.com/", new LiquidationChannel());
 
-class LiquidationChannel extends AbstractScrapper {
+class LiquidationChannel extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_xpath("//a[contains(@href,'Dealoftheday')]/@href");

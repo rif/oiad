@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.dailyimprint.com/", new DailyImprint());
+PolyFactory::addScraper("http://www.dailyimprint.com/", new DailyImprint());
 
-class DailyImprint extends AbstractScrapper {
+class DailyImprint extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='brandD']");

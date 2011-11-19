@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.6ave.com/shop/SickDealProduct.aspx", new ThAveElectronics());
+PolyFactory::addScraper("http://www.6ave.com/shop/SickDealProduct.aspx", new ThAveElectronics());
 
-class ThAveElectronics extends AbstractScrapper {
+class ThAveElectronics extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td/span[@class='style8']");

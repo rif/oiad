@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.jizbee.com/toy/", new JizbeeToy());
+PolyFactory::addScraper("http://www.jizbee.com/toy/", new JizbeeToy());
 
-class JizbeeToy extends AbstractScrapper {
+class JizbeeToy extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//td[@class='bigheader']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.ecost.com/n/Bargain-Countdown/page-bargain", new Ecost());
+PolyFactory::addScraper("http://www.ecost.com/n/Bargain-Countdown/page-bargain", new Ecost());
 
-class Ecost extends AbstractScrapper {
+class Ecost extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $this->_get_host($host).$this->_xpath("//p[@class='wbreak w360 itemName']/a/@href");

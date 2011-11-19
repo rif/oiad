@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.greattiming.net/side_bar_special", new Greatiming());
+PolyFactory::addScraper("http://www.greattiming.net/side_bar_special", new Greatiming());
 
-class Greatiming extends AbstractScrapper {
+class Greatiming extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='title'][1]");

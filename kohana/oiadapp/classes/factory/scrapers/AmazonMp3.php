@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.amazon.com/MP3-Music-Download/b/ref=topnav_storetab_dmusic?ie=UTF8&node=163856011", new AmazonMp3());
+PolyFactory::addScraper("http://www.amazon.com/MP3-Music-Download/b/ref=topnav_storetab_dmusic?ie=UTF8&node=163856011", new AmazonMp3());
 
-class AmazonMp3 extends AbstractScrapper {
+class AmazonMp3 extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = "http://www.amazon.com".$this->_xpath("//div[@class='unified_widget rcmBody']/a/@href");

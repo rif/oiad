@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.worldofwatches.com/cust/dailydealsteal.asp", new WorldOfWatches());
+PolyFactory::addScraper("http://www.worldofwatches.com/cust/dailydealsteal.asp", new WorldOfWatches());
 
-class WorldOfWatches extends AbstractScrapper {
+class WorldOfWatches extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//font[@color='#3D3F42']");

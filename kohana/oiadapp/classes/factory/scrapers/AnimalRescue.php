@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.theanimalrescuesite.com/", new AnimalRescue());
+PolyFactory::addScraper("http://www.theanimalrescuesite.com/", new AnimalRescue());
 
-class AnimalRescue extends AbstractScrapper {
+class AnimalRescue extends AbstractScraper {
 
 	protected function _getPageToScrap($page) {
     	return "http://www.theanimalrescuesite.com/".$this->_xpath("//a[contains(.,'Daily Deal')]/@href");

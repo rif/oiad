@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.udealbest.com/wireless-special.html", new UdealbestWireless());
+PolyFactory::addScraper("http://www.udealbest.com/wireless-special.html", new UdealbestWireless());
 
-class UdealbestWireless extends AbstractScrapper {
+class UdealbestWireless extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 			$deal->desc_short = $this->_xpath("//div[@id='wsite-content']/h2");

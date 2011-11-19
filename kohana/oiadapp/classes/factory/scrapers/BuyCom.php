@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.buy.com/retail/clearance/todays_deals.asp", new BuyCom());
+PolyFactory::addScraper("http://www.buy.com/retail/clearance/todays_deals.asp", new BuyCom());
 
-class BuyCom extends AbstractScrapper {
+class BuyCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//a[@class='productTitle']/b");

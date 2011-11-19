@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.mountaingear.com/pages/product/dod.asp?&N=0", new MountainGear());
+PolyFactory::addScraper("http://www.mountaingear.com/pages/product/dod.asp?&N=0", new MountainGear());
 
-class MountainGear extends AbstractScrapper {
+class MountainGear extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='GeneralPageHeader_MG']");

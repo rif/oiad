@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.jr.com/promotions/deal-of-the-day/", new JR());
+PolyFactory::addScraper("http://www.jr.com/promotions/deal-of-the-day/", new JR());
 
-class JR extends AbstractMultipleScrapper {
+class JR extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='calloutContent']//img[@class='productImage ']/@src";

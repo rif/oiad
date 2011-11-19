@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://livingsocial.com/", new Livingsocial());
+PolyFactory::addScraper("http://livingsocial.com/", new Livingsocial());
 
-class Livingsocial extends AbstractFeedScrapper {
+class Livingsocial extends AbstractFeedScraper {
   protected function _fillFeedDetails($deal, $item){
     $deal->item_link = $item['link']['href'];
     $deal->desc_short = $item['merchant_name'];

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.moshells.com/", new MoshellsCom());
+PolyFactory::addScraper("http://www.moshells.com/", new MoshellsCom());
 
-class MoshellsCom extends AbstractScrapper {
+class MoshellsCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//div[@class='rgt-top-bnr-lft-text']/h2/a/@href");

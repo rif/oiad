@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.dealsclick.com/", new DealsClick());
+PolyFactory::addScraper("http://www.dealsclick.com/", new DealsClick());
 
-class DealsClick extends AbstractScrapper {
+class DealsClick extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='ctl00_ContentPlaceHolder1_lblModel']");

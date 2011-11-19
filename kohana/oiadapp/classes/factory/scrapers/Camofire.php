@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("https://www.camofire.com/", new Camofire());
+PolyFactory::addScraper("https://www.camofire.com/", new Camofire());
 
-class Camofire extends AbstractScrapper {
+class Camofire extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='contentLeft']/h1");

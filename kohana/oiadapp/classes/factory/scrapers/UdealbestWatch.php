@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.udealbest.com/watch-special.html", new UdealbestWatch());
+PolyFactory::addScraper("http://www.udealbest.com/watch-special.html", new UdealbestWatch());
 
-class UdealbestWatch extends AbstractScrapper {
+class UdealbestWatch extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='columnlistp']/h2");

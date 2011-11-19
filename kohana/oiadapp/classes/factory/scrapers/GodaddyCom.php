@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("(need to sign up for it)", new GodaddyCom());
+PolyFactory::addScraper("(need to sign up for it)", new GodaddyCom());
 
-class GodaddyCom extends AbstractScrapper {
+class GodaddyCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

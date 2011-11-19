@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://closeout.thingfling.com/", new ThingFlingCloseouts());
+PolyFactory::addScraper("http://closeout.thingfling.com/", new ThingFlingCloseouts());
 
-class ThingFlingCloseouts extends AbstractMultipleScrapper {
+class ThingFlingCloseouts extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[@style='border: 1px solid #666666;']/@src";

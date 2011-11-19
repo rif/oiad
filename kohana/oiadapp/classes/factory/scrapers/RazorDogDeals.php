@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.razordogdeals.com/", new RazorDogDeals());
+PolyFactory::addScraper("http://www.razordogdeals.com/", new RazorDogDeals());
 
-class RazorDogDeals extends AbstractMultipleScrapper {
+class RazorDogDeals extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='gallery-image']/a/img/@src";

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.mikasa.com/", new Mikasa());
+PolyFactory::addScraper("http://www.mikasa.com/", new Mikasa());
 
-class Mikasa extends AbstractScrapper {
+class Mikasa extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

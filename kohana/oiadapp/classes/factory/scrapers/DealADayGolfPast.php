@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://dealadaygolf.com/pastdeals.php", new DealADayGolfPast());
+PolyFactory::addScraper("http://dealadaygolf.com/pastdeals.php", new DealADayGolfPast());
 
-class DealADayGolfPast extends AbstractMultipleScrapper {
+class DealADayGolfPast extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[@class='main_image']/@src";

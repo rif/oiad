@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.thegolfstoreonline.com/t-dealoftheday.aspx", new TheGolfStore());
+PolyFactory::addScraper("http://www.thegolfstoreonline.com/t-dealoftheday.aspx", new TheGolfStore());
 
-class TheGolfStore extends AbstractScrapper {
+class TheGolfStore extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//p[@id='dotdName']/a");

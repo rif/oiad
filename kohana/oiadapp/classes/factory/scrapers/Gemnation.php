@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.gemnation.com/watches/Deal-Of-The-Day.html", new Gemnation());
+PolyFactory::addScraper("http://www.gemnation.com/watches/Deal-Of-The-Day.html", new Gemnation());
 
-class Gemnation extends AbstractScrapper {
+class Gemnation extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@class='watch-title'][1]");

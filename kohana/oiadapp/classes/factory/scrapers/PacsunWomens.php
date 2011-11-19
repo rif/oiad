@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://shop.pacsun.com/content.jsp?pageName=sale", new PacsunWomens());
+PolyFactory::addScraper("http://shop.pacsun.com/content.jsp?pageName=sale", new PacsunWomens());
 
-class PacsunWomens extends AbstractMultipleScrapper {
+class PacsunWomens extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='dealIMG']/img/@src";

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.certifikid.com/", new CertifiKid());
+PolyFactory::addScraper("http://www.certifikid.com/", new CertifiKid());
 
-class CertifiKid extends AbstractScrapper {
+class CertifiKid extends AbstractScraper {
   protected function _fillDetails($deal, $host){
     $deal->item_link = "http://www.certifikid.com".$this->_xpath("//div[@class='daily-deal']/h1/a/@href");
     $deal->desc_short = $this->_xpath("//div[@class='daily-deal']/h1/a");

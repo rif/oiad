@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("https://www.friendsandfamilycircle.com/", new FriendsAndFamilyCircle());
+PolyFactory::addScraper("https://www.friendsandfamilycircle.com/", new FriendsAndFamilyCircle());
 
-class FriendsAndFamilyCircle extends AbstractScrapper {
+class FriendsAndFamilyCircle extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

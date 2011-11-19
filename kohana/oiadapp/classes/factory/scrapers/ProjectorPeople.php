@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.projectorpeople.com/deal/default.asp", new ProjectorPeople());
+PolyFactory::addScraper("http://www.projectorpeople.com/deal/default.asp", new ProjectorPeople());
 
-class ProjectorPeople extends AbstractScrapper {
+class ProjectorPeople extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='main']/h2[1]");

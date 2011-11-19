@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.shoptrailblazer.com/Default.aspx", new Trailblazer());
+PolyFactory::addScraper("http://www.shoptrailblazer.com/Default.aspx", new Trailblazer());
 
-class Trailblazer extends AbstractScrapper {
+class Trailblazer extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 	$deal->item_link = $this->_xpath("//a[@class='deptlinkM']/@href");

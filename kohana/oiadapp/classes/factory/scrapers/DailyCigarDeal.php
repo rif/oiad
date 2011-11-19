@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://dailycigardeal.com/", new DailyCigarDeal());
+PolyFactory::addScraper("http://dailycigardeal.com/", new DailyCigarDeal());
 
-class DailyCigarDeal extends AbstractMultipleScrapper {
+class DailyCigarDeal extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//img[@id='bigImg']/@src";

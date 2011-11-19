@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://cinderellawine.com/", new CinderellaWine());
+PolyFactory::addScraper("http://cinderellawine.com/", new CinderellaWine());
 
-class CinderellaWine extends AbstractScrapper {
+class CinderellaWine extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//a[@class='dyntextval']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.techforless.com/cgi-bin/tech4less/hot_deal.html", new TechForLess());
+PolyFactory::addScraper("http://www.techforless.com/cgi-bin/tech4less/hot_deal.html", new TechForLess());
 
-class TechForLess extends AbstractScrapper {
+class TechForLess extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='prodnamewrap']");

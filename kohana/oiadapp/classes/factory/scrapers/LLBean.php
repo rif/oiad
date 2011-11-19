@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.llbean.com/bin/TMM/TMM.cgi", new LLBean());
+PolyFactory::addScraper("http://www.llbean.com/bin/TMM/TMM.cgi", new LLBean());
 
-class LLBean extends AbstractScrapper {
+class LLBean extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

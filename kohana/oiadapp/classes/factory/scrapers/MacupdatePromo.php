@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.mupromo.com/", new MacupdatePromo());
+PolyFactory::addScraper("http://www.mupromo.com/", new MacupdatePromo());
 
-class MacupdatePromo extends AbstractScrapper {
+class MacupdatePromo extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//span[@id='apptitle']");

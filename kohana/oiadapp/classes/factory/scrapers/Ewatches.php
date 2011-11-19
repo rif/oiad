@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.ewatches.com/cust/dailydealsteal.asp?d=0", new Ewatches());
+PolyFactory::addScraper("http://www.ewatches.com/cust/dailydealsteal.asp?d=0", new Ewatches());
 
-class Ewatches extends AbstractScrapper {
+class Ewatches extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//font[@color='#3D3F42'][@size='2']");

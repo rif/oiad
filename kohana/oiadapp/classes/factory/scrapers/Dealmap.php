@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.thedealmap.com/", new Dealmap());
+PolyFactory::addScraper("http://www.thedealmap.com/", new Dealmap());
 
-class Dealmap extends AbstractMultipleScrapper {
+class Dealmap extends AbstractMultipleScraper {
     protected function _getDealIterator() {
     return "//img[contains(@class,'deal-image')]/@src";
   }

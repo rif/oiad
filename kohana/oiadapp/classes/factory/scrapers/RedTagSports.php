@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.redtagsports.com/", new RedTagSports());
+PolyFactory::addScraper("http://www.redtagsports.com/", new RedTagSports());
 
-class RedTagSports extends AbstractScrapper {
+class RedTagSports extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='content_right']/h3");

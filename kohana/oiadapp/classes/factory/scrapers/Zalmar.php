@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.zalmar.com/", new Zalmar());
+PolyFactory::addScraper("http://www.zalmar.com/", new Zalmar());
 
-class Zalmar extends AbstractScrapper {
+class Zalmar extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
 	 		$deal->item_link = $host.$this->_xpath("//td[@class='dod']/p/a/@href");

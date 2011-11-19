@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.josbank.com/menswear/shop/SubCategory_11001_10050_9252000", new JosABank());
+PolyFactory::addScraper("http://www.josbank.com/menswear/shop/SubCategory_11001_10050_9252000", new JosABank());
 
-class JosABank extends AbstractMultipleScrapper {
+class JosABank extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='padding_wrapper']/a/img[contains(@src,'JosBank')]/@src";

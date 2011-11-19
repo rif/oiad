@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.roastoftheday.com/", new RoastOfTheDay());
+PolyFactory::addScraper("http://www.roastoftheday.com/", new RoastOfTheDay());
 
-class RoastOfTheDay extends AbstractScrapper {
+class RoastOfTheDay extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h1[@style='font-size:30px']");

@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.kindredcreationsideas.blogspot.com/", new KindredCreations());
+PolyFactory::addScraper("http://www.kindredcreationsideas.blogspot.com/", new KindredCreations());
 
-class KindredCreations extends AbstractScrapper {
+class KindredCreations extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h3[@class='post-title entry-title']/a");

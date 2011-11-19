@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://outlet.altrec.com/", new Altrec());
+PolyFactory::addScraper("http://outlet.altrec.com/", new Altrec());
 
-class Altrec extends AbstractScrapper {
+class Altrec extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@id='detailMain']/h1[@class='detailBH1']");

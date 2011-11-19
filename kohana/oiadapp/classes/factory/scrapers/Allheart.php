@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.allheart.com/ko123clearance.html?_s_icmp=DOTD", new Allheart());
+PolyFactory::addScraper("http://www.allheart.com/ko123clearance.html?_s_icmp=DOTD", new Allheart());
 
-class Allheart extends AbstractScrapper {
+class Allheart extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("/html/body[@class='product-page']/div[@id='v3page']/div[@id='v3content']/div[@id='v3product-detail']/h1");

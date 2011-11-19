@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.amazon.com/gp/goldbox", new AmazonGoldBox());
+PolyFactory::addScraper("http://www.amazon.com/gp/goldbox", new AmazonGoldBox());
 
-class AmazonGoldBox extends AbstractScrapper {
+class AmazonGoldBox extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='gbox-dotd-container'][1]/a[@class='gbox-b']");

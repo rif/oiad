@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.bigbearoutlet.com/servlet/StoreFront", new BigBearOutlet());
+PolyFactory::addScraper("http://www.bigbearoutlet.com/servlet/StoreFront", new BigBearOutlet());
 
-class BigBearOutlet extends AbstractScrapper {
+class BigBearOutlet extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("");

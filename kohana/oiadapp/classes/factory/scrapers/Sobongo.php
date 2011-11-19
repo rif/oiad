@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.sobongo.com/daily-deal", new Sobongo());
+PolyFactory::addScraper("http://www.sobongo.com/daily-deal", new Sobongo());
 
-class Sobongo extends AbstractMultipleScrapper {
+class Sobongo extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='thumbnail']/a/img/@src";

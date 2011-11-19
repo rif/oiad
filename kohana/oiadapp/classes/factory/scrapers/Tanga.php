@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tanga.com/", new Tanga());
+PolyFactory::addScraper("http://www.tanga.com/", new Tanga());
 
-class Tanga extends AbstractMultipleScrapper {
+class Tanga extends AbstractMultipleScraper {
 
   protected function _getDealIterator() {
     return "//div[@class='image']/div/div/a/img/@src";

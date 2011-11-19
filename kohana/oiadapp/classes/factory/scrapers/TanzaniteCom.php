@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.tanzanite.com/item/?id=68&deal", new TanzaniteCom());
+PolyFactory::addScraper("http://www.tanzanite.com/item/?id=68&deal", new TanzaniteCom());
 
-class TanzaniteCom extends AbstractScrapper {
+class TanzaniteCom extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='item_title']");

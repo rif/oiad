@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.teediculous.com/", new Teediculous());
+PolyFactory::addScraper("http://www.teediculous.com/", new Teediculous());
 
-class Teediculous extends AbstractScrapper {
+class Teediculous extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='td-left_content'][1]/h1");

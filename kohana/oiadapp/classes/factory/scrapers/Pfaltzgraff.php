@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.pfaltzgraff.com/", new Pfaltzgraff());
+PolyFactory::addScraper("http://www.pfaltzgraff.com/", new Pfaltzgraff());
 
-class Pfaltzgraff extends AbstractScrapper {
+class Pfaltzgraff extends AbstractScraper {
 
 	protected function _getPageToScrap($page) {
     	return $this->_xpath("//div[@class='banner dotd']/a/@href");

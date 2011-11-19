@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.lootpig.com/", new LootPig());
+PolyFactory::addScraper("http://www.lootpig.com/", new LootPig());
 
-class LootPig extends AbstractScrapper {
+class LootPig extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//h3[@class='catItemTitle']/a");

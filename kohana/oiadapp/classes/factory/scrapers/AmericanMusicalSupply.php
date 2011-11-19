@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.americanmusical.com/RSS_Feeds/Ndnd.aspx", new AmericanMusicalSupply());
+PolyFactory::addScraper("http://www.americanmusical.com/RSS_Feeds/Ndnd.aspx", new AmericanMusicalSupply());
 
-class AmericanMusicalSupply extends AbstractScrapper {
+class AmericanMusicalSupply extends AbstractScraper {
 
 	 protected function _fillDetails($deal, $host){
         	$deal->desc_short = $this->_xpath("//div[@class='textboxndnd']/a");

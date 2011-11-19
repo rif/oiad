@@ -1,9 +1,9 @@
 <?php
 defined('SYSPATH') OR die('No Direct Script Access');
 
-PolyFactory::addScrapper("http://www.bellechic.com/", new Bellechic());
+PolyFactory::addScraper("http://www.bellechic.com/", new Bellechic());
 
-class Bellechic extends AbstractMultipleScrapper {
+class Bellechic extends AbstractMultipleScraper {
 
   protected function _getPageToScrap($page) {
     return "http://www.bellechic.com".$this->_xpath("//div[@class='details']/h3/a/@href");
