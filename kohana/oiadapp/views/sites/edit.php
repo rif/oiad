@@ -4,7 +4,7 @@ echo HTML::anchor('/sites/delete/'.$site->id, 'Delete', array('id'=>'delete-link
 echo Form::open('/sites/edit/'.$site->id);
 echo '<div class="site-label">'.Form::label('name', 'Site name: '); echo Form::input('name', $site->name)."</div>";
 echo '<div class="site-label">'.Form::label('page', 'Site DOD page link: '); echo Form::input('page', $site->page)."</div>";
-echo '<div class="site-label">'.Form::label('type', 'Site type: '); echo Form::select('type', array('deal-of-the-day'=>'Deal Of The Day', 'coupon-of-the-day'=>'Coupon Of The Day', 'other-deals'=>'The Other Deals', 'blackFriday/CyberMonday'=>'Black Friday / Cyber Monday'), $site->type)."</div>";
+echo '<div class="site-label">'.Form::label('type', 'Site type: '); echo Form::select('type', array('deal-of-the-day'=>'Deal Of The Day', 'coupon-of-the-day'=>'Coupon Of The Day', 'other-deals'=>'The Other Deals'), $site->type)."</div>";
 echo '<div class="site-label">'.Form::label('refresh_period', 'Refresh period (in minutes): '); echo Form::input('refresh_period', $site->refresh_period)."</div>";
 echo '<div class="site-label">'.Form::label('active', 'Active: '); echo Form::checkbox('active','T', $site->active == 'T')."</div>";
 echo '<div class="site-label">'.Form::label('is_deal', 'Is deal: '); echo Form::checkbox('is_deal','T', $site->is_deal == 'T')."</div>";
