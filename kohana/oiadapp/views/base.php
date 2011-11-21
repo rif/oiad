@@ -72,8 +72,8 @@
                 } else { ?>
                 <li><?php echo HTML::anchor('/sites', 'Sites'); ?></li>        
                 <li><?php echo HTML::anchor('/categories', 'Categories'); ?></li>
-                <li><?php echo HTML::anchor('/sites/scrape_expired', 'Scrap Expired'); ?></li>
-               	<li><?php echo HTML::anchor('/sites/scrape', 'Scrap All '); ?></li>               	
+                <li><?php echo HTML::anchor('/sites/scrape_expired', 'Scrape Expired'); ?></li>
+               	<li><?php echo HTML::anchor('/sites/scrape', 'Scrape All '); ?></li>               	
                 <li><?php echo HTML::anchor('/admin_user', 'User Admin'); ?></li>
                 <?php } ?>
             </ul>
