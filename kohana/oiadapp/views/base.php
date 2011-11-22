@@ -75,6 +75,7 @@
                 <li><?php echo HTML::anchor('/sites/scrape_expired', 'Scrape Expired'); ?></li>
                	<li><?php echo HTML::anchor('/sites/scrape', 'Scrape All '); ?></li>               	
                 <li><?php echo HTML::anchor('/admin_user', 'User Admin'); ?></li>
+                <li><?php echo HTML::anchor('/reports', 'Reports'); ?></li>
                 <?php } ?>
             </ul>
             
