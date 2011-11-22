@@ -56,12 +56,12 @@ abstract class AbstractScraper {
       $this->_fillDetails($deal, $pageToScrape);
       $deal->pub_date = $today;
       // the site automatic deactivation
-      $lastDeal = ORM::factory('deal')->where('site', '=', $site->id)->where('pub_date', '<', $today)->order_by('pub_date', 'desc')->find();            
+      /*$lastDeal = ORM::factory('deal')->where('site', '=', $site->id)->where('pub_date', '<', $today)->order_by('pub_date', 'desc')->find();            
       if($deal->desc_short == $lastDeal){
         $site->active = 'F';
         $site->save();
         return 'The site is inactive!';
-      }
+      }*/
       $deal->save();
       return $deal->id;
     }
