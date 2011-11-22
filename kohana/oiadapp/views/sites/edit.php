@@ -43,7 +43,7 @@ echo Form::close();
 <div id="timesincescrape">
 	<hr />	
 	<?php
-		$last_scrape = strtotime($site->last_scrapp);
+		$last_scrape = strtotime($site->last_scrape);
         $now = strtotime("now");
         $mins = round(($now - $last_scrape)/60,1);
         $hours = round(($now - $last_scrape)/(60*60),1);
