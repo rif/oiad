@@ -16,6 +16,7 @@ def push():
     print(green('pushing...'))
     local('hg rebase --svn')
     local('hg push')
+    local('hg push bit')
 
 @task
 @hosts('radu.fericean@dev.upandrunningsoftware.com')
