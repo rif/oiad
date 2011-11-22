@@ -60,7 +60,7 @@ class Controller_Oiad extends Controller_Template {
 			if($site->active != 'T') continue;
     		$query = DB::query(Database::SELECT, 'select * from deals where site=:site_id and pub_date=(select max(pub_date) from deals where site=:site_id)');
     		$query->param(':site_id', $site->id);
-    		$result = $query->execute();
+    		$result = $query->as_object()->execute();
 			foreach ($result as $d) {
 				array_push($deals, array($site,$d));
 			}
