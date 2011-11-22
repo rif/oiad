@@ -1,27 +1,30 @@
 <ul id="promo-listing" class="cf">
 <?php
 $section = (isset($_GET['section']) && strlen($_GET['section'])) ? $_GET['section'] : 'deal-of-the-day';
-foreach($deals as $d){
+foreach($deals as $a){
+  $site = $a[0];
+  $d = $a[1];
 ?>
     <li>
     <div class="item" >
-    <?php echo HTML::anchor('/oiad/showdeal/'.$d->id ,truncate($d->desc_short, 70, " "), array('class'=>'item-title')); ?>
+<?php echo HTML::anchor($site->page, $site->name, array('class'=>'item-site')); ?><br/>
+    <?php echo HTML::anchor('/oiad/showdeal/'.$d['id'] ,truncate($d['desc_short'], 70, " "), array('class'=>'item-title')); ?>
    <div class="item-body">
-	<?php echo '<a href="/oiad/showdeal/'.$d->id.'"><img src="'.$d->pictures.'" alt="'.$d->pictures.'"/></a>';?>    
-    <div class="item-price"><?php echo htmlspecialchars($d->price); ?></div>
-    <div class="item-shipping"><?php echo htmlspecialchars($d->shipping); ?></div>
+	<?php echo '<a href="/oiad/showdeal/'.$d['id'].'"><img src="'.$d['pictures'].'" alt="'.$d['pictures'].'"/></a>';?>    
+    <div class="item-price"><?php echo htmlspecialchars($d['price']); ?></div>
+    <div class="item-shipping"><?php echo htmlspecialchars($d['shipping']); ?></div>
     
     <?php  
     	if(strlen($user)){    		
 			$a1 = array('class'=>'fav');
 			$a2 = array('class'=>'fav');
-			if($user->has('sites', $d->site)){
+			if($user->has('sites', $d['site'])){
 				$a2['class'] .= ' hidden';
 			} else {
 				$a1['class'] .= ' hidden';
 			}
-			echo HTML::anchor('/preferences/unmarkmysite/'.$d->site, 'UnMark as favorite', $a1);
-    	echo HTML::anchor('/preferences/markmysite/'.$d->site, 'Mark as favorite', $a2);
+			echo HTML::anchor('/preferences/unmarkmysite/'.$d['site'], 'UnMark as favorite', $a1);
+    	echo HTML::anchor('/preferences/markmysite/'.$d['site'], 'Mark as favorite', $a2);
 		}
     ?>
     </div> <!-- item-body -->

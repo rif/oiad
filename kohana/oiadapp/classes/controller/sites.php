@@ -63,10 +63,9 @@ class Controller_Sites extends Controller_App {
       	  $errors = $e->errors('models');
       }
     }
-
-    $deals = ORM::factory('deal');
-    $today = date('Y-m-d');
-    $view->deal = $deals->where('site', '=', $site)->where('pub_date', '=', $today)->find();
+    $query = DB::query(Database::SELECT, 'select * from deals where site=:site_id and pub_date=(select max(pub_date) from deals where site=:site_id)');
+    $query->param(':site_id', $site->id);
+    $view->deals = $query->execute();
     $view->site = $site;
     $this->template->content = $view;
   }

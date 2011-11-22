@@ -48,19 +48,21 @@ class Controller_Oiad extends Controller_Template {
 		}
 
 		// select prefered sites 
-		if	($section == 'items-of-the-day'){			
+		if	($section == 'items-of-the-day'){
 			$sites = $user->sites->find_all();
 		} else {
 			// all sites remain in this section (after categrory and cities have been filtered)
         	$sites = $sites->where('type','=',$section)->find_all();
 		}
-		$today = date('Y-m-d');
 			
 		$deals = array();
-		foreach($sites as $site) {          		
-    		$dd = $site->deals->where('pub_date', '=', $today)->find_all();
-			foreach ($dd as $d) {
-				array_push($deals, $d);
+		foreach($sites as $site) {
+			if($site->active != 'T') continue;
+    		$query = DB::query(Database::SELECT, 'select * from deals where site=:site_id and pub_date=(select max(pub_date) from deals where site=:site_id)');
+    		$query->param(':site_id', $site->id);
+    		$result = $query->execute();
+			foreach ($result as $d) {
+				array_push($deals, array($site,$d));
 			}
 		}
 						
