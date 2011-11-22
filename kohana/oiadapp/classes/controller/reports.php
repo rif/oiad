@@ -31,7 +31,7 @@ class Controller_Reports extends Controller_App {
 		
 		if($category->loaded() == TRUE)
 		{
-			$sites = $category->sites;
+			$sites = $category->sites->where('active','=','T');
 			$view->page_name = __("Sites from '").$category->name.__("' category");
 		}
 		else {
@@ -40,7 +40,7 @@ class Controller_Reports extends Controller_App {
 		}
 	}
 	else {
-		$sites = ORM::factory('site');
+		$sites = ORM::factory('site')->where('active','=','T');
 		$view->page_name = __("All sites");
 	}
 	   
@@ -60,7 +60,7 @@ class Controller_Reports extends Controller_App {
       
     $sites = ORM::factory('site')->join('categories_sites', 'LEFT')
     	->on('site.id', '=', 'categories_sites.site_id')
-		->where('categories_sites.site_id', 'IS', NULL);
+		->where('categories_sites.site_id', 'IS', NULL)->where('active','=','T');
 		
     $view->sites = $sites->find_all();
 	$view->page_name = __("Sites not assigned to a category");
@@ -68,5 +68,35 @@ class Controller_Reports extends Controller_App {
     $this->template->content = $view;
   }
 
+	public function action_olddeals()
+	{
+		$view = View::factory('reports/sites');
+      
+	    if(isset($_GET['days']))
+	    {
+	    	$days = $_GET['days'];
+			if(!is_numeric($days) || $days <1)
+			{
+				$this->report_error("Error details: days parameter must be numeric and positive!");
+				return;
+			}
+		
+			$query = DB::query(Database::SELECT, 
+				'SELECT sites.* FROM sites INNER JOIN
+	(SELECT site, desc_short FROM deals GROUP BY site, desc_short 
+	 HAVING MAX(pub_date) =CURDATE() and DATEDIFF(MAX(pub_date) , MIN(pub_date)) > :days) 
+	 AS old_deals ON sites.id = old_deals.site WHERE active="T"');
+	    	$query->param(':days', $days);
+	    	$view->sites = $query->as_object()->execute();
+			
+			$view->page_name = __("Sites with deals not updated for a time");
+				
+		    $this->template->content = $view;
+	    }
+		else {
+			$this->report_error("Error details: days parameter should be provided!");
+				return;
+		}
+	}
 
 }

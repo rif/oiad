@@ -11,6 +11,7 @@
 <tbody>
 <?php
 $tr_classes = Array('odd','even');
+
 foreach($sites as $i=>$site)
 {
 	echo '<tr class="'.$tr_classes[$i%2].'">';
@@ -19,6 +20,7 @@ foreach($sites as $i=>$site)
     echo '<td>'.$site->last_scrape.'</td>';
 	echo "</tr>";
 }
+
 ?>
 </tbody>
 </table>
