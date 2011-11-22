@@ -51,7 +51,7 @@ Class Controller_Scrape extends Controller {
           }
         }
     }
-    $site->last_scrapp = date ("Y-m-d H:i:s");
+    $site->last_scrape = date ("Y-m-d H:i:s");
     $site->save();
     $this->response->body($content);
   }
@@ -90,7 +90,7 @@ Class Controller_Scrape extends Controller {
           }
         }
       }
-      $site->last_scrapp = date ("Y-m-d H:i:s");
+      $site->last_scrape = date ("Y-m-d H:i:s");
       $site->save();
     }
   }
@@ -111,7 +111,7 @@ Class Controller_Scrape extends Controller {
     foreach ($sites as $site) {
       $refresh = $site->refresh_period;
       if($refresh){
-        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrape));
         $now = strtotime("now");
         if($next_scrape - $now < 0){
           array_push($expired_sites, $site);

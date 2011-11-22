@@ -26,7 +26,7 @@ foreach($sites as $i=>$site)
     $refresh = $site->refresh_period;
     echo '<td style="text-align: center;">';
 	if($refresh && ($site->active == 'T')) {
-        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrapp));
+        $next_scrape = strtotime("+$refresh minutes",strtotime($site->last_scrape));
         $now = strtotime("now");
         $mins = round(($next_scrape - $now)/60,1);
         $hours = round(($next_scrape - $now)/(60*60),1);
