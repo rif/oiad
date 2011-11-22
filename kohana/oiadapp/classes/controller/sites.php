@@ -65,7 +65,7 @@ class Controller_Sites extends Controller_App {
     }
     $query = DB::query(Database::SELECT, 'select * from deals where site=:site_id and pub_date=(select max(pub_date) from deals where site=:site_id)');
     $query->param(':site_id', $site->id);
-    $view->deals = $query->execute();
+    $view->deals = $query->as_object()->execute();
     $view->site = $site;
     $this->template->content = $view;
   }
