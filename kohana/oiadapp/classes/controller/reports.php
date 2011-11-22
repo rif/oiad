@@ -99,4 +99,19 @@ class Controller_Reports extends Controller_App {
 		}
 	}
 
+	public function action_outofdate()
+	{
+		$view = View::factory('reports/sites');
+      
+		$query = DB::query(Database::SELECT, 
+			'SELECT DISTINCT sites.* from sites INNER JOIN deals ON sites.id = deals.site INNER JOIN
+(SELECT site, max(pub_date) AS max_pub_date FROM `deals` group by site) AS site_last_pub ON
+deals.site = site_last_pub.site
+WHERE deals.pub_date = site_last_pub.max_pub_date AND (deals.desc_short IS NULL OR deals.price IS NULL)
+ AND active="T"');
+    	$view->sites = $query->as_object()->execute();
+		
+		$view->page_name = __("Sites with out of date scrapers");			
+	    $this->template->content = $view;	    		
+	}
 }
