@@ -8,9 +8,9 @@ foreach($deals as $d){
 	<li>
 		<div class="item" >
 			<?php echo HTML::anchor($d -> page, $d -> name, array('class' => 'item-site'));?><br/>
-			<?php echo HTML::anchor('/oiad/showdeal/' . $d -> id, truncate($d -> desc_short, 70, " "), array('class' => 'item-title'));?>
+			<?php echo HTML::anchor('/oiad/showdeal/' . $d -> dealsid, truncate($d -> desc_short, 70, " "), array('class' => 'item-title'));?>
 			<div class="item-body">
-				<?php echo '<a href="/oiad/showdeal/' . $d -> id . '"><img src="' . $d -> pictures . '" alt="' . $d -> pictures . '"/></a>';?>
+				<?php echo '<a href="/oiad/showdeal/' . $d -> dealsid . '"><img src="' . $d -> pictures . '" alt="' . $d -> pictures . '"/></a>';?>
 				<div class="item-price">
 					<?php echo htmlspecialchars($d -> price);?>
 				</div>
