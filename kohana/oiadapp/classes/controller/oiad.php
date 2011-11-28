@@ -56,7 +56,7 @@ class Controller_Oiad extends Controller_Template {
 		}
 		
 		$deals = $sites->join('deals')->on('deals.site', '=', 'site.id')
-			->select('deals.*', 'site.name', 'site.page')
+			->select('deals.*', array('deals.id', 'dealsid'), 'site.name', 'site.page')
 			->where('deals.pub_date','=', DB::expr('(SELECT MAX(pub_date) FROM deals WHERE deals.site = site.id)'))
 			->where('active','=','T');
 			
