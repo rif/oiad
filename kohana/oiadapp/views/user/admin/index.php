@@ -10,10 +10,10 @@
    <ul>
       <li><?php echo Html::anchor('admin_user/edit', __('Add new user'))?></li>
    </ul>
-   <div class="search" style="float: right; padding: 5px; margin-right: 20px;height: 25px; border: 1px solid black;"> 
+   <div class="search" style="float: right; padding: 5px; margin-right: 20px;height: 25px;"> 
    	<?php
    	echo Form::open('/admin_user/', array('method' => 'get', 'id' => 'searchform')); //, 'onsubmit' => 'return false;'
-	echo "<span style='padding-right: 10px;'>".Form::label('search', 'Text:')."</span>";
+	echo "<span style='padding-right: 10px;'>".Form::label('search', 'Search text:')."</span>";
 	echo "<span style='padding-right: 10px;'>".Form::input('search')."</span>";
 	echo "<span>".Form::submit('search_btn', 'Search', array('id' => 'search_btn'))."</span>";
 	echo Form::close();
@@ -80,9 +80,17 @@ echo $paging->render();
     	$("#search_btn").click(function(){
     		var q=$("#searchform input[name=search]").val();
     		if(q == '')
+    		{
     			window.location.href=$("#searchform").attr('action');
-    		else	
-    			window.location.href=$("#searchform").attr('action') + "?q="+ q;    		
+    		}
+    		else if(q.indexOf("%")>=0 || q.indexOf("_")>=0)
+    		{
+    			alert("The characters % and _ are not allowed in the search text box!");
+    		}
+    		else
+    		{
+    			window.location.href=$("#searchform").attr('action') + "?q="+ q;
+    		}    		
     	});
     	
         $("#searchform").submit(function() {

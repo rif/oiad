@@ -14,7 +14,13 @@
 		$search_text = isset($_GET['q'])? $_GET['q']: '';
 		if($search_text != '')
 		{
-			$user = $user->where('username','=',$search_text);
+			$not_allowed_chars = array('%', '_');
+			$search_text = str_replace($not_allowed_chars, '', $search_text);
+			$user = $user
+				->where_open()
+				->where('username','LIKE','%'.$search_text.'%')
+				->or_where('email','LIKE','%'.$search_text.'%')
+				->where_close();
 		}
 		
 		// This is an example of how to use Kohana pagination
@@ -25,8 +31,9 @@
 		
 		// Create a paginator
 		$pagination = new Pagination(array(
+		    'current_page'      => array('source' => 'query_string', 'key' => 'page'),  // source: "query_string" or "route"
 			'total_items' => $total, 
-			'items_per_page' => 30,  // set this to 30 or 15 for the real thing, now just for testing purposes...
+			'items_per_page' => 10,  // set this to 30 or 15 for the real thing, now just for testing purposes...
 			'auto_hide' => false, 
 			'view' => 'pagination/useradmin'
 		));
