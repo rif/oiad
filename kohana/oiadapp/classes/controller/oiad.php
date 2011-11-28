@@ -49,37 +49,36 @@ class Controller_Oiad extends Controller_Template {
 
 		// select prefered sites 
 		if	($section == 'items-of-the-day'){
-			$sites = $user->sites->find_all();
+			$sites = $user->sites;
 		} else {
 			// all sites remain in this section (after categrory and cities have been filtered)
-        	$sites = $sites->where('type','=',$section)->find_all();
+        	$sites = $sites->where('type','=',$section);
 		}
+		
+		$deals = $sites->join('deals')->on('deals.site', '=', 'site.id')
+			->select('deals.*', 'site.name', 'site.page')
+			->where('deals.pub_date','=', DB::expr('(SELECT MAX(pub_date) FROM deals WHERE deals.site = site.id)'))
+			->where('active','=','T');
 			
-		$deals = array();
-		foreach($sites as $site) {
-			if($site->active != 'T') continue;
-    		$query = DB::query(Database::SELECT, 'select * from deals where site=:site_id and pub_date=(select max(pub_date) from deals where site=:site_id)');
-    		$query->param(':site_id', $site->id);
-    		$result = $query->as_object()->execute();
-			foreach ($result as $d) {
-				array_push($deals, array($site,$d));
-			}
-		}
-						
+		$dupl_deals = clone $deals;
+		$count_deals = $dupl_deals->count_all();
+							
 		$pagination = new Pagination(array(
-			'total_items' => count($deals),	
+			'total_items' => $count_deals,	
 			'count_in' => 3,
 			'items_per_page' => Session::instance()->get('items_per_page', 15) // default items per page in 9			
 		));		
-			
-		//$result = $sites->limit($pagination->items_per_page)->offset($pagination->offset)->find_all();
-		$result = array_slice($deals, $pagination->offset, $pagination->items_per_page);
+					
+		$deals = $deals
+			->limit($pagination->items_per_page)
+			->offset($pagination->offset)
+			->find_all();
 						
 		$this->template->content = View::factory('oiad/list')
-			->set('deals', $result)
+			->set('deals', $deals)
 			->set('user', $user)
 			->set('paging', $pagination)
-			->set('all', sizeof($deals));
+			->set('all', $count_deals);
     }        
 
     public function action_location() {    	       
