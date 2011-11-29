@@ -28,15 +28,18 @@
 		// the user has to be cloned because the count_all deletes the where conditions
 		$duplicate_user = clone $user;
 		$total = $duplicate_user->count_all();
-		
+			
 		// Create a paginator
 		$pagination = new Pagination(array(
 		    'current_page'      => array('source' => 'query_string', 'key' => 'page'),  // source: "query_string" or "route"
 			'total_items' => $total, 
-			'items_per_page' => 10,  // set this to 30 or 15 for the real thing, now just for testing purposes...
+			'items_per_page' => 15,  // set this to 30 or 15 for the real thing, now just for testing purposes...
 			'auto_hide' => false, 
 			'view' => 'pagination/useradmin'
 		));
+		
+		$pagination->route_params(array('controller' => $this->request->controller(), 'action' => $this->request->action()));
+		
 		// Get the items for the querykohana/modules/useradmin/views/user/admin/index.php
 		$sort = isset($_GET['sort']) ? $_GET['sort'] : 'username'; // set default sorting direction here
 		$dir = isset($_GET['dir']) ? 'DESC' : 'ASC';
